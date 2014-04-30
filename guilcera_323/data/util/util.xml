@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<items>
+
+<unmoveable id="1740" />
+<unmoveable id="1747" />
+<unmoveable id="1748" />
+<unmoveable id="1749" />
+
+<ring id="2205" time="900000"/>
+<ring id="2168" time="900000"/>
+<ring id="2169" time="1200000"/>
+<ring id="2206" time="1200000"/>
+
+<wand id="2182" mindmg="7" maxdmg="13" dist="5" mana="2" level="7"/>
+<wand id="2186" mindmg="13" maxdmg="19" dist="4" mana="3" level="13"/>
+<wand id="2185" mindmg="19" maxdmg="30" dist="3" mana="5" level="19"/>
+<wand id="2181" mindmg="30" maxdmg="45" dist="3" mana="8" level="26"/>
+<wand id="2183" mindmg="40" maxdmg="65" dist="2" mana="13" level="33"/>
+<wand id="2190" mindmg="7" maxdmg="13" dist="5" mana="2" level="7"/>
+<wand id="2191" mindmg="13" maxdmg="19" dist="4" mana="3" level="13"/>
+<wand id="2188" mindmg="19" maxdmg="30" dist="3" mana="5" level="19"/>
+<wand id="2189" mindmg="30" maxdmg="45" dist="3" mana="8" level="26"/>
+<wand id="2187" mindmg="40" maxdmg="65" dist="2" mana="13" level="33"/>
+
+<amulet id="2173" charge="5"/>
+
+<hitemsave id="1718"/>
+
+</items>

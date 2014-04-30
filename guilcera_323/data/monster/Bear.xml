@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<monster name="Bear" level="1" maglevel="1" speed="156" experience="23" pushable="1" monster="1" armor="3" defense="5" canpushitems="0" staticattack="50" changetarget="200">
+	<health now="80" max="80"/>
+	<look type="16" corpse="2849"/>
+	<combat targetdistance="1" runonhealth="15"/>
+	<attacks>
+		<attack type="melee" maxdamage="25"/>
+	</attacks>
+	<defenses>
+		<defense immunity="drunk"/>
+	</defenses>
+	<voices>
+		<voice sentence="Grrrr"/>
+		<voice sentence="Groar"/>
+	</voices>
+	<loot>
+		<item id="2666" countmax="4" chance1="40000" chancemax="20000"/>
+<!-- meat -->
+		<item id="2671" countmax="2" chance1="20000" chancemax="10000"/><!-- ham -->
+	</loot>
+</monster>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<monster name="Crab" level="1" maglevel="1" speed="156" experience="30" pushable="1" monster="1" armor="3" defense="5" canpushitems="0" staticattack="50" changetarget="200">
+	<health now="55" max="55"/>
+	<look type="112" corpse="4253"/>
+	<combat targetdistance="1" runonhealth="0"/>
+	<attacks>
+		<attack type="melee" maxdamage="23"/>
+	</attacks>
+	<defenses>
+		<defense immunity="drunk"/>
+		<defense immunity="poison"/>
+	</defenses>
+	<voices/>
+	<loot>
+		<item id="2148" countmax="10" chance1="80000" chancemax="4000"/>
+<!-- gold -->
+		<item id="2667" countmax="1" chance1="20000" chancemax="19000"/>
+<!-- fish -->
+	</loot>
+</monster>

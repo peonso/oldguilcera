@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<monster name="Panda" level="1" maglevel="1" speed="156" experience="23" pushable="1" monster="1" armor="3" defense="5" canpushitems="0" staticattack="50" changetarget="200">
+<health now="80" max="80"/>
+<look type="123" corpse="4286"/>
+<combat targetdistance="1" runonhealth="15"/>
+<attacks>
+<attack type="melee" maxdamage="15"/>
+</attacks>
+<defenses>
+<defense immunity="drunk"/>
+</defenses>
+<voices>
+<voice sentence="Brrrr"/>
+<voice sentence="Groar"/>
+</voices>
+<loot>
+<item id="2666" countmax="4" chance1="70000" chancemax="20000"/>
+<item id="2671" countmax="2" chance1="70000" chancemax="20000"/>
+</loot>
+</monster>

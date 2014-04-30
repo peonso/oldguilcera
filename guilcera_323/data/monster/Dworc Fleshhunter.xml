@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<monster name="Dworc Fleshhunter" level="1" maglevel="1" speed="156" experience="40" pushable="1" monster="1" armor="3" defense="5" canpushitems="0" staticattack="50" changetarget="200">
+	<health now="85" max="85"/>
+	<look type="215" corpse="4307"/>
+	<combat targetdistance="1" runonhealth="20"/>
+	<attacks>
+		<attack type="melee" maxdamage="25"/>
+		<attack type="distance" name="Throwing knives" mindamage="0" maxdamage="15" cycleticks="2000" probability="70"/>
+	</attacks>
+	<defenses>
+		<defense immunity="drunk"/>
+		<defense immunity="poison"/>
+	</defenses>
+	<voices>
+		<voice sentence="Grow truk grrrrr."/>
+		<voice sentence="Brak brrretz!"/>
+		
+<voice sentence="Prek tars, dekklep zurk."/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="13" chance1="75000" chancemax="8000"/>
+<!-- gold -->
+		<item id="2229" countmax="3" chance1="4000" chancemax="1000"/><!-- skull -->
+		<item id="2050" chance="6000"/><!-- torch -->
+		<item id="2467" chance="11000"/><!-- leather armor -->
+		<item id="2568" chance="10000"/><!-- cleaver -->
+		<item id="3967" chance="1000"/><!-- tribal mask -->
+		<item id="1987" chance="100000">
+<!-- bag -->
+			<inside>
+			<item id="2541" chance="2000"/><!-- bone shield -->
+			<item id="3964" chance="1000"/>
+<!-- ripper lance -->
+			<item id="3965" chance="2000"/>
+<!-- hunting spear -->
+			<item id="2411" chance="3000"/>
+<!-- poison dagger -->
+			</inside>
+		</item>
+	</loot>
+</monster>

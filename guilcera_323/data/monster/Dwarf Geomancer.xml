@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<monster name="Dwarf Geomancer" level="1" maglevel="100" speed="200" experience="265" pushable="1" monster="1" armor="3" defense="5" canpushitems="1" staticattack="50" changetarget="200">
+	<health now="380" max="380"/>
+	<manadrain damagemin="50" damagemax="80" probability="25"/><!-- mana drain -->
+	<look type="66" corpse="2987"/>
+	<combat targetdistance="4" runonhealth="130"/>
+	<attacks>
+		<attack type="melee" maxdamage="100"/>
+		<attack type="distance" name="largerock" mindamage="60" maxdamage="120" cycleticks="2000" probability="95"/>
+		<attack type="instant" name="b exura" cycleticks="2000" probability="85"/>
+	</attacks>
+	<defenses>
+		<defense immunity="fire"/>
+		<defense immunity="invisibility"/>
+		<defense immunity="invis"/>
+	</defenses>
+	<voices>
+		<voice sentence= "Dust to dust."/>
+		<voice sentence="Earth is the strongest element."/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="45" chance1="75000" chancemax="5000"/><!-- gold -->
+		<item id="2787" countmax="2" chance1="60000" chancemax="30000"/><!-- white mushroom -->
+		<item id="2673" countmax="1" chance1="26000" chancemax="25000"/><!-- pear -->
+		<item id="2146" countmax="1" chance1="1001" chancemax="1000"/><!-- small sapphire -->
+		<!-- 1% dwarven ring -->
+		<item id="2175" chance="1000"/><!-- spellbook -->
+		<item id="2260" chance="34000"/><!-- blank rune -->
+		<item id="2162" chance="15000"/><!-- magic lightwand -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2423" chance="2000"/><!-- clerical mace -->
+			</inside>
+		</item>
+	</loot>
+</monster>

@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<monster name="Rat" level="1" maglevel="0" speed="134" experience="5" pushable="1" monster="1" armor="3" defense="5" canpushitems="0" staticattack="50" changetarget="200"><health now="20" max="20"/><look type="21" corpse="2813"/><combat targetdistance="1" runonhealth="4"/><attacks><attack type="melee" maxdamage="5"/></attacks><defenses/><voices/><loot><item id="2148" countmax="5" chance1="60000" chancemax="3000"/><item id="3976" countmax="2" chance1="40000" chancemax="1000"/><item id="2696" chance="20000"/></loot></monster>

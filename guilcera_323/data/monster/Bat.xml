@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<monster name="Bat" level="1" maglevel="1" speed="220" experience="10" pushable="1" monster="1" armor="0" defense="0" canpushitems="0" staticattack="50" changetarget="200" mana="20">
+	<health now="30" max="30"/>
+	<look type="122" corpse="4298"/>
+	<combat targetdistance="1" runonhealth="3"/>
+	<attacks>
+	<attack type="melee" maxdamage="8"/>
+	</attacks>
+	<defenses/>
+	<voices>
+		<voice sentence= "Flap! Flap!"/>
+	</voices>
+	<loot></loot>
+</monster>

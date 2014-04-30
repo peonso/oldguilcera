@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<monster name="Pig" level="1" maglevel="0" speed="114" experience="0" pushable="1" monster="1" armor="3" defense="5" canpushitems="0" staticattack="50" changetarget="200"><health now="25" max="25"/><look type="60" corpse="2936"/><combat targetdistance="3" runonhealth="1"/><attacks/><defenses><defense immunity="drunk"/></defenses><voices><voice sentence="Oinki!"/></voices><loot><item id="2671" countmax="3" chance1="100000" chancemax="5000"/></loot></monster>

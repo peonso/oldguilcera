@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<monster name="Beholder" level="1" maglevel="12" experience="170" speed="150" pushable="0" monster="1" armor="3" defense="5" canpushitems="1" staticattack="50" changetarget="200">
+	<health now="260" max="260"/>
+	<manadrain damagemin="0" damagemax="35" probability="55"/><!-- mana drain -->
+	<look type="17" corpse="2908"/>
+	<combat targetdistance="3" runonhealth="40"/>
+	<attacks>
+		<attack type="rune" name="heavy magic missile" exhaustion="1000" cycleticks="2000" probability="55"/>
+		<attack type="rune" name="sudden death" exhaustion="1000" cycleticks="2000" probability="55"/>
+		<attack type="rune" name="bhfireatack" exhaustion="1000" cycleticks="2000" probability="55"/>
+	</attacks>
+	<defenses>
+		<defense immunity="poison"/>
+		<defense immunity="invis"/>
+		<defense immunity="invisibility"/>
+	</defenses>
+	<voices>
+		<voice sentence="Let me take a look at you!"/>
+		<voice sentence="You've got the look!"/>
+		<voice sentence="I've got to look!"/>
+		<voice sentence="Here's looking at you!"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="32" chance1="100000" chancemax="5000"/>
+<!-- gold -->
+		<item id="2148" countmax="16" chance1="70000" chancemax="5000"/>
+
+<!-- gold -->
+		<item id="2175" chance="5000"/>
+<!-- spellbook -->
+		<item id="1987" chance="100000">
+<!-- bag -->
+			<inside>
+			<item id="2377" chance="4000"/>
+<!-- two-handed sword -->
+			<item id="2397" chance="9000"/>
+<!-- longsword -->
+			<item id="2509" chance="5000"/>
+<!-- steel shield -->
+			<item id="2518" chance="1000"/>
+<!-- beholder shield -->
+			<item id="2394" chance="7000"/><!-- morning star -->
+			<item id="2512" chance="3000"/><!-- wooden shield -->
+			</inside>
+		</item>
+	</loot>
+	<summons maxSummons="6">
+ 		<summon name="Skeleton" chance="15000"/>
+	</summons>
+</monster>

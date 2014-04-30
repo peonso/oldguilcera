@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<monster name="Morgaroth" level="11" maglevel="330" speed="490" experience="15000" pushable="0" monster="1" armor="3" defense="5" canpushitems="1" staticattack="50" changetarget="200">
+<health now="55000" max="55000"/>
+<look type="35" corpse="2916"/>
+<combat targetdistance="1" runonhealth="0"/>
+<attacks>
+<attack type="melee" maxdamage="1950"/>
+<attack type="instant" name="b exura" cycleticks="2000" probability="70"/>
+<attack type="rune" name="orshgfb" exhaustion="2000" cycleticks="2000" probability="80"/>
+<attack type="instant" name="morgmusic" cycleticks="3000" probability="40"/>
+</attacks>
+<defenses>
+<defense immunity="energy"/>
+<defense immunity="fire"/>
+<defense immunity="poison"/>
+<defense immunity="paralyze"/>
+<defense immunity="drunk"/>
+<defense immunity="invis"/>
+<defense immunity="invisibility"/>
+</defenses>
+<voices>
+<voice sentence="I AM MORGAROTH, LORD OF THE TRIANGLE... AND YOU ARE LOST!"/>
+<voice sentence="MY SEED IS FEAR AND MY HAVERST ARE YOUR SOULS!"/>
+<voice sentence="ZATHROTH! LOOK AT THE DESTRUCTION I AM CAUSING IN YOUR NAME!"/>
+<voice sentence="THE TRIANGLE OF TERROR WILL RISE!"/>
+</voices>
+<loot>
+<item id="2152" countmax="43" chance1="60000" chancemax="4000"/>
+<item id="2152" countmax="94" chance1="40000" chancemax="2000"/>
+<item id="2195" chance="5000"/>
+<item id="2462" chance="5000"/>
+<item id="2167" chance="5000"/>
+<item id="2164" chance="5000"/>
+<item id="2171" chance="5000"/>
+<item id="2197" chance="5000"/>
+<item id="2472" chance="1000"/>
+<item id="2470" chance="1000"/>
+<item id="1987" chance="100000">
+<inside>
+<item id="2520" chance="20000"/>
+<item id="2387" chance="20000"/>
+<item id="2432" chance="20000"/>
+<item id="2393" chance="20000"/>
+<item id="2396" chance="20000"/>
+<item id="2514" chance="20000"/>
+<item id="2436" chance="20000"/>
+<item id="2421" chance="20000"/>
+</inside>
+</item>
+</loot>
+<summons maxSummons="4">
+<summon name="Demon" chance="4000"/>
+</summons>
+</monster>

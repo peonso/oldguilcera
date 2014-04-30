@@ -1,0 +1,30 @@
+O arquivo www.rar contém um site de criação de accounts em PHP
+
+Se você não sabe nada de PHP acesse esse tutorial:
+
+http://forum.otserv.com.br/index.php?showtopic=43
+
+================================
+site (www\config.php  www\acc\config.php www\make\config.php)
+================================
+nos 3 config.php procure e caminhos parecidos, sempre no início do arquivo (primeiras 20 linhas):
+
+$servpath = 'C:\pasta do ot'; // Your Server folder
+
+troque C:\pasta do ot pela pasta do seu OT
+
+================================
+
+index.php procure:
+
+#cec6a4;">&nbsp;&nbsp;.: <b>otgala.servegame.com</b> :.<br>
+
+troque otgala.servegame.com pelo IP do seu OT
+
+================================
+
+index.php procure:
+
+$sock = @fsockopen('otgala.servegame.com', 7171, $errno, $errstr, 1); 
+
+troque otgala.servegame.com pelo IP do seu OT

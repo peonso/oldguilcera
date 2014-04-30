@@ -1,0 +1,151 @@
+================================
+======== Guilcera 3.2.3 ========
+================================
+=========== Protocolo 7.6 ======
+=============== by Peonso ======
+================================
+
+Utilizando HoTServ, distro de Rex e Dimas
+
+===== Créditos =====
+
+~~ NPCs
+All NPCs [Peonso]
+NPCs Movement code [JTE]
+~~ Actions
+anihilator.lua [GriZzm0]
+decayto.lua [Atolon]
+all demonquests, all gates and some insanes.lua [GriZzm0]
+door.lua [GriZzm0]
+destroyfield [GriZzm0]
+fluids.lua [Atolon]
+food.lua [Darkonia Team]
+key.lua [GriZzm0]
+lvldoor.lua [Junkfood/Peonso]
+shovel.lua [Atolon]
+bamboo.lua [Peonso]
+chests.lua [Peonso]
+emptychests.lua [Peonso]
+insane7, 8, 9 [Peonso]
+insanekey.lua [Peonso]
+machete.lua [Peonso]
+pick.lua [Peonso]
+parchment.lua [Peonso]
+posso.lua [Peonso]
+(bug on it yet)vocation.lua [Peonso]
+others [CVS]
+~~ Monsters
+All monsters [Peonso]
+~~ Spells
+BhFireAtack.lua [Peonso]
+DemonGFB.lua [Peonso]
+DLFBomb.lua [Peonso]
+NPoisonMissile.lua [Peonso]
+OrshGFB.lua [Peonso]
+Poison bomb.lua [Peonso]
+Poison field.lua [Peonso]
+WExplosion.lua [Peonso]
+WFBomb.lua [Peonso]
+s poison field.lua [Peonso]
+bb poison.lua [Peonso]
+as exevo gran mas pox.lua [Peonso]
+lich poison.lua [Peonso]
+yeti power.lua [Peonso]
+bb exori.lua [Peonso]
+lich exori.lua [Peonso]
+lich beam.lua [Peonso]
+exevo gran mas pox.lua [Peonso]
+w exevo gran vis lux.lua [Peonso]
+d exevo gran vis lux.lua [Peonso]
+d exevo flam hur.lua [Peonso]
+dl exevo flam hur.lua [Peonso]
+d exura.lua [Peonso]
+hitmusic.lua [Peonso]
+b exura.lua [Peonso]
+water wave.lua [?]
+poison wave.lua [?]
+others [CVS]
+~~ Map
+Guilcera.otbm [Peonso]
+guilcera-spawn.xml [Peonso/Geronimo]
+
+
+3.2.1
+# corrigido bug da Machete
+# corrigido bug no Scarf
+# corrigido bug com a mail box de Peonsville
+# drop rate de ham do Pig alterado
+# Poison Spider imune a poison
+# alterada mensagem do server ao logar
+# death penality reduzida pra 3%
+# adicionado Morgaroth
+# Tom vende Crowbar, Sickle e Knife
+# exausted aumentado de algo próximo a 0,3 segundos pra algo próximo a 0,6 segundos
+# dano em full attack aumentado 10%
+
+3.2.2
+# drop loot do orshabaal
+# drop chance do Morgaroth
+# tom vende Snowballs
+# várias descriçoes de itens adicionadas
+
+3.2.2b
+# mail box de xanadu trocada
+# removidas prateleiras das casas
+# slime passou a summonar mais 
+# attack do ice rapier corrigido
+# removido teleport nas larvas
+# wild warrior corre no red 
+# elandriel preso no shop
+# destroy field remove fields no mapa agora
+# NPC não dá mais labels de graça
+# descrições das placas adicionadas
+# exevo gran mas pox dexa poison de 98
+
+3.2.3
+# corrigido drop loot e combate de alguns monstros (a-d)
+# corrigido alguns baús de quest que sumiam
+# exori corrigido
+
+====known bugs====
+Levitate só funciona verticalmente
+algumas spells aparecem como msg privada
+club rings e outros ficam infinitos as vezes
+bichos não andam na diagonal e travam se não tem range pra bater
+exhausted não pode ser setado em 1 segundo (config.lua impreciso)
+exeta res pega todos os bichos da tela
+arrow/bolt/fist pega em Ghost
+utevo res ina não funciona
+npc não para pra conversar
+npc do barco da bye mesmo sem te enviar pra lugar algum
+Drunkness - não funciona
+Ring of Healing (2214) - não tem efeito
+Dwarven Ring (2213) - não tem efeito
+Bronze Amulet (2172) - não funciona
+Dragon Necklace (2201) - não funciona
+Elven Amulet (2198) - não funciona
+Garlic Necklace (2199) - não funciona
+Protection Amulet (2200) - não funciona
+Silver Amulet (2170) - não funciona
+
+====por implementar===
+# promotion?
+# premmium?
+# casas
+# attacks melees que deixam poison
+# áreas em Caralin funcionais
+# reestruturção de Peonsville
+# wands e rods como loot/npc
+@@
+Wand of Plague (2188) - Orc Shaman
+Wand of Inferno (2187) - 
+Wand of Cosmic Energy (2189) - Minotaur Mage, Elf Arcanist, 
+Wand of Vortex (2190) - 
+Wand of Dragonbreath (2191) - 
+Quagmire Rod (2181) - 
+Snakebite Rod (2182) - 
+Moonlight Rod (2186) - 
+Volcanic Rod (2185) - 
+Tempest Rod (2183) - 
+@@
+

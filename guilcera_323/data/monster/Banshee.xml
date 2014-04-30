@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<monster name="Banshee" level="1" maglevel="70" paralyze="1" experience="900" speed="220" pushable="0" monster="1" armor="3" defense="5" canpushitems="1" staticattack="50" changetarget="200">
+	<health now="1000" max="1000"/>
+	<lifedrain damagemin="55" damagemax="350" probability="10"/> <!-- death hit -->
+	<look type="78" corpse="2998"/>
+	<combat targetdistance="1" runonhealth="300"/>
+	<attacks>
+		<attack type="melee" maxdamage="200" cycleticks="" probability="70"/>
+		
+		<attack type="instant" name="hitmusic" cycleticks="3000" probability="20"/><!-- scream -->
+		<attack type="instant" name="b exura" cycleticks="3000" probability="70"/>
+	</attacks>
+	<defenses>
+		<defense immunity="fire"/>
+		<defense immunity="poison"/>
+		<defense immunity="paralyze"/>
+		<defense immunity="drunk"/>
+		<defense immunity="invis"/>
+		<defense immunity="invisibility"/>
+	</defenses>
+	<voices>
+		<voice sentence="Dance for me your dance of death!"/>
+		<voice sentence="Let the music play!"/>
+		<voice sentence="I will mourn your death!"/>
+		<voice sentence="Are you ready to rock?"/>
+		<voice sentence="Feel my gentle kiss of death."/>
+		<voice sentence="That's what I call easy listening!"/>
+		<voice sentence= "IIIIEEEeeeeeehhhHHHH!"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="48" chance1="30000" chancemax="4000"/><!-- gold -->
+		<item id="2148" countmax="32" chance1="30000" chancemax="4000"/><!-- gold -->
+		<item id="2143" countmax="1" chance1="1001" chancemax="1000"/><!-- white pearl -->
+		<item id="2144" countmax="1" chance1="3001" chancemax="3000"/><!-- black pearl -->
+		<item id="2656" chance="1000"/><!-- blue robe -->
+		<item id="2655" chance="1000"/><!-- red robe -->
+		<item id="2177" chance="1000"/><!-- life crystal -->
+		<item id="2124" chance="1000"/><!-- crystal ring -->
+		<item id="2237" chance="1000"/><!-- dirty cape -->
+		<item id="2121" chance="1000"/><!-- wedding ring -->
+		<item id="2175" chance="1000"/><!-- spellbook -->
+		<!-- 1% ring of healing -->
+		<item id="2197" chance="1000"/><!-- stone skin amulet -->
+		<item id="2372" chance="1000"/><!-- lyre -->
+		<item id="2134" chance="2000"/><!-- silver brooch -->
+		<item id="2411" chance="2000"/><!-- poison dagger -->
+		<item id="2657" chance="7000"/><!-- simple dress -->
+		<!-- 9% silver amulet -->
+		<item id="2047" chance="60000"/><!-- candlestick -->
+	</loot>
+</monster>

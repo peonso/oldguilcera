@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<monster name="NitrouS" level="150" maglevel="20" speed="500" experience="8000" pushable="0" monster="1" armor="3" defense="5" canpushitems="1" staticattack="100" changetarget="2000">
+<health now="6700" max="6700"/>
+<look type="88" head="114" body="60" legs="60" feet="114" corpse="3034"/>
+<combat targetdistance="1" runonhealth="0"/>
+<attacks>
+<attack type="melee" maxdamage="750"/>
+<attack type="instant" name="w exevo gran vis lux" cycleticks="3000" probability="75"/>
+</attacks>
+<defenses>
+<defense immunity="energy"/>
+<defense immunity="fire"/>
+<defense immunity="poison"/>
+<defense immunity="paralyze"/>
+<defense immunity="drunk"/>
+<defense immunity="invis"/>
+<defense immunity="invisibility"/>
+</defenses>
+<voices>
+</voices>
+<loot>
+<item id="2148" countmax="94" chance1="40000" chancemax="2000"/>
+<item id="2148" countmax="56" chance1="40000" chancemax="2000"/>
+<item id="1987" chance="2000">
+<inside>
+<item id="3954" chance="100000"/>
+</inside>
+</item>
+</loot>
+<summons maxSummons="3">
+</summons>
+</monster>

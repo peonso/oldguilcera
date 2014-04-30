@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<monster name="Warlock" level="11" maglevel="127" paralyze="1" invisible="1" speed="240" experience="4000" pushable="0" monster="1" armor="3" defense="5" canpushitems="0" staticattack="50" changetarget="200"><health now="3200" max="3200"/><look type="130" head="0" body="90" legs="128" feet="95" corpse="3129"/><combat targetdistance="5" runonhealth="300"/><attacks>
+<attack type="costum" name="invis" mindamage="0" maxdamage="0" exhaustion="2000" cycleticks="3000" probability="50"/>
+<attack type="instant" name="w exevo gran vis lux" cycleticks="4000" probability="75"/><attack type="rune" name="wexplosion" exhaustion="2000" cycleticks="2000" probability="100"/><attack type="instant" name="b exura" cycleticks="2000" probability="70"/><attack type="rune" name="wfbomb" exhaustion="2000" cycleticks="4000" probability="40"/></attacks><defenses><defense immunity="energy"/><defense immunity="fire"/><defense immunity="poison"/><defense immunity="paralyze"/><defense immunity="drunk"/>
+<defense immunity="invis"/><defense immunity="invisibility"/></defenses><voices/><loot><item id="2148" countmax="30" chance1="70000" chancemax="2000"/><item id="2689" countmax="3" chance1="70000" chancemax="2000"/><item id="2656" chance="2000"/><item id="2167" chance="5000"/><item id="2466" chance="1000"/><item id="2357" chance="1000"/><item id="1987" chance="5000"><inside><item id="2436" chance="100000"/></inside></item></loot><summons maxSummons="4">
+ 	<summon name="Stone Golem" chance="1000"/>
+</summons></monster>

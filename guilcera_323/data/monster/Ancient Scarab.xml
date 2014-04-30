@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<monster name="Ancient Scarab" level="11" maglevel="65" paralyze="1" experience="720" speed="212" pushable="0" monster="1" armor="3" defense="5" canpushitems="1" staticattack="50" changetarget="1000">
+	<health now="1000" max="1000"/>
+	<look type="79" corpse="3004"/>
+	<combat targetdistance="1" runonhealth="0"/>
+	<attacks>
+		<attack type="melee" maxdamage="220" probability="90"/>
+		<attack type="instant" name="as exevo gran mas pox" cycleticks="5000" probability="50"/>
+		<attack type="instant" name="utani hur" cycleticks="10000" probability="30"/>
+	</attacks>
+	<defenses>
+		<defense immunity="poison"/>
+		<defense immunity="invis"/>
+		<defense immunity="paralyze"/>
+		<defense immunity="invisibility"/>
+	</defenses>
+	<loot>
+		<item id="2148" countmax="93" chance1="100000" chancemax="5000"/><!-- gold coin -->
+		<item id="2148" countmax="93" chance1="100000" chancemax="5000"/><!-- gold coin -->
+		<item id="2159" countmax="2" chance1="8000" chancemax="4000"/><!-- scarab coin -->
+		<item id="2150" countmax="4" chance1="6001" chancemax="3000"/><!-- small amethyst -->
+		<item id="2149" countmax="3" chance1="6000" chancemax="3000"/><!-- small emerald -->
+		<item id="2135" chance="4000"/><!-- scarab amulet -->
+		<item id="2463" chance="11000"/><!-- plate armor -->
+		<item id="2162" chance="11000"/><!-- magic light wand -->
+		<item id="2142" chance="3000"/> <!-- ancient amulet -->
+		<item id="1987" chance="100000">
+<!-- bag -->
+			<inside>
+			<item id="2540" chance="1000"/>
+<!-- scarab shield -->
+			<item id="2440" chance="1000"/>
+<!-- daramanian waraxe -->
+			</inside>
+		</item>
+	</loot>
+
+	<summons maxSummons="4">
+ 		<summon name="Scarab" chance="2000"/>
+	</summons>
+
+</monster>

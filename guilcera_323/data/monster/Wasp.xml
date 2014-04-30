@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<monster name="Wasp" level="1" maglevel="1" speed="652" experience="24" pushable="1" monster="1" armor="3" defense="5" canpushitems="0" staticattack="50" changetarget="200">
+<health now="35" max="35"/>
+<look type="44" corpse="2899"/>
+<combat targetdistance="1" runonhealth="0"/>
+<attacks>
+<attack type="melee" maxdamage="15"/>
+</attacks>
+<defenses/>
+<voices/>
+<loot>
+</loot>
+</monster>

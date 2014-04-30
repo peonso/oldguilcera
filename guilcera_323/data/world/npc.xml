@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<npclist>
+<npc name="Bony" x="240" y="250" z="7"/>
+<npc name="Cornehlia" x="186" y="242" z="6"/>
+<npc name="Jeska" x="196" y="213" z="7"/>
+<npc name="Tom" x="230" y="214" z="7"/>
+<npc name="Sabrina" x="247" y="234" z="7"/>
+<npc name="Gibaltar" x="270" y="230" z="7"/>
+<npc name="Jony" x="172" y="106" z="7"/>
+<npc name="Gix" x="193" y="138" z="8"/>
+<npc name="Camehlia" x="151" y="120" z="8"/>
+<npc name="Ixidor" x="337" y="50" z="7"/>
+<npc name="Sam" x="319" y="80" z="7"/>
+<npc name="Rony" x="308" y="38" z="7"/>
+<npc name="Mishra" x="60" y="71" z="7"/>
+<npc name="Tony" x="59" y="85" z="7"/>
+<!--<npc name="Poorman" x="309" y="122" z="7"/>-->
+<npc name="Eesha" x="172" y="116" z="8"/>
+<npc name="Insane" x="166" y="140" z="9"/>
+<npc name="Peonso" x="224" y="227" z="7"/>
+<npc name="Nitrous" x="417" y="456" z="7"/>
+<npc name="Rofelos" x="434" y="417" z="6"/>
+<npc name="Elandriel" x="445" y="425" z="7"/>
+<!--<npc name="King Peonsius LXVI" x="260" y="235" z="8"/>-->
+<npc name="Thor" x="584" y="120" z="7"/>
+<npc name="Sunny" x="624" y="125" z="7"/>
+<npc name="Paola" x="623" y="124" z="6"/>
+<npc name="Bilbo" x="585" y="137" z="7"/>
+<npc name="Cede" x="612" y="143" z="7"/>
+<npc name="Dwalin" x="655" y="135" z="7"/>
+<npc name="Kony" x="595" y="153" z="7"/>
+<npc name="Pierre" x="241" y="215" z="7"/>
+<npc name="Dony" x="198" y="558" z="7"/>
+<npc name="Eremo" x="203" y="196" z="4"/>
+</npclist>

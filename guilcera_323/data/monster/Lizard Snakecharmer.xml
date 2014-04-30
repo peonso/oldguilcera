@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<monster name="Lizard Snakecharmer" level="1" maglevel="130" speed="200" experience="185" pushable="0" monster="1" armor="3" defense="5" canpushitems="1" staticattack="50" changetarget="200">
+<health now="325" max="325"/>
+<look type="115" corpse="4262"/>
+<combat targetdistance="1" runonhealth="0"/>
+<attacks>
+<attack type="rune" name="npoisonmissile" exhaustion="2000" cycleticks="2000" probability="90"/>
+</attacks>
+<defenses>
+<defense immunity="invis"/>
+</defenses>
+<voices></voices>
+<loot>
+<item id="2148" countmax="19" chance1="70000" chancemax="1000"/>
+<item id="2237" chance="60000"/>
+<item id="2817" chance="60000"/>
+</loot>
+<summons maxSummons="7">
+<summon name="Cobra" chance="8000"/>
+</summons>
+</monster>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<monster name="Dworc Voodoomaster" level="1" maglevel="1" paralyze="1" invisible="1" speed="156" experience="55" pushable="1" monster="1" armor="3" defense="5" canpushitems="0" staticattack="50" changetarget="200">
+	<health now="85" max="85"/>
+	<lifedrain damagemin="1" damagemax="40" probability="50"/> <!-- death hit -->
+	<look type="214" corpse="4304"/>
+	<combat targetdistance="3" runonhealth="30"/>
+	<attacks>
+		<attack type="melee" maxdamage="20"/>
+		<attack type="instant" name="s poison field" cycleticks="2000" probability="30"/>
+		<attack type="instant" name="exura" exhaustion="2000" cycleticks="2000" probability="30"/>
+		<attack type="instant" name="dw exevo gran mas pox" exhaustion="2000" cycleticks="2000" probability="90"/>
+	</attacks>
+	<defenses>
+		<defense immunity="drunk"/>
+		<defense immunity="poison"/>
+	</defenses>
+	<voices>
+		<voice sentence="Grow truk grrrrr."/>
+		<voice sentence="Brak brrretz!"/>
+		
+<voice sentence="Prek tars, dekklep zurk."/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="17" chance1="75000" chancemax="3000"/>
+<!-- gold -->
+		<item id="2229" countmax="3" chance1="2000" chancemax="500"/><!-- skull -->
+		<item id="2050" chance="6000"/><!-- torch -->
+		<item id="2231" chance="4000"/><!-- big bone -->
+		<item id="2230" chance="6000"/><!-- bone -->
+		<item id="2174" chance="1000"/><!-- strange symbol -->
+		<item id="3955" chance="600"/><!-- voodoo doll -->
+		<item id="2467" chance="11000"/><!-- leather armor -->
+		<item id="3967" chance="1000"/><!-- tribal mask -->
+		<item id="1987" chance="100000">
+<!-- bag -->
+			<inside>
+			<item id="2411" chance="2000"/>
+<!-- poison dagger -->
+			</inside>
+		</item>
+	</loot>
+</monster>
