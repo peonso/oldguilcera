@@ -1,5 +1,5 @@
 @echo off
-title OTGALA by Ocosoft
+title Running Guilcera 3.2.3, HoTServer
 echo :: If the server go down, it will restart!
 echo :: =========================================
 echo :: ============ Guilcera 3.2.3 =============
