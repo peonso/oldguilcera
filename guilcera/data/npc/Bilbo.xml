@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<npc name="Bilbo" script="bilbo.lua" walkinterval="2000" floorchange="0" idleinterval="30">
+	<health now="100" max="100"/>
+	<look type="129" head="132" body="60" legs="79" feet="0"/>
+</npc>

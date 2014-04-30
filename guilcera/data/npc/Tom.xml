@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<npc name="Tom" script="tom.lua" walkinterval="2000" floorchange="0" idleinterval="30">
+	<health now="100" max="100"/>
+	<look type="128" head="116" body="43" legs="21" feet="121"/>
+</npc>

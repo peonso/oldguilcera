@@ -1,0 +1,238 @@
+@NPCs (dwarf 160// elf 144)
+=== COMO FICARÁ
+
+##peonsville
+Ferrus - temple/blessing <look type="57"/>
+Tom - equipments <look type="128" head="116" body="43" legs="21" feet="121"/>
+Pierre - parcel <look type="132" head="43" body="57" legs="76" feet="132"/>
+GriZzm0 - rods/ham/meat/brownmushrrom <look type="130" head="132" body="60" legs="79" feet="120"/>
+Sabrina - wands/spellbooks/blank runes/mana fluids <look type="138" head="79" body="93" legs="114" feet="86"/>
+Captain SimOne - boat <look type="134" head="95" body="116" legs="22" feet="132"/>
+Jeska - bolts/arrows/bow/crossbow <look type="137" head="56" body="40" legs="76" feet="60"/>
+Cornehlia - weapons/armor/shields <look type="142" head="41" body="21" legs="95" feet="5"/>
+Eremo - Aol/runes/blessing? <look type="130" head="132" body="77" legs="86" feet="114"/>
+Gular Dragonslayer - powerbolt/burstarrow/dragon ham <look type="134" head="59" body="123" legs="76" feet="95"/>
+Remere - merchant <look type="144" head="117" body="2" legs="3" feet="121"/>
+Rainha Edyneia II - promotion <look type="140" head="114" body="4" legs="57" feet="14"/>
+Jiddo - quets <look type="133" head="77" body="3" legs="114" feet="57"/>
+*Esperto - prisioner <look type="128" head="58" body="61" legs="37" feet="95"/>
+*Camehlia - furniture <look type="136" head="114" body="0" legs="98" feet="94"/>
+##ruins of dodoma
+Captain Pietia10 - boat
+Insane <look type="134" head="94" body="79" legs="107" feet="0"/>
+##caralin
+Captain Talaturen - boat
+Bony - parcel <look type="129" head="114" body="86" legs="79" feet="95"/>
+Paola - equipments <look type="142" head="0" body="126" legs="86" feet="0"/>
+Mishra - food/bolts/arrows/bow/crossbow <look type="131" head="132" body="77" legs="86" feet="114"/>
+Gix - rods/wands/spellbooks/blank runes/mana fluids <look type="133" head="126" body="126" legs="79" feet="126"/>
+##xanadu
+Captain Atolon - boat
+Jaehaerys - parcel <look type="144" head="132" body="60" legs="79" feet="0"/>
+Rofelos - equipments <look type="144" head="121" body="40" legs="21" feet="95"/>
+Elandriel - food/burst/bolt <look type="144" head="126" body="79" legs="39" feet="114"/>
+## turim
+Captain Yurez - boat
+Bilbo - equipments <look type="129" head="132" body="60" legs="79" feet="0"/>
+Sunny - parcel <look type="133" head="126" body="126" legs="79" feet="126"/>
+Eesha - food/rods/wands/spellbooks/blank runes/mana fluids <look type="132" head="132" body="0" legs="0" feet="2"/>
+Sam - bolts/arrows/bow/crossbow <look type="131" head="132" body="77" legs="86" feet="114"/>
+Dwalin - merchant <look type="160" head="132" body="77" legs="86" feet="114"/>
+
+@@@@@@cip npcs examples@@@@@
+parcel - Liane
+bolts/arrows - Perac
+tavern - Dane
+spellshop - Rachel
+boat - captain greyhound
+temple - Alia
+food - lector
+armor/shield/weapong - sam/rowenna/cornelia
+
+@@@@@@@@@@@@@Tom - equipments@@@@@@@@@@@@@@
+@@@@@@@@@@@@@Bilbo - equipments@@@@@@@@@@@@@
+@@@@@@@@@@@@@Paola - equipments@@@@@@@@@@@@@
+@@@@@@@@@@@@@Rofelos - equipments@@@@@@@@@@@@@
+items = {}
+items[0] = {name = 'worm', id = 3976, subtype = 1, sell = 1, buy = -1, stackable = 1}
+items[1] = {name = 'torch', id = 2050, subtype = -1, sell = 2, buy = -1, stackable = 0}
+items[2] = {name = 'shovel', id = 2554, subtype = -1, sell = 50, buy = -1, stackable = 0}
+items[3] = {name = 'scythe', id = 2550, subtype = -1, sell = 50, buy = -1, stackable = 0}
+items[4] = {name = 'rope', id = 2120, subtype = -1, sell = 50, buy = -1, stackable = 0}
+items[5] = {name = 'bag', id = 1995, subtype = -1, sell = 5, buy = -1, stackable = 0}
+items[6] = {name = 'backpack', id = 2002, subtype = -1, sell = 20, buy = -1, stackable = 0}
+items[7] = {name = 'pick', id = 2553, subtype = -1, sell = 50, buy = -1, stackable = 0}
+items[8] = {name = 'machete', id = 2420, subtype = -1, sell = 35, buy = 6, stackable = 0}
+items[9] = {name = 'rod', id = 2580, subtype = -1, sell = 150, buy = -1, stackable = 0}
+items[10] = {name = 'crowbar', id = 2416, subtype = -1, sell = 260, buy = -1, stackable = 0}
+
+@@@@@@@@@@@@@Bony - parcel@@@@@@@@@@@@@
+@@@@@@@@@@@@@Pierre - parcel@@@@@@@@@@@@@
+@@@@@@@@@@@@@Jaehaerys - parcel@@@@@@@@@@@@@
+@@@@@@@@@@@@@Sunny - parcel@@@@@@@@@@@@@
+items = {}
+items[0] = {name = 'parcel', id = 2595, subtype = -1, sell = 10, buy = -1, stackable = 0}
+items[1] = {name = 'letter', id = 2597, subtype = -1, sell = 5, buy = -1, stackable = 0}
+items[2] = {name = 'label', id = 2599, subtype = -1, sell = 1, buy = -1, stackable = 0}
+
+@@@@@@@@@@@@@GriZzm0 - rods/ham/meat/brownmushrrom@@@@@@@@@@@@@
+items = {}
+items[0] = {name = 'snakebite', id = 2182, subtype = -1, sell = 500, buy = -1, stackable = 0}
+items[1] = {name = 'moonlight', id = 2186, subtype = -1, sell = 1000, buy = -1, stackable = 0}
+items[2] = {name = 'volcanic', id = 2185, subtype = -1, sell = 5000, buy = -1, stackable = 0}
+items[3] = {name = 'quagmire', id = 2181, subtype = -1, sell = 10000, buy = -1, stackable = 0}
+items[4] = {name = 'tempest', id = 2183, subtype = -1, sell = 15000, buy = -1, stackable = 0}
+items[5] = {name = 'ham', id = 2671, subtype = 1, sell = 6, buy = -1, stackable = 1}
+items[6] = {name = 'meat', id = 2666, subtype = 1, sell = 3, buy = -1, stackable = 1}
+items[7] = {name = 'mushroom', id = 2789, subtype = 1, sell = 10, buy = -1, stackable = 1}
+
+@@@@@@@@@@@@@Sabrina - wands/spellbooks/blank runes/mana fluids@@@@@@@@@@@@@
+items = {}
+items[0] = {name = 'vortex', id = 2190, subtype = -1, sell = 500, buy = -1, stackable = 0}
+items[1] = {name = 'dragonbreath', id = 2191, subtype = -1, sell = 1000, buy = -1, stackable = 0}
+items[2] = {name = 'plague', id = 2188, subtype = -1, sell = 5000, buy = -1, stackable = 0}
+items[3] = {name = 'cosmic', id = 2189, subtype = -1, sell = 10000, buy = -1, stackable = 0}
+items[4] = {name = 'inferno', id = 2187, subtype = -1, sell = 15000, buy = -1, stackable = 0}
+items[5] = {name = 'blank', id = 2260, subtype = -1, sell = 10, buy = -1, stackable = 0}
+items[6] = {name = 'mana', id = 2006, subtype = 7, sell = 55, buy = -1, stackable = 0}
+items[7] = {name = 'spellbook', id = 2175, subtype = -1, sell = 150, buy = -1, stackable = 0}
+
+@@@@@@@@@@@@@Gix - rods/wands/spellbooks/blank runes/mana fluids@@@@@@@@@@@@@
+items = {}
+items[0] = {name = 'vortex', id = 2190, subtype = -1, sell = 500, buy = -1, stackable = 0}
+items[1] = {name = 'dragonbreath', id = 2191, subtype = -1, sell = 1000, buy = -1, stackable = 0}
+items[2] = {name = 'plague', id = 2188, subtype = -1, sell = 5000, buy = -1, stackable = 0}
+items[3] = {name = 'cosmic', id = 2189, subtype = -1, sell = 10000, buy = -1, stackable = 0}
+items[4] = {name = 'inferno', id = 2187, subtype = -1, sell = 15000, buy = -1, stackable = 0}
+items[5] = {name = 'blank', id = 2260, subtype = -1, sell = 10, buy = -1, stackable = 0}
+items[6] = {name = 'mana', id = 2006, subtype = 7, sell = 55, buy = -1, stackable = 0}
+items[7] = {name = 'spellbook', id = 2175, subtype = -1, sell = 150, buy = -1, stackable = 0}
+items[8] = {name = 'snakebite', id = 2182, subtype = -1, sell = 500, buy = -1, stackable = 0}
+items[9] = {name = 'moonlight', id = 2186, subtype = -1, sell = 1000, buy = -1, stackable = 0}
+items[10] = {name = 'volcanic', id = 2185, subtype = -1, sell = 5000, buy = -1, stackable = 0}
+items[11] = {name = 'quagmire', id = 2181, subtype = -1, sell = 10000, buy = -1, stackable = 0}
+items[12] = {name = 'tempest', id = 2183, subtype = -1, sell = 15000, buy = -1, stackable = 0}
+
+@@@@@@@@@@@@@Eesha - food/rods/wands/spellbooks/blank runes/mana fluids@@@@@@@@@@@@@
+items = {}
+items[0] = {name = 'vortex', id = 2190, subtype = -1, sell = 500, buy = -1, stackable = 0}
+items[1] = {name = 'dragonbreath', id = 2191, subtype = -1, sell = 1000, buy = -1, stackable = 0}
+items[2] = {name = 'plague', id = 2188, subtype = -1, sell = 5000, buy = -1, stackable = 0}
+items[3] = {name = 'cosmic', id = 2189, subtype = -1, sell = 10000, buy = -1, stackable = 0}
+items[4] = {name = 'inferno', id = 2187, subtype = -1, sell = 15000, buy = -1, stackable = 0}
+items[5] = {name = 'blank', id = 2260, subtype = -1, sell = 10, buy = -1, stackable = 0}
+items[6] = {name = 'mana', id = 2006, subtype = 7, sell = 55, buy = -1, stackable = 0}
+items[7] = {name = 'spellbook', id = 2175, subtype = -1, sell = 150, buy = -1, stackable = 0}
+items[8] = {name = 'snakebite', id = 2182, subtype = -1, sell = 500, buy = -1, stackable = 0}
+items[9] = {name = 'moonlight', id = 2186, subtype = -1, sell = 1000, buy = -1, stackable = 0}
+items[10] = {name = 'volcanic', id = 2185, subtype = -1, sell = 5000, buy = -1, stackable = 0}
+items[11] = {name = 'quagmire', id = 2181, subtype = -1, sell = 10000, buy = -1, stackable = 0}
+items[12] = {name = 'tempest', id = 2183, subtype = -1, sell = 15000, buy = -1, stackable = 0}
+items[13] = {name = 'ham', id = 2671, subtype = 1, sell = 6, buy = -1, stackable = 1}
+items[14] = {name = 'meat', id = 2666, subtype = 1, sell = 3, buy = -1, stackable = 1}
+
+@@@@@@@@@@@@@Jeska - bolts/arrows/bow/crossbow/spear@@@@@@@@@@@@@
+@@@@@@@@@@@@@Sam - bolts/arrows/bow/crossbow/spear@@@@@@@@@@@@@
+items = {}
+items[0] = {name = 'bolt', id = 2543, subtype = -1, sell = 3, buy = -1, stackable = 1}
+items[1] = {name = 'arrow', id = 2544, subtype = -1, sell = 2, buy = -1, stackable = 1}
+items[2] = {name = 'spear', id = 2389, subtype = -1, sell = 9, buy = -1, stackable = 1}
+items[3] = {name = 'crossbow', id = 2455, subtype = -1, sell = 500, buy = 120, stackable = 0}
+items[4] = {name = 'bow', id = 2456, subtype = -1, sell = 350, buy = 100, stackable = 0}
+
+@@@@@@@@@@@@@Mishra - food/bolts/arrows/bow/crossbow@@@@@@@@@@@@@
+items = {}
+items[0] = {name = 'bolt', id = 2543, subtype = -1, sell = 3, buy = -1, stackable = 1}
+items[1] = {name = 'arrow', id = 2544, subtype = -1, sell = 2, buy = -1, stackable = 1}
+items[2] = {name = 'spear', id = 2389, subtype = -1, sell = 9, buy = -1, stackable = 1}
+items[3] = {name = 'crossbow', id = 2455, subtype = -1, sell = 500, buy = 120, stackable = 0}
+items[4] = {name = 'bow', id = 2456, subtype = -1, sell = 350, buy = 100, stackable = 0}
+items[5] = {name = 'ham', id = 2671, subtype = 1, sell = 6, buy = -1, stackable = 1}
+items[6] = {name = 'meat', id = 2666, subtype = 1, sell = 3, buy = -1, stackable = 1}
+
+@@@@@@@@@@@@@Elandriel - food/burst/powerbolt@@@@@@@@@@@@@
+items = {}
+items[0] = {name = 'power', id = 2547, subtype = -1, sell = 7, buy = -1, stackable = 1}
+items[1] = {name = 'burst', id = 2546, subtype = -1, sell = 50, buy = -1, stackable = 1}
+items[2] = {name = 'grape', id = 2681, subtype = -1, sell = 3, buy = -1, stackable = 1}
+items[3] = {name = 'melon', id = 2682, subtype = -1, sell = 8, buy = -1, stackable = 1}
+items[4] = {name = 'apple', id = 2674, subtype = -1, sell = 3, buy = -1, stackable = 1}
+items[5] = {name = 'ruby', id = 2147, subtype = -1, sell = 500, buy = 250, stackable = 1}
+
+@@@@@@@@@@@@@Gular Dragonslayer - powerbolt/burstarrow/dragon ham@@@@@@@@@@@@@
+items = {}
+items[0] = {name = 'power', id = 2547, subtype = -1, sell = 7, buy = -1, stackable = 1}
+items[1] = {name = 'burst', id = 2546, subtype = -1, sell = 50, buy = -1, stackable = 1}
+items[2] = {name = 'dragon ham', id = 2672, subtype = -1, sell = 20, buy = -1, stackable = 1}
+
+@@@@@@@@@@@@@Cornehlia - weapons/armor/shields@@@@@@@@@@@@@
+items = {}
+items[0] = {name = 'chain armor', id = 2464, subtype = -1, sell = 200, buy = -1, stackable = 0}
+items[1] = {name = 'brass armor', id = 2465, subtype = -1, sell = 450, buy = 150, stackable = 0}
+items[2] = {name = 'plate armor', id = 2463, subtype = -1, sell = -1, buy = 400, stackable = 0}
+items[3] = {name = 'brass helmet', id = 2460, subtype = -1, sell = 120, buy = 30, stackable = 0}
+items[4] = {name = 'scale armor', id = 2483, subtype = -1, sell = -1, buy = 100, stackable = 0}
+items[5] = {name = 'viking helmet', id = 2473, subtype = -1, sell = 265, buy = 66, stackable = 0}
+items[6] = {name = 'steel helmet', id = 2457, subtype = -1, sell = -1, buy = 190, stackable = 0}
+items[7] = {name = 'plate shield', id = 2510, subtype = -1, sell = 125, buy = 45, stackable = 0}
+items[8] = {name = 'battle shield', id = 2513, subtype = -1, sell = -1, buy = 95, stackable = 0}
+items[9] = {name = 'steel shield', id = 2509, subtype = -1, sell = 240, buy = 80, stackable = 0}
+items[10] = {name = 'brass legs', id = 2478, subtype = -1, sell = 195, buy = 49, stackable = 0}
+items[11] = {name = 'two handed sword', id = 2377, subtype = -1, sell = 950, buy = 450, stackable = 0}
+items[12] = {name = 'battle axe', id = 2378, subtype = -1, sell = -1, buy = 80, stackable = 0}
+items[13] = {name = 'halberd', id = 2381, subtype = -1, sell = -1, buy = 400, stackable = 0}
+items[14] = {name = 'morning star', id = 2394, subtype = -1, sell = 430, buy = -1, stackable = 0}
+items[15] = {name = 'sword', id = 2376, subtype = -1, sell = 85, buy = 25, stackable = 0}
+items[16] = {name = 'mace', id = 2398, subtype = -1, sell = 90, buy = 30, stackable = 0}
+items[17] = {name = 'battle hammer', id = 2417, subtype = -1, sell = 350, buy = 120, stackable = 0}
+items[18] = {name = 'double axe', id = 2387, subtype = -1, sell = -1, buy = 260, stackable = 0}
+items[19] = {name = 'war hammer', id = 2391, subtype = -1, sell = -1, buy = 470, stackable = 0}
+items[19] = {name = 'dwarven shield', id = 2525, subtype = -1, sell = -1, buy = 100, stackable = 0}
+
+@@@@@@@@@@@@@Eremo - Aol/runes@@@@@@@@@@@@@
+items = {}
+items[0] = {name = 'amulet of loss', id = 2173, subtype = -1, sell = 50000, buy = 50000, stackable = 0}
+items[1] = {name = 'sudden death', id = 2268, subtype = -1, sell = 175, buy = -1, stackable = 1}
+items[2] = {name = 'explosion', id = 2313, subtype = -1, sell = 50, buy = -1, stackable = 1}
+items[3] = {name = 'magic missile', id = 2311, subtype = -1, sell = 8, buy = -1, stackable = 1}
+items[4] = {name = 'ultimate healing', id = 2273, subtype = -1, sell = 80, buy = -1, stackable = 1}
+items[5] = {name = 'great fireball', id = 2304, subtype = -1, sell = 45, buy = -1, stackable = 1}
+items[6] = {name = 'intense healing', id = 2265, subtype = -1, sell = 12, buy = -1, stackable = 1}
+
+@@@@@@@@@@@@@Remere - merchant@@@@@@@@@@@@@
+@@@@@@@@@@@@@Dwalin - merchant@@@@@@@@@@@@@
+items = {}
+items[0] = {name = 'dark helmet', id = 2490, subtype = -1, sell = -1, buy = 200, stackable = 0}
+items[1] = {name = 'crown helmet', id = 2491, subtype = -1, sell = -1, buy = 3000, stackable = 0}
+items[2] = {name = 'warrior helmet', id = 2475, subtype = -1, sell = -1, buy = 6000, stackable = 0}
+items[3] = {name = 'crusader helmet', id = 2497, subtype = -1, sell = -1, buy = 6000, stackable = 0}
+items[4] = {name = 'royal helmet', id = 2498, subtype = -1, sell = -1, buy = 55000, stackable = 0}
+items[5] = {name = 'dark armor', id = 2489, subtype = -1, sell = -1, buy = 1000, stackable = 0}
+items[6] = {name = 'blue robe', id = 2656, subtype = -1, sell = -1, buy = 30000, stackable = 0}
+items[7] = {name = 'crown armor', id = 2487, subtype = -1, sell = -1, buy = 30000, stackable = 0}
+items[8] = {name = 'knight armor', id = 2476, subtype = -1, sell = -1, buy = 15000, stackable = 0}
+items[9] = {name = 'golden armor', id = 2466, subtype = -1, sell = -1, buy = 80000, stackable = 0}
+items[10] = {name = 'plate legs', id = 2647, subtype = -1, sell = -1, buy = 2000, stackable = 0}
+items[11] = {name = 'knight legs', id = 2477, subtype = -1, sell = -1, buy = 20000, stackable = 0}
+items[12] = {name = 'crown legs', id = 2488, subtype = -1, sell = -1, buy = 35000, stackable = 0}
+items[13] = {name = 'spike sword', id = 2383, subtype = -1, sell = -1, buy = 2000, stackable = 0}
+items[14] = {name = 'serpent sword', id = 2409, subtype = -1, sell = -1, buy = 2000, stackable = 0}
+items[15] = {name = 'fire sword', id = 2392, subtype = -1, sell = -1, buy = 15000, stackable = 0}
+items[16] = {name = 'giant sword', id = 2393, subtype = -1, sell = -1, buy = 35000, stackable = 0}
+items[17] = {name = 'knight axe', id = 2430, subtype = -1, sell = -1, buy = 8000, stackable = 0}
+items[18] = {name = 'fire axe', id = 2432, subtype = -1, sell = -1, buy = 26000, stackable = 0}
+items[19] = {name = 'clerical mace', id = 2423, subtype = -1, sell = -1, buy = 500, stackable = 0}
+items[20] = {name = 'dragon hammer', id = 2434, subtype = -1, sell = -1, buy = 3000, stackable = 0}
+items[21] = {name = 'skull staff', id = 2436, subtype = -1, sell = -1, buy = 25000, stackable = 0}
+items[22] = {name = 'ancient shield', id = 2532, subtype = -1, sell = -1, buy = 1000, stackable = 0}
+items[23] = {name = 'medusa shield', id = 2536, subtype = -1, sell = -1, buy = 22000, stackable = 0}
+items[24] = {name = 'guardian shield', id = 2515, subtype = -1, sell = -1, buy = 5000, stackable = 0}
+items[25] = {name = 'dragon shield', id = 2516, subtype = -1, sell = -1, buy = 7500, stackable = 0}
+items[26] = {name = 'crown shield', id = 2519, subtype = -1, sell = -1, buy = 18000, stackable = 0}
+items[27] = {name = 'tower shield', id = 2528, subtype = -1, sell = -1, buy = 16000, stackable = 0}
+items[28] = {name = 'vampire shield', id = 2534, subtype = -1, sell = -1, buy = 45000, stackable = 0}
+items[29] = {name = 'demon shield', id = 2520, subtype = -1, sell = -1, buy = 66666, stackable = 0}
+items[30] = {name = 'beholder shield', id = 2518, subtype = -1, sell = -1, buy = 4000, stackable = 0}
+items[31] = {name = 'wand of inferno', id = 2187, subtype = -1, sell = -1, buy = 7000, stackable = 0}
+items[32] = {name = 'boots of haste', id = 2195, subtype = -1, sell = -1, buy = 20000, stackable = 0}
+items[33] = {name = 'platinum amulet', id = 2171, subtype = -1, sell = -1, buy = 10000, stackable = 0}

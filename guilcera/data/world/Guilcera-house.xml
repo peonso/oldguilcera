@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<houses>
+  <house name="Casa 1" houseid="3" entryx="206" entryy="218" entryz="7" rent="100" townid="1" size="19"/>
+  <house name="Casa foda" houseid="6" entryx="198" entryy="225" entryz="7" rent="100" townid="1" size="45"/>
+  <house name="Casa 2" houseid="7" entryx="206" entryy="224" entryz="7" rent="100" townid="1" size="25"/>
+  <house name="Casa 3" houseid="8" entryx="206" entryy="230" entryz="7" rent="100" townid="1" size="25"/>
+</houses>
