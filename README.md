@@ -11,4 +11,5 @@ Credits
 
 - peonso is the main developer
 - avesta rev94 is the server distro used, courtesy of Ferrus and [OpenTibia crew] (https://github.com/opentibia/server/blob/master/AUTHORS)
+- HoTS distro used in old XML version (3.23), courtesy of ReX
 - specific codes will be credit inside the file
