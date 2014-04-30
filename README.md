@@ -11,5 +11,5 @@ Guilcera otserv for Tibia client version 7.6
 Credits
 
 - peonso is the main developer
-- avesta rev94 is the server distro used, courtesy of Ferrus and OpenTibia crew (https://github.com/opentibia/server/blob/master/AUTHORS)
+- avesta rev94 is the server distro used, courtesy of Ferrus and [OpenTibia crew] (https://github.com/opentibia/server/blob/master/AUTHORS)
 - specific codes will be credit inside the file
