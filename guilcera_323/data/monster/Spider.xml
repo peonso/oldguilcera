@@ -1,2 +1,0 @@
-<?xml version="1.0"?>
-<monster name="Spider" level="1" maglevel="1" speed="152" experience="12" pushable="1" monster="1" armor="3" defense="5" canpushitems="0" staticattack="50" changetarget="200"><health now="20" max="20"/><look type="30" corpse="2807"/><combat targetdistance="1" runonhealth="4"/><attacks><attack type="melee" maxdamage="7" cycleticks="2000" probability="100"/></attacks><defenses/><voices/><loot><item id="2148" countmax="5" chance1="70000" chancemax="3000"/></loot></monster>

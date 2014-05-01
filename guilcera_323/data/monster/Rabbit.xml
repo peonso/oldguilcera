@@ -1,2 +1,0 @@
-<?xml version="1.0"?>
-<monster name="Rabbit" level="1" maglevel="1" speed="180" experience="0" pushable="1" monster="1" armor="3" defense="5" canpushitems="0" staticattack="50" changetarget="200"><health now="15" max="15"/><look type="74" corpse="2992"/><combat targetdistance="2" runonhealth="3"/><attacks/><defenses><defense immunity="drunk"/></defenses><voices/><loot><item id="2666" countmax="2" chance1="70000" chancemax="20000"/></loot></monster>

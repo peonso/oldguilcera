@@ -1,2 +1,0 @@
-<?xml version="1.0"?>
-<monster name="Snake" level="1" maglevel="1" speed="120" experience="10" pushable="1" monster="1" armor="3" defense="5" canpushitems="0" staticattack="50" changetarget="200"><health now="15" max="15"/><look type="28" corpse="3077"/><combat targetdistance="1" runonhealth="0"/><attacks><attack type="melee" maxdamage="5" cycleticks="2000" probability="100"/><attack type="melee" maxdamage="15" cycleticks="2000" probability="10"/></attacks><defenses/><voices/><loot/></monster>

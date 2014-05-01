@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<monster name="Priestess" level="1" maglevel="19" speed="170" experience="420" pushable="0" monster="1" armor="3" defense="5" canpushitems="1" staticattack="50" changetarget="200"><health now="390" max="390"/><look type="58" corpse="3065"/><combat targetdistance="4" runonhealth="15"/><attacks><attack type="instant" name="d exura" cycleticks="2000" probability="75"/><attack type="rune" name="sudden death" exhaustion="2000" cycleticks="2000" probability="70"/><attack type="rune" name="heavy magic missile" exhaustion="2000" cycleticks="2000" probability="70"/></attacks><defenses><defense immunity="fire"/><defense immunity="poison"/><defense immunity="energy"/><defense immunity="invis"/><defense immunity="invisibility"/></defenses><voices><voice sentence="Your energy is mine."/><voice sentence="Now your life is come to the end, hahahaha!"/></voices><loot><item id="1987" chance="20000"><inside><item id="2070" chance="5000"/><item id="2529" chance="5000"/><item id="2423" chance="25000"/></inside></item></loot>
-
-<summons maxSummons="3">
- 	<summon name="Ghoul" chance="4000"/>
-</summons></monster>

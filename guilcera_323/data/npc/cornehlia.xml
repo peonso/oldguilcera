@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-
-<npc name="Cornehlia" script="data/npc/scripts/cornehlia.lua" access="3">
-	<health now="1" max="1"/>
-	<look type="139" head="114" body="114" legs="114" feet="114"/>
-</npc>

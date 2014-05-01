@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-
-<npc name="Gix" script="data/npc/scripts/gix.lua" access="3">
-	<health now="1" max="1"/>
-	<look type="133" head="126" body="126" legs="79" feet="126"/>
-</npc>

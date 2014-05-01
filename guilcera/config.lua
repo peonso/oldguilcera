@@ -1,3 +1,68 @@
+---- CONNECTION ----
+
+    -- Server ip (the ip that server listens on)
+    IP = "187.14.137.103"
+
+    -- Server port (the port that server listens on)
+    Port = "7171"
+
+    -- How many logins attempts until ip is temporary disabled 
+    -- Set to 0 to disable
+    LoginTries = 5
+
+    -- How long the retry timeout until a new login can be made (without disabling the ip)
+    RetryTimeout = 5000
+
+    -- How long the player need to wait until the ip is allowed again
+    LoginTimeout = 60 * 1000
+
+    -- Allow clones (multiple logins of the same char)
+    AllowClones = false
+
+    -- Only one player online per account
+    CheckAccounts = false
+	
+    -- Kick player when trying to log on his character
+    KickOnLogin = false
+
+---- DATABASE ----
+
+    -- SQL type
+    -- options: mysql, sqlite, odbc or pgsql
+    SQL_Type = "mysql"
+
+    --- SQL connection part
+    SQL_DB   = "guilcera"
+
+    -- These settings are not used by SQLite
+    SQL_Host = "localhost"
+    SQL_Port = 3306
+    SQL_User = "root"
+    SQL_Pass = "guilcera"
+
+--- INFO ---
+
+    -- Login message
+    LoginMsg = "Welcome to Guilcera."
+
+    -- Server name
+    ServerName = "OTServ"
+
+    -- World name
+    WorldName = "Guilcera"
+
+    -- Server owner name
+    OwnerName = ""
+
+    -- Server owner email
+    OwnerEmail = ""
+
+    -- Server url
+    URL = ""
+
+    -- Server location
+    Location = ""
+
 --- DIRECTORY PATH ---
 
     DataDir = "data/"
@@ -62,48 +127,6 @@
     -- Top player on a stacked tile will be unable to heal
     UHTrap = true
 
----- CONNECTION ----
-
-    -- Server ip (the ip that server listens on)
-    IP = "187.14.137.103"
-
-    -- Server port (the port that server listens on)
-    Port = "7171"
-
-    -- How many logins attempts until ip is temporary disabled 
-    -- Set to 0 to disable
-    LoginTries = 5
-
-    -- How long the retry timeout until a new login can be made (without disabling the ip)
-    RetryTimeout = 5000
-
-    -- How long the player need to wait until the ip is allowed again
-    LoginTimeout = 60 * 1000
-
-    -- Allow clones (multiple logins of the same char)
-    AllowClones = false
-
-    -- Only one player online per account
-    CheckAccounts = false
-	
-	-- Kick player when trying to log on his character
-	KickOnLogin = false
-
----- DATABASE ----
-
-    -- SQL type
-    -- options: mysql, sqlite, odbc or pgsql
-    SQL_Type = "mysql"
-
-    --- SQL connection part
-    SQL_DB   = "guilcera"
-
-    -- These settings are not used by SQLite
-    SQL_Host = "localhost"
-    SQL_Port = 3306
-    SQL_User = "root"
-    SQL_Pass = "guilcera"
-
 ---- HOUSES ----
 
     -- House rent period
@@ -115,30 +138,6 @@
 	
 	-- Beds only for premium players
     PremOnlyBeds = false
-
---- INFO ---
-
-    -- Login message
-    LoginMsg = "Welcome to Guilcera."
-
-    -- Server name
-    ServerName = "OTServ"
-
-    -- World name
-    WorldName = "Guilcera"
-
-    -- Server owner name
-    OwnerName = "Peonso"
-
-    -- Server owner email
-    OwnerEmail = ""
-
-    -- Server url
-    URL = ""
-
-    -- Server location
-    Location = "Brasil"
-
 
 ---- ITEM USAGE ----
 
@@ -186,7 +185,7 @@
 --- STATUS ---
 
     -- Message Of The Day box that you sometimes get before you choose characters)
-    MOTD = "guilcera_401"
+    MOTD = "Welcome to Guilcera World."
     MOTD_Num = "1"
 
     -- Max number of players allowed
