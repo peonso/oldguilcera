@@ -8,7 +8,7 @@ guilcera 4.02
 --------------
 `may 2014, [7.6] Avesta rev94 by Ferrus - MySQL database`
 
-* added to GitHub
+*_added to GitHub
 
 guilcera 4.01
 --------------
@@ -16,7 +16,7 @@ guilcera 4.01
 
 [[map image](https://raw.githubusercontent.com/peonso/guilcera/master/docs/images/guilcera_401.png)]
 
-* bug fixes
+*_bug fixes
 - machete working
 - locked doors now locked
 - stages 1-60 10x; 60-90 8x; 90-120 6x
@@ -26,18 +26,18 @@ guilcera 4.01
 - server saving each 2 minutes \globalevents
 - added functional guilcera_schema.sql
 
-* rates
+*_rates
 - ml x5
 - skills x10
 
-* map
+*_map
 - changed respaw xanadu mountain quest
 - elves north of peonsville removed
 - cyclops spawn nearby it removed
 - taumel removed
 - started new peonsville
 
-* know issues/to do
+*_know issues/to do
 - add schema.sql for server test, with test characters
 - dragons screaming from underground nearby ghoul area
 - guilcera_schema.sql need some tweak
@@ -58,7 +58,7 @@ guilcera 4.01
 - add custom demon boss
 - add houses
 
-* map related to do
+*_map related to do
 - revamp peonsville (+ revamp at noob quest, balance initial items)
 - new troll/ghoul cave
 - elves south of peonsville
@@ -81,45 +81,45 @@ guilcera 4.00
 --------------
 `jun 2013, [7.6] Avesta rev94 by Ferrus - MySQL database`
 
-* Avesta works with a much newer version of CVS, a lot of scripts not working and a lot of things to setup, unplayable.
+*_Avesta works with a much newer version of CVS, a lot of scripts not working and a lot of things to setup, unplayable.
 
-* actions
+*_actions
 - removed quest_reward.lua
 - added worms to fishing_rod.lua
-- changed teleport.lua with nominal ids (was bugging otherwise, don`t know why)
+- changed teleport.lua with nominal ids (was bugging otherwise, don't know why)
 - added 7.6 objects to increment.lua, decrement.lua and \doors
-- changed doors\gateofexp_closed.lua a bit, so it add special description even if the door don`t open
+- changed doors\gateofexp_closed.lua a bit, so it add special description even if the door don't open
 - changed food.lua, `sound` in orange, instead of saying it in yellow
 - added hota.lua (helmet of the ancients + small ruby transformation)
 - added information for 7.6 in lib/action.lua
-* actions/guilcera
+*_actions/guilcera
 - money.lua (transforming gold->platinum and platinum->crystal)
 - posso.lua (like sewer gate from teleport.lua, actionid 101 to draw wells)
 - others actions for quests/map gates
-* creaturescripts
+*_creaturescripts
 - stages.lua (max level 110) STAGES = {{level = 59, rate = 10}, {level = 99, rate = 6}, {level = 109, rate = 5},} DEFAULT_RATE = 0
 - added freepremmium.lua, so everyone got 30 days of premmium in login if premdays < 15
-* items
+*_items
 - added plural to all legs and torches 2050 (to work with npc script)
-* monsters
+*_monsters
 - added 7.6 monsters from old avesta datapack
-* movements
+*_movements
 - configured setnewtown.lua to guilcera map
 - added 7.6 tiles and doors
 - hota.lua/parchment.lua -> quest scripts
-* npc
+*_npc
 - removed examples
 - added tom.lua (free of bugs improved seller/buyer)
-* weapons
+*_weapons
 - added wands and rods
-* world
+*_world
 - added Guilcera.otbm and testserv.otbm for tests
 - changed all uniqueids and actionids
 - added intersections through cave systems
 - revamped insane game
-* functions.lua
+*_functions.lua
 - added questAddReward(PLAYER_ENTITY, EFFECT_POS, QUEST_ITEM, ITEM_count, QUEST_STORAGE)
-* documentation
+*_documentation
 - added organized guilcera ids.xlsx
 
 guilcera 3.2.3
@@ -128,21 +128,21 @@ guilcera 3.2.3
 
 [[map image](https://raw.githubusercontent.com/peonso/guilcera/master/docs/images/guilcera_323.png)]
 
-* bug fixes
+*_bug fixes
 - fixed combat and loot from monster (A-D)
 - fixed quest chests disapering
-- fixed *exori* spell
+- fixed *exori*_spell
 
-* know issues
+*_know issues
 - levitate spell only works verticaly
 - some spells are sent as private message
 - some rings can work endlessly
-- monsters can`t use diagonals to move, and can get stuck when don`t find range
+- monsters can't use diagonals to move, and can get stuck when don't find range
 - exhausted setup on config.lua is broken
 - arrow, bolts and fist can strike ghosts
-- utevo res ina spell doesn`t work
-- npcs don`t stop moving to talk
-- boat npcs force ends the conversation even when the player aren`t sent anywehere
+- utevo res ina spell doesn't work
+- npcs don't stop moving to talk
+- boat npcs force ends the conversation even when the player aren't sent anywehere
 -drunkness does not work
 - following items has no effects: Ring of Healing (2214), Dwarven Ring (2213), Bronze Amulet (2172), Dragon Necklace (2201), Elven Amulet (2198), Garlic Necklace (2199), Protection Amulet (2200), Silver Amulet (2170).
 - promotion system not implemented
@@ -153,14 +153,14 @@ guilcera 3.2.2b
 ---------------
 `jun 2013, [7.6] HoTS by Rex and Dimas - XML database`
 
-* changes
+*_changes
 - teleport at northern larva spawn removed
 - slime is summoning more slimes
 - you need to buy labels now
 - sign`s descriptions added
 - exevo gran mas pox spell poisons for 98 damage
 
-* bug fixes
+*_bug fixes
 - xanadu mailbox swaped
 - ice rapier working
 - wild warrior running on low hp
@@ -171,7 +171,7 @@ guilcera 3.2.2
 ---------------
 `jun 2012, [7.6] HoTS by Rex and Dimas - XML database`
 
-* changes
+*_changes
 - drop loot chances from bosses
 - tom npc now sells snoballs
 - a lot of items descriptions added
@@ -180,14 +180,14 @@ guilcera 3.2.1
 ---------------
 `jun 2012, [7.6] HoTS by Rex and Dimas - XML database`
 
-* changes
+*_changes
 - death penality is now 3%
 - morgaroth added
 - tom npc sells crowbar, sickle and knife
 - exausted raised from 0,3s to 0,6s
 - full attack damage raised by 10%
 
-* bug fixes
+*_bug fixes
 - machete now properly working
 - scarf bug fixed
 - peonsville mailbox fixed
@@ -207,7 +207,7 @@ guilcera 3.0.0
 ---------------
 `feb 2006, [7.6] otserv by OpenTibia team - XML database`
 
-* Changed protocol, Guilcera now works with Tibia Client 7.6
+*_Changed protocol, Guilcera now works with Tibia Client 7.6
 
 guilcera 2.7.1
 ---------------
@@ -235,11 +235,11 @@ guilcera 2.6.4
 ---------------
 `oct 2005, [7.5] YurOTS 0.9.1 by Yurez - XML database`
 
-* changes
+*_changes
 - god guido monster implemented
 - invasions implemented
 
-* bug fixes
+*_bug fixes
 - monsters can summon
 - all quests working
 - npcs fixed
@@ -249,7 +249,7 @@ guilcera 2.5.1
 ---------------
 `sep 2005, [7.5] HoTS by Rex - XML database`
 
-* Changed protocol, Guilcera now works with Tibia Client 7.5
+*_Changed protocol, Guilcera now works with Tibia Client 7.5
 
 guilcera 2.4.5
 ---------------
