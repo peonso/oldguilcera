@@ -7,15 +7,18 @@ more info and lastest version at https://github.com/peonso/guilcera
 guilcera 4.02
 --------------
 *may 2014*
-'[7.6] Avesta rev94 by Ferrus - database MySQL'
+
+`[7.6] Avesta rev94 by Ferrus - MySQL database`
 
 *added to GitHub
 
 guilcera 4.01
 --------------
 *jun 2013*
-'[7.6] Avesta rev94 by Ferrus - database MySQL'
-[map image](https://raw.githubusercontent.com/peonso/guilcera/master/docs/images/guilcera_401.png)
+
+`[7.6] Avesta rev94 by Ferrus - MySQL database`
+
+[[map image](https://raw.githubusercontent.com/peonso/guilcera/master/docs/images/guilcera_401.png)]
 
 *bug fixes
 - machete working
@@ -26,15 +29,18 @@ guilcera 4.01
 - first try setuping houses
 - server saving each 2 minutes \globalevents
 - added functional guilcera_schema.sql
+
 *rates
 - ml x5
 - skills x10
+
 *map
 - changed respaw xanadu mountain quest
 - elves north of peonsville removed
 - cyclops spawn nearby it removed
 - taumel removed
 - started new peonsville
+
 *know issues/to do
 - add schema.sql for server test, with test characters
 - dragons screaming from underground nearby ghoul area
@@ -55,6 +61,7 @@ guilcera 4.01
 - add custom pharaohs
 - add custom demon boss
 - add houses
+
 *map related to do
 - revamp peonsville (+ revamp at noob quest, balance initial items)
 - new troll/ghoul cave
@@ -77,17 +84,18 @@ guilcera 4.01
 guilcera 4.00
 --------------
 *jun 2013*
-'[7.6] Avesta rev94 by Ferrus - database MySQL'
+
+`[7.6] Avesta rev94 by Ferrus - MySQL database`
 
 *Avesta works with a much newer version of CVS, a lot of scripts not working and a lot of things to setup, unplayable.
 
 *actions
 - removed quest_reward.lua
 - added worms to fishing_rod.lua
-- changed teleport.lua with nominal ids (was bugging otherwise, don't know why)
+- changed teleport.lua with nominal ids (was bugging otherwise, don`t know why)
 - added 7.6 objects to increment.lua, decrement.lua and \doors
-- changed doors\gateofexp_closed.lua a bit, so it add special description even if the door don't open
-- changed food.lua, 'sound' in orange, instead of saying it in yellow
+- changed doors\gateofexp_closed.lua a bit, so it add special description even if the door don`t open
+- changed food.lua, `sound` in orange, instead of saying it in yellow
 - added hota.lua (helmet of the ancients + small ruby transformation)
 - added information for 7.6 in lib/action.lua
 *actions/guilcera
@@ -123,8 +131,10 @@ guilcera 4.00
 guilcera 3.2.3
 --------------
 *jun 2013*
-'[7.6] HoTS by Rex and Dimas - database XML'
-[map image](https://raw.githubusercontent.com/peonso/guilcera/master/docs/images/guilcera_323.png)
+
+`[7.6] HoTS by Rex and Dimas - XML database`
+
+[[map image](https://raw.githubusercontent.com/peonso/guilcera/master/docs/images/guilcera_323.png)]
 
 *bug fixes
 - fixed combat and loot from monster (A-D)
@@ -135,12 +145,12 @@ guilcera 3.2.3
 - levitate spell only works verticaly
 - some spells are sent as private message
 - some rings can work endlessly
-- monsters can't use diagonals to move, and can get stuck when don't find range
+- monsters can`t use diagonals to move, and can get stuck when don`t find range
 - exhausted setup on config.lua is broken
 - arrow, bolts and fist can strike ghosts
-- utevo res ina spell doesn't work
-- npcs don't stop moving to talk
-- boat npcs force ends the conversation even when the player aren't sent anywehere
+- utevo res ina spell doesn`t work
+- npcs don`t stop moving to talk
+- boat npcs force ends the conversation even when the player aren`t sent anywehere
 -drunkness does not work
 - following items has no effects: Ring of Healing (2214), Dwarven Ring (2213), Bronze Amulet (2172), Dragon Necklace (2201), Elven Amulet (2198), Garlic Necklace (2199), Protection Amulet (2200), Silver Amulet (2170).
 - promotion system not implemented
@@ -150,13 +160,14 @@ guilcera 3.2.3
 guilcera 3.2.2b
 ---------------
 *jun 2013*
-'[7.6] HoTS by Rex and Dimas - database XML'
+
+`[7.6] HoTS by Rex and Dimas - XML database`
 
 *changes
 - teleport at northern larva spawn removed
 - slime is summoning more slimes
 - you need to buy labels now
-- sign's descriptions added
+- sign`s descriptions added
 - exevo gran mas pox spell poisons for 98 damage
 
 *bug fixes
@@ -169,7 +180,8 @@ guilcera 3.2.2b
 guilcera 3.2.2
 ---------------
 *jun 2012*
-'[7.6] HoTS by Rex and Dimas - database XML'
+
+`[7.6] HoTS by Rex and Dimas - XML database`
 
 *changes
 - drop loot chances from bosses
@@ -179,7 +191,8 @@ guilcera 3.2.2
 guilcera 3.2.1
 ---------------
 *jun 2012*
-'[7.6] HoTS by Rex and Dimas - database XML'
+
+`[7.6] HoTS by Rex and Dimas - XML database`
 
 * changes
 - death penality is now 3%
@@ -197,51 +210,62 @@ guilcera 3.2.1
 guilcera 3.2.0
 ---------------
 *jun 2012*
-'[7.6] HoTS by Rex and Dimas - database XML'
+
+`[7.6] HoTS by Rex and Dimas - XML database`
 
 guilcera 3.1.0
 ---------------
 *jul 2006*
-'[7.6] HoTS by Rex and Dimas - database XML'
-[map image](https://raw.githubusercontent.com/peonso/guilcera/master/docs/images/guilcera_310.png)
+
+`[7.6] HoTS by Rex and Dimas - XML database`
+
+[[map image](https://raw.githubusercontent.com/peonso/guilcera/master/docs/images/guilcera_310.png)]
 
 guilcera 3.0.0
 ---------------
 *feb 2006*
-'[7.6] otserv by OpenTibia team - database XML'
+
+`[7.6] otserv by OpenTibia team - XML database`
 
 * Changed protocol, Guilcera now works with Tibia Client 7.6
 
 guilcera 2.7.1
 ---------------
 *jan 2006*
-'[7.5] Neverland 2.5 by Ruly - database XML'
+
+`[7.5] Neverland 2.5 by Ruly - XML database`
 
 guilcera 2.7.0
 ---------------
 *dec 2005*
-'[7.5] YurOTS 0.9.1 by Yurez - database XML'
+
+`[7.5] YurOTS 0.9.1 by Yurez - XML database`
 
 guilcera 2.6.7
 ---------------
 *nov 2005*
-'[7.5] YurOTS 0.9.1 by Yurez - database XML'
-[map image](https://raw.githubusercontent.com/peonso/guilcera/master/docs/images/guilcera_267.png)
+
+`[7.5] YurOTS 0.9.1 by Yurez - XML database`
+
+[[map image](https://raw.githubusercontent.com/peonso/guilcera/master/docs/images/guilcera_267.png)]
 
 guilcera 2.6.6
 ---------------
 *nov 2005*
-'[7.5] YurOTS 0.9.1 by Yurez - database XML'
+
+`[7.5] YurOTS 0.9.1 by Yurez - XML database`
 
 guilcera 2.6.5
 ---------------
 *oct 2005*
-'[7.5] YurOTS 0.9.1 by Yurez - database XML'
+
+`[7.5] YurOTS 0.9.1 by Yurez - XML database`
 
 guilcera 2.6.4
 ---------------
 *oct 2005*
-'[7.5] YurOTS 0.9.1 by Yurez - database XML'
+
+`[7.5] YurOTS 0.9.1 by Yurez - XML database`
 
 * changes
 - god guido monster implemented
@@ -256,64 +280,78 @@ guilcera 2.6.4
 guilcera 2.5.1
 ---------------
 *sep 2005*
-'[7.5] HoTS by Rex - database XML'
+
+`[7.5] HoTS by Rex - XML database`
 
 * Changed protocol, Guilcera now works with Tibia Client 7.5
 
 guilcera 2.4.5
 ---------------
 *aug 2005*
-'[7.4] HoTS 0.9 by Rex - database XML'
+
+`[7.4] HoTS 0.9 by Rex - XML database`
 
 guilcera 2.4.1
 ---------------
 *aug 2005*
-'[7.4] HoTS 0.9 by Rex - database XML'
-[map image](https://raw.githubusercontent.com/peonso/guilcera/master/docs/images/guilcera_241.png)
+
+`[7.4] HoTS 0.9 by Rex - XML database`
+
+[[map image](https://raw.githubusercontent.com/peonso/guilcera/master/docs/images/guilcera_241.png)]
 
 guilcera 2.3.0
 ---------------
 *jul 2005*
-'[7.4] HoTS 0.8 by Rex - database XML'
+
+`[7.4] HoTS 0.8 by Rex - XML database`
 
 guilcera 2.2.0c
 ---------------
 *jul 2005*
-'[7.4] HoTS 0.8 by Rex - database XML'
+
+`[7.4] HoTS 0.8 by Rex - XML database`
 
 guilcera 2.2.0
 ---------------
 *jul 2005*
-'[7.4] HoTS 0.8 by Rex - database XML'
+
+`[7.4] HoTS 0.8 by Rex - XML database`
 
 guilcera 2.1.0
 ---------------
 *jun 2005*
-'[7.4] HoTS 0.8 by Rex - database XML'
+
+`[7.4] HoTS 0.8 by Rex - XML database`
 
 guilcera 2.0.0
 ---------------
 *jun 2005*
-'[7.4] HoTS 0.8 by Rex - database XML'
+
+`[7.4] HoTS 0.8 by Rex - XML database`
 
 guilcera 1.4.0
 ---------------
 *jun 2005*
-'[7.4] LostWorld v1 by Crazytoko - database XML'
+
+`[7.4] LostWorld v1 by Crazytoko - XML database`
 
 guilcera 1.3.5
 ---------------
 *jun 2005*
-'[7.4] Revolution 1.0.9 - database XML'
+
+`[7.4] Revolution 1.0.9 - XML database`
 
 guilcera 1.3.0
 ---------------
 *jun 2005*
-'[7.4] Revolution 1.0.9 - database XML'
+
+`[7.4] Revolution 1.0.9 - XML database`
 
 guilcera 1.2.0
 ---------------
 *may 2005*
-'[7.4] Revolution 1.0.9 - database XML'
-[map image](https://raw.githubusercontent.com/peonso/guilcera/master/docs/images/guilcera_120.png)
+
+`[7.4] Revolution 1.0.9 - XML database`
+
+[[map image](https://raw.githubusercontent.com/peonso/guilcera/master/docs/images/guilcera_120.png)]
 
