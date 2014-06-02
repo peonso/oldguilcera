@@ -22,7 +22,7 @@ guilcera 4.02
 - AAC doesn't give first items anymore
 - added guilcera/data/creaturescripts/scripts/firstitems.lua and necessary changes at creaturescripts.xml
 - login.lua and removebless.lua manage blesses and premium features
-- added functional NPCs (a lot missing yet)
+- added functional NPCs (many missing yet)
 - added missing monsters, corrected loot 
 - small fixes at items.xml
 - small fixes at actions

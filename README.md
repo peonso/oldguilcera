@@ -21,7 +21,7 @@ Downloads
 - Remere's Map Editor can be downloaded [HERE](http://remeresmapeditor.com/), to make it functional with Guilcera please follow the steps from [SETUP_GUIDE](https://github.com/peonso/guilcera/blob/master/docs/SETUP_GUIDE.md)
 - otitemeditor-0.2.2 can be downloaded [HERE](http://www.4shared.com/zip/jFtWifSjce/otitemeditor-022.html), to make it functional with Guilcera please follow the steps from [SETUP_GUIDE](https://github.com/peonso/guilcera/blob/master/docs/SETUP_GUIDE.md)
 - Tibia Client protocol 7.6 [HERE](http://lmgtfy.com/?q=Tibia+Client+7.6), [HERE](http://tibiaclient.com/?windows) or [HERE](http://remeresmapeditor.com/marklar.php?clients)
-- OtLand ip changer (http://otland.net/threads/otland-ip-changer.134369/), you can found it [HERE](http://static.otland.net/ipchanger.exe)
+- OtLand ip changer [HERE](http://otland.net/threads/otland-ip-changer.134369/), you can found it [HERE](http://static.otland.net/ipchanger.exe)
 - Old guilcera (3.2.3) XML [HERE](http://www.4shared.com/rar/emtMmLPkba/guilcera_323.html)
 
 Structure
