@@ -4,7 +4,7 @@ more info and lastest version at https://github.com/peonso/guilcera
 
 guilcera 4.02
 --------------
-`may 2014, [7.6] Avesta rev94 by Ferrus - MySQL database`
+`may 2014, [7.6] Avesta rev94 by Ferrus - MySQL database
 
 *_added to GitHub
 
@@ -30,7 +30,7 @@ guilcera 4.02
 
 *_map
 - did some work at main city
-- added boats
+- added boats`
 
 guilcera 4.01
 --------------
