@@ -50,7 +50,7 @@ Extract Uniform Server (better if you do at C:\) and run it as service, once it 
 
 2.7 - Web account creator
 
-Nicaw ACC will do the job, at Uniform Server folder there is a folder named *www*, delete all files inside and extract Nicaw_ACC.rar there. Open *config.inc.php*, search for '$cfg['SQL_Password'] = '';' and fill it with the password from the step above, also *guilcera* is the default user and database name, if you picked a different one change the respectives fields. Then search '$cfg['dirdata'] = '.../guilcera/data/';' and enter your entire data folder name (as *C:/otserv/guilcera/data/*). Save and close.
+Nicaw ACC will do the job, at Uniform Server folder there is a folder named *www*, delete all files inside and extract Nicaw_ACC.rar there. Open *config.inc.php*, search for *$cfg['SQL_Password'] = '';* and fill it with the password from the step above, also *guilcera* is the default user and database name, if you picked a different one change the respectives fields. Then search *$cfg['dirdata'] = '.../guilcera/data/';* and enter your entire data folder name (as *C:/otserv/guilcera/data/*). Save and close.
 
 2.8 - Running the server
 
