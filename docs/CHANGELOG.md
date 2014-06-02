@@ -85,7 +85,7 @@ more info and lastest version at https://github.com/peonso/guilcera
     - fixed combat and loot from monster (A-D)
     - fixed quest chests disapering
     - fixed *exori*_spell
-*_know issues
+    - //know issues//
     - levitate spell only works verticaly
     - some spells are sent as private message
     - some rings can work endlessly
