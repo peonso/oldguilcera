@@ -1,59 +1,32 @@
 _state = 0
 _count = 0
 _index = 0
-_delay = 500
- 
-itemsremere = {}
-itemsremere[0] = {name = 'dark helmet', id = 2490, subtype = -1, sell = -1, buy = 200, stackable = 0}
-itemsremere[1] = {name = 'crown helmet', id = 2491, subtype = -1, sell = -1, buy = 3000, stackable = 0}
-itemsremere[2] = {name = 'warrior helmet', id = 2475, subtype = -1, sell = -1, buy = 6000, stackable = 0}
-itemsremere[3] = {name = 'crusader helmet', id = 2497, subtype = -1, sell = -1, buy = 6000, stackable = 0}
-itemsremere[4] = {name = 'royal helmet', id = 2498, subtype = -1, sell = -1, buy = 55000, stackable = 0}
-itemsremere[5] = {name = 'dark armor', id = 2489, subtype = -1, sell = -1, buy = 1000, stackable = 0}
-itemsremere[6] = {name = 'blue robe', id = 2656, subtype = -1, sell = -1, buy = 30000, stackable = 0}
-itemsremere[7] = {name = 'crown armor', id = 2487, subtype = -1, sell = -1, buy = 30000, stackable = 0}
-itemsremere[8] = {name = 'knight armor', id = 2476, subtype = -1, sell = -1, buy = 15000, stackable = 0}
-itemsremere[9] = {name = 'golden armor', id = 2466, subtype = -1, sell = -1, buy = 80000, stackable = 0}
-itemsremere[10] = {name = 'plate legs', id = 2647, subtype = -1, sell = -1, buy = 2000, stackable = 0}
-itemsremere[11] = {name = 'knight legs', id = 2477, subtype = -1, sell = -1, buy = 20000, stackable = 0}
-itemsremere[12] = {name = 'crown legs', id = 2488, subtype = -1, sell = -1, buy = 35000, stackable = 0}
-itemsremere[13] = {name = 'spike sword', id = 2383, subtype = -1, sell = -1, buy = 2000, stackable = 0}
-itemsremere[14] = {name = 'serpent sword', id = 2409, subtype = -1, sell = -1, buy = 2000, stackable = 0}
-itemsremere[15] = {name = 'fire sword', id = 2392, subtype = -1, sell = -1, buy = 15000, stackable = 0}
-itemsremere[16] = {name = 'giant sword', id = 2393, subtype = -1, sell = -1, buy = 35000, stackable = 0}
-itemsremere[17] = {name = 'knight axe', id = 2430, subtype = -1, sell = -1, buy = 8000, stackable = 0}
-itemsremere[18] = {name = 'fire axe', id = 2432, subtype = -1, sell = -1, buy = 26000, stackable = 0}
-itemsremere[19] = {name = 'clerical mace', id = 2423, subtype = -1, sell = -1, buy = 500, stackable = 0}
-itemsremere[20] = {name = 'dragon hammer', id = 2434, subtype = -1, sell = -1, buy = 3000, stackable = 0}
-itemsremere[21] = {name = 'skull staff', id = 2436, subtype = -1, sell = -1, buy = 25000, stackable = 0}
-itemsremere[22] = {name = 'ancient shield', id = 2532, subtype = -1, sell = -1, buy = 1000, stackable = 0}
-itemsremere[23] = {name = 'medusa shield', id = 2536, subtype = -1, sell = -1, buy = 22000, stackable = 0}
-itemsremere[24] = {name = 'guardian shield', id = 2515, subtype = -1, sell = -1, buy = 5000, stackable = 0}
-itemsremere[25] = {name = 'dragon shield', id = 2516, subtype = -1, sell = -1, buy = 7500, stackable = 0}
-itemsremere[26] = {name = 'crown shield', id = 2519, subtype = -1, sell = -1, buy = 18000, stackable = 0}
-itemsremere[27] = {name = 'tower shield', id = 2528, subtype = -1, sell = -1, buy = 16000, stackable = 0}
-itemsremere[28] = {name = 'vampire shield', id = 2534, subtype = -1, sell = -1, buy = 45000, stackable = 0}
-itemsremere[29] = {name = 'demon shield', id = 2520, subtype = -1, sell = -1, buy = 66666, stackable = 0}
-itemsremere[30] = {name = 'beholder shield', id = 2518, subtype = -1, sell = -1, buy = 4000, stackable = 0}
-itemsremere[31] = {name = 'wand of inferno', id = 2187, subtype = -1, sell = -1, buy = 7000, stackable = 0}
-itemsremere[32] = {name = 'boots of haste', id = 2195, subtype = -1, sell = -1, buy = 20000, stackable = 0}
-itemsremere[33] = {name = 'platinum amulet', id = 2171, subtype = -1, sell = -1, buy = 10000, stackable = 0}
+_delay = 800
+
+local items = {}
+items[0] = {name = 'amulet', id = 2173, subtype = -1, sell = 50000, buy = 50000, stackable = 0}
+items[1] = {name = 'sudden death', id = 2268, subtype = -1, sell = 175, buy = -1, stackable = 1}
+items[2] = {name = 'explosion', id = 2313, subtype = -1, sell = 50, buy = -1, stackable = 1}
+items[3] = {name = 'magic missile', id = 2311, subtype = -1, sell = 8, buy = -1, stackable = 1}
+items[4] = {name = 'ultimate healing', id = 2273, subtype = -1, sell = 80, buy = -1, stackable = 1}
+items[5] = {name = 'great fireball', id = 2304, subtype = -1, sell = 45, buy = -1, stackable = 1}
+items[6] = {name = 'intense healing', id = 2265, subtype = -1, sell = 12, buy = -1, stackable = 1}
 
 local function onActionItem(action)
-	if (action == 'buy' and itemsremere[_index].sell == -1) then
+	if (action == 'buy' and items[_index].sell == -1) then
 		selfSay('I\'m not selling it.', _delay * 2)
 		_state = 0
 		return
-	elseif (action == 'sell' and itemsremere[_index].buy == -1) then
+	elseif (action == 'sell' and items[_index].buy == -1) then
 		selfSay('I\'m not interested.', _delay * 2)
 		_state = 0
 		return
 	end
 
-	DESCRIPTION = getItemDescriptions(itemsremere[_index].id)
+	DESCRIPTION = getItemDescriptions(items[_index].id)
 	amount = ''
 	NAME_TO_SAY = DESCRIPTION.name
-	if itemsremere[_index].subtype == 7 then
+	if items[_index].subtype == 7 then
 		NAME_TO_SAY = 'mana fluid'
 	end
 	plural = DESCRIPTION.article
@@ -61,21 +34,21 @@ local function onActionItem(action)
 	if (_count > 1) then
 		amount = '' .. tostring(_count)
 		NAME_TO_SAY = DESCRIPTION.plural
-		if itemsremere[_index].subtype == 7 then
+		if items[_index].subtype == 7 then
 		NAME_TO_SAY = 'mana fluids'
 		end
 		plural = ''
 	end
  
-	cost = itemsremere[_index].buy
+	cost = items[_index].buy
 	if (_count > 1) then
-		cost = itemsremere[_index].buy * amount
+		cost = items[_index].buy * amount
 	end
 
 	if (action == 'buy') then
-		cost = itemsremere[_index].sell
+		cost = items[_index].sell
 		if (_count > 1) then
-			cost = itemsremere[_index].sell * amount
+			cost = items[_index].sell * amount
 		end
 	end
  
@@ -112,7 +85,7 @@ end
  
 function onCreatureDisappear(cid)
 	if (getNpcFocus() == cid) then
-		selfSay('See you.', _delay)
+		selfSay('Farewell.', _delay)
     _state = 0
 		getNext()
 	else
@@ -142,18 +115,19 @@ function onCreatureSay(cid, type, msg)
 		if ((msgcontains(msg, 'hi') or msgcontains(msg, 'hello')) and getDistanceToCreature(cid) <= 4) then
 			updateNpcIdle()
 			setNpcFocus(cid)
-			selfSay('Hi ' .. getCreatureName(cid) .. '! Are you new in Peonsville?', _delay)
+			getCreatureName(cid)
+			selfSay('Welcome to my little room, adventurer ' .. getCreatureName(cid) .. '!', _delay)
 		end
 	
 	elseif (getNpcFocus() ~= cid) then
 		if ((msgcontains(msg, 'hi') or msgcontains(msg, 'hello')) and getDistanceToCreature(cid) <= 4) then
-			selfSay('Sorry ' .. getCreatureName(cid) .. ', I\'m talking to a customer. Please stand in line.', _delay)
+			selfSay('Please wait a minute, ' .. getCreatureName(cid) .. '.', _delay)
 			queuePlayer(cid)
 		end
  
 	else
 		if (msgcontains(msg, 'bye')or msgcontains(msg, 'farewell')) then
-			selfSay('Good bye.', _delay)
+			selfSay('Farewell.', _delay)
 			_state = 0
 			getNext()
 
@@ -164,9 +138,9 @@ function onCreatureSay(cid, type, msg)
 		elseif (msgcontains(msg, 'name')) then
 			_selfSay('I am Remere. I am selling everything the adventurer needs.')
  			_state = 0
-
-		elseif (msgcontains(msg, 'job')) then
-			_selfSay('I am selling equipment of all kinds. Do you need anything?')
+			
+		elseif (msgcontains(msg, 'guilcera')) then
+			_selfSay('A great world full of magic and wonder.')
  			_state = 0
 
 		elseif (msgcontains(msg, 'food')) then
@@ -177,48 +151,51 @@ function onCreatureSay(cid, type, msg)
 			_selfSay('It\'s ' .. getTibiaTime() .. ' right now.')
  			_state = 0
 
-		elseif (msgcontains(msg, 'offer') or msgcontains(msg, 'goods')) then
-			_selfSay('I\'m sell crowbars, fishing rods, machetes, picks, backpacks, bags, ropes, scythes, shovels, torches and worms.')
+		elseif (msgcontains(msg, 'offer')) or (msgcontains(msg, 'goods')) or (msgcontains(msg, 'job')) or (msgcontains(msg, 'runes')) then
+			selfSay('I sell runes. Sudden death runes, ultimate healing runes, great fireball runes, heavy magic missile runes...', _delay)
+			selfSay('... explosion runes and intense healing runes. ...', _delay*5)
+			selfSay('... Almost forgot, I can sell you an amulet of loss also.', _delay*10)
+			updateNpcIdle()
 			_state = 0
 
 		elseif (_state == 1) then
 			if (msgcontains(msg, 'yes')) then
-				if (doPlayerRemoveMoney(cid, itemsremere[_index].sell * _count) == 1) then
+				if (doPlayerRemoveMoney(cid, items[_index].sell * _count) == 1) then
  
-					if itemsremere[_index].stackable == TRUE then
+					if items[_index].stackable == TRUE then
 						local _stacks = math.floor(_count/100)
 						_count = _count - _stacks*100
 						if _stacks > 0 then
 							for i = 1, _stacks do
-								doPlayerAddItem(cid, itemsremere[_index].id, 100)
+								doPlayerAddItem(cid, items[_index].id, 100)
       							end
     						end
     						if _count > 0 then
-							doPlayerAddItem(cid, itemsremere[_index].id, _count)
+							doPlayerAddItem(cid, items[_index].id, _count)
     						end
 
 					else
 						for i = 1, _count do
-							doPlayerAddItem(cid, itemsremere[_index].id, itemsremere[_index].subtype)
+							doPlayerAddItem(cid, items[_index].id, items[_index].subtype)
 						end
 					end
  
-					selfSay('Here you are.', _delay)
+					selfSay('Thank you. Use it wisely.', _delay)
 				else
-					selfSay('Come back, when you have enough money.', _delay)
+					selfSay('Oh. You do not have enough money.', _delay)
 				end
  
 				updateNpcIdle()
 			else
-				selfSay('Hmm, but next time.', _delay)
+				selfSay('Maybe another time.', _delay)
 			end
  
 			_state = 0
  
 		elseif (_state == 2) then
 			if (msgcontains(msg, 'yes')) then
-				if (doPlayerRemoveItem(cid, itemsremere[_index].id, _count, itemsremere[_index].subtype) == 1) then
-					doPlayerAddMoney(cid, itemsremere[_index].buy * _count)
+				if (doPlayerRemoveItem(cid, items[_index].id, _count, items[_index].subtype) == 1) then
+					doPlayerAddMoney(cid, items[_index].buy * _count)
 					selfSay('Ok. Here is your money.')
 				else
 					if (_count > 1) then
@@ -230,14 +207,14 @@ function onCreatureSay(cid, type, msg)
  
 				updateNpcIdle()
 			else
-				selfSay('Maybe next time.', _delay)
+				selfSay('Maybe another time.', _delay)
 			end
  
 			_state = 0
  
 		else
-			for n = 0, table.getn(itemsremere) do
-				if (msgcontains(msg, itemsremere[n].name) or msgcontains(msg, itemsremere[n].name .. "s")) then
+			for n = 0, table.getn(items) do
+				if (msgcontains(msg, items[n].name) or msgcontains(msg, items[n].name .. "s")) then
 					_count = getCount(msg)
 					_index = n
  

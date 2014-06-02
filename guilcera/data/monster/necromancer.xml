@@ -52,25 +52,18 @@
     <voice sentence="Your corpse will be mine!"/>
     <voice sentence="Taste the sweetness of death!"/>
   </voices>
-  <loot>
-    <item id="2186" chance="110" /> -- moonlight rod
-    <item id="2148" countmax="40" chance1="100000" chancemax="0"/>
-    <item id="2032" chance="10000"/>
-    <item id="2804" countmax="2" chance1="20000" chancemax="0"/>
-    <item id="2182" chance="1333" /> -- snakebite rod
-    <item id="2406" chance="15000"/>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2412" chance="10000"/>
-        <item id="2483" chance="10000"/>
-        <item id="2796" countmax="1" chance="1500"/>
-        <item id="2229" countmax="3" chance1="20000" chancemax="0"/>
-        <item id="2747" chance="20000"/>
-        <item id="2436" chance="833"/>
-        <item id="2663" chance="909"/>
-        <item id="2195" chance="666"/>
-        <item id="2423" chance="5000"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="90" chance1="30000" chancemax="0"/><!-- 1-90 30% 2148 gold -->
+	<item id="2796" countmax="1" chance1="2000" chancemax="0"/><!-- 2% 2796 green mushroom -->
+	<item id="2483" chance="10000"/><!-- 10% 2483 scale armor -->
+	<item id="2663" chance="500"/><!-- 0,5% 2663 mystic turban -->
+	<item id="2195" chance="200"/><!-- 0,2% 2195 boots of haste -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2436" chance="200"/><!-- 0,2% 2436 skull staff -->
+			<item id="2423" chance="2000"/><!-- 2% 2423 clerical mace -->
+			<item id="2406" chance="13000"/><!-- 13% 2406 short sword -->
+			</inside>
+		</item>
+</loot>
 </monster>

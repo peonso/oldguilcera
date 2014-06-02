@@ -35,7 +35,7 @@
   <voices interval="5000" chance="10">
     <voice sentence="maeh"/>
   </voices>
-  <loot>
-    <item id="2666" countmax="5" chance1="100000" chancemax="0"/>
-  </loot>
+<loot>
+	<item id="2666" countmax="4" chance1="85000" chancemax="0"/><!-- 85% 2666 meat -->
+</loot>
 </monster>

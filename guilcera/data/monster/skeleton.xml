@@ -33,18 +33,18 @@
     <immunity drunk="0"/>
     <immunity invisible="0"/>
   </immunities>
-  <loot>
-    <item id="2148" countmax="10" chance1="90000" chancemax="0"/>
-    <item id="2480" chance="6666"/>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2388" chance="10000"/>
-        <item id="2398" chance="10000"/>
-        <item id="2511" chance="5000"/>
-        <item id="2473" chance="5000"/>
-        <item id="2376" chance="3333"/>
-        <item id="2050" chance="20000"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="10" chance1="44000" chancemax="0"/><!-- 1-10 44% 2148 gold -->
+	<item id="2050" chance="10000"/><!-- 10% 2050 torch -->
+	<item id="2230" chance="50000"/><!-- 50% 2230 bone -->
+	<item id="2473" chance="8000"/><!-- 8% 2473 viking helmet -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2398" chance="5000"/><!-- 5% 2398 mace -->
+			<item id="2388" chance="5000"/><!-- 5% 2388 hatchet -->
+			<item id="2376" chance="2000"/><!-- 2% 2376 sword -->
+			<item id="2511" chance="2000"/><!-- 2% 2511 brass shield -->
+			</inside>
+		</item>
+</loot>
 </monster>

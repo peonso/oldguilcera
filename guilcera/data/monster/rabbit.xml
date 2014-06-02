@@ -32,8 +32,8 @@
     <immunity drunk="0"/>
     <immunity invisible="0"/>
   </immunities>
-  <loot>
-    <item id="2684" countmax="4" chance1="70000" chancemax="0"/>
-    <item id="2666" countmax="2" chance1="20000" chancemax="0"/>
-  </loot>
+<loot>
+	<item id="2666" countmax="2" chance1="85000" chancemax="0"/><!-- 1-2 85% 2666 meat -->
+	<item id="2684" countmax="1" chance1="10000" chancemax="0"/><!-- 10% 2684 carrot -->
+</loot>
 </monster>

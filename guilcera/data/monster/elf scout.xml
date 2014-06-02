@@ -42,18 +42,18 @@
     <voice sentence="Evicor guide my arrow."/>
     <voice sentence="Your existence will end here!"/>
   </voices>
-  <loot>
-    <item id="2148" countmax="10" chance1="100000" chancemax="0"/>
-    <item id="2544" countmax="10" chance1="50000" chancemax="0"/>
-    <item id="2484" chance="10000"/>
-    <item id="2456" chance="10000"/>
-    <item id="2681" chance="20000"/>
-    <item id="1987" chance="6666">
-      <inside>
-        <item id="2148" countmax="5" chance1="80000" chancemax="0"/>
-        <item id="2642" chance="5500"/>
-        <item id="2397" chance="4000"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="25" chance1="75000" chancemax="0"/><!-- 1-25 75% 2148 gold -->
+	<item id="2681" chance="17000"/><!-- 17% 2681 grapes -->
+	<item id="2743" chance="1000"/><!-- 1% 2743 heaven blossom -->
+	<item id="2031" chance="1000"/><!-- 1% 2031 waterskin -->
+	<item id="2544" countmax="12" chance1="30000" chancemax="0"/><!-- 1-12 30% 2544 arrow -->
+	<item id="2545" countmax="4" chance1="15000" chancemax="0"/><!-- 1-4 15% 2545 poison arrow -->
+	<item id="2642" chance="1000"/><!-- 1% 2642 sandals -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2456" chance="4000"/><!-- 4% 2456 bow -->
+			</inside>
+		</item>
+</loot>
 </monster>

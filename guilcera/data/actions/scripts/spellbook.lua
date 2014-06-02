@@ -5,9 +5,11 @@ function onUse(cid, item, frompos, item2, topos)
 
 	for i = 0, count - 1 do
 		local spell = getPlayerInstantSpellInfo(cid, i)
-		if spell.level ~= 0 then
+		if spell.level ~= (nil) then
 			if spell.manapercent > 0 then
 				spell.mana = spell.manapercent .. "%"
+			elseif spell.mana == 0 then
+				spell.mana = "-"
 			end
 
 			table.insert(t, spell)
@@ -19,18 +21,24 @@ function onUse(cid, item, frompos, item2, topos)
 	local prevLevel = -1
 	for i, spell in ipairs(t) do
 		local line = ""
+		
+
 		if prevLevel ~= spell.level then
 			if i ~= 1 then
 				line = "\n"
 			end
-
+			if spell.level == 0 then
+			line = line .. "House Spells\n"
+			prevLevel = spell.level
+			else
 			line = line .. "Spells for Level " .. spell.level .. "\n"
 			prevLevel = spell.level
+			end
 		end
 		
 		text = text .. line .. "  " .. spell.words .. " - " .. spell.name .. " : " .. spell.mana .. "\n"
 	end
-		
+
 	doShowTextDialog(cid, item.itemid, text)
 	return TRUE
 end

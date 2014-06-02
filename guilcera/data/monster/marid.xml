@@ -67,21 +67,20 @@
     <voice sentence="Be careful what you wish for."/>
     <voice sentence="Wishes can come true."/>
   </voices>
-  <loot>
-    <item id="2158" countmax="1" chance="300"/>
-    <item id="1872" countmax="1" chance="2500"/>
-    <item id="2148" countmax="50" chance1="100000" chancemax="0"/>
-    <item id="2442" chance="5000"/>
-    <item id="2183" chance="1000" />
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2070" chance="300"/>
-        <item id="2148" countmax="14" chance1="100000" chancemax="0"/>
-        <item id="2146" countmax="3" chance1="7000" chancemax="0"/>
-        <item id="2063" chance="3333"/>
-        <item id="2677" countmax="4" chance1="20000" chancemax="0"/>
-        <item id="2177" chance="10000"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="90" chance1="90000" chancemax="0"/>
+	<item id="2148" countmax="39" chance1="70000" chancemax="0"/><!-- 1-129 97% 2148 gold -->
+	<item id="2677" countmax="25" chance1="26000" chancemax="0"/><!-- 1-25 26% 2677 blueberry -->
+	<item id="2146" countmax="1" chance1="6000" chancemax="0"/><!-- 6% 2146 small sapphire -->
+	<item id="2374" chance="1000"/><!-- 1% 2374 wooden flute -->
+	<item id="2158" chance="200"/><!-- 0,2% 2158 blue gem -->
+	<item id="2359" chance="200"/><!-- 0,2% 2359 small oil lamp -->
+	<item id="2663" chance="300"/><!-- 0,3% 2663 mystic turban -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2442" chance="5000"/><!-- 5% 2442 heavy machete -->
+			<item id="2183" chance="2000"/><!-- 2% 2183 tempest rod -->
+			</inside>
+		</item>
+</loot>
 </monster>

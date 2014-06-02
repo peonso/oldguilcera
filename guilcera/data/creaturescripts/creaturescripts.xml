@@ -1,9 +1,15 @@
 <?xml version="1.0"?>
-
 <creaturescripts>
+
 	<event type="login" name="stagesLogin" script="stages.lua" />
 	<event type="advance" name="stagesAdvance" script="stages.lua" />
+	<event type="login" name="PlayerLogin" script="login.lua"/>
+	<event type="login" name="SendLoginInfo" script="sendlogininfo.lua"/>
+	<event type="die" name="RemoveBlesses" script="removeblesses.lua"/>
+	
+	<!-- guilcera -->
+	
 	<event type="login" name="addPremium" script="freepremmium.lua" />
-	<!--event type="login" name="PlayerLogin" script="login.lua" /-->
-	<!--event type="logout" name="Playerlogout" script="logout.lua"/-->
+	<event type="login" name="giveFirstItems" script="firstitems.lua" />
+	
 </creaturescripts>

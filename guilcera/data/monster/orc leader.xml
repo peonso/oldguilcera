@@ -38,30 +38,23 @@
   <voices interval="5000" chance="10">
     <voice sentence="Ulderek futgyr human!"/>
   </voices>
-  <loot>
-    <item id="2148" countmax="30" chance1="100000" chancemax="0"/>
-    <item id="2410" countmax="2" chance1="50000" chancemax="0"/>
-    <item id="2419" chance="10000"/>
-    <item id="2510" chance="5000"/>
-    <item id="2667" countmax="1" chance1="20000" chancemax="0"/>
-    <item id="2647" chance="1818"/>
-    <item id="2413" chance="2857"/>
-    <item id="1988" chance="20000">
-      <inside>
-        <item id="2148" countmax="1" chance1="2857" chancemax="0"/>
-      </inside>
-    </item>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2207" chance="2000"/>
-        <item id="2666" countmax="2" chance1="33333" chancemax="0"/>
-        <item id="2379" chance="6666"/>
-        <item id="2475" chance="1000"/>
-        <item id="2397" chance="10000"/>
-        <item id="2652" chance="2500"/>
-        <item id="2478" chance="2857"/>
-        <item id="2463" chance="1818"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="35" chance1="28000" chancemax="0"/><!-- 1-35 28% 2148 gold -->
+	<item id="2789" countmax="1" chance1="10000" chancemax="0"/><!-- 10% 2789 brown mushroom -->
+	<item id="2667" countmax="1" chance1="30000" chancemax="0"/><!-- 30% 2667 fish -->
+	<item id="2410" countmax="4" chance1="10000" chancemax="0"/><!-- 1-4 10% 2410 throwing knife -->
+	<item id="2478" chance="3000"/><!-- 3% 2478 brass legs -->
+	<item id="2463" chance="2000"/><!-- 2% 2463 plate armor -->
+	<item id="2647" chance="500"/><!-- 0,5% 2647 plate legs -->
+	<item id="2475" chance="200"/><!-- 0,2% 2475 warrior helmet -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2207" chance="4000"/><!-- 4% 2207 sword ring -->
+			<item id="2413" chance="1000"/><!-- 1% 2413 broad sword -->
+			<item id="2397" chance="3000"/><!-- 3% 2397 longsword -->
+			<item id="2419" chance="2000"/><!-- 2% 2419 scimitar -->
+			<item id="2510" chance="10000"/><!-- 10% 2510 plate shield -->
+			</inside>
+		</item>
+</loot>
 </monster>

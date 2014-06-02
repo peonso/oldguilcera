@@ -42,21 +42,21 @@
     <voice sentence="Bugga! Bugga!"/>
     <voice sentence="Me green, me mean!"/>
   </voices>
-  <loot>
-    <item id="2148" countmax="10" chance1="100000" chancemax="0"/>
-    <item id="2420" chance="10000"/>
-    <item id="2461" chance="10000"/>
-    <item id="2406" chance="10000"/>
-    <item id="2467" chance="10000"/>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2559" chance="10000"/>
-        <item id="1294" countmax="4" chance1="20000" chancemax="0"/>
-        <item id="2667" countmax="2" chance1="20000" chancemax="0"/>
-        <item id="2230" chance="10000"/>
-        <item id="2235" chance="10000"/>
-        <item id="2449" chance="10000"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="9" chance1="50000" chancemax="0"/><!-- 1-9 50% 2148 gold -->
+	<item id="2667" countmax="1" chance1="13000" chancemax="0"/><!-- 13% 2667 fish -->
+	<item id="1294" countmax="1" chance1="15000" chancemax="0"/><!-- 15% 1294 small stone -->
+	<item id="2230" chance="1000"/><!-- 1% 2230 bone -->
+	<item id="2235" chance="1000"/><!-- 1% 2235 moldy cheese -->
+	<item id="2559" chance="10000"/><!-- 10% 2559 small axe -->
+	<item id="2467" chance="3000"/><!-- 3% 2467 leather armor -->
+	<item id="2461" chance="2000"/><!-- 2% 2461 leather helmet -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2379" chance="2000"/><!-- 2% 2379 dagger -->
+			<item id="2406" chance="9000"/><!-- 9% 2406 short sword -->
+			<item id="2449" chance="5000"/><!-- 5% 2449 bone club -->
+			</inside>
+		</item>
+</loot>
 </monster>

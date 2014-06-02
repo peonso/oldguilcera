@@ -50,21 +50,21 @@
   <summons maxSummons="3">
     <summon name="larva" interval="1000" chance="15" max="3"/>
   </summons>
-  <loot>
-    <item id="2150" countmax="4" chance="1200"/>
-    <item id="2148" countmax="90" chance1="100000" chancemax="0"/>
-    <item id="2162" chance="2500"/>
-    <item id="2463" chance="2222"/>
-    <item id="1987" chance="100000">
-    <item id="2149" countmax="3" chance="600"/>
-      <inside>
-        <item id="2148" countmax="22" chance="99900"/>
-        <item id="2135" chance="1428"/>
-        <item id="2159" countmax="4" chance1="555" chancemax="0"/>
-        <item id="2142" chance="800"/>
-        <item id="2440" chance="200"/>
-        <item id="2540" countmax="1" chance="500"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+    <item id="2148" countmax="93" chance1="100000" chancemax="5000"/><!-- gold coin -->
+	<item id="2148" countmax="93" chance1="100000" chancemax="5000"/><!-- gold coin -->
+	<item id="2159" countmax="2" chance1="8000" chancemax="4000"/><!-- scarab coin -->
+	<item id="2150" countmax="4" chance1="6001" chancemax="3000"/><!-- small amethyst -->
+	<item id="2149" countmax="3" chance1="6000" chancemax="3000"/><!-- small emerald -->
+	<item id="2135" chance="4000"/><!-- scarab amulet -->
+	<item id="2463" chance="11000"/><!-- plate armor -->
+	<item id="2162" chance="11000"/><!-- magic light wand -->
+	<item id="2142" chance="3000"/> <!-- ancient amulet -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2540" chance="500"/><!-- 0,5% scarab shield -->
+			<item id="2440" chance="500"/><!-- 0,5% daramanian waraxe -->
+			</inside>
+		</item>
+</loot>
 </monster>

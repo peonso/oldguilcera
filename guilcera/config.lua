@@ -1,7 +1,7 @@
 ---- CONNECTION ----
 
     -- Server ip (the ip that server listens on)
-    IP = "187.14.137.103"
+    IP = "127.0.0.1"
 
     -- Server port (the port that server listens on)
     Port = "7171"
@@ -37,16 +37,16 @@
     -- These settings are not used by SQLite
     SQL_Host = "localhost"
     SQL_Port = 3306
-    SQL_User = "root"
-    SQL_Pass = "guilcera"
+    SQL_User = "guilcera"
+    SQL_Pass = "peonso"
 
 --- INFO ---
 
     -- Login message
-    LoginMsg = "Welcome to Guilcera."
+    loginmsg = "Welcome to Guilcera."
 
     -- Server name
-    ServerName = "OTServ"
+    ServerName = "Guilcera"
 
     -- World name
     WorldName = "Guilcera"

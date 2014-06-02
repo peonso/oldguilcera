@@ -40,22 +40,18 @@
     <voice sentence="Grrrrrrr"/>
     <voice sentence="Orc arga Huummmak!"/>
   </voices>
-  <loot>
-    <item id="2148" countmax="20" chance1="100000" chancemax="0"/>
-    <item id="2666" countmax="3" chance1="50000" chancemax="0"/>
-    <item id="2129" chance="10000"/>
-    <item id="1988" chance="20000">
-      <inside>
-        <item id="2148" countmax="1" chance1="20000" chancemax="0"/>
-      </inside>
-    </item>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2428" chance="2500"/>
-        <item id="2480" chance="10000"/>
-        <item id="2425" chance="2000"/>
-        <item id="2513" chance="6666"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="81" chance1="46000" chancemax="0"/><!-- 1-81 46% 2148 gold -->
+	<item id="2666" countmax="2" chance1="24000" chancemax="0"/><!-- 24% 2666 meat -->
+	<item id="2050" chance="1000"/><!-- 1% 2050 torch -->
+	<item id="2129" chance="10000"/><!-- 10% 2129 wolf tooth chain -->
+	<item id="2483" chance="1000"/><!-- 1% 2483 scale armor -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2428" chance="26000"/><!-- 26% 2428 orcish axe -->
+			<item id="2425" chance="1000"/><!-- 1% 2425 obsidian lance -->
+			<item id="2513" chance="1000"/><!-- 1% 2513 battle shield -->
+			</inside>
+		</item>
+</loot>
 </monster>

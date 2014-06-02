@@ -36,25 +36,19 @@
     <voice sentence="I will silence you forever!"/>
     <voice sentence="You saw something you shouldn't!"/>
   </voices>
-  <loot>
-    <item id="2148" countmax="20" chance1="100000" chancemax="0"/>
-    <item id="2465" chance="10000"/>
-    <item id="2461" chance="10000"/>
-    <item id="2649" chance="10000"/>
-    <item id="2671" countmax="2" chance1="20000" chancemax="0"/>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2456" chance="6666"/>
-        <item id="2544" countmax="15" chance1="10000" chancemax="0"/>
-        <item id="2546" countmax="5" chance1="10000" chancemax="0"/>
-        <item id="2147" countmax="2" chance1="3333" chancemax="0"/>
-        <item id="2675" countmax="4" chance1="6666" chancemax="0"/>
-        <item id="2690" countmax="4" chance1="6666" chancemax="0"/>
-        <item id="2050" chance="20000"/>
-        <item id="2478" chance="3333"/>
-        <item id="2652" chance="2222"/>
-        <item id="2201" chance="2500"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="10" chance1="80000" chancemax="0"/><!-- 1-10 80% 2148 gold -->
+	<item id="2671" countmax="1" chance1="10000" chancemax="0"/><!-- 10% 2671 ham -->
+	<item id="2050" chance="30000"/><!-- 30% 2050 torch -->
+	<item id="2649" chance="15000"/><!-- 15% 2649 leather legs -->
+	<item id="2461" chance="10000"/><!-- 10% 2461 leather helmet -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2403" chance="10000"/><!-- 10% 2403 knife -->
+			<item id="2406" chance="10000"/><!-- 10% 2406 short sword -->
+			<item id="2376" chance="5000"/><!-- 5% 2376 sword -->
+			<item id="2404" chance="4000"/><!-- 4% 2404 combat knife -->
+			</inside>
+		</item>
+</loot>
 </monster>

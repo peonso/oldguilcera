@@ -46,19 +46,21 @@
     <voice sentence="Chhhhhrrrrk!"/>
     <voice sentence="There is a stone in your shoe!"/>
   </voices>
-  <loot>
-    <item id="2148" countmax="20" chance1="100000" chancemax="0"/>
-    <item id="2671" countmax="2" chance1="33333" chancemax="0"/>
-    <item id="2666" countmax="3" chance1="33333" chancemax="0"/>
-    <item id="2457" chance="20000"/>
-    <item id="2513" chance="25000"/>
-    <item id="2209" chance="3333"/>
-    <item id="2394" chance="5000"/>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2489" chance="2500"/>
-        <item id="2148" countmax="5" chance1="100000" chancemax="0"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="30" chance1="88000" chancemax="0"/><!-- 1-30 88% 2148 gold -->
+	<item id="2666" countmax="2" chance1="55000" chancemax="0"/><!-- 1-2 55% 2666 meat -->
+	<item id="2671" countmax="1" chance1="17000" chancemax="0"/><!-- 17% 2671 ham -->
+	<item id="1294" countmax="10" chance1="16000" chancemax="0"/><!-- 1-10 16% 1294 small stone -->
+	<item id="2129" chance="2000"/><!-- 2% 2129 wolf tooth chain -->
+	<item id="2457" chance="1000"/><!-- 1% 2457 steel helmet -->
+	<item id="2489" chance="1000"/><!-- 1% 2489 dark armor -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2209" chance="1000"/><!-- 1% 2209 club ring -->
+			<item id="2448" chance="5000"/><!-- 5% 2448 studded club -->
+			<item id="2394" chance="2000"/><!-- 2% 2394 morning star -->
+			<item id="2513" chance="1000"/><!-- 1% 2513 battle shield -->
+			</inside>
+		</item>
+</loot>
 </monster>

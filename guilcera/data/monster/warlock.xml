@@ -67,30 +67,29 @@
     <voice sentence="Even a rat is a better mage than you."/>
     <voice sentence="We don't like intruders!"/>
   </voices>
-  <loot>
-    <item id="2148" countmax="100" chance1="100000" chancemax="0"/>
-    <item id="1986" chance="400"/>
-    <item id="2600" chance="10000"/>
-    <item id="2124" chance="1000"/>
-    <item id="2689" countmax="1" chance="11000"/>
-    <item id="2167" chance="3000"/>
-    <item id="2114" chance="1400"/>
-    <item id="2151" countmax="2" chance="1100"/>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2148" countmax="50" chance1="80000" chancemax="0"/>
-        <item id="2146" countmax="2" chance="1400"/>
-        <item id="2178" countmax="1" chance="2500"/>
-        <item id="2679" countmax="4" chance="20000"/>
-        <item id="2047" chance="15000"/>
-        <item id="2411" chance="5000"/>
-        <item id="2792" countmax="5" chance1="6666" chancemax="0"/>
-        <item id="2793" countmax="2" chance1="6666" chancemax="0"/>
-        <item id="2656" chance="2000"/>
-        <item id="2466" chance="588"/>
-        <item id="2436" chance="1428"/>
-        <item id="2123" chance="1000"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="80" chance1="30000" chancemax="0"/><!-- 1-80 30% 2148 gold -->
+	<item id="2689" countmax="1" chance1="9000" chancemax="0"/><!-- 9% 2689 bread -->
+	<item id="2792" countmax="1" chance1="3000" chancemax="0"/><!-- 3% 2792 dark mushroom -->
+	<item id="2679" countmax="4" chance1="20000" chancemax="0"/><!-- 1-4 20% 2679 cherry -->
+	<item id="2146" countmax="1" chance1="2000" chancemax="0"/><!-- 2% 2146 small sapphire -->
+	<item id="2151" countmax="1" chance1="1000" chancemax="0"/><!-- 1% 2151 talon -->
+	<item id="2047" chance="12000"/><!-- 12% 2047 candlestick -->
+	<item id="1986" chance="1000"/><!-- 1% 1986 red tome -->
+	<item id="2600" chance="11000"/><!-- 11% 2600 inkwell -->
+	<item id="2178" chance="2000"/><!-- 2% 2178 mind stone -->
+	<item id="2656" chance="2000"/><!-- 2% 2656 blue robe -->
+	<item id="2466" chance="300"/><!-- 0,3% 2466 golden armor -->
+	<item id="2197" chance="1000"/><!-- 1% 2197 stone skin amulet -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2124" chance="1000"/><!-- 1% 2124 crystal ring -->
+			<item id="2123" chance="1000"/><!-- 1% 2123 ring of the sky -->
+			<item id="2167" chance="2000"/><!-- 2% 2167 energy ring -->
+			<item id="2185" chance="4000"/><!-- 4% 2185 volcanic rod -->
+			<item id="2411" chance="8000"/><!-- 8% 2411 poison dagger -->
+			<item id="2436" chance="7000"/><!-- 7% 2436 skull staff -->
+			</inside>
+		</item>
+</loot>
 </monster>

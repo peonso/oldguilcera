@@ -35,21 +35,21 @@
   <voices interval="5000" chance="10">
     <voice sentence="kaplar!"/>
   </voices>
-  <loot>
-    <item id="2148" countmax="28" chance1="100000" chancemax="0"/>
-    <item id="2464" chance="10000"/>
-    <item id="2386" chance="10000"/>
-    <item id="2649" chance="10000"/>
-    <item id="2554" chance="10000"/>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2458" chance="10000"/>
-        <item id="2148" countmax="5" chance1="20000" chancemax="0"/>
-        <item id="2460" chance="10000"/>
-        <item id="2510" chance="10000"/>
-        <item id="2398" chance="10000"/>
-        <item id="2172" chance="2500"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="25" chance1="66000" chancemax="0"/><!-- 1-25 66% 2148 gold -->
+	<item id="2666" countmax="1" chance1="5000" chancemax="0"/><!-- 5% 2666 meat -->
+	<item id="2554" chance="2000"/><!-- 2% 2554 shovel -->
+	<item id="2460" chance="8000"/><!-- 8% 2460 brass helmet -->
+	<item id="2458" chance="6000"/><!-- 6% 2458 chain helmet -->
+	<item id="2464" chance="10000"/><!-- 10% 2464 chain armor -->
+	<item id="2172" chance="1000"/><!-- 1% 2172 bronze amulet -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2386" chance="4000"/><!-- 4% 2386 axe -->
+			<item id="2376" chance="5000"/><!-- 5% 2376 sword -->
+			<item id="2398" chance="13000"/><!-- 13% 2398 mace -->
+			<item id="2510" chance="20000"/><!-- 20% 2510 plate shield -->
+			</inside>
+		</item>
+</loot>
 </monster>

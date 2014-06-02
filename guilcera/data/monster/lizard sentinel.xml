@@ -38,25 +38,18 @@
   <voices interval="5000" chance="10">
     <voice sentence="Tssss!"/>
   </voices>
-  <loot>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
-    <item id="2148" countmax="100" chance1="100000" chancemax="0"/>
-    <item id="2148" countmax="25" chance1="100000" chancemax="0"/>
-    <item id="2182" chance="450"/>
-    <item id="2425" chance="1428"/>
-    <item id="2381" chance="6666"/>
-    <item id="2457" chance="6666"/>
-    <item id="3974" chance="366"/>
-    <item id="3965" chance="250"/>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
-    <item id="5876" countmax="1" chance1="5000" chancemax="0"/>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2148" countmax="50" chance1="100000" chancemax="0"/>
-        <item id="2147" countmax="4" chance1="4000" chancemax="0"/>
-        <item id="2654" chance="20000"/>
-        <item id="5881" countmax="1" chance1="5000" chancemax="0"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="80" chance1="89000" chancemax="0"/><!-- 1-80 89% 2148 gold -->
+	<item id="2145" countmax="1" chance1="1000" chancemax="0"/><!-- 1% 2145 small diamond -->
+	<item id="2464" chance="8000"/><!-- 8% 2464 chain armor -->
+	<item id="2483" chance="8000"/><!-- 8% 2483 scale armor -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2389" countmax="3" chance1="9000" chancemax="0"/><!-- 1-3 9% 2389 spear -->
+			<item id="2425" chance="1000"/><!-- 1% 2425 obsidian lance -->
+			<item id="2381" chance="500"/><!-- 0,5% 2381 halberd -->
+			<item id="3974" chance="500"/><!-- 0,5% 3974 sentinel shield -->
+			</inside>
+		</item>
+</loot>
 </monster>

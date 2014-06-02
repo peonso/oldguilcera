@@ -38,20 +38,18 @@
     <voice sentence="Shhhhhh"/>
     <voice sentence="Buuuuuh"/>
   </voices>
-  <loot>
-    <item id="2148" countmax="15" chance1="100000" chancemax="0"/>
-    <item id="2642" chance="10000"/>
-    <item id="2404" chance="10000"/>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2394" chance="6666"/>
-        <item id="2804" countmax="2" chance1="20000" chancemax="0"/>
-        <item id="2532" chance="1666"/>
-        <item id="2182" chance="1333" />
-        <item id="2165" chance="1538"/>
-        <item id="2423" chance="10000"/>
-        <item id="1962" chance="5000"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2804" chance="14000"/><!-- 14% 2804 shadow herb -->
+	<item id="1962" chance="1000"/><!-- 1% 1962 orange book -->
+	<item id="2642" chance="13000"/><!-- 13% 2642 sandals -->
+	<item id="2654" chance="9000"/><!-- 9% 2654 cape -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2165" chance="1000"/><!-- 1% 2165 stealth ring -->
+			<item id="2404" chance="7000"/><!-- 7% 2404 combat knife -->
+			<item id="2394" chance="10000"/><!-- 10% 2394 morning star -->
+			<item id="2532" chance="1000"/><!-- 1% 2532 ancient shield -->
+			</inside>
+		</item>
+</loot>
 </monster>

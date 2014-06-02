@@ -39,17 +39,17 @@
   <voices interval="5000" chance="10">
     <voice sentence="KRAK ORRRRRRK!" yell="1"/>
   </voices>
-  <loot>
-    <item id="2148" countmax="15" chance1="100000" chancemax="0"/>
-    <item id="2666" countmax="3" chance1="33333" chancemax="0"/>
-    <item id="2381" chance="6666"/>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2464" chance="10000"/>
-        <item id="2458" chance="10000"/>
-        <item id="2044" chance="5000"/>
-        <item id="2378" chance="5000"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="12" chance1="54000" chancemax="0"/><!-- 1-12 54% 2148 gold -->
+	<item id="2671" countmax="1" chance1="10000" chancemax="0"/><!-- 10% 2671 ham -->
+	<item id="2044" chance="7000"/><!-- 7% 2044 lamp -->
+	<item id="2458" chance="13000"/><!-- 13% 2458 chain helmet -->
+	<item id="2464" chance="12000"/><!-- 12% 2464 chain armor -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2381" chance="9000"/><!-- 9% 2381 halberd -->
+			<item id="2378" chance="6000"/><!-- 6% 2378 battle axe -->
+			</inside>
+		</item>
+</loot>
 </monster>

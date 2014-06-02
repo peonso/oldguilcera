@@ -50,16 +50,22 @@
     <voice sentence="Feel the hand of death!"/>
     <voice sentence="You are on my deathlist!"/>
   </voices>
-  <loot capacity="500">
-    <item id="2513" countmax="1" chance="1500"/>
-    <item id="2404" countmax="1" chance="4000"/>
-    <item id="2148" countmax="40" chance="80000"/>
-    <item id="2148" countmax="10" chance="15000"/>
-    <item id="2403" countmax="1" chance="10000"/>
-    <item id="2510" countmax="1" chance="2000"/>
-    <item id="2145" countmax="1" chance="200"/>
-    <item id="2457" countmax="1" chance="3000"/>
-    <item id="2509" countmax="1" chance="1000"/>
-    <item id="2050" countmax="2" chance="30000"/>
-  </loot>
+<loot>
+	<item id="2148" countmax="50" chance1="83000" chancemax="0"/><!-- 1-50 83% 2148 gold -->
+	<item id="2145" countmax="1" chance1="500" chancemax="0"/><!-- 0,5% 2145 small diamond -->
+	<item id="2399" countmax="14" chance1="7000" chancemax="0"/><!-- 1-14 7% throwing star -->
+	<item id="2050" chance="30000"/><!-- 30% 2050 torch -->
+	<item id="2457" chance="3000"/><!-- 3% 2457 steel helmet -->
+	<item id="3969" chance="500"/><!-- 0,5% 3969 horseman helmet -->
+	<item id="3968" chance="500"/><!-- 0,5% 3968 leopard armor -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2403" chance="10000"/><!-- 10% 2403 knife -->
+			<item id="2404" chance="4000"/><!-- 4% 2404 combat knife -->
+			<item id="2510" chance="2000"/><!-- 2% 2510 plate shield -->
+			<item id="2513" chance="2000"/><!-- 2% 2513 battle shield -->
+			<item id="2509" chance="1000"/><!-- 1% 2509 steel shield -->
+			</inside>
+		</item>
+</loot>
 </monster>

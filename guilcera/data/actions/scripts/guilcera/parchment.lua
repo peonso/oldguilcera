@@ -1,5 +1,3 @@
--- Parchment by Peonso
-
 function onUse(cid, item, frompos, item2, topos)
 
 if item.uid == 7030 then

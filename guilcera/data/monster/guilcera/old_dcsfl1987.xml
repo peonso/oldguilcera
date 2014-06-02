@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="dcsfl1987" nameDescription="dcsfl1987" race="undead" experience="8000" speed="320" manacost="0">
+  <health now="4400" max="4400"/>
+  <look type="87" corpse="3016"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="6"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="200"/>
+  </flags>
+  <attacks>
+    <attack name="physical" interval="2000" chance="50" range="7" min="-305" max="-410">
+      <attribute key="shootEffect" value="suddendeath"/>
+    </attack>
+	    <attack name="fire" interval="4000" chance="50" length="8" spread="0" min="-390" max="-550">
+      <attribute key="areaEffect" value="firearea"/>
+    </attack>
+  </attacks>
+  <defenses armor="3" defense="5"/>
+  <immunities>
+    <immunity physical="1"/>
+    <immunity energy="0"/>
+    <immunity fire="0"/>
+    <immunity poison="0"/>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+   <summons maxSummons="3">
+    <summon name="stone golem" interval="1000" chance="20" max="3"/>
+  </summons>
+  <voices interval="5000" chance="10">
+    <voice sentence="Your end has come."/>
+  </voices>
+<loot>
+	<item id="2353" chance="100000"/><!-- 100% 2353 burning heart-->
+	<item id="2148" countmax="50" chance1="80000" chancemax="0"/><!-- 1-50 90% 2148 gold -->
+	<item id="2148" countmax="90" chance1="80000" chancemax="0"/><!-- 1-90 90% 2148 gold -->
+	<item id="2148" countmax="90" chance1="90000" chancemax="0"/><!-- 1-90 90% 2148 gold -->
+	<item id="2147" countmax="3" chance1="13000" chancemax="0"/><!-- 1-3 13% small ruby -->
+	<item id="2156" chance="1000"/><!-- 1% 2156 red gem -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2168" chance="7000"/><!-- 7% 2168 life ring -->
+			<item id="2432" chance="1000"/><!-- 1% 2432 fire axe -->
+			<item id="2539" chance="4000"/><!-- 4% 2539 phoenix shield -->
+			</inside>
+		</item>	
+</loot>
+</monster>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Rex" nameDescription="Rex" race="undead" experience="8000" speed="320" manacost="0">
+  <health now="9000" max="9000"/>
+ <look type="87" corpse="3016"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="6"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="2000"/>
+  </flags>
+  <attacks>
+	<attack name="fire" interval="2000" chance="100" range="7" radius="9" target="1" min="-120" max="-300">
+      <attribute key="shootEffect" value="fire"/>
+      <attribute key="areaEffect" value="firearea"/>
+    </attack>
+  </attacks>
+  <defenses armor="3" defense="5">
+     <defense name="healing" interval="2000" chance="50" min="200" max="350">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="1"/>
+    <immunity poison="1"/>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="Your resistance is futile."/>
+  </voices>
+<loot>
+	<item id="2350" chance="100000"/><!-- 100% 2350 sword hilt -->
+	<item id="2148" countmax="41" chance1="80000" chancemax="0"/><!-- 1-41 90% 2148 gold -->
+	<item id="2148" countmax="90" chance1="85000" chancemax="0"/><!-- 1-90 90% 2148 gold -->
+	<item id="2148" countmax="90" chance1="90000" chancemax="0"/><!-- 1-90 90% 2148 gold -->
+	<item id="2144" chance="11000"/><!-- 11% 2144 black pear -->
+	<item id="2141" chance="200"/><!-- 0,2% 2141 holy falcon-->
+	<item id="2140" chance="200"/><!-- 0,2% 2140 holy scarab -->
+	<item id="2197" chance="5000"/><!-- 5% 2197 stone skin amulet -->
+	<item id="2645" chance="4000"/><!-- 4% 2645 steel boots -->
+</loot>
+</monster>

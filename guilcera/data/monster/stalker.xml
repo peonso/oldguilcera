@@ -39,16 +39,18 @@
     <immunity drunk="1"/>
     <immunity invisible="1"/>
   </immunities>
-  <loot>
-    <item id="2148" countmax="20" chance1="100000" chancemax="0"/>
-    <item id="2649" chance="6666"/>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2260" chance="4000"/>
-        <item id="2399" countmax="1" chance1="20000" chancemax="0"/>
-        <item id="2478" chance="3333"/>
-        <item id="2425" chance="2000"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="8" chance1="13000" chancemax="0"/><!-- 1-8 13% 2148 gold -->
+	<item id="2410" countmax="2" chance1="11000" chancemax="0"/><!-- 1-2 11% 2410 throwing knife -->
+	<item id="2260" chance="9000"/><!-- 9% 2260 blank rune -->
+	<item id="1998" chance="4000"/><!-- 4% 1998 backpack -->
+	<item id="2478" chance="3000"/><!-- 3% 2478 brass legs -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2425" chance="1000"/><!-- 1% 2425 obsidian lance -->
+			<item id="2412" chance="1000"/><!-- 1% 2412 katana -->
+			<item id="2511" chance="5000"/><!-- 5% 2511 brass shield -->
+			</inside>
+		</item>
+</loot>
 </monster>

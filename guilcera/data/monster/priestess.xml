@@ -50,31 +50,25 @@
     <voice sentence="Now, your life has come to an end, hahahha!"/>
     <voice sentence="Throw the soul on the altar!"/>
   </voices>
-  <loot>
-    <item id="2674" countmax="2" chance="7500"/>
-    <item id="2148" countmax="10" chance1="100000" chancemax="0"/>
-    <item id="2183" chance="1000" /> -- tempest rod
-    <item id="1977" chance="7000"/>
-    <item id="2032" chance="10000"/>
-    <item id="2070" chance="3333"/>
-    <item id="2529" chance="1818"/>
-    <item id="1987" chance="100000">
-    <item id="2423" chance="1500"/>
-    <item id="2379" chance="23000"/>
-      <inside>
-        <item id="2125" chance="600"/>
-        <item id="2802" countmax="1" chance="14000"/>
-        <item id="2803" countmax="1" chance="6000"/>
-        <item id="2420" chance="10000"/>
-        <item id="2143" countmax="2" chance1="5000" chancemax="0"/>
-        <item id="2760" chance="5000"/>
-        <item id="2791" countmax="1" chance="3500"/>
-        <item id="2192" chance="2500"/>
-        <item id="2114" chance="2857"/>
-        <item id="2134" chance="3333"/>
-        <item id="2151" countmax="2" chance1="4000" chancemax="0"/>
-        <item id="2145" countmax="2" chance1="1666" chancemax="0"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2674" countmax="2" chance1="8000" chancemax="0"/><!-- 1-2 8% 2674 red apple -->
+	<item id="2791" countmax="1" chance1="3000" chancemax="0"/><!-- 3% 2791 wood mushroom -->
+	<item id="2151" countmax="1" chance1="1000" chancemax="0"/><!-- 1% 2151 talon -->
+	<item id="2032" chance="23000"/><!-- 23% 2032 bowl -->
+	<item id="2802" chance="13000"/><!-- 13% 2802 sling herb -->
+	<item id="2760" chance="12000"/><!-- 12% 2760 goat grass -->
+	<item id="2803" chance="6000"/><!-- 6% 2803 powder herb -->
+	<item id="2374" chance="2000"/><!-- 2% 2374 wooden flute -->
+	<item id="2192" chance="1000"/><!-- 1% 2192 crystal ball -->
+	<item id="1962" chance="1000"/><!-- 1% 1962 orange book -->
+	<item id="2125" chance="1000"/><!-- 1% 2125 crystal necklace -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2183" chance="1000"/><!-- 1% 2183 tempest rod -->
+			<item id="2379" chance="23000"/><!-- 23% 2379 dagger -->
+			<item id="2423" chance="2000"/><!-- 2% 2423 clerical mace -->
+			<item id="2529" chance="200"/><!-- 0,2% 2529 black shield -->
+			</inside>
+		</item>
+</loot>
 </monster>

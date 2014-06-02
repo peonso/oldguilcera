@@ -33,10 +33,12 @@
     <immunity invisible="0"/>
   </immunities>
   <voices interval="5000" chance="10">
-    <voice sentence="gokgoooook"/>
-    <voice sentence="cluck cluck"/>
+    <voice sentence="Gokgoooook"/>
+    <voice sentence="Cluck Cluck"/>
   </voices>
-  <loot>
-    <item id="2695" countmax="4" chance1="20000" chancemax="0"/>
-  </loot>
+<loot>
+	<item id="3976" countmax="1" chance1="10001" chancemax="10000"/><!-- worm -->
+	<item id="2666" countmax="1" chance1="3001" chancemax="3000"/><!-- meat -->
+	<item id="2695" countmax="1" chance1="2001" chancemax="2000"/><!-- egg -->
+</loot>
 </monster>

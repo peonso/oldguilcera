@@ -46,28 +46,23 @@
     <voice sentence="Futchi maruk buta!"/>
   </voices>
 <loot>
-<item id="2148" chance="50000" countmax="70" /> -- gold coin
-<item id="2666" chance="20000" countmax="3" /> -- meat
-<item id="2667" chance="6667" countmax="1" /> -- fish
-<item id="2392" chance="1538" /> -- fire sword
-<item id="2647" chance="2222" /> -- plate legs
-<item id="2463" chance="1333" /> -- plate armor
-<item id="2399" chance="3333" countmax="18" /> -- throwing star
-<item id="2428" chance="2000" /> -- orcish axe
-<item id="1988" chance="100000" > -- backpack
-<inside>
-	<item id="2478" chance="3333" /> -- brass legs
-	<item id="2165" chance="1333" /> -- stealth ring
-	<item id="2200" chance="2000" /> -- protection amulet
-	<item id="2490" chance="2500" /> -- dark helmet
-	<item id="2377" chance="1818" /> -- two-handed sword
-	<item id="2434" chance="833" /> -- dragon hammer
-	<item id="2497" chance="667" /> -- crusader helmet
-	<item id="2179" chance="556" /> -- gold ring
-	<item id="2499" chance="333" /> -- amazon helmet
-	<item id="2500" chance="250" /> -- amazon armor
-	<item id="2537" chance="200" /> -- amazon shield
-</inside>
-</item>
+	<item id="2148" countmax="45" chance1="18000" chancemax="0"/><!-- 1-45% 18% 2148 gold -->
+	<item id="2667" countmax="2" chance1="11000" chancemax="0"/><!-- 1-2 11% 2667 fish -->
+	<item id="2399" countmax="18" chance1="14000" chancemax="0"/><!-- 1-18 14% 2399 throwing star -->
+	<item id="2200" chance="2000"/><!-- 2% 2200 protection amulet -->
+	<item id="2463" chance="5000"/><!-- 5% 2463 plate armor -->
+	<item id="2647" chance="5000"/><!-- 5% 2647 plate legs -->
+	<item id="2490" chance="2000"/><!-- 2% 2490 dark helmet -->
+	<item id="2465" chance="1000"/><!-- 1% 2465 brass armor -->
+	<item id="2497" chance="500"/><!-- 0,5% 2497 crusader helmet -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2165" chance="1000"/><!-- 1% 2165 stealth ring -->
+			<item id="2428" chance="6000"/><!-- 6% 2428 orcish axe -->
+			<item id="2434" chance="500"/><!-- 0,5% 2434 dragon hammer -->
+			<item id="2377" chance="2000"/><!-- 2% 2377 two handed sword -->
+			<item id="2419" chance="4000"/><!-- 4% 2419 scimitar -->
+			</inside>
+		</item>
 </loot>
 </monster>

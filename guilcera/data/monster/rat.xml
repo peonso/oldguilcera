@@ -32,8 +32,9 @@
     <immunity drunk="0"/>
     <immunity invisible="0"/>
   </immunities>
-  <loot>
-    <item id="2148" countmax="7" chance1="80000" chancemax="0"/>
-    <item id="2696" chance="20000"/>
-  </loot>
+<loot>
+	<item id="2148" countmax="4" chance1="70000" chancemax="0"/><!-- 1-4 70% 2148 gold -->
+	<item id="3976" countmax="2" chance1="30000" chancemax="0"/><!-- 1-2 30% 3976  worm -->
+	<item id="2696" chance="40000"/><!-- 40% 2696 cheese -->
+</loot>
 </monster>

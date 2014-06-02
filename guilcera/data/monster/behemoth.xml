@@ -44,30 +44,28 @@
     <voice sentence="Human flesh - delicious!"/>
     <voice sentence="Crush the intruders!" yell="1"/>
   </voices>
-  <loot>
-    <item id="2148" countmax="70" chance="100000"/>
-    <item id="2671" countmax="3" chance="10000"/>
-    <item id="2023" chance="11000"/>
-    <item id="2174" countmax="1" chance="800"/>
-    <item id="2387" chance="2000"/>
-    <item id="2377" chance="4000"/>
-    <item id="2231" countmax="1" chance="7000"/>
-    <item id="2393" chance="688"/>
-    <item id="2454" chance="488"/>
-    <item id="2150" countmax="2" chance="4000"/>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2463" countmax="1" chance="2000"/>
-        <item id="2553" countmax="1" chance="6000"/>
-        <item id="2666" countmax="6" chance="40000"/>
-        <item id="2489" countmax="1" chance="3000"/>
-        <item id="2125" chance="300"/>
-        <item id="2148" countmax="40" chance="100000"/>
-        <item id="2416" countmax="1" chance="15000"/>
-        <item id="2645" chance="400"/>
-        <item id="2188" chance="1000"/>
-        <item id="2161" chance="3333"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="89" chance1="96000" chancemax="4000"/><!-- gold -->
+	<item id="2148" countmax="99" chance1="9600" chancemax="4000"/><!-- gold -->
+	<item id="2148" countmax="96" chance1="60000" chancemax="6000"/><!-- gold -->
+	<item id="2148" countmax="96" chance1="40000" chancemax="8000"/><!-- gold -->
+	<item id="2666" countmax="4" chance1="70000" chancemax="20000"/><!-- meat -->
+	<item id="2150" countmax="5" chance1="7000" chancemax="2000"/><!-- small amethyst -->
+	<item id="2645" chance="500"/><!-- 0,5% steel boots -->
+	<item id="2489" chance="5000"/><!-- dark armor -->	
+	<item id="2416" chance="2000"/><!-- crowbar -->
+	<item id="2463" chance="4000"/><!-- plate armor -->
+	<item id="2125" chance="2000"/><!-- 2125 crystal necklace -->
+	<item id="2174" chance="1000"/><!-- strange symbol -->
+	<item id="2231" chance="1000"/><!-- big bone -->
+	<item id="2553" chance="1000"/><!-- pick -->
+	<item id="2023" chance="1000"/><!-- amphora  -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2393" chance="2000"/><!-- 2393 giant sword -->
+			<item id="2377" chance="6000"/><!-- two-handed sword -->
+			<item id="2387" chance="10000"/><!-- double axe -->
+			</inside>
+		</item>
+</loot>
 </monster>

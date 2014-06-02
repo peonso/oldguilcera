@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="banshee" nameDescription="a banshee" race="blood" experience="900" speed="220" manacost="0">
+<monster name="banshee" nameDescription="a banshee" race="undead" experience="900" speed="220" manacost="0">
   <health now="1000" max="1000"/>
   <look type="78" head="20" body="30" legs="40" feet="50" corpse="2998"/>
   <targetchange interval="5000" chance="8"/>
@@ -51,18 +51,25 @@
     <voice sentence="Dance for me your dance of death!"/>
     <voice sentence="Feel my gentle kiss of death."/>
   </voices>
-  <loot>
-    <item id="2148" countmax="40" chance1="100000" chancemax="0"/>
-    <item id="2144" countmax="3" chance1="1000" chancemax="0"/>
-    <item id="2657" chance="5000"/>
-    <item id="2168" chance="1333"/>
-    <item id="2170" chance="2000"/>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2654" chance="20000"/>
-        <item id="2655" chance="1333"/>
-        <item id="2656" chance="600"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="48" chance1="30000" chancemax="4000"/><!-- gold -->
+	<item id="2148" countmax="32" chance1="30000" chancemax="4000"/><!-- gold -->
+	<item id="2143" countmax="1" chance1="1001" chancemax="1000"/><!-- white pearl -->
+	<item id="2144" countmax="1" chance1="3001" chancemax="3000"/><!-- black pearl -->
+	<item id="2656" chance="1000"/><!-- blue robe -->
+	<item id="2655" chance="200"/><!-- 0,2% red robe -->
+	<item id="2177" chance="1000"/><!-- life crystal -->
+	<item id="2124" chance="1000"/><!-- crystal ring -->
+	<item id="2237" chance="1000"/><!-- dirty cape -->
+	<item id="2121" chance="1000"/><!-- wedding ring -->
+	<item id="2175" chance="1000"/><!-- spellbook -->
+	<item id="2214" chance="1000"/><!-- ring of healing -->
+	<item id="2197" chance="1000"/><!-- 2197 stone skin amulet -->
+	<item id="2372" chance="1000"/><!-- lyre -->
+	<item id="2134" chance="2000"/><!-- silver brooch -->
+	<item id="2411" chance="2000"/><!-- poison dagger -->
+	<item id="2657" chance="7000"/><!-- simple dress -->
+	<item id="2170" chance="9000"/><!-- 2170 silver amulet -->
+	<item id="2047" chance="60000"/><!-- candlestick -->
+</loot>
 </monster>

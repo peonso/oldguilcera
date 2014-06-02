@@ -36,8 +36,10 @@
     <voice sentence="Meeeeep!"/>
     <voice sentence="Meep!"/>
   </voices>
-  <loot>
-    <item id="2148" countmax="6" chance1="100000" chancemax="0"/>
-    <item id="2696" chance="20000"/>
-  </loot>
+<loot>
+	<item id="2148" countmax="2" chance1="84000" chancemax="0"/><!-- 1-2 84% 2148 gold -->
+	<item id="3976" countmax="2" chance1="10000" chancemax="0"/><!-- 1-2 10% 3976  worm -->
+	<item id="2687" countmax="1" chance1="1000" chancemax="0"/><!-- 1% 2687  cookie --> 
+	<item id="2696" chance="30000"/><!-- 30% 2696 cheese -->
+</loot>
 </monster>

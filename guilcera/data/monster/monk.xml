@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="monk" nameDescription="a monk" race="blood" experience="200" speed="220" manacost="600">
   <health now="240" max="240"/>
-  <look type="57" head="20" body="30" legs="40" feet="50" corpse="3128"/>
+  <look type="57" corpse="3128"/>
   <targetchange interval="5000" chance="8"/>
   <strategy attack="100" defense="0"/>
   <flags>
@@ -42,18 +42,20 @@
   <voices interval="5000" chance="10">
     <voice sentence="'Repent heretic!, Feel my kick!. A prayer for Zathroth"/>
   </voices>
-  <loot>
-    <item id="2148" countmax="20" chance1="100000" chancemax="0"/>
-    <item id="1949" chance="10000"/>
-    <item id="2467" chance="10000"/>
-    <item id="2642" chance="6666"/>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2044" chance="6666"/>
-        <item id="2689" countmax="3" chance1="20000" chancemax="0"/>
-        <item id="2401" chance="3333"/>
-        <item id="2166" chance="1428"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="18" chance1="15000" chancemax="0"/><!-- 1-18 15% 2148 gold -->
+	<item id="2689" countmax="1" chance1="20000" chancemax="0"/><!-- 20% 2689 bread -->
+	<item id="2193" chance="3000"/><!-- 3% 2193 ankh -->
+	<item id="1949" chance="2000"/><!-- 2% 1949 scroll -->
+	<item id="2177" chance="1000"/><!-- 1% 2177 life crystal -->
+	<item id="2044" chance="1000"/><!-- 1% 2044 lamp -->
+	<item id="2015" chance="1000"/><!-- 1% 2015 brown flask -->
+	<item id="2642" chance="11000"/><!-- 11% 2642 sandals -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2166" chance="1000"/><!-- 1% 2166 power ring -->
+			<item id="2401" chance="1000"/><!-- 1% 2401 staff -->
+			</inside>
+		</item>
+</loot>
 </monster>

@@ -32,12 +32,9 @@
     <immunity drunk="0"/>
     <immunity invisible="0"/>
   </immunities>
-  <loot>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
-    <item id="2148" countmax="100" chance1="100000" chancemax="0"/>
-    <item id="3982" chance="4000"/>
-    <item id="3982" chance="1333"/>
-    <item id="3983" chance="200"/>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
-  </loot>
+<loot>
+	<item id="2148" countmax="10" chance1="50000" chancemax="5000"/><!-- gold -->
+	<item id="2671" countmax="2" chance1="40000" chancemax="20000"/><!-- ham -->
+	<item id="3982" chance="2000"/><!-- crocodile boots -->
+ </loot>
 </monster>

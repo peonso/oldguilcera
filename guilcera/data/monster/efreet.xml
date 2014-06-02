@@ -68,21 +68,19 @@
     <voice sentence="Tell me your last wish!"/>
     <voice sentence="Good wishes are for fairytales"/>
   </voices>
-  <loot>
-    <item id="2155" countmax="1" chance="100"/>
-    <item id="2148" countmax="60" chance1="100000" chancemax="0"/>
-    <item id="2673" countmax="4" chance1="6666" chancemax="0"/>
-    <item id="2044" chance="10000"/>
-    <item id="1987" chance="100000">
-    <item id="2063" chance="20000"/>
-      <inside>
-        <item id="2149" countmax="2" chance="7000"/>
-        <item id="2663" chance="200"/>
-        <item id="1860" countmax="1" chance="2500"/>
-        <item id="2148" countmax="15" chance1="80000" chancemax="0"/>
-        <item id="2442" chance="2000"/>
-        <item id="2187" chance="1111" />
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="90" chance1="95000" chancemax="0"/>
+	<item id="2148" countmax="39" chance1="20000" chancemax="0"/><!-- 1-129 97% 2148 gold -->
+	<item id="2673" countmax="5" chance1="9000" chancemax="0"/><!-- 1-5 9% 2673 pear -->
+	<item id="2149" countmax="1" chance1="7000" chancemax="0"/><!-- 7% 2149 small emerald -->
+	<item id="2155" chance="200"/><!-- 0,2% 2155 green gem -->
+	<item id="2663" chance="200"/><!-- 0,2% 2663 mystic turban -->
+	<item id="2359" chance="200"/><!-- 0,2% 2359 small oil lamp -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2442" chance="5000"/><!-- 5% 2442 heavy machete -->
+			<item id="2187" chance="500"/><!-- 0,5% 2187 wand of inferno -->
+			</inside>
+		</item>
+</loot>
 </monster>

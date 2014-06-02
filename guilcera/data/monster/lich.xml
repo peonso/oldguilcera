@@ -61,23 +61,27 @@
     <voice sentence="Thy living flesh offends me!"/>
     <voice sentence="Death and Decay!"/>
   </voices>
-  <loot>
- 	<item id="2148" countmax="100" chance1="100000" chancemax="0"/>
- 	<item id="2401" chance="10000"/> --staff
- 	<item id="2171" chance="1666"/> --platinium amulet
- 	<item id="2656" chance="709"/> --blue robe
- 	<item id="2144" countmax="6" chance1="6666" chancemax="0"/>  black pear
-
- 	<item id="1987" chance="100000">
- 	<inside>
- 	<item id="2535" chance="588"/> --castle shield
- 	<item id="2165" chance="888"/> --stealth ring
- 	<item id="2143" countmax="4" chance1="4000" chancemax="0"/>  white pear
- 	<item id="2237" chance="10000"/> --dirty cape
- 	<item id="2148" countmax="12" chance1="80000" chancemax="0"/>
- 	<item id="2175" chance="10000"/> --spell book
- 	<item id="2179" chance="900"/> --gold ring
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="98" chance1="100000" chancemax="0"/>
+	<item id="2148" countmax="40" chance1="64000" chancemax="0"/><!-- 1-138 100% 2148 gold -->
+	<item id="2144" countmax="3" chance1="6000" chancemax="0"/><!-- 1-3 6% 2144 black pearl -->
+	<item id="2143" countmax="1" chance1="5000" chancemax="0"/><!-- 5% 2143 white pearl -->
+	<item id="2149" countmax="3" chance1="3000" chancemax="0"/><!-- 1-3 3% 2149 small emerald -->
+	<item id="2175" chance="10000"/><!-- 10% 2175 spellbook -->
+	<item id="2237" chance="19000"/><!-- 19% 2237 dirty cape -->
+	<item id="2154" chance="1000"/><!-- 1% 2154 yellow gem -->
+	<item id="2178" chance="1000"/><!-- 1% 2178 mind stone -->
+	<item id="2479" chance="1000"/><!-- 1% 2479 strange helmet -->
+	<item id="2171" chance="500"/><!-- 0,5% 2171 platinum amulet -->
+	<item id="2656" chance="500"/><!-- 0,5% 2656 blue robe -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2214" chance="2000"/><!-- 2% 2214 ring of healing -->
+			<item id="2436" chance="1000"/><!-- 1% 2436 skull staff -->
+			<item id="2401" chance="57000"/><!-- 57% 2401 staff -->
+			<item id="2535" chance="500"/><!-- 0,5% 2535 castle shield -->
+			<item id="2532" chance="3000"/><!-- 3% 2532 ancient shield -->
+			</inside>
+		</item>
+</loot>
 </monster>

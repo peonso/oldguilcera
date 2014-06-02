@@ -39,21 +39,20 @@
     <voice sentence="Hmmm, bugs."/>
     <voice sentence="Hmmm, dogs."/>
   </voices>
-  <loot>
-    <item id="2148" countmax="10" chance1="100000" chancemax="0"/>
-    <item id="2389" countmax="1" chance1="33333" chancemax="0"/>
-    <item id="2643" chance="10000"/>
-    <item id="2461" chance="20000"/>
-    <item id="2120" chance="23333"/>
-    <item id="2172" chance="3333"/>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2512" chance="6666"/>
-        <item id="2666" countmax="2" chance1="30000" chancemax="0"/>
-        <item id="2380" chance="10000"/>
-        <item id="2170" chance="1428"/>
-        <item id="2448" chance="10000"/>
-      </inside>
-    </item>
-  </loot>
+ <loot>
+	<item id="2148" countmax="12" chance1="65000" chancemax="0"/><!-- 1-12 65% 2148 gold -->
+	<item id="2666" countmax="2" chance1="15000" chancemax="0"/><!-- 15% 2666 meat -->
+	<item id="2120" chance="8000"/><!-- 8% 2120 rope -->
+	<item id="2461" chance="12000"/><!-- 12% 2461 leather helmet -->
+	<item id="2643" chance="10000"/><!-- 10% 2643 leather boots -->
+	<item id="2170" chance="1000"/><!-- 1% 2170 silver amulet -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2389" countmax="1" chance1="13000" chancemax="0"/><!-- 13% 2389 spear -->
+			<item id="2380" chance="18000"/><!-- 18% 2380 hand axe -->
+			<item id="2448" chance="5000"/><!-- 5% 2448 studded club -->
+			<item id="2512" chance="5000"/><!-- 5% 2512 wooden shield -->
+			</inside>
+		</item>
+</loot>
 </monster>

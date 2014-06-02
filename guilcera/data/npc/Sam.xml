@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<npc name="Sam" script="sam.lua" walkinterval="2000" floorchange="0" idleinterval="30">
-	<health now="100" max="100"/>
-	<look type="131" head="132" body="77" legs="86" feet="114"/>
-</npc>

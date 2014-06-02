@@ -1,7 +1,5 @@
 @echo off
-title guilcera_401 avesta_rev94
-echo :: === guilcera_401 avesta_rev94 ===
-echo :: === by peonso ===================
+title guilcera_402 avesta_rev94
 :begin
 avesta_rev94.exe
 echo :: === The Server Shutdown, Restarting... ===

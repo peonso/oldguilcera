@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <globalevents>
-<globalevent name="save" interval="120000" script="save.lua"/>
-	<!--
-	EXAMPLES
-	execute something.lua every 20 seconds the interval is in ms , 1sec = 1000ms 
-	<globalevent name="something" interval="600000" script="something.lua"/>
+
+	<!-- 60000 = 1 minute -->
+	<globalevent name="save" interval="120000" script="save.lua"/>
 	
-	execute my_script.lua at 12:00
-	<globalevent name="timer_example" time="12:00:00" script="my_script.lua"/>
-	
-	execute shutdown.lua at the moment of shutdown 
-	<globalevent name="shutdown" type="shutdown" script="shutdown.lua"/>
-	
-	execute startup.lua at start of the server
-	<globalevent name="startup" type="startup" script="startup.lua"/>
+	<!-- functions does not working with avesta rev 94
+	<globalevent type="record" name="PlayerRecord" script="record.lua"/>
+	<globalevent name="Server Save" time="20:42:00" script="serversave.lua" />
 	-->
+	
 </globalevents>

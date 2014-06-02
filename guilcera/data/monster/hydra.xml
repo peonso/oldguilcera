@@ -55,28 +55,24 @@
     <voice sentence="FCHHHHH"/>
     <voice sentence="HISSSS"/>
   </voices>
-  <loot>
-    <item id="2148" countmax="100" chance1="100000" chancemax="0"/>
-    <item id="2148" countmax="25" chance1="100000" chancemax="0"/>
-    <item id="2671" countmax="3" chance="60000"/>
-    <item id="2498" chance="200"/>
-    <item id="2195" chance="500"/>
-    <item id="2475" chance="1000"/>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
-    <item id="2146" countmax="1" chance="5000"/>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2214" countmax="1" chance="1200"/>
-        <item id="2666" countmax="4" chance="90000"/>
-        <item id="2177" chance="600"/>
-        <item id="2476" chance="1000"/>
-        <item id="4850" chance="1200"/>
-        <item id="2149" countmax="3" chance1="10000" chancemax="0"/>
-        <item id="2148" countmax="50" chance1="100000" chancemax="0"/>
-        <item id="2536" chance="555"/>
-        <item id="2168" chance="2500"/>
-        <item id="2197" chance="800"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="50" chance1="83000" chancemax="0"/><!-- 1-246 88% 2148 gold -->
+	<item id="2671" countmax="3" chance1="60000" chancemax="0"/><!-- 1-3 60% 2671 ham -->
+	<item id="2666" countmax="4" chance1="70000" chancemax="0"/><!-- 1-4 70% 2666 meat -->
+	<item id="2146" countmax="1" chance1="5000" chancemax="0"/><!-- 5% 2146 small sapphire -->
+	<item id="4850" chance="1000"/><!-- 1% 4850 hydra egg -->
+	<item id="2177" chance="1000"/><!-- 1% 2177 life crystal -->
+	<item id="2197" chance="1000"/><!-- 1% 2197 stone skin amulet -->
+	<item id="2476" chance="1000"/><!-- 1% 2476 knight armor -->
+	<item id="2475" chance="1000"/><!-- 1% 2475 warrior helmet -->
+	<item id="2498" chance="200"/><!-- 0,2% 2498 royal helmet -->
+	<item id="2195" chance="200"/><!-- 0,2% 2195 boots of haste -->
+	<item id="2492" chance="200"/><!-- 0,2% 2492 dragon scale mail -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2214" chance="1000"/><!-- 1% 2214 ring of healing -->
+			<item id="2536" chance="400"/><!-- 0,4% 2536 medusa shield -->
+			</inside>
+		</item>
+</loot>
 </monster>

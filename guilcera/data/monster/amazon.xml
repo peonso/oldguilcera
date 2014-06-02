@@ -36,21 +36,22 @@
     <immunity invisible="0"/>
   </immunities>
   <voices interval="5000" chance="10">
+	<voice sentence="Your head shall be mine!"/>
     <voice sentence="Yeee ha!"/>
     <voice sentence="Your head will be mine!"/>
   </voices>
 <loot>
-		<item id="2148" countmax="20" chance1="40000" chancemax="3000"/><!-- gold coin -->
-		<item id="2229" countmax="2" chance1="80000" chancemax="20000"/><!-- skull -->
-		<item id="2691" countmax="1" chance1="30000" chancemax="29000"/><!-- brown bread -->
-		<item id="2050" chance="1000"/><!-- torch -->
-		<item id="2147" countmax="1" chance1="1001" chancemax="1000"/><!-- small ruby -->
-		<item id="2125" chance="1000"/><!-- crystal necklace -->
+	<item id="2148" countmax="20" chance1="40000" chancemax="3000"/><!-- gold coin -->
+	<item id="2229" countmax="2" chance1="80000" chancemax="20000"/><!-- skull -->
+	<item id="2691" countmax="1" chance1="30000" chancemax="29000"/><!-- brown bread -->
+	<item id="2050" chance="1000"/><!-- torch -->
+	<item id="2147" countmax="1" chance1="1001" chancemax="1000"/><!-- small ruby -->
+	<item id="2125" chance="1000"/><!-- 2125 crystal necklace -->
 		<item id="1987" chance="100000"><!-- bag -->
 			<inside>
 			<item id="2385" chance="23000"/><!-- sabre -->
 			<item id="2379" chance="80000"/><!-- dagger -->
 			</inside>
 		</item>
-	</loot>
+</loot>
 </monster>

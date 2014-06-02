@@ -37,20 +37,19 @@
     <immunity drunk="1"/>
     <immunity invisible="1"/>
   </immunities>
-  <loot>
-    <item id="2148" countmax="64" chance1="100000" chancemax="0"/>
-    <item id="2148" countmax="30" chance1="100000" chancemax="0"/>
-    <item id="2050" chance="20000"/>
-    <item id="2483" chance="10000"/>
-    <item id="2473" chance="6666"/>
-    <item id="2398" chance="20000"/>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2460" chance="6666"/>
-        <item id="2229" countmax="2" chance1="20000" chancemax="0"/>
-        <item id="2403" chance="10000"/>
-        <item id="2168" chance="2500"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="30" chance1="68000" chancemax="0"/><!-- 1-30 68% 2148 gold -->
+	<item id="3976" countmax="2" chance1="10000" chancemax="0"/><!-- 1-2 10% 3976  worm -->
+	<item id="2050" chance="5000"/><!-- 5% 2050 torch -->
+	<item id="2229" countmax="1" chance1="1000" chancemax="0"/><!-- 1% 2229 skull -->
+	<item id="2460" chance="20000"/><!-- 20% 2460 brass helmet -->
+	<item id="2473" chance="1000"/><!-- 1% 2473 viking helmet -->
+	<item id="2483" chance="1000"/><!-- 1% 2483 scale armor -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2168" chance="1000"/><!-- 1% 2168 life ring -->
+			<item id="2403" chance="18000"/><!-- 18% 2403 knife -->
+			</inside>
+		</item>
+</loot>
 </monster>

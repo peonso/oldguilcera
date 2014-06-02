@@ -37,15 +37,17 @@
     <voice sentence="Groar!"/>
     <voice sentence="Me strong! Me ate spinach!"/>
   </voices>
-  <loot>
-    <item id="2148" countmax="12" chance1="100000" chancemax="0"/>
-    <item id="2667" countmax="1" chance1="90000" chancemax="0"/>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2643" chance="20000"/>
-        <item id="2050" chance="20000"/>
-        <item id="2580" chance="20000"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="5" chance1="50000" chancemax="0"/><!-- 1-5 50% 2148 gold -->
+	<item id="2667" countmax="1" chance1="60000" chancemax="0"/><!-- 60% 2667 fish -->
+	<item id="2050" chance="15000"/><!-- 15% 2050 torch -->
+	<item id="2235" chance="10000"/><!-- 10% 2235 moldy cheese -->
+	<item id="2643" chance="10000"/><!-- 10% 2643 leather boots -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2580" chance="1000"/><!-- 1% 2580 fishing rod -->
+			<item id="2389" countmax="1" chance1="13000" chancemax="0"/><!-- 13% 2389 spear -->
+			</inside>
+		</item>
+</loot>
 </monster>

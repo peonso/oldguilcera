@@ -29,14 +29,11 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `warned` tinyint(1) NOT NULL default '0',
   `warnings` int(11) NOT NULL default '0',
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=136592 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
 -- Extraindo dados da tabela `accounts`
 --
-
-INSERT INTO `accounts` (`id`, `password`, `email`, `premend`, `blocked`, `deleted`, `warned`, `warnings`) VALUES
-(2, '2', 'owner_error404@hotmail.com', 1374175558, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -96,7 +93,7 @@ CREATE TABLE IF NOT EXISTS `groups` (
   `maxdepotitems` int(11) NOT NULL,
   `maxviplist` int(11) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Extraindo dados da tabela `groups`
@@ -104,7 +101,7 @@ CREATE TABLE IF NOT EXISTS `groups` (
 
 INSERT INTO `groups` (`id`, `name`, `flags`, `access`, `maxdepotitems`, `maxviplist`) VALUES
 (1, 'player', 0, 0, 1000, 100),
-(2, 'Gamemaster', 2147483647, 3, 1000, 100);
+(2, 'Gamemaster', 603554057, 3, 1000, 100);
 
 -- --------------------------------------------------------
 
@@ -164,11 +161,6 @@ CREATE TABLE IF NOT EXISTS `houses` (
 -- Extraindo dados da tabela `houses`
 --
 
-INSERT INTO `houses` (`id`, `owner`, `paid`, `warnings`, `lastwarning`) VALUES
-(3, 0, 0, 0, 1372290665),
-(4, 0, 0, 0, 1372290665),
-(5, 0, 0, 0, 1372290665);
-
 -- --------------------------------------------------------
 
 --
@@ -203,11 +195,6 @@ CREATE TABLE IF NOT EXISTS `map_store` (
 -- Extraindo dados da tabela `map_store`
 --
 
-INSERT INTO `map_store` (`house_id`, `data`) VALUES
-(3, 0xcf00da000701000000ba0400),
-(4, ''),
-(5, 0xcf00e6000701000000bb0400);
-
 -- --------------------------------------------------------
 
 --
@@ -228,9 +215,6 @@ CREATE TABLE IF NOT EXISTS `nicaw_accounts` (
 -- Extraindo dados da tabela `nicaw_accounts`
 --
 
-INSERT INTO `nicaw_accounts` (`account_id`, `rlname`, `location`, `comment`, `recovery_key`, `reveal_characters`) VALUES
-(2, 'peonso', 'brazil', NULL, NULL, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -245,19 +229,11 @@ CREATE TABLE IF NOT EXISTS `nicaw_account_logs` (
   `action` varchar(255) NOT NULL,
   UNIQUE KEY `id` (`id`),
   KEY `account_id` (`account_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
 -- Extraindo dados da tabela `nicaw_account_logs`
 --
-
-INSERT INTO `nicaw_account_logs` (`id`, `account_id`, `ip`, `date`, `action`) VALUES
-(1, 136591, 2130706433, 1371583533, 'Created'),
-(2, 136591, 2130706433, 1371583544, 'Created character: GM Peonso'),
-(3, 2, 2130706433, 1371588475, 'Created character: Top Tester Br'),
-(4, 2, 2130706433, 1371776387, 'Created character: Peonso'),
-(5, 2, 2130706433, 1371776467, 'Created character: Bilonga'),
-(6, 2, 2130706433, 1372296975, 'Created character: Kirok');
 
 -- --------------------------------------------------------
 
@@ -395,11 +371,11 @@ CREATE TABLE IF NOT EXISTS `players` (
   `manamax` int(10) unsigned NOT NULL default '100',
   `manaspent` int(10) unsigned NOT NULL default '0',
   `direction` int(10) unsigned NOT NULL default '0',
-  `looktype` int(10) unsigned NOT NULL default '136',
-  `lookhead` int(10) unsigned NOT NULL default '10',
-  `lookbody` int(10) unsigned NOT NULL default '10',
-  `looklegs` int(10) unsigned NOT NULL default '10',
-  `lookfeet` int(10) unsigned NOT NULL default '10',
+  `looktype` int(10) unsigned NOT NULL default '128',
+  `lookhead` int(10) unsigned NOT NULL default '78',
+  `lookbody` int(10) unsigned NOT NULL default '69',
+  `looklegs` int(10) unsigned NOT NULL default '58',
+  `lookfeet` int(10) unsigned NOT NULL default '76',
   `posx` int(11) NOT NULL default '0',
   `posy` int(11) NOT NULL default '0',
   `posz` int(11) NOT NULL default '0',
@@ -425,18 +401,11 @@ CREATE TABLE IF NOT EXISTS `players` (
   UNIQUE KEY `name` (`name`),
   KEY `account_id` (`account_id`),
   KEY `group_id` (`group_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
 -- Extraindo dados da tabela `players`
 --
-
-INSERT INTO `players` (`id`, `name`, `account_id`, `group_id`, `sex`, `vocation`, `experience`, `level`, `maglevel`, `health`, `healthmax`, `mana`, `manamax`, `manaspent`, `direction`, `looktype`, `lookhead`, `lookbody`, `looklegs`, `lookfeet`, `posx`, `posy`, `posz`, `cap`, `soul`, `lastlogin`, `lastlogout`, `lastip`, `save`, `conditions`, `redskulltime`, `redskull`, `guildnick`, `loss_experience`, `loss_mana`, `loss_skills`, `loss_items`, `rank_id`, `town_id`, `balance`, `status`) VALUES
-(1, 'GM Error', 2, 2, 1, 0, 100, 2, 0, 185, 185, 35, 35, 100, 1, 75, 10, 10, 10, 10, 224, 229, 7, 0, 2, 1372296928, 1372296938, 16777343, 1, '', 0, 0, '', 10, 10, 10, 10, 0, 1, 0, 0),
-(2, 'Top Tester Br', 2, 1, 1, 1, 3524, 7, 0, 180, 180, 5, 5, 129, 2, 131, 114, 41, 100, 60, 224, 229, 7, 470, 2, 1372296947, 1372296951, 16777343, 1, '', 0, 0, '', 10, 10, 10, 10, 0, 1, 0, 0),
-(3, 'Peonso', 2, 1, 1, 4, 4200, 8, 0, 185, 185, 35, 35, 0, 2, 131, 10, 10, 10, 10, 224, 229, 7, 470, 0, 1372296953, 1372296958, 16777343, 1, '', 0, 0, '', 10, 10, 10, 10, 0, 1, 0, 0),
-(4, 'Bilonga', 2, 1, 1, 4, 4200, 8, 0, 185, 185, 15, 35, 100, 2, 131, 10, 10, 10, 10, 224, 229, 7, 470, 0, 1372296786, 1372296925, 16777343, 1, '', 0, 0, '', 10, 10, 10, 10, 0, 1, 0, 0),
-(5, 'Kirok', 2, 1, 1, 1, 6450, 9, 1, 190, 190, 65, 65, 310, 2, 130, 10, 10, 10, 10, 224, 229, 7, 480, 3, 1372296983, 1372297495, 16777343, 1, 0x01000100000200000000032894020010d7000000110600000012983a000013e2f00000fe, 0, 0, '', 10, 10, 10, 10, 0, 1, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -456,10 +425,6 @@ CREATE TABLE IF NOT EXISTS `player_deaths` (
 --
 -- Extraindo dados da tabela `player_deaths`
 --
-
-INSERT INTO `player_deaths` (`player_id`, `time`, `level`, `lasthit_killer`, `mostdamage_killer`) VALUES
-(2, 1371661642, 8, 'amazon', 'wolf'),
-(2, 1371662058, 7, 'dragon', 'amazon');
 
 -- --------------------------------------------------------
 
@@ -483,15 +448,6 @@ CREATE TABLE IF NOT EXISTS `player_depotitems` (
 -- Extraindo dados da tabela `player_depotitems`
 --
 
-INSERT INTO `player_depotitems` (`player_id`, `depot_id`, `sid`, `pid`, `itemtype`, `count`, `attributes`) VALUES
-(5, 0, 105, 101, 2594, 1, ''),
-(2, 0, 102, 101, 2594, 1, ''),
-(2, 0, 101, 0, 2589, 1, ''),
-(5, 0, 104, 101, 2160, 100, 0x0f64),
-(5, 0, 103, 101, 2148, 6, 0x0f06),
-(5, 0, 102, 101, 2000, 1, ''),
-(5, 0, 101, 0, 2589, 1, '');
-
 -- --------------------------------------------------------
 
 --
@@ -512,35 +468,6 @@ CREATE TABLE IF NOT EXISTS `player_items` (
 -- Extraindo dados da tabela `player_items`
 --
 
-INSERT INTO `player_items` (`player_id`, `sid`, `pid`, `itemtype`, `count`, `attributes`) VALUES
-(5, 110, 103, 2160, 99, 0x0f63),
-(5, 109, 103, 2120, 1, ''),
-(5, 108, 8, 2643, 1, ''),
-(3, 101, 1, 2480, 1, ''),
-(3, 102, 2, 2172, 200, 0x0cc8),
-(3, 103, 3, 2000, 1, ''),
-(3, 104, 6, 2530, 1, ''),
-(3, 105, 7, 2468, 1, ''),
-(3, 106, 8, 2643, 1, ''),
-(1, 102, 101, 2148, 8, 0x0f08),
-(1, 101, 3, 2000, 1, ''),
-(5, 107, 7, 2648, 1, ''),
-(2, 105, 8, 2643, 1, ''),
-(2, 104, 7, 2468, 1, ''),
-(2, 103, 6, 2530, 1, ''),
-(2, 102, 2, 2172, 200, 0x0cc8),
-(2, 101, 1, 2480, 1, ''),
-(4, 101, 1, 2480, 1, ''),
-(4, 102, 2, 2172, 200, 0x0cc8),
-(4, 103, 4, 2464, 1, ''),
-(4, 104, 6, 2530, 1, ''),
-(5, 106, 6, 2509, 1, ''),
-(5, 105, 5, 2190, 1, ''),
-(5, 104, 4, 2464, 1, ''),
-(5, 103, 3, 2000, 1, ''),
-(5, 102, 2, 2172, 200, 0x0cc8),
-(5, 101, 1, 2480, 1, '');
-
 -- --------------------------------------------------------
 
 --
@@ -558,43 +485,6 @@ CREATE TABLE IF NOT EXISTS `player_skills` (
 --
 -- Extraindo dados da tabela `player_skills`
 --
-
-INSERT INTO `player_skills` (`player_id`, `skillid`, `value`, `count`) VALUES
-(1, 0, 10, 0),
-(1, 1, 10, 0),
-(1, 2, 10, 0),
-(1, 3, 10, 0),
-(1, 4, 10, 0),
-(1, 5, 10, 0),
-(1, 6, 10, 0),
-(2, 0, 10, 0),
-(2, 1, 10, 0),
-(2, 2, 10, 0),
-(2, 3, 10, 0),
-(2, 4, 10, 0),
-(2, 5, 11, 62),
-(2, 6, 10, 0),
-(3, 0, 10, 0),
-(3, 1, 10, 0),
-(3, 2, 10, 0),
-(3, 3, 10, 0),
-(3, 4, 10, 0),
-(3, 5, 10, 0),
-(3, 6, 10, 0),
-(4, 0, 10, 10),
-(4, 1, 10, 0),
-(4, 2, 10, 0),
-(4, 3, 10, 0),
-(4, 4, 10, 0),
-(4, 5, 10, 90),
-(4, 6, 10, 0),
-(5, 0, 10, 0),
-(5, 1, 10, 0),
-(5, 2, 10, 0),
-(5, 3, 10, 0),
-(5, 4, 10, 0),
-(5, 5, 14, 230),
-(5, 6, 10, 0);
 
 -- --------------------------------------------------------
 
@@ -630,16 +520,6 @@ CREATE TABLE IF NOT EXISTS `player_storage` (
 -- Extraindo dados da tabela `player_storage`
 --
 
-INSERT INTO `player_storage` (`player_id`, `key`, `value`) VALUES
-(1, 6071, 1),
-(1, 6070, 1),
-(1, 6069, 1),
-(1, 6068, 1),
-(5, 6071, 1),
-(5, 6070, 1),
-(5, 6069, 1),
-(5, 6068, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -656,9 +536,6 @@ CREATE TABLE IF NOT EXISTS `player_viplist` (
 --
 -- Extraindo dados da tabela `player_viplist`
 --
-
-INSERT INTO `player_viplist` (`player_id`, `vip_id`) VALUES
-(4, 2);
 
 -- --------------------------------------------------------
 
@@ -695,7 +572,6 @@ CREATE TABLE IF NOT EXISTS `tiles` (
 --
 -- Extraindo dados da tabela `tiles`
 --
-
 
 -- --------------------------------------------------------
 

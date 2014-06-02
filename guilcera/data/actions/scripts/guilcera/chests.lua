@@ -29,7 +29,7 @@ queststatus = getPlayerStorageValue(cid,item.uid)
 	if (queststatus == -1) or (queststatus == 0) then
 		local DESCRIPTIONS = getItemDescriptions(QUEST_ITEM)
 		REWARD_ITEM = doPlayerAddItem(cid,QUEST_ITEM,1)
-		if (getItemWeight(REWARD_ITEM) > getPlayerFreeCap(cid) == true) then
+		if (getPlayerFreeCap(cid) > 0 == false) then
 			doPlayerSendTextMessage(cid, 22, "You do not have enough capacity.")
  			doRemoveItem(REWARD_ITEM,1)
 		else
@@ -47,7 +47,7 @@ queststatus = getPlayerStorageValue(cid,item.uid)
 	if (queststatus == -1) or (queststatus == 0) then
 		local DESCRIPTIONS = getItemDescriptions(QUEST_ITEM)
 		REWARD_ITEM = doPlayerAddItem(cid,QUEST_ITEM,1)
-		if (getItemWeight(REWARD_ITEM) > getPlayerFreeCap(cid)) then
+		if (getPlayerFreeCap(cid) > 0 == false) then
 			doPlayerSendTextMessage(cid, 22, "You do not have enough capacity.")
  			doRemoveItem(REWARD_ITEM,1)
 		else

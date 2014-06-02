@@ -47,18 +47,17 @@
   <summons maxSummons="4">
     <summon name="snake" interval="1000" chance="25" max="4"/>
   </summons>
-  <loot>
-    <item id="2148" countmax="20" chance1="100000" chancemax="0"/>
-    <item id="2401" chance="2222"/>
-    <item id="2458" chance="2222"/>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2817" chance="5000"/>
-        <item id="2389" countmax="1" chance1="4000" chancemax="0"/>
-        <item id="2079" chance="3333"/>
-        <item id="2190" chance="1538"/>
-        <item id="2188" chance="1000" />
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="5" chance1="89000" chancemax="0"/><!-- 1-5 89% 2148 gold -->
+	<item id="2686" countmax="2" chance1="10000" chancemax="0"/><!-- 1-2 10% 2686 corncob -->
+	<item id="1958" chance="4000"/><!-- 4% 1958 grey small book -->
+	<item id="2464" chance="9000"/><!-- 9% 2464 chain armor -->
+	<item id="2458" chance="9000"/><!-- 9% 2458 chain helmet -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2389" countmax="1" chance1="5000" chancemax="0"/><!-- 5% 2389 spear -->
+			<item id="2188" chance="1000"/><!-- 1% 2188 wand of plague -->
+			</inside>
+		</item>
+</loot>
 </monster>

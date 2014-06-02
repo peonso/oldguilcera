@@ -45,31 +45,30 @@
     <voice sentence="By Bolg's Blood!"/>
     <voice sentence="You're no match for me!"/>
   </voices>
-  <loot>
-    <item id="2457" chance="10000"/>
-    <item id="2417" chance="7000"/>
-    <item id="2148" countmax="100" chance1="100000" chancemax="0"/>
-    <item id="2476" chance="800"/>
-    <item id="2489" chance="1428"/>
-    <item id="2490" chance="6666"/>
-    <item id="2381" chance="9000"/>
-    <item id="2389" countmax="1" chance1="20000" chancemax="0"/>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2477" chance="1000"/>
-        <item id="2691" countmax="2" chance="20000"/>
-        <item id="2478" chance="13000"/>
-        <item id="2475" countmax="1" chance="2000"/>
-        <item id="2463" chance="2500"/>
-        <item id="2148" countmax="15" chance1="100000" chancemax="0"/>
-        <item id="2120" chance="20000"/>
-        <item id="2387" chance="6666"/>
-        <item id="2377" chance="2857"/>
-        <item id="2430" chance="1333"/>
-        <item id="2414" chance="909"/>
-        <item id="2195" chance="555"/>
-        <item id="2133" countmax="1" chance="800"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+ 	<item id="2148" countmax="78" chance1="47000" chancemax="4000"/><!-- gold -->
+	<item id="2148" countmax="56" chance1="47000" chancemax="5000"/><!-- gold -->
+	<item id="2691" countmax="2" chance1="21000" chancemax="14000"/><!-- brown bread -->
+	<item id="2476" chance="500"/><!-- 0,5 knight armor -->
+	<item id="2489" chance="2000"/><!-- dark armor -->
+	<item id="2477" chance="1000"/><!-- knight legs -->
+	<item id="2195" chance="300"/><!-- 0,3% 2195 boots of haste -->
+	<item id="2475" chance="6000"/><!-- warrior helmet -->
+	<item id="2133" chance="1000"/><!-- ruby necklace -->
+	<item id="2463" chance="12000"/><!-- plate armor -->
+	<item id="2478" chance="11000"/><!-- brass legs -->
+	<item id="2457" chance="13000"/><!-- steel helmet -->
+	<item id="2490" chance="3000"/><!-- dark helmet -->
+	<item id="2120" chance="16000"/><!-- rope -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2381" chance="13000"/><!-- halberd -->
+			<item id="2389" countmax="3" chance1="33000" chancemax="10000"/><!-- spear -->
+			<item id="2417" chance="8000"/><!-- battle hammer -->
+			<item id="2414" chance="200"/><!-- 0,2% dragon lance -->
+			<item id="2430" chance="4000"/><!-- knight axe -->
+			<item id="2377" chance="10000"/><!-- two-handed sword -->
+			</inside>
+		</item>
+</loot>
 </monster>

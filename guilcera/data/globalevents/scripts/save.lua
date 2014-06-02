@@ -1,5 +1,5 @@
 function onThink(interval)
 	doSaveServer(true)
-print(":: Saving...")
+	print(":: Saving...")
 	return 1
 end

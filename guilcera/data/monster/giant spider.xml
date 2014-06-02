@@ -42,21 +42,20 @@
   <summons maxSummons="2">
     <summon name="poison spider" interval="1000" chance="30" max="2"/>
   </summons>
-  <loot>
-    <item id="2169" chance="700"/>
-    <item id="2148" countmax="50" chance1="100000" chancemax="0"/>
-    <item id="2463" chance="4000"/>
-    <item id="2171" chance="400"/>
-    <item id="2459" chance="20000"/>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2148" countmax="40" chance1="100000" chancemax="0"/>
-        <item id="2457" chance="5000"/>
-        <item id="2476" chance="700"/>
-        <item id="2477" chance="500"/>
-        <item id="2478" chance="10000"/>
-        <item id="2169" chance="800"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="99" chance1="100000" chancemax="0"/>
+	<item id="2148" countmax="97" chance1="60000" chancemax="0"/><!-- 1-196 100% 2148 gold -->
+	<item id="2545" countmax="12" chance1="12000" chancemax="0"/><!-- 1-12 12% 2545 poison arrow -->
+	<item id="2463" chance="10000"/><!-- 10% 2463 plate armor -->
+	<item id="2478" chance="9000"/><!-- 9% 2478 brass legs -->
+	<item id="2457" chance="5000"/><!-- 5% 2457 steel helmet -->
+	<item id="2477" chance="1000"/><!-- 1% 2477 knight legs -->
+	<item id="2476" chance="500"/><!-- 0,5% 2476 knight armor -->
+	<item id="2171" chance="500"/><!-- 0,5% 2171 platinum amulet -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2169" chance="1000"/><!-- 1% 2169 time ring -->
+			</inside>
+		</item>
+</loot>
 </monster>

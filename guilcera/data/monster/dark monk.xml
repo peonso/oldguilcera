@@ -47,22 +47,19 @@
     <voice sentence="Your end has come."/>
     <voice sentence="You are no match for us!"/>
   </voices>
-  <loot>
-    <item id="2148" countmax="20" chance1="100000" chancemax="0"/>
-    <item id="2439" chance="400"/>
-    <item id="1949" chance="10000"/>
-    <item id="2467" chance="10000"/>
-    <item id="2642" chance="6666"/>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2177" countmax="1" chance="1000"/>
-        <item id="2044" chance="6666"/>
-        <item id="2689" countmax="3" chance1="20000" chancemax="0"/>
-        <item id="2401" chance="3333"/>
-        <item id="2440" chance="100"/>
-        <item id="2166" chance="1428"/>
-        <item id="1949" chance="20000"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="18" chance1="14000" chancemax="0"/><!-- 1-18 14% 2148 gold -->
+	<item id="2689" countmax="1" chance1="20000" chancemax="0"/><!-- 20% 2689 bread -->
+	<item id="1949" chance="2000"/><!-- 2% 1949 scroll -->
+	<item id="2177" chance="1000"/><!-- 1% 2177 life crystal -->
+	<item id="2193" chance="1000"/><!-- 1% 2193 ankh -->
+	<item id="2642" chance="1000"/><!-- 1% 2642 sandals -->
+	<item id="2044" chance="1000"/><!-- 1% 2044 lamp -->
+	<item id="2015" chance="1000"/><!-- 1% 2015 brown flask -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2166" chance="1000"/><!-- 1% 2166 power ring -->
+			</inside>
+		</item>
+</loot>
 </monster>

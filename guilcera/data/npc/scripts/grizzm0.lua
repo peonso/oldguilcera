@@ -3,31 +3,31 @@ _count = 0
 _index = 0
 _delay = 500
  
-itemsgrizzm0 = {}
-itemsgrizzm0[0] = {name = 'snakebite', id = 2182, subtype = -1, sell = 500, buy = -1, stackable = 0}
-itemsgrizzm0[1] = {name = 'moonlight', id = 2186, subtype = -1, sell = 1000, buy = -1, stackable = 0}
-itemsgrizzm0[2] = {name = 'volcanic', id = 2185, subtype = -1, sell = 5000, buy = -1, stackable = 0}
-itemsgrizzm0[3] = {name = 'quagmire', id = 2181, subtype = -1, sell = 10000, buy = -1, stackable = 0}
-itemsgrizzm0[4] = {name = 'tempest', id = 2183, subtype = -1, sell = 15000, buy = -1, stackable = 0}
-itemsgrizzm0[5] = {name = 'ham', id = 2671, subtype = 1, sell = 6, buy = -1, stackable = 1}
-itemsgrizzm0[6] = {name = 'meat', id = 2666, subtype = 1, sell = 3, buy = -1, stackable = 1}
-itemsgrizzm0[7] = {name = 'mushroom', id = 2789, subtype = 1, sell = 10, buy = -1, stackable = 1}
+local items = {}
+items[0] = {name = 'snakebite', id = 2182, subtype = -1, sell = 500, buy = -1, stackable = 0}
+items[1] = {name = 'moonlight', id = 2186, subtype = -1, sell = 1000, buy = -1, stackable = 0}
+items[2] = {name = 'volcanic', id = 2185, subtype = -1, sell = 5000, buy = -1, stackable = 0}
+items[3] = {name = 'quagmire', id = 2181, subtype = -1, sell = 10000, buy = -1, stackable = 0}
+items[4] = {name = 'tempest', id = 2183, subtype = -1, sell = 15000, buy = -1, stackable = 0}
+items[5] = {name = 'ham', id = 2671, subtype = 1, sell = 6, buy = -1, stackable = 1}
+items[6] = {name = 'meat', id = 2666, subtype = 1, sell = 3, buy = -1, stackable = 1}
+items[7] = {name = 'mushroom', id = 2789, subtype = 1, sell = 10, buy = -1, stackable = 1}
 
 local function onActionItem(action)
-	if (action == 'buy' and itemsgrizzm0[_index].sell == -1) then
+	if (action == 'buy' and items[_index].sell == -1) then
 		selfSay('I\'m not selling it.', _delay * 2)
 		_state = 0
 		return
-	elseif (action == 'sell' and itemsgrizzm0[_index].buy == -1) then
+	elseif (action == 'sell' and items[_index].buy == -1) then
 		selfSay('I\'m not interested.', _delay * 2)
 		_state = 0
 		return
 	end
 
-	DESCRIPTION = getItemDescriptions(itemsgrizzm0[_index].id)
+	DESCRIPTION = getItemDescriptions(items[_index].id)
 	amount = ''
 	NAME_TO_SAY = DESCRIPTION.name
-	if itemsgrizzm0[_index].subtype == 7 then
+	if items[_index].subtype == 7 then
 		NAME_TO_SAY = 'mana fluid'
 	end
 	plural = DESCRIPTION.article
@@ -35,21 +35,21 @@ local function onActionItem(action)
 	if (_count > 1) then
 		amount = '' .. tostring(_count)
 		NAME_TO_SAY = DESCRIPTION.plural
-		if itemsgrizzm0[_index].subtype == 7 then
+		if items[_index].subtype == 7 then
 		NAME_TO_SAY = 'mana fluids'
 		end
 		plural = ''
 	end
  
-	cost = itemsgrizzm0[_index].buy
+	cost = items[_index].buy
 	if (_count > 1) then
-		cost = itemsgrizzm0[_index].buy * amount
+		cost = items[_index].buy * amount
 	end
 
 	if (action == 'buy') then
-		cost = itemsgrizzm0[_index].sell
+		cost = items[_index].sell
 		if (_count > 1) then
-			cost = itemsgrizzm0[_index].sell * amount
+			cost = items[_index].sell * amount
 		end
 	end
  
@@ -157,23 +157,23 @@ function onCreatureSay(cid, type, msg)
 
 		elseif (_state == 1) then
 			if (msgcontains(msg, 'yes')) then
-				if (doPlayerRemoveMoney(cid, itemsgrizzm0[_index].sell * _count) == 1) then
+				if (doPlayerRemoveMoney(cid, items[_index].sell * _count) == 1) then
  
-					if itemsgrizzm0[_index].stackable == TRUE then
+					if items[_index].stackable == TRUE then
 						local _stacks = math.floor(_count/100)
 						_count = _count - _stacks*100
 						if _stacks > 0 then
 							for i = 1, _stacks do
-								doPlayerAddItem(cid, itemsgrizzm0[_index].id, 100)
+								doPlayerAddItem(cid, items[_index].id, 100)
       							end
     						end
     						if _count > 0 then
-							doPlayerAddItem(cid, itemsgrizzm0[_index].id, _count)
+							doPlayerAddItem(cid, items[_index].id, _count)
     						end
 
 					else
 						for i = 1, _count do
-							doPlayerAddItem(cid, itemsgrizzm0[_index].id, itemsgrizzm0[_index].subtype)
+							doPlayerAddItem(cid, items[_index].id, items[_index].subtype)
 						end
 					end
  
@@ -191,8 +191,8 @@ function onCreatureSay(cid, type, msg)
  
 		elseif (_state == 2) then
 			if (msgcontains(msg, 'yes')) then
-				if (doPlayerRemoveItem(cid, itemsgrizzm0[_index].id, _count, itemsgrizzm0[_index].subtype) == 1) then
-					doPlayerAddMoney(cid, itemsgrizzm0[_index].buy * _count)
+				if (doPlayerRemoveItem(cid, items[_index].id, _count, items[_index].subtype) == 1) then
+					doPlayerAddMoney(cid, items[_index].buy * _count)
 					selfSay('Ok. Here is your money.')
 				else
 					if (_count > 1) then
@@ -210,8 +210,8 @@ function onCreatureSay(cid, type, msg)
 			_state = 0
  
 		else
-			for n = 0, table.getn(itemsgrizzm0) do
-				if (msgcontains(msg, itemsgrizzm0[n].name) or msgcontains(msg, itemsgrizzm0[n].name .. "s")) then
+			for n = 0, table.getn(items) do
+				if (msgcontains(msg, items[n].name) or msgcontains(msg, items[n].name .. "s")) then
 					_count = getCount(msg)
 					_index = n
  

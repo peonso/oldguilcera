@@ -37,19 +37,18 @@
     <voice sentence="Trak grrrr brik."/>
     <voice sentence="Alk!"/>
   </voices>
-  <loot>
-    <item id="2148" countmax="12" chance1="100000" chancemax="0"/>
-    <item id="2666" countmax="2" chance1="40000" chancemax="0"/>
-    <item id="2512" chance="10000"/>
-    <item id="2530" chance="4000"/>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2385" chance="6666"/>
-        <item id="2464" chance="5000"/>
-        <item id="2420" chance="5000"/>
-        <item id="2448" chance="5000"/>
-        <item id="2007" chance="20000"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="15" chance1="65000" chancemax="0"/><!-- 1-15 65% 2148 gold -->
+	<item id="2666" countmax="1" chance1="15000" chancemax="0"/><!-- 15% 2666 meat -->
+	<item id="2007" chance="8000"/><!-- 8% 2007 bottle -->
+	<item id="2464" chance="7000"/><!-- 7% 2464 chain armor -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2385" chance="51000"/><!-- 51% 2385 sabre -->
+			<item id="2411" chance="1000"/><!-- 1% 2411 poison dagger -->
+			<item id="2512" chance="19000"/><!-- 19% 2512 wooden shield -->
+			<item id="2530" chance="1000"/><!-- 1% 2530 copper shield -->
+			</inside>
+		</item>
+</loot>
 </monster>

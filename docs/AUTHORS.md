@@ -1,6 +1,8 @@
 Guilcera is an OpenTibia map made by *Peonso*.
 
-It's actually working with Avesta OpenTibia server, a work of *Ferrus*, based on OpenTibia by *OpenTibia team*.
+guilcera.otbm has some locations ripped off from *Cipsoft* map, also there is a dungeon made by *Melara* @OTServBrasil
+
+It's actually working with Avesta OpenTibia server, a work of *Ferrus* @otfans, based on OpenTibia by *OpenTibia team*.
 
 During long time of OpenTibia development process many people worked
 on it and cooperated with us. Note that OpenTibia is not only Open

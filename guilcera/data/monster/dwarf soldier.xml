@@ -38,21 +38,20 @@
   <voices interval="5000" chance="10">
     <voice sentence="Hail Durin!"/>
   </voices>
-  <loot>
-    <item id="2148" countmax="15" chance1="100000" chancemax="0"/>
-    <item id="2543" countmax="10" chance1="20000" chancemax="0"/>
-    <item id="2481" chance="10000"/>
-    <item id="2455" chance="10000"/>
-    <item id="2554" chance="3333"/>
-    <item id="2464" chance="20000"/>
-    <item id="2643" chance="25000"/>
-    <item id="2696" chance="15000"/>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2525" chance="1666"/>
-        <item id="2378" chance="3333"/>
-        <item id="2213" chance="2500"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="30" chance1="29000" chancemax="1000"/><!-- gold -->
+	<item id="2787" countmax="2" chance1="40000" chancemax="22000"/><!-- white mushroom -->
+	<item id="2543" countmax="7" chance1="38000" chancemax="5000"/><!-- bolt -->
+	<item id="2464" chance="8000"/><!-- chain armor -->
+	<item id="2481" chance="12000"/><!-- soldier helmet -->
+	<item id="2554" chance="10000"/><!-- shovel -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2378" chance="3000"/><!-- battle axe -->
+			<item id="2525" chance="4000"/><!-- dwarven shield -->
+			<item id="2455" chance="3000"/><!-- crossbow -->
+			<item id="2208" chance="1000"/><!-- axe ring -->
+			</inside>
+		</item>
+</loot>
 </monster>

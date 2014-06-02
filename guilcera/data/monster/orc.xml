@@ -37,17 +37,17 @@
     <voice sentence="Grow truk grrrrr."/>
     <voice sentence="Prek tars, dekklep zurk."/>
   </voices>
-  <loot>
-    <item id="2148" countmax="12" chance1="100000" chancemax="0"/>
-    <item id="2666" countmax="2" chance1="33333" chancemax="0"/>
-    <item id="2484" chance="10000"/>
-    <item id="2480" chance="10000"/>
-    <item id="2385" chance="10000"/>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2526" chance="10000"/>
-        <item id="2386" chance="10000"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="14" chance1="85000" chancemax="0"/><!-- 1-14 85% 2148 gold -->
+	<item id="2666" countmax="1" chance1="10000" chancemax="0"/><!-- 10% 2666 meat -->
+	<item id="2484" chance="8000"/><!-- 8% 2484 studded armor -->
+	<item id="2482" chance="3000"/><!-- 3% 2482 studded helmet -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2386" chance="5000"/><!-- 5% 2386 axe -->
+			<item id="2385" chance="6000"/><!-- 6% 2385 sabre -->
+			<item id="2526" chance="7000"/><!-- 7% 2526 studded shield -->
+			</inside>
+		</item>
+</loot>
 </monster>

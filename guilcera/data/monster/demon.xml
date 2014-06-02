@@ -64,34 +64,31 @@
     <voice sentence="Your soul will be mine!" yell="0"/>
   </voices>
 <loot>
- 	<item id="2148" countmax="100" chance1="100000" chancemax="0"/>
- 	<item id="2148" countmax="25" chance1="100000" chancemax="0"/>
- 	<item id="2393" chance="1428"/> --giantsword
- 	<item id="2514" chance="500"/> --mastermind shield
- 	<item id="2432" chance="1200"/> --fire axe
- 	<item id="2472" chance="130"/> --magic plate armor
-	<item id="2164" chance="200"/> --might ring
-	<item id="2176" chance="3000"/> --orb
-	<item id="1982" chance="1300"/> --purpel tome
-	<item id="2165" chance="1400"/> --stealth ring
- 	<item id="1987" chance="100000">
- 	<inside>
-        <item id="2214" chance="500"/> --ring of healing
-        <item id="2396" chance="600"/> --ice rapier
-        <item id="2179" chance="1100"/> --golden ring
-        <item id="2795" countmax="6" chance="20000"/>
-  	<item id="2678" countmax="3" chance1="10000" chancemax="0"/>
- 	<item id="2148" countmax="100" chance1="100000" chancemax="0"/>
- 	<item id="2151" countmax="4" chance1="4000" chancemax="0"/>
- 	<item id="2462" chance="1200"/> --devil helmet
-	<item id="2149" countmax="3" chance1="11000" chancemax="0"/>
- 	<item id="2171" chance="800"/> --platinum amulet
- 	<item id="2387" chance="20000"/> --double axe
- 	<item id="2470" chance="400"/> --golden legs
- 	<item id="2520" chance="700"/> --demon shield
- 	<item id="2418" chance="1500"/> --golden sickle
- 	<item id="2377" chance="3333"/> --two-handed sword
- 	</inside>
- 	</item>
+	<item id="2148" countmax="100" chance1="85000" chancemax="4000"/><!-- gold -->
+	<item id="2148" countmax="94" chance1="85000" chancemax="2000"/><!-- gold -->
+	<item id="2795" countmax="6" chance1="55000" chancemax="6000"/><!-- fire mushroom -->
+	<item id="2151" countmax="1" chance1="4001" chancemax="4000"/><!-- talon -->
+	<item id="2149" countmax="1" chance1="10001" chancemax="10000"/><!-- small emerald -->
+	<item id="2176" chance="3000"/><!-- orb -->
+	<item id="2165" chance="2000"/><!-- stealth ring -->
+	<item id="1982" chance="2000"/><!-- purple tome -->
+	<item id="2179" chance="2000"/><!-- gold ring -->
+	<item id="2214" chance="500"/><!-- ring of healing -->
+	<item id="2164" chance="600"/><!-- might ring -->
+	<item id="2462" chance="2000"/><!-- 2462 devil helmet -->
+	<item id="2470" chance="400"/><!-- 0,4% 2470 golden legs -->
+	<item id="2171" chance="800"/><!-- 0,8% 2171 platinum amulet -->
+	<item id="2472" chance="200"/><!-- 0,2% 2472 magic plate armor -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2432" chance="4000"/><!-- 2432 fire axe -->
+			<item id="2393" chance="3000"/><!-- 2393 giant sword -->
+			<item id="2387" chance="15000"/><!-- double axe -->
+			<item id="2396" chance="2000"/><!-- ice rapier -->
+			<item id="2418" chance="2000"/><!-- 2418 golden sickle -->
+			<item id="2520" chance="900"/><!-- 0,9% 2520 demon shield -->
+			<item id="2514" chance="600"/><!-- 0,6% 2514 mastermind shield -->
+			</inside>
+		</item>
 </loot>
 </monster>

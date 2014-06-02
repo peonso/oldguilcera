@@ -45,21 +45,22 @@
     <immunity invisible="1"/>
   </immunities>
   <voices interval="5000" chance="10">
-    <voice sentence="Hail Durin!"/>
     <voice sentence="Earth is the strongest element."/>
     <voice sentence="Dust to dust."/>
   </voices>
-  <loot>
-    <item id="2148" countmax="20" chance1="100000" chancemax="0"/>
-    <item id="2673" countmax="3" chance1="6666" chancemax="0"/>
-    <item id="2260" chance="4000"/>
-    <item id="2649" chance="10000"/>
-    <item id="2643" chance="20000"/>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2162" chance="2500"/>
-        <item id="2787" countmax="3" chance1="20000" chancemax="0"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="45" chance1="75000" chancemax="5000"/><!-- gold -->
+	<item id="2787" countmax="2" chance1="60000" chancemax="30000"/><!-- white mushroom -->
+	<item id="2673" countmax="1" chance1="26000" chancemax="25000"/><!-- pear -->
+	<item id="2146" countmax="1" chance1="1001" chancemax="1000"/><!-- small sapphire -->
+	<item id="2175" chance="1000"/><!-- spellbook -->
+	<item id="2260" chance="34000"/><!-- blank rune -->
+	<item id="2162" chance="15000"/><!-- magic lightwand -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2213" chance="1000"/><!-- dwarven ring -->
+			<item id="2423" chance="2000"/><!-- clerical mace -->
+			</inside>
+		</item>
+</loot>
 </monster>

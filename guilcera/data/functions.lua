@@ -361,7 +361,7 @@ queststatus = getPlayerStorageValue(PLAYER_ENTITY,QUEST_STORAGE)
 	if queststatus == -1 or queststatus == 0 then
 		local DESCRIPTION = getItemDescriptions(QUEST_ITEM)
 		REWARD_ITEM = doPlayerAddItem(PLAYER_ENTITY,QUEST_ITEM,ITEM_count)
-		if (getItemWeight(REWARD_ITEM) > getPlayerFreeCap(PLAYER_ENTITY) == true) then
+		if (getPlayerFreeCap(PLAYER_ENTITY) > 0 == false) then
 			doPlayerSendTextMessage(PLAYER_ENTITY, 22, "You do not have enough capacity.")
  			doRemoveItem(REWARD_ITEM,ITEM_count)
 		else

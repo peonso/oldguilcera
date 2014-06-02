@@ -65,32 +65,30 @@
     <voice sentence="Tsssse one will risssse again"/>
     <voice sentence="I bring you deathhhh, mortalssss"/>
   </voices>
-  <loot>
-    <item id="2182" chance="1333" /> -- snakebite rod
-    <item id="2195" chance="800"/>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
-    <item id="2148" countmax="50" chance1="100000" chancemax="0"/>
-    <item id="2476" chance="500"/> --knight armor
-    <item id="1976" countmax="1" chance="9000"/>
-    <item id="3971" countmax="1" chance="2000"/>
-    <item id="2492" countmax="1" chance="200"/>
-    <item id="2167" countmax="1" chance="3000"/>
-    <item id="2392" countmax="1" chance="300"/>
-
-    <item id="1987" chance="100000">
-      <inside>
-    <item id="2148" countmax="100" chance1="100000" chancemax="0"/>
-    <item id="2033" countmax="1" chance="3000"/>
-    <item id="2182" countmax="1" chance="1000"/>
-    <item id="2796" countmax="1" chance="18000"/>
-    <item id="2177" countmax="1" chance="800"/>
-    <item id="2168" countmax="1" chance="3000"/>
-    <item id="2547" countmax="1" chance="6000"/>
-    <item id="2498" countmax="1" chance="100"/>
-    <item id="2146" countmax="1" chance="6000"/>
-    <item id="2479" countmax="1" chance="600"/>
-    <item id="2528" countmax="1" chance="400"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="90" chance1="90000" chancemax="0"/>
+	<item id="2148" countmax="90" chance1="50000" chancemax="0"/>
+	<item id="2148" countmax="62" chance1="40000" chancemax="0"/><!-- 1-242 97% 2148 gold -->
+	<item id="2796" countmax="1" chance1="18000" chancemax="0"/><!-- 18% 2796 green mushroom -->
+	<item id="2146" countmax="1" chance1="12000" chancemax="0"/><!-- 12% 2146 small sapphire -->
+	<item id="1976" chance="9000"/><!-- 9% 1976 gemmed book -->
+	<item id="2033" chance="3000"/><!-- 3% 2033 golden mug -->
+	<item id="2547" countmax="1" chance1="6000" chancemax="0"/><!-- 6% 2547 power bolt -->
+	<item id="1967" chance="1000"/><!-- 1% 1967 old parchment -->
+	<item id="2177" chance="1000"/><!-- 1% 2177 life crystal -->
+	<item id="2479" chance="1000"/><!-- 1% 2479 strange helmet -->
+	<item id="2473" chance="15000"/><!-- 15% 2473 viking helmet -->
+	<item id="2475" chance="600"/><!-- 0,6% 2475 warrior helmet -->
+	<item id="2487" chance="600"/><!-- 0,6% 2487 crown armor -->
+	<item id="3971" chance="200"/><!-- 0,2% 3971 charmer's tiara -->
+	<item id="2498" chance="200"/><!-- 0,2% 2498 royal helmet -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2168" chance="6000"/><!-- 6% 2168 life ring -->
+			<item id="2167" chance="6000"/><!-- 6% 2167 energy ring -->
+			<item id="2182" chance="1000"/><!-- 1% 2182 snakebite rod -->
+			<item id="2528" chance="1000"/><!-- 1% 2528 tower shield -->
+			</inside>
+		</item>
+</loot>
 </monster>

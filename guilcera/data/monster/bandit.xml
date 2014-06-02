@@ -36,17 +36,19 @@
     <voice sentence="Your money or your life!"/>
     <voice sentence="Hand me your purse!"/>
   </voices>
-  <loot>
-    <item id="2148" countmax="15" chance1="100000" chancemax="0"/>
-    <item id="2388" chance="6666"/>
-    <item id="2386" chance="5000"/>
-    <item id="2484" chance="20000"/>
-    <item id="2530" chance="6666"/>
-    <item id="2649" chance="10000"/>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2787" countmax="2" chance1="20000" chancemax="0"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="30" chance1="49000" chancemax="4000"/><!-- gold -->
+	<item id="2666" countmax="2" chance1="17000" chancemax="10000"/><!-- meat -->
+	<item id="2465" chance="3000"/><!-- brass armor -->
+	<item id="2458" chance="6000"/><!-- chain helmet -->
+	<item id="2459" chance="1000"/><!-- iron helmet -->
+	<item id="2649" chance="16000"/><!-- leather legs -->		
+		<item id="1987" chance="2000">
+			<inside>
+			<item id="2386" chance="31000"/><!-- axe -->
+			<item id="2398" chance="11000"/><!-- mace -->
+			<item id="2511" chance="17000"/><!-- brass shield -->
+			</inside>
+		</item>
+</loot>
 </monster>

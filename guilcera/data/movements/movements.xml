@@ -2,9 +2,12 @@
 
 <movements>
 
-<movevent event="AddItem" actionid="101" tileitem="1" script="hota.lua"/>
-<movevent event="RemoveItem" itemid="1953" script="parchment.lua"/>
+    <!-- guilcera -->
+		<movevent event="StepIn" itemid="1387" script="guilcera\setnewtown.lua"/>
+		<movevent event="AddItem" actionid="101" tileitem="1" script="guilcera\hota.lua"/>
+		<movevent event="RemoveItem" itemid="1953" script="guilcera\parchment.lua"/>
 
+	<!-- Pitfall -->
         <movevent event="StepIn" itemid="293" script="pitfall.lua" />
 
     <!-- Amulets -->
@@ -224,8 +227,5 @@
         <movevent event="StepOut" itemid="1511" script="trap.lua" />
         <movevent event="StepIn"  itemid="1512" script="trap.lua" />
         <movevent event="StepOut" itemid="1513" script="trap.lua" />
-
-    <!-- Citizen teleport -->
-	<movevent event="StepIn" itemid="1387" script="setnewtown.lua"/>
 
 </movements>

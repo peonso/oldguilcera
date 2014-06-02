@@ -36,27 +36,24 @@
     <immunity invisible="0"/>
   </immunities>
   <voices interval="5000" chance="10">
-    <voice sentence="grak brrretz!"/>
-    <voice sentence="grow truk grrrrr."/>
-    <voice sentence="prek tars, dekklep zurk."/>
+		<voice sentence="Grow truk grrrrr."/>
+		<voice sentence="Brak brrretz!"/>
+		<voice sentence="Prek tars, dekklep zurk."/>
   </voices>
-  <loot>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
-    <item id="2148" countmax="12" chance1="100000" chancemax="0"/>
-    <item id="2666" countmax="2" chance1="40000" chancemax="0"/>
-    <item id="3983" chance="200"/>
-    <item id="3975" chance="100"/>
-    <item id="2512" chance="10000"/>
-    <item id="2530" chance="4000"/>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2385" chance="6666"/>
-        <item id="2464" chance="5000"/>
-        <item id="2420" chance="5000"/>
-        <item id="2448" chance="5000"/>
-        <item id="2007" chance="20000"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="13" chance1="76000" chancemax="8000"/><!-- gold -->
+	<item id="2229" countmax="2" chance1="1000" chancemax="500"/><!-- skull -->
+	<item id="2545" countmax="3" chance1="5000" chancemax="1700"/><!-- poison arrow -->
+	<item id="2410" countmax="2" chance1="8000" chancemax="4000"/><!-- throwing knife -->
+	<item id="2050" chance="6000"/><!-- torch -->
+	<item id="2467" chance="11000"/><!-- leather armor -->
+	<item id="3967" chance="500"/><!-- 0,5% tribal mask -->
+	<item id="2172" chance="200"/><!-- 0,2% bronze amulet -->
+	<item id="3983" chance="200"/><!-- 0,2% bast skirt -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2411" chance="2000"/><!-- poison dagger -->
+			</inside>
+		</item>
+</loot>
 </monster>

@@ -54,16 +54,14 @@
     <voice sentence="Be careful what you wish for."/>
     <voice sentence="Wishes can come true."/>
   </voices>
-  <loot>
-    <item id="1978" countmax="1" chance="2500"/>
-    <item id="2745" countmax="1" chance="1000"/>
-    <item id="2146" countmax="4" chance="2500"/>
-    <item id="2148" countmax="20" chance1="100000" chancemax="0"/>
-    <item id="2684" countmax="5" chance1="50000" chancemax="0"/>
-    <item id="2146" countmax="4" chance1="6666" chancemax="0"/>
-    <item id="2663" countmax="1" chance="100"/>
-    <item id="1971" chance="10000"/>
-    <item id="2044" chance="20000"/>
-    <item id="2063" countmax="1" chance="7500"/>
-  </loot>
+<loot>
+	<item id="2148" countmax="55" chance1="85000" chancemax="4000"/><!-- gold -->
+	<item id="2148" countmax="60" chance1="85000" chancemax="2000"/><!-- gold -->
+	<item id="2684" countmax="1" chance1="23000" chancemax="23000"/><!-- 23,4% 2684 carrot -->
+	<item id="2146" countmax="4" chance1="2001" chancemax="6000"/><!-- 2,5% small sapphire -->
+	<item id="1978" chance="2000"/><!-- 2,3% 1978 blue book -->
+	<item id="2063" chance="600"/><!-- 0,6% 2063 small oil lamp -->
+	<item id="2745" chance="400"/><!-- 0,4% 2745 blue rose -->
+	<item id="2663" chance="200"/><!-- 0,2% 2663 mystic turban -->
+</loot>
 </monster>

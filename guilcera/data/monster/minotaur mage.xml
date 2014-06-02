@@ -47,21 +47,20 @@
     <voice sentence="#W Learrn tha secrret uf deathhh!"/>
     <voice sentence="Kaplar!"/>
   </voices>
-  <loot>
-    <item id="2148" countmax="20" chance1="100000" chancemax="0"/>
-    <item id="2050" chance="10000"/>
-    <item id="2461" chance="8000"/>
-    <item id="2649" chance="8000"/>
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2189" chance="1333" />
-        <item id="2404" chance="10000"/>
-        <item id="2362" countmax="5" chance1="20000" chancemax="0"/>
-        <item id="2817" chance="10000"/>
-        <item id="2311" chance="2857"/>
-        <item id="2465" chance="4000"/>
-        <item id="2648" chance="4000"/>
-      </inside>
-    </item>
-  </loot>
+<loot>
+	<item id="2148" countmax="35" chance1="86000" chancemax="0"/><!-- 1-35 86% 2148 gold -->
+	<item id="2684" countmax="8" chance1="15000" chancemax="0"/><!-- 1-8 15% 2684 carrot -->
+	<item id="2050" chance="5000"/><!-- 5% 2050 torch -->
+	<item id="2817" chance="35000"/><!-- 35% 2817 dead snake -->
+	<item id="2649" chance="5000"/><!-- 5% 2649 leather legs -->
+	<item id="2461" chance="3000"/><!-- 3% 2461 leather helmet -->
+	<item id="2465" chance="4000"/><!-- 4% 2465 brass armor -->
+	<item id="2648" chance="3000"/><!-- 3% 2648 chain legs -->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+			<item id="2404" chance="3000"/><!-- 3% 2404 combat knife -->
+			<item id="2403" chance="10000"/><!-- 10% 2403 knife -->
+			</inside>
+		</item>
+</loot>
 </monster>
