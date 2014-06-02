@@ -2,37 +2,31 @@ Guilcera Change Log
 ===================
 more info and lastest version at https://github.com/peonso/guilcera
 
-guilcera 4.02
---------------
-`may 2014, [7.6] Avesta rev94 by Ferrus - MySQL database
+  4.02
 
-*_added to GitHub
+    - may 2014, [7.6] Avesta rev94 by Ferrus - MySQL database
+    - added to GitHub
+    - added README.md
+    - added docs/CHANGELOG.md
+    - added docs/SETUP_GUIDE.md
+    - cleaned up guilcera_schema.sql
+    - added guilcera_testserver_schema.sql with level 100 characters and a gamemaster (account 1/1)
+    - spells need level instead of magic level (as in 7.6)
+    - fixed spellbook
+    - fixed capacity bug with quests
+    - AAC doesn't give first items anymore
+    - added guilcera/data/creaturescripts/scripts/firstitems.lua and necessary changes at creaturescripts.xml
+    - login.lua and removebless.lua manage blesses and premium features
+    - added functional NPCs (many missing yet)
+    - added missing monsters, corrected loot 
+    - small fixes at items.xml
+    - small fixes at actions
+    - removed sample scripts
+    - did some work at main city
+    - added boats
+    
 
-*_documentation
-- added README.md
-- added docs/CHANGELOG.md
-- added docs/SETUP_GUIDE.md
-- cleaned up guilcera_schema.sql
-- added guilcera_testserver_schema.sql with level 100 characters and a gamemaster (account 1/1)
-
-*_misc
-- spells need level instead of magic level (as in 7.6)
-- fixed spellbook
-- fixed capacity bug with quests
-- AAC doesn't give first items anymore
-- added guilcera/data/creaturescripts/scripts/firstitems.lua and necessary changes at creaturescripts.xml
-- login.lua and removebless.lua manage blesses and premium features
-- added functional NPCs (many missing yet)
-- added missing monsters, corrected loot 
-- small fixes at items.xml
-- small fixes at actions
-- removed sample scripts
-
-*_map
-- did some work at main city
-- added boats`
-
-guilcera 4.01
+  guilcera 4.01
 --------------
 `jun 2013, [7.6] Avesta rev94 by Ferrus - MySQL database`
 
