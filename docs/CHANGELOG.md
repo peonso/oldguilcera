@@ -28,8 +28,8 @@ more info and lastest version at https://github.com/peonso/guilcera
 
   4.01
   
+    [[map image](https://raw.githubusercontent.com/peonso/guilcera/master/docs/images/guilcera_401.png)]
     - jun 2013, [7.6] Avesta rev94 by Ferrus - MySQL database
-    - [[map image](https://raw.githubusercontent.com/peonso/guilcera/master/docs/images/guilcera_401.png)]
     - machete working
     - locked doors now locked
     - stages 1-60 10x; 60-90 8x; 90-120 6x
