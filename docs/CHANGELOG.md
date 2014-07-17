@@ -1,5 +1,6 @@
 Guilcera Change Log
 ===================
+datapack for opentibia
 more info and lastest version at https://github.com/peonso/guilcera
 
   4.02

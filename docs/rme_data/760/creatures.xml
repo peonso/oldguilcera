@@ -1,28 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <creatures>
 <!-- guilcera npcs -->
-  <creature name="Bilbo" type="npc" looktype="129" lookhead="132" lookbody="60" looklegs="79"/>
-  <creature name="Bony" type="npc" looktype="129" lookhead="114" lookbody="86" looklegs="79" lookfeet="95"/>
+  <creature name="Assassina" type="npc" looktype="141" lookhead="114" lookbody="114" looklegs="95" lookfeet="57"/>
+  <creature name="Atolon" type="npc" looktype="131" lookhead="117" lookbody="4" looklegs="119" lookfeet="95"/>
+  <creature name="Bilbo" type="npc" looktype="128" lookhead="19" lookbody="42" looklegs="87" lookfeet="126"/>
+  <creature name="Bony" type="npc" looktype="128" lookhead="77" lookbody="60" looklegs="3" lookfeet="95"/>
+  <creature name="Camehlia" type="npc" looktype="136" lookhead="114" lookbody="0" looklegs="98"/>
   <creature name="Cornehlia" type="npc" looktype="142" lookhead="41" lookbody="21" looklegs="95" lookfeet="5"/>
-  <creature name="Dwalin" type="npc" looktype="160" lookhead="132" lookbody="77" looklegs="86" lookfeet="114"/>
-  <creature name="Eesha" type="npc" looktype="132" lookhead="132" lookfeet="2"/>
+  <creature name="Captain J4K3xBl4sT3r" type="npc" looktype="134" lookhead="95" lookbody="117" looklegs="40" lookfeet="114"/>
+  <creature name="Captain SimOne" type="npc" looktype="129" lookhead="115" lookbody="122" looklegs="24" lookfeet="76"/>
+  <creature name="Dwalin" type="npc" looktype="160" lookhead="78" lookbody="38" looklegs="76" lookfeet="10"/>
+  <creature name="Eesha" type="npc" looktype="132" lookhead="57" lookbody="43" looklegs="108" lookfeet="7"/>
   <creature name="Elandriel" type="npc" looktype="144" lookhead="126" lookbody="79" looklegs="39" lookfeet="114"/>
   <creature name="Ferrus" type="npc" looktype="57"/>
-  <creature name="Gix" type="npc" looktype="133" lookhead="126" lookbody="126" looklegs="79" lookfeet="126"/>
+  <creature name="Gix" type="npc" looktype="9"/>
   <creature name="GriZzm0" type="npc" looktype="130" lookhead="132" lookbody="60" looklegs="79" lookfeet="120"/>
+  <creature name="Insane" type="npc" looktype="134" lookhead="91" lookbody="114" looklegs="41" lookfeet="0"/>
   <creature name="Iryont" type="npc" looktype="132" lookhead="43" lookbody="57" looklegs="76" lookfeet="132"/>
   <creature name="Jaehaerys" type="npc" looktype="144" lookhead="132" lookbody="60" looklegs="79"/>
   <creature name="Jeska" type="npc" looktype="137" lookhead="56" lookbody="40" looklegs="76" lookfeet="60"/>
   <creature name="Jiddo" type="npc" looktype="133" lookhead="77" lookbody="3" looklegs="114" lookfeet="57"/>
-  <creature name="King Peonso VII" type="npc" looktype="128" lookhead="114" lookbody="4" looklegs="57" lookfeet="14"/>
-  <creature name="Mishra" type="npc" looktype="131" lookhead="132" lookbody="77" looklegs="86" lookfeet="114"/>
+  <creature name="King Peonso VII" type="npc" looktype="132" lookhead="114" lookbody="4" looklegs="57" lookfeet="14"/>
+  <creature name="Mishra" type="npc" looktype="131" lookhead="0" lookbody="107" looklegs="57" lookfeet="0"/>
   <creature name="Paola" type="npc" looktype="142" lookbody="126" looklegs="86"/>
-  <creature name="Pierre" type="npc" looktype="132" lookhead="43" lookbody="57" looklegs="76" lookfeet="132"/>
+  <creature name="Pietia10" type="npc" looktype="140" lookhead="86" lookbody="8" looklegs="18" lookfeet="46"/>
   <creature name="Remere" type="npc" looktype="130" lookhead="132" lookbody="77" looklegs="86" lookfeet="114"/>
+  <creature name="Rex" type="npc" looktype="129" lookhead="41" lookbody="21" looklegs="95" lookfeet="5"/>
   <creature name="Rofelos" type="npc" looktype="144" lookhead="121" lookbody="40" looklegs="21" lookfeet="95"/>
   <creature name="Sabrina" type="npc" looktype="138" lookhead="79" lookbody="93" looklegs="114" lookfeet="86"/>
-  <creature name="Sam" type="npc" looktype="131" lookhead="132" lookbody="77" looklegs="86" lookfeet="114"/>
-  <creature name="Sunny" type="npc" looktype="133" lookhead="126" lookbody="126" looklegs="79" lookfeet="126"/>
+  <creature name="Sam" type="npc" looktype="132" lookhead="114" lookbody="43" looklegs="6" lookfeet="115"/>
+  <creature name="Sunny" type="npc" looktype="133" lookhead="80" lookbody="6" looklegs="13" lookfeet="1"/>
+  <creature name="Talaturen" type="npc" looktype="144" lookhead="117" lookbody="2" looklegs="3" lookfeet="121"/>
   <creature name="Tliff" type="npc" looktype="128" lookhead="116" lookbody="43" looklegs="21" lookfeet="121"/>
   <creature name="Yurez Dragonslayer" type="npc" looktype="134" lookhead="59" lookbody="123" looklegs="76" lookfeet="95"/>
 
@@ -79,7 +87,7 @@
   <creature name="gazer" type="monster" looktype="109"/>
   <creature name="ghost" type="monster" looktype="48"/>
   <creature name="ghoul" type="monster" looktype="18"/>
-  <creature name="giant spider" type="monster" looktype="38"/>5"/>
+  <creature name="giant spider" type="monster" looktype="38"/>
   <creature name="goblin" type="monster" looktype="61"/>
   <creature name="green djinn" type="monster" looktype="51"/>
   <creature name="hero" type="monster" looktype="73"/>
@@ -155,7 +163,7 @@
   <creature name="butterfly yellow" type="monster" looktype="10"/>
   <creature name="butterfly red" type="monster" looktype="228"/>
   
-  <!--<creature name="deathslicer" type="monster" looktype="102"/>
+  <creature name="deathslicer" type="monster" looktype="102"/>
   <creature name="flamethrower" type="monster"/>
   <creature name="magicthrower" type="monster" lookitem="1560"/>
   <creature name="plaguethrower" type="monster"/>
@@ -170,7 +178,7 @@
   <creature name="Necropharus" type="monster" looktype="209"/>
   <creature name="The Evil Eye" type="monster" looktype="210"/>
   <creature name="The Horned Fox" type="monster" looktype="202"/>
-  <creature name="The Old Widow" type="monster" looktype="208"/>!-->
+  <creature name="The Old Widow" type="monster" looktype="208"/>
   <creature name="Ashmunrah" type="monster" looktype="87"/>
   <creature name="Dipthrah" type="monster" looktype="87"/>
   <creature name="Mahrdis" type="monster" looktype="90"/>
@@ -179,5 +187,5 @@
   <creature name="Rahemos" type="monster" looktype="87"/>
   <creature name="Thalas" type="monster" looktype="90"/>
   <creature name="Vashresamun" type="monster" looktype="90"/>
-  <creature name="Orshabaal" type="monster" looktype="201"/>
+  <creature name="Orshabaal" type="monster" looktype="201"/>  
 </creatures>
