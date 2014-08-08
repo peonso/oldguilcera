@@ -1,234 +1,416 @@
----- CONNECTION ----
+-- The OTX Server Config
 
-    -- Server ip (the ip that server listens on)
-    IP = "127.0.0.1"
+	-- Owner Data
+	ownerName = "Peonso"
+	ownerEmail = "peonso@hotmail.com"
+	url = ""
+	location = "Brasil"
 
-    -- Server port (the port that server listens on)
-    Port = "7171"
+	-- Messages
+	motd = "Welcome to the Guilcera!"
+	serverName = "Guilcera"
+	loginMessage = "Welcome to Guilcera!"
+	displayGamemastersWithOnlineCommand = true
 
-    -- How many logins attempts until ip is temporary disabled 
-    -- Set to 0 to disable
-    LoginTries = 5
+	-- MySql
+	sqlType = "mysql"
+	sqlHost = "127.0.0.1"
+	sqlPort = 3306
+	sqlUser = "usersample"
+	sqlPass = "passsample"
+	sqlDatabase = "dbsample"
+	sqlFile = "schemas/otxserver.s3db"
+	sqlKeepAlive = 0
+	mysqlReadTimeout = 10
+	mysqlWriteTimeout = 10
+	mysqlReconnectionAttempts = 3
+	encryptionType = "sha1"
 
-    -- How long the retry timeout until a new login can be made (without disabling the ip)
-    RetryTimeout = 5000
+	-- World / Ip / Port
+	worldId = 0
+	ip = "127.0.0.1"
+	worldType = "open"
+	bindOnlyGlobalAddress = false
+	loginPort = 7171
+	gamePort = "7172"
+	statusPort = 7171
+	loginOnlyWithLoginServer = false
 
-    -- How long the player need to wait until the ip is allowed again
-    LoginTimeout = 60 * 1000
+	-- Account manager
+	accountManager = false
+	namelockManager = true
+	newPlayerChooseVoc = true
+	newPlayerSpawnPosX = 224
+	newPlayerSpawnPosY = 229
+	newPlayerSpawnPosZ = 7
+	newPlayerTownId = 1
+	newPlayerLevel = 8
+	newPlayerMagicLevel = 0
+	generateAccountNumber = false
+	generateAccountSalt = true
 
-    -- Allow clones (multiple logins of the same char)
-    AllowClones = false
+	-- Limits on frags / Time
+	fragsLimit = 24 * 60 * 60
+	fragsSecondLimit = 7 * 24 * 60 * 60
+	fragsThirdLimit = 30 * 24 * 60 * 60
 
-    -- Only one player online per account
-    CheckAccounts = false
+	-- Red Skull Config
+	fragsToRedSkull = 3
+	fragsSecondToRedSkull = 5
+	fragsThirdToRedSkull = 10
+	redSkullLength = 3 * 24 * 60 * 60
+
+	-- Black Skull Config
+	fragsToBlackSkull = 6
+	fragsSecondToBlackSkull = 10
+	fragsThirdToBlackSkull = 20
+	blackSkulledDeathHealth = 40
+	blackSkulledDeathMana = 0
+	blackSkullLength = 6 * 24 * 60 * 60
+	useBlackSkull = true
+
+	-- Banishment Config
+	-- killsBanLength works only if useBlackSkull option is disabled.
+	notationsToBan = 3
+	warningsToFinalBan = 4
+	warningsToDeletion = 5
+	banLength = 7 * 24 * 60 * 60
+	killsBanLength = 7 * 24 * 60 * 60
+	finalBanLength = 30 * 24 * 60 * 60
+	ipBanLength = 1 * 24 * 60 * 60
+	fragsToBanishment = 7
+	fragsSecondToBanishment = 21
+	fragsThirdToBanishment = 41
+
+	-- Battle
+	-- NOTE: showHealth/ManaChangeForMonsters inherites from showHealth/ManaChange.
+	protectionLevel = 0
+	pvpTileIgnoreLevelAndVocationProtection = true
+	allowFightback = true
+	pzLocked = 60 * 1000
+	huntingDuration = 60 * 1000
+	criticalHitMultiplier = 1
+	displayCriticalHitNotify = true
+	removeWeaponAmmunition = true
+	removeWeaponCharges = true
+	removeRuneCharges = true
+	whiteSkullTime = 15 * 60 * 1000
+	advancedFragList = true
+	useFragHandler = true
+	noDamageToSameLookfeet = false
+	showHealthChange = false
+	showManaChange = false
+	showHealthChangeForMonsters = true
+	showManaChangeForMonsters = true
+	fieldOwnershipDuration = 5 * 1000
+	stopAttackingAtExit = true
+	loginProtectionPeriod = 5 * 1000
+	deathLostPercent = 10
+	stairhopDelay = 2 * 1000
+	pushCreatureDelay = 2 * 1000
+	deathContainerId = 1987
+	gainExperienceColor = 215
+	addManaSpentInPvPZone = true
+	recoverManaAfterDeathInPvPZone = true
+	squareColor = 0
+
+	-- RSA
+	-- NOTE: These should not be changed unless you know what your doing!
+	-- Prime1 - known as p; Prime2 - known as q; Public - known as e;
+	-- Modulus - known as n; Private - known as d.
+	-- How make custom client with custom RSA Key: http://vapus.net/customclient
+	rsaPrime1 = "14299623962416399520070177382898895550795403345466153217470516082934737582776038882967213386204600674145392845853859217990626450972452084065728686565928113"
+	rsaPrime2 = "7630979195970404721891201847792002125535401292779123937207447574596692788513647179235335529307251350570728407373705564708871762033017096809910315212884101"
+	rsaPublic = "65537"
+	rsaModulus = "109120132967399429278860960508995541528237502902798129123468757937266291492576446330739696001110603907230888610072655818825358503429057592827629436413108566029093628212635953836686562675849720620786279431090218017681061521755056710823876476444260558147179707119674283982419152118103759076030616683978566631413"
+	rsaPrivate = "46730330223584118622160180015036832148732986808519344675210555262940258739805766860224610646919605860206328024326703361630109888417839241959507572247284807035235569619173792292786907845791904955103601652822519121908367187885509270025388641700821735345222087940578381210879116823013776808975766851829020659073"
+
+	-- OTX Server Extras Features
+		-- Battle
+		optionalWarAttackableAlly = true
+		fistBaseAttack = 7
+		criticalHitChance = 0
+		noDamageToGuildMates = false
+			-- if true then no damage, if false then damage
+		noDamageToPartyMembers = false
+			-- if true then no damage, if false then damage
+
+		-- Rook System
+		rookLevelTo = 5
+		rookLevelToLeaveRook = 8
+		rookTownId = 0
+		useRookSystem = false
+
+		-- Paralyze delay
+		paralyzeDelay = 1500
+
+		-- GUI
+		premiumDaysToAddByGui = 10
+
+		-- Depot and Miscellaneous
+		-- set playerFollowExhaust to 2000 if someone causes lags and kicks by following unreachable creatures too often
+		useCapacity = true
+		defaultDepotSize = 2000
+		defaultDepotSizePremium = 2000
+		enableProtectionQuestForGM = true
+		cleanItemsInMap = false
+		playerFollowExhaust = 2000
+
+		-- 8.7x + config
+		tibiaClassicSlots = true
+		monsterSpawnWalkback = true
+		allowBlockSpawn = true
+
+		-- Summons and monsters
+		NoShareExpSummonMonster = false
+
+		-- Others
+		enableLootBagDisplay = false
+		attackImmediatelyAfterLoggingIn = true
+
+		-- Old Configs
+		tileHeightBlock = true
+
+		autoStack = true
+		runesHitTopCreature = false
+		charlistBasicInfo = false
+		classicDamageOnWeapons = true
+
+	-- Connection config
+	loginTries = 20
+	retryTimeout = 5 * 1000
+	loginTimeout = 60 * 1000
+	maxPlayers = 200
+	displayOnOrOffAtCharlist = false
+	onePlayerOnlinePerAccount = true
+	allowClones = 0
+	statusTimeout = 1000
+	replaceKickOnLogin = true
+	forceSlowConnectionsToDisconnect = false
+	premiumPlayerSkipWaitList = false
+	packetsPerSecond = 50
+
+	-- Deathlist
+	deathListEnabled = true
+	deathListRequiredTime = 1 * 60 * 1000
+	deathAssistCount = 20
+	maxDeathRecords = 5
+	multipleNames = false
+
+	-- Guilds
+	-- NOTE: externalGuildWarsManagement supports Automatic Account Creator(webpage or whatever you want)
+	externalGuildWarsManagement = true
+	ingameGuildManagement = true
+	levelToFormGuild = 20
+	premiumDaysToFormGuild = 0
+	guildNameMinLength = 4
+	guildNameMaxLength = 20
+
+	-- Houses
+	buyableAndSellableHouses = true
+	houseNeedPremium = false
+	bedsRequirePremium = false
+	levelToBuyHouse = 20
+	housesPerAccount = 1
+	houseRentAsPrice = false
+	housePriceAsRent = false
+	housePriceEachSquare = 1000
+	houseRentPeriod = "weekly"
+	houseCleanOld = 8 * 24 * 60 * 60
+	guildHalls = true
+	houseSkipInitialRent = true
+	houseProtection = true
+
+	-- Item usage
+	timeBetweenActions = 200
+	timeBetweenExActions = 1000
+	timeBetweenCustomActions = 500
+	checkCorpseOwner = false
+	maximumDoorLevel = 999
+	tradeLimit = 107
+	canOnlyRopePlayers = false
+
+	-- Map
+	-- NOTE: storeTrash costs more memory, but will perform alot faster cleaning.
+	-- houseDataStorage usage may be found at how-use-internal-functions.log
+	mapAuthor = "Peonso"
+	randomizeTiles = true
+	houseDataStorage = "binary-tilebased"
+	storeTrash = true
+	cleanProtectedZones = true
+	mapName = "guilcera.otbm"
+
+	-- Mailbox
+	mailMaxAttempts = 5
+	mailBlockPeriod = 30 * 60 * 1000
+	mailAttemptsFadeTime = 5 * 60 * 1000
+	mailboxDisabledTowns = ""
+		-- Example disable rook depot (temple) "4"
+		-- mailboxDisabledTowns = "4"
+
+	-- Startup
+	-- For Linux use "-1" is default
+	-- daemonize works only on *nix, same as niceLevel
+	daemonize = false
+	defaultPriority = "higher"
+	niceLevel = 5
+	serviceThreads = 1
 	
-    -- Kick player when trying to log on his character
-    KickOnLogin = false
+	coresUsed = "0"
 
----- DATABASE ----
+	startupDatabaseOptimization = true
+	removePremiumOnInit = true
+	confirmOutdatedVersion = false
+	skipItemsVersionCheck = false
 
-    -- SQL type
-    -- options: mysql, sqlite, odbc or pgsql
-    SQL_Type = "mysql"
+	-- Muted buffer
+	maxMessageBuffer = 4
 
-    --- SQL connection part
-    SQL_DB   = "guilcera"
+	-- Miscellaneous
+	dataDirectory = "data/"
+	logsDirectory = "data/logs/"
+	disableOutfitsForPrivilegedPlayers = false
+	bankSystem = false
+	spellNameInsteadOfWords = false
+	emoteSpells = false
+	unifiedSpells = false
+	promptExceptionTracerErrorBox = true
+	storePlayerDirection = false
+	savePlayerData = true
+	monsterLootMessage = 0
+	monsterLootMessageType = 22
+	separateViplistPerCharacter = false
+	vipListDefaultLimit = 100
+	vipListDefaultPremiumLimit = 100
 
-    -- These settings are not used by SQLite
-    SQL_Host = "localhost"
-    SQL_Port = 3306
-    SQL_User = "guilcera"
-    SQL_Pass = "peonso"
+	-- Outfits
+	allowChangeOutfit = true
+	allowChangeColors = true
+	allowChangeAddons = true
+	addonsOnlyPremium = false
 
---- INFO ---
+	-- Ghost mode
+	ghostModeInvisibleEffect = false
+	ghostModeSpellEffects = true
 
-    -- Login message
-    loginmsg = "Welcome to Guilcera."
+	-- Limits
+	idleWarningTime = 15 * 60 * 1000
+	idleKickTime = 16 * 60 * 1000
+	expireReportsAfterReads = 1
+	playerQueryDeepness = -1
+	protectionTileLimit = 10
+	houseTileLimit = 10
+	tileLimit = 7
 
-    -- Server name
-    ServerName = "Guilcera"
+	-- Premium-related
+	freePremium = false
+	premiumForPromotion = false
+	updatePremiumStateAtStartup = true
 
-    -- World name
-    WorldName = "Guilcera"
+	-- Blessings
+	blessings = true
+	blessingOnlyPremium = false
+	blessingReductionBase = 30
+	blessingReductionDecrement = 5
+	eachBlessReduction = 8
+	useFairfightReduction = true
+	pvpBlessingThreshold = 40
+	fairFightTimeRange = 60
 
-    -- Server owner name
-    OwnerName = ""
+	-- Rates
+	experienceStages = true
+	rateExperience = 1.0
+	levelToOfflineTraining = 8
+	rateSkill = 10.0
+	rateSkillOffline = 0.5
+	rateMagic = 5.0
+	rateMagicOffline = 0.5
+	rateLoot = 1.0
+	rateSpawnMin = 1
+	rateSpawnMax = 1
+	formulaLevel = 5.0
+	formulaMagic = 1.0
+		-- Monster rates
+		rateMonsterHealth = 1.0
+		rateMonsterMana = 1.0
+		rateMonsterAttack = 1.0
+		rateMonsterDefense = 1.0
 
-    -- Server owner email
-    OwnerEmail = ""
+	-- Experience from players
+	rateExperienceFromPlayers = 0
+	minLevelThresholdForKilledPlayer = 0.9
+	maxLevelThresholdForKilledPlayer = 1.1
 
-    -- Server url
-    URL = ""
+	-- Stamina System
+	useStamina = false
+	rateStaminaLoss = 1
+	rateStaminaGain = 3
+	rateStaminaThresholdGain = 12
+	staminaRatingLimitTop = 40 * 60
+	staminaRatingLimitBottom = 14 * 60
+	staminaLootLimit = 14 * 60
+	rateStaminaAboveNormal = 1.5
+	rateStaminaUnderNormal = 0.5
+	staminaThresholdOnlyPremium = false
 
-    -- Server location
-    Location = ""
+	-- Party System
+	experienceShareRadiusX = 30
+	experienceShareRadiusY = 30
+	experienceShareRadiusZ = 1
+	experienceShareLevelDifference = 2 / 3
+	extraPartyExperienceLimit = 20
+	extraPartyExperiencePercent = 5
+	experienceShareActivity = 2 * 60 * 1000
 
---- DIRECTORY PATH ---
+	-- Global save
+	globalSaveEnabled = true
+	globalSaveHour = 6
+	globalSaveMinute = 00
+	shutdownAtGlobalSave = false
+	cleanMapAtGlobalSave = false
 
-    DataDir = "data/"
+	-- Spawns
+	minRateSpawn = 1
+	maxRateSpawn = 3
+	deSpawnRange = 2
+	deSpawnRadius = 50
 
---- BANS ---
+	-- Summons
+	maxPlayerSummons = 2
+	teleportAllSummons = false
+	teleportPlayerSummons = false
 
-    NotationsToBan = 3
-    WarningsToFinalBan = 4
-    WarningsToDeletion = 5
-    BanLength = 1 * 24 * 60 * 60
-    FinalBanLength = 7 * 24 * 60 * 60
-    IPBanishmentLength = 24 * 60 * 60
-    KillsToBan = 7
+	-- Logs
+	disableLuaErrors = false
+	adminLogs = true
+	displayPlayersLogging = true
+	prefixChannelLogs = ""
+	runFile = "server/run.log"
+	outputLog = "server/out.log"
+	truncateLogOnStartup = false
+	logPlayersStatements = true
 
---- COMBAT ---
+	-- Manager
+	-- NOTE: managerPassword left blank disables manager.
+	managerPort = 7171
+	managerLogs = true
+	managerPassword = ""
+	managerLocalhostOnly = false
+	managerConnectionsLimit = 1
 
-    -- World type
-    -- options: pvp, no-pvp, pvp-enforced
-    WorldType = "pvp"
+	-- Admin
+	-- NOTE: adminPassword left blank disables manager.
+	-- Set to anything if you set adminRequireLogin to false.
+	-- adminEncryption available options: rsa1024xtea;
+	-- remember to set correct data!
+	adminPort = 7171
+	adminPassword = ""
+	adminLocalhostOnly = true
+	adminConnectionsLimit = 1
+	adminRequireLogin = true
+	adminEncryption = ""
+	adminEncryptionData = ""
 
-    -- Exhausted time in ms (1000 = 1 second) for yelling
-    Exhausted = 1000
-
-    -- Exhausted time in ms (1000 = 1 second) for aggressive spells/weapons
-    FightExhausted = 2000
-
-    -- Exhausted time in ms (1000 = 1 second) for none-aggressive spells/weapons
-    HealExhausted = 1000
-
-    -- How many ms to add if the player is already exhausted and tries to yell (1000 = 1 second)
-    ExhaustedAdd = 200
-
-    -- How long does the player has to stay out of fight to get pz unlocked in ms (1000 = 1 second)
-    PZLock = 30000
-
-    -- How long a field belongs to a player before it no longer causes PZ lock for the owner
-    FieldOwnershipDuration = 5000
-
-    -- In mili seconds
-    TimeToDecreaseFrags = 24 * 60 * 60 * 1000
-
-    -- Time white skull will remain after killing a player, in minutes
-    WhiteSkullTime = 3
-
-    -- amount of kills that leads to red skull
-    KillsToRedSkull = 5
-
-    -- Remove ammunition
-    -- If false, ammunition will not be removed when using distance weapons
-    -- (or other weapons that use ammunition)
-    RemoveAmmunition = true
-
-    -- Remove rune charges
-    -- This only applies to runes done using the default functions. 
-    -- Custom runes made using actions will not be affected.
-    RemoveRuneCharges = true
-
-    -- Remove weapon charges
-    -- Set to false to disable charges disappearing from weapons on use
-    RemoveWeaponCharges = true
-
-    -- Top player on a stacked tile will be unable to heal
-    UHTrap = true
-
----- HOUSES ----
-
-    -- House rent period
-    -- Options: daily, weekly, monthly
-    HouseRentPeriod = "monthly"
-
-    -- Price for a tile
-    HousePrice = 100
-	
-	-- Beds only for premium players
-    PremOnlyBeds = false
-
----- ITEM USAGE ----
-
-    -- Minimum amount of time between actions ('Use') (1000 = 1 second)
-    MinActionInterval = 200
-
-    -- Minimum amount of time between extended actions ('Use with...') (1000 = 1 second)
-    MinActionExInterval = 1000
-
----- MAP ----
-
-    -- Map location
-    Map = "data/world/Guilcera.otbm"
-
-    -- Mapkind
-    -- Options: OTBM for binary map, XML for OTX map
-    MapKind = "OTBM"
-
-    -- Type of map storage, 
-    -- 'relational' - Slower, but possible to run database queries to change all items to another id for example.
-    -- 'binary' - Faster, but you cannot run DB queries.
-    -- To switch, load server with the current type, change the type in config.lua 
-    -- type /reload config and the save the server with /closeserver serversave
-    MapStoreType = "binary"
-
----- RATES ----
-
-    -- Rates (experience, skill, magic level, loot and spawn)
-    RateExp = 1
-    RateSkill = 10
-    RateMag = 5
-    RateLoot = 1
-    RateSpawn = 1
-
-
---- SPAWNS ---
-
-    -- Despawn configs
-    -- How many floors can a monster go from his spawn before despawning
-    DespawnRange = 2
-
-    -- How many square metters can a monster be far from his spawn before despawning
-    DespawnRadius = 50
-
---- STATUS ---
-
-    -- Message Of The Day box that you sometimes get before you choose characters)
-    MOTD = "Welcome to Guilcera World."
-    MOTD_Num = "1"
-
-    -- Max number of players allowed
-    MaxPlayers = "100"
-	
---- WAR ---
-
-	-- Players with same Guild ID can't attack each other
-	TeamMode = false
-	
-	-- The damage percent guild members deal to each other with magic spells/runes
-	-- Works only with TeamMode on
-	DamagePercent = 20
-
---- OTHER ---
-
-    -- Accounts password type
-    -- options: plain, md5, sha1
-    PasswordType = "plain"
-
-    -- Max number of messages a player can say before getting muted (default 4), set to 0 to disable muting
-    MaxMessageBuffer = 4
-
-    -- Save client debug assertion reports
-    SaveClientDebug = false
-
-    -- Should the server use account balance system or depot system for paying houses?
-    UseAccBalance = false
-
-    -- Time after player will be warned and kicked, in miliseconds
-    IdleTimeKick = 900000
-	IdleTimeWarning = 840000
-
-    -- Level on which player will get rooked
-    LevelToRook = 0
-
-    -- TownId to which player will be teleported
-    RookTempleId = 10
-
-    -- if your website is not showing player deaths, then keep this as false
-    StorePlayerDeaths = true
-
-    -- ID of temple to which player will get teleported when his prem end out
-    -- 0 to disable
-    -- not tested
-    FACCTempleID = 1 
+	-- Don't edit use at your own risk
+	saveGlobalStorage = false
+	bufferMutedOnSpellFailure = false

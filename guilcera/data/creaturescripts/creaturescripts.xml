@@ -1,15 +1,17 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <creaturescripts>
+	<!-- Player Login -->
+	<event type="login" name="PlayerLogin" event="script" value="login.lua"/>
 
-	<event type="login" name="stagesLogin" script="stages.lua" />
-	<event type="advance" name="stagesAdvance" script="stages.lua" />
-	<event type="login" name="PlayerLogin" script="login.lua"/>
-	<event type="login" name="SendLoginInfo" script="sendlogininfo.lua"/>
-	<event type="die" name="RemoveBlesses" script="removeblesses.lua"/>
+	<!-- Server Events -->
+	<event type="channeljoin" name="GuildEvents" event="script" value="guild.lua"/>
+	<event type="mailreceive" name="Mail" event="script" value="mail.lua"/>
+	<event type="reportbug" name="ReportBug" script="reportbug.lua"/>
+	<event type="advance" name="AdvanceSave" event="script" value="advancesave.lua"/>
+	<event type="think" name="Idle" event="script" value="idle.lua"/>
+	<event type="think" name="SkullCheck" event="script" value="skullcheck.lua"/>
 	
-	<!-- guilcera -->
-	
+	<!-- Guilcera -->
 	<event type="login" name="addPremium" script="freepremmium.lua" />
 	<event type="login" name="giveFirstItems" script="firstitems.lua" />
-	
 </creaturescripts>

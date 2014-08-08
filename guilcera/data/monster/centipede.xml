@@ -21,17 +21,10 @@
     <attack name="melee" interval="2000" skill="30" attack="24" poison="22"/>
   </attacks>
   <defenses armor="4" defense="3"/>
-  <immunities>
-    <immunity physical="0"/>
-    <immunity energy="0"/>
-    <immunity fire="0"/>
-    <immunity poison="1"/>
-    <immunity lifedrain="0"/>
-    <immunity paralyze="0"/>
-    <immunity outfit="0"/>
-    <immunity drunk="0"/>
-    <immunity invisible="0"/>
-  </immunities>
+  	<elements>
+		<element earthPercent="100"/>
+	</elements>
+  <immunities></immunities>
 <loot>
  	<item id="2148" countmax="15" chance1="80000" chancemax="5000"/><!-- gold -->
 		<item id="1987" chance="10000"><!-- bag -->

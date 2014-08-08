@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<npc name="Remere" script="remere.lua" walkinterval="2000" floorchange="0" idleinterval="30">
+<npc name="Remere" script="default.lua" walkinterval="2000" floorchange="0" idleinterval="30">
 	<health now="100" max="100"/>
 	<look type="130" head="132" body="77" legs="86" feet="114"/>
 </npc>

@@ -26,7 +26,7 @@
       <attribute key="shootEffect" value="fire"/>
     </attack>
     <attack name="physical" interval="1000" chance="17" range="7" min="-135" max="-175">
-      <attribute key="shootEffect" value="suddendeath"/>
+      <attribute key="shootEffect" value="death"/>
       <attribute key="areaEffect" value="mortarea"/>
     </attack>
     <attack name="poison" interval="1000" chance="15" range="7" min="-40" max="-120">
@@ -53,11 +53,10 @@
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
   </defenses>
+  	<elements>
+		<element earthPercent="100"/>
+	</elements>
   <immunities>
-    <immunity physical="0"/>
-    <immunity energy="0"/>
-    <immunity fire="0"/>
-    <immunity poison="1"/>
     <immunity lifedrain="1"/>
     <immunity paralyze="1"/>
     <immunity outfit="1"/>

@@ -1,12 +1,12 @@
 SETUP GUIDE FOR GUILCERA SERVER
 ===============================
 
-1. How to play in a Guilcera server for Tibia 7.6 client
+1. How to play in a Guilcera server for Tibia 7.72 client
 --------------------------------------------------------
 
-First you need Tibia Client version 7.6, you can download it [HERE](http://lmgtfy.com/?q=Tibia+Client+7.6), [HERE](http://tibiaclient.com/?windows) or [HERE](http://remeresmapeditor.com/marklar.php?clients). I'm not responsible for those links, so you better googling it. We also need a IP changer application, I suggest OtLand ip changer (http://otland.net/threads/otland-ip-changer.134369/), you can found it [HERE](http://static.otland.net/ipchanger.exe).
+First you need Tibia Client version 7.72, you can download it [HERE](http://lmgtfy.com/?q=Tibia+Client+7.72), [HERE](http://tibiaclient.com/?windows) or [HERE](http://remeresmapeditor.com/marklar.php?clients). I'm not responsible for those links, so you better googling it. We also need a IP changer application, I suggest OtLand ip changer (http://otland.net/threads/otland-ip-changer.134369/), you can found it [HERE](http://static.otland.net/ipchanger.exe).
 
-Then find a server website, create an account there and search for the server ip adress. Open both Tibia 7.6 client and ip changer, enter server IP at *IP* and *apply*. Log in with the account you created.
+Then find a server website, create an account there and search for the server ip adress. Open both Tibia 7.72 client and ip changer, enter server IP at *IP* and *apply*. Log in with the account you created.
 
 2. How to setup your Guilcera server
 ------------------------------------
@@ -15,7 +15,7 @@ Then find a server website, create an account there and search for the server ip
 
 To run an OpenTibia server you will need a group of programs that manage not only the server, but the database of players, accounts and other informations, and the website used by server users to create the accounts and such things.
 
-The server itself will be Avesta distro revision 94 for protocol 7.6, a work of Ferrus, based on OpenTibia CVS version 0.6.5e, sources are avaible [here](https://code.google.com/p/avesta74/), you can also see some discussion about Avesta [here](http://otland.net/threads/7-4-avesta.39366/), the OtLand forum thread. Guilcera is our map, the files are inside server data folder.
+The server itself will be Avesta distro revision 94 for protocol 7.72, a work of Ferrus, based on OpenTibia CVS version 0.6.5e, sources are avaible [here](https://code.google.com/p/avesta74/), you can also see some discussion about Avesta [here](http://otland.net/threads/7-4-avesta.39366/), the OtLand forum thread. Guilcera is our map, the files are inside server data folder.
 
 As website we will use Nicaw AAC for Avesta, already edited by me, since the original one is not correctly setup to work with revision 94 of Avesta, but older versions, you can see more about Nicaw AAC [here](http://nicaw.net/). It's a web based account creator for OpenTibia servers that work through PHP.
 
@@ -25,10 +25,9 @@ And last but not least, we will need a URL Redirect service, and port foward all
 
 2.2 - Downloads
 So, we will need (versions used while I wrote this guide, june 2014)
-- The server (Avesta+DLL libraries), download the lastest version (rev94) [HERE](http://www.4shared.com/rar/sNwGjg4zce/avesta_rev94_and_libraries.html).
-- Lastest Guilcera data folder (4.02) [HERE](https://github.com/peonso/guilcera/tree/master/guilcera) or [HERE](http://www.4shared.com/rar/AYX0zk9Dba/guilcera_402.html).
+- Lastest Guilcera data folder (4.03) + OTX 2.10, [HERE](https://github.com/peonso/guilcera/tree/master/guilcera).
 - Uniform Server (8.9.2 Coral), get the lastest version at official website [HERE](http://sourceforge.net/projects/miniserver/files/Uniform%20Server/8.9.2-Coral/Coral_8_9_2.exe/download).
-- Nicaw AAC for Guilcera, lastest version (AAC 4.02) [HERE](https://github.com/peonso/guilcera/tree/master/www) or [HERE](http://www.4shared.com/rar/S83s3Kufba/acc_402.html).
+- Gesior2012 AAC for Guilcera, [HERE](https://github.com/peonso/guilcera/tree/master/www).
 
 2.3 - URL Redirect service
 
@@ -50,7 +49,7 @@ Extract Uniform Server (better if you do at C:\) and run it as service, once it 
 
 2.7 - Web account creator
 
-Nicaw ACC will do the job, at Uniform Server folder there is a folder named *www*, delete all files inside and extract Nicaw_ACC.rar there. Open *config.inc.php*, search for *$cfg['SQL_Password'] = '';* and fill it with the password from the step above, also *guilcera* is the default user and database name, if you picked a different one change the respectives fields. Then search *$cfg['dirdata'] = '.../guilcera/data/';* and enter your entire data folder name (as *C:/otserv/guilcera/data/*). Save and close.
+Gesior2012 ACC will do the job, at Uniform Server folder there is a folder named *www*, delete all files inside and paste www folder you got from GitHub. Go to 127.0.0.1 and follow the instructions.
 
 2.8 - Running the server
 
@@ -82,4 +81,4 @@ If you find an error in a item description or stats, or just want to change it y
 4. Disclaimer
 -------------
 
-As you noticied, guilcera works for tibia 7.6, an old protocol, not only for tibia but for otserv also, so a lot of nowadays applications won't work with it, and a lot of adaptations need to be done so it work properly with some new applications. Otitemeditor for exemple, you need version 2.2.0 to work, since newer versions are not suited to protocol 7.6. Our web application is based on a older version from Nicaw ACC, since newer ones won't work. We need a revised items.otb file to work with RME, since files for older protocols are not really functional. I (peonso) am not versed at any computer language or anything computer related, so a lot of solutions I came up with are not really efficient (like lua, php, or html scripts).
+As you noticied, guilcera works for tibia 7.72, an old protocol, not only for tibia but for otserv also, so a lot of nowadays applications won't work with it, and a lot of adaptations need to be done so it work properly with some new applications. Otitemeditor for exemple, you need version 2.2.0 to work, since newer versions are not suited to protocol 7.72. Our web application is based on a older version from Nicaw ACC, since newer ones won't work. We need a revised items.otb file to work with RME, since files for older protocols are not really functional. I (peonso) am not versed at any computer language or anything computer related, so a lot of solutions I came up with are not really efficient (like lua, php, or html scripts).

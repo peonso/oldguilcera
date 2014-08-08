@@ -3,6 +3,15 @@ Guilcera Change Log
 datapack for opentibia
 more info and lastest version at https://github.com/peonso/guilcera
 
+  4.03
+
+    - august 2014, [7.72] OTX 2.10 by Kaiser - MySQL database
+	- Changed protocol, Guilcera now works with Tibia Client 7.72
+	- AAC is now Gesior2012
+	- converted nearby all files
+	- missing npcs
+	- map main city is a mess
+
   4.02
 
     - may 2014, [7.6] Avesta rev94 by Ferrus - MySQL database

@@ -28,7 +28,7 @@
     </attack>
 
     <attack name="physical" interval="3000" chance="20" range="7" min="-60" max="-600">
-      <attribute key="shootEffect" value="suddendeath"/>
+      <attribute key="shootEffect" value="death"/>
       <attribute key="areaEffect" value="mortarea"/>
     </attack>
 
@@ -38,7 +38,7 @@
 
     <attack name="drunk" interval="1000" chance="8" range="7">
       <attribute key="shootEffect" value="energy"/>
-      <attribute key="areaEffect" value="energyarea"/>
+      <attribute key="areaEffect" value="energy"/>
     </attack>
 
     <attack name="outfit" interval="1000" chance="15" range="7" monster="pig" duration="12000">
@@ -54,11 +54,12 @@
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
   </defenses>
+  	<elements>
+		<element firePercent="100"/>
+		<element earthPercent="100"/>
+		<element energyPercent="100"/>
+	</elements>
   <immunities>
-    <immunity physical="0"/>
-    <immunity energy="1"/>
-    <immunity fire="1"/>
-    <immunity poison="1"/>
     <immunity lifedrain="1"/>
     <immunity paralyze="1"/>
     <immunity outfit="1"/>

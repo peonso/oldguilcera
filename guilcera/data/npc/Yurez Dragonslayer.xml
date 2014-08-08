@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<npc name="Yurez Dragonslayer" script="yurez_dragonslayer.lua" walkinterval="2000" floorchange="0" idleinterval="30">
+<npc name="Yurez Dragonslayer" script="default.lua" walkinterval="2000" floorchange="0" idleinterval="30">
 	<health now="100" max="100"/>
 	<look type="134" head="59" body="123" legs="76" feet="95"/>
 </npc>

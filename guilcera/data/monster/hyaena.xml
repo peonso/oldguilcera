@@ -21,17 +21,7 @@
     <attack name="melee" interval="2000" skill="18" attack="11"/>
   </attacks>
   <defenses armor="1" defense="3"/>
-  <immunities>
-    <immunity physical="0"/>
-    <immunity energy="0"/>
-    <immunity fire="0"/>
-    <immunity poison="0"/>
-    <immunity lifedrain="0"/>
-    <immunity paralyze="0"/>
-    <immunity outfit="0"/>
-    <immunity drunk="0"/>
-    <immunity invisible="0"/>
-  </immunities>
+  <immunities></immunities>
 <loot>
 	<item id="2666" countmax="4" chance1="30000" chancemax="0"/><!-- 30% 2666 meat -->
 	<item id="3976" countmax="1" chance1="50000" chancemax="0"/><!-- 1-3 50% 3976  worm -->

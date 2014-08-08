@@ -12,7 +12,7 @@ function onLogin(cid)
 				{2182} -- snakebite rod
 			},
 			{ -- PALADIN
-				{2389, 5} -- spear
+				{2389, 10} -- spear
 			},
 			{ -- KNIGHT
 				{2398} -- mace

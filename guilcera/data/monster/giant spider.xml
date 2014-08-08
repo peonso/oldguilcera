@@ -28,13 +28,12 @@
       <attribute key="areaEffect" value="redshimmer"/>
     </defense>
   </defenses>
+  	<elements>
+		<element firePercent="100"/>
+		<element earthPercent="100"/>
+	</elements>
   <immunities>
-    <immunity physical="0"/>
-    <immunity energy="0"/>
-    <immunity fire="1"/>
-    <immunity poison="1"/>
     <immunity lifedrain="1"/>
-    <immunity paralyze="0"/>
     <immunity outfit="1"/>
     <immunity drunk="1"/>
     <immunity invisible="1"/>
@@ -45,7 +44,7 @@
 <loot>
 	<item id="2148" countmax="99" chance1="100000" chancemax="0"/>
 	<item id="2148" countmax="97" chance1="60000" chancemax="0"/><!-- 1-196 100% 2148 gold -->
-	<item id="2545" countmax="12" chance1="12000" chancemax="0"/><!-- 1-12 12% 2545 poison arrow -->
+	<!--<item id="2545" countmax="12" chance1="12000" chancemax="0"/>--><!-- 1-12 12% 2545 poison arrow -->
 	<item id="2463" chance="10000"/><!-- 10% 2463 plate armor -->
 	<item id="2478" chance="9000"/><!-- 9% 2478 brass legs -->
 	<item id="2457" chance="5000"/><!-- 5% 2457 steel helmet -->

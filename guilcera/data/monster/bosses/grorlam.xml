@@ -31,16 +31,12 @@
       <attribute key="areaEffect" value="redshimmer"/>
     </defense>
   </defenses>
+  	<elements>
+		<element firePercent="100"/>
+		<element earthPercent="100"/>
+	</elements>
   <immunities>
-    <immunity physical="0"/>
-    <immunity energy="0"/>
-    <immunity fire="1"/>
-    <immunity poison="1"/>
-    <immunity lifedrain="0"/>
     <immunity paralyze="1"/>
-    <immunity outfit="0"/>
-    <immunity drunk="0"/>
-    <immunity invisible="0"/>
   </immunities>
 <loot>
 	<item id="2148" countmax="98" chance1="100000" chancemax="4000"/><!-- 1-98 100% gold -->

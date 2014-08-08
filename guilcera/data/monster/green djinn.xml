@@ -26,22 +26,23 @@
       <attribute key="shootEffect" value="energy"/>
     </attack>
     <attack name="lifedrain" interval="3000" chance="25" range="7" min="-55" max="-105">
-      <attribute key="shootEffect" value="suddendeath"/>
+      <attribute key="shootEffect" value="death"/>
     </attack>
     <attack name="drunk" interval="1000" chance="20" range="7">
       <attribute key="shootEffect" value="energy"/>
-      <attribute key="areaEffect" value="energyarea"/>
+      <attribute key="areaEffect" value="energy"/>
     </attack>
     <attack name="outfit" interval="1000" chance="17" range="7" monster="rat" duration="30000">
       <attribute key="areaEffect" value="blueshimmer"/>
     </attack>
   </attacks>
   <defenses armor="18" defense="10"/>
+  	<elements>
+		<element energyPercent="100"/>
+		<element firePercent="100"/>
+		<element earthPercent="100"/>
+	</elements>
   <immunities>
-    <immunity physical="0"/>
-    <immunity energy="1"/>
-    <immunity fire="1"/>
-    <immunity poison="1"/>
     <immunity lifedrain="1"/>
     <immunity paralyze="1"/>
     <immunity outfit="1"/>

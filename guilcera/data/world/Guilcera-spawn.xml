@@ -800,9 +800,7 @@
     <monster name="minotaur guard" x="-3" y="0" z="7" spawntime="60"/>
     <monster name="minotaur" x="1" y="2" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="204" centery="71" centerz="7" radius="20">
-    <monster name="orc shaman" x="-13" y="18" z="7" spawntime="60"/>
-  </spawn>
+  <spawn centerx="204" centery="71" centerz="7" radius="5"/>
   <spawn centerx="569" centery="72" centerz="7" radius="5">
     <monster name="hyaena" x="-3" y="-1" z="7" spawntime="60"/>
     <monster name="hyaena" x="2" y="0" z="7" spawntime="60"/>
@@ -835,6 +833,7 @@
     <monster name="minotaur" x="-1" y="2" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="191" centery="91" centerz="7" radius="20">
+    <monster name="orc shaman" x="0" y="-2" z="7" spawntime="60"/>
     <monster name="orc berserker" x="-1" y="1" z="7" spawntime="60"/>
     <monster name="orc" x="2" y="2" z="7" spawntime="60"/>
   </spawn>
@@ -855,7 +854,6 @@
     <monster name="hyaena" x="-2" y="3" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="584" centery="120" centerz="7" radius="2"/>
-  <spawn centerx="624" centery="126" centerz="7" radius="2"/>
   <spawn centerx="718" centery="131" centerz="7" radius="5">
     <monster name="cyclops" x="-2" y="1" z="7" spawntime="60"/>
     <monster name="cyclops" x="2" y="1" z="7" spawntime="60"/>
@@ -873,7 +871,6 @@
     <monster name="goblin" x="-8" y="6" z="7" spawntime="60"/>
     <monster name="goblin" x="-12" y="9" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="655" centery="135" centerz="7" radius="2"/>
   <spawn centerx="586" centery="138" centerz="7" radius="2"/>
   <spawn centerx="247" centery="140" centerz="7" radius="3">
     <monster name="wild warrior" x="0" y="0" z="7" spawntime="60"/>
@@ -1155,7 +1152,6 @@
   <spawn centerx="190" centery="208" centerz="7" radius="1">
     <npc name="Tliff" x="0" y="-1" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="249" centery="209" centerz="7" radius="1"/>
   <spawn centerx="162" centery="210" centerz="7" radius="20">
     <monster name="wolf" x="0" y="0" z="7" spawntime="60"/>
     <monster name="wolf" x="-6" y="4" z="7" spawntime="60"/>
@@ -1560,11 +1556,6 @@
     <monster name="bug" x="-2" y="2" z="7" spawntime="60"/>
     <monster name="centipede" x="2" y="2" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="180" centery="458" centerz="7" radius="5">
-    <monster name="hunter" x="-2" y="-3" z="7" spawntime="60"/>
-    <monster name="hunter" x="-3" y="-1" z="7" spawntime="60"/>
-    <monster name="hunter" x="2" y="2" z="7" spawntime="60"/>
-  </spawn>
   <spawn centerx="490" centery="458" centerz="7" radius="5">
     <monster name="bat" x="2" y="-4" z="7" spawntime="60"/>
     <monster name="bat" x="-1" y="-2" z="7" spawntime="60"/>
@@ -1631,12 +1622,6 @@
     <monster name="parrot" x="-2" y="-1" z="7" spawntime="60"/>
     <monster name="terror bird" x="3" y="0" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="170" centery="471" centerz="7" radius="5">
-    <monster name="wolf" x="-2" y="-2" z="7" spawntime="60"/>
-    <monster name="wolf" x="2" y="-2" z="7" spawntime="60"/>
-    <monster name="wolf" x="0" y="1" z="7" spawntime="60"/>
-    <monster name="wolf" x="1" y="2" z="7" spawntime="60"/>
-  </spawn>
   <spawn centerx="512" centery="471" centerz="7" radius="5">
     <monster name="elephant" x="3" y="-1" z="7" spawntime="60"/>
     <monster name="elephant" x="-3" y="2" z="7" spawntime="60"/>
@@ -1647,28 +1632,12 @@
     <monster name="panda" x="4" y="0" z="7" spawntime="60"/>
     <monster name="panda" x="1" y="3" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="186" centery="476" centerz="7" radius="5">
-    <monster name="wolf" x="-2" y="-1" z="7" spawntime="60"/>
-    <monster name="wolf" x="2" y="1" z="7" spawntime="60"/>
-    <monster name="wolf" x="0" y="2" z="7" spawntime="60"/>
-  </spawn>
   <spawn centerx="589" centery="482" centerz="7" radius="5">
     <monster name="crab" x="0" y="-2" z="7" spawntime="60"/>
     <monster name="crab" x="-4" y="-1" z="7" spawntime="60"/>
     <monster name="crab" x="2" y="-1" z="7" spawntime="60"/>
     <monster name="crab" x="-2" y="2" z="7" spawntime="60"/>
     <monster name="crab" x="3" y="3" z="7" spawntime="60"/>
-  </spawn>
-  <spawn centerx="208" centery="488" centerz="7" radius="5">
-    <monster name="wolf" x="2" y="-1" z="7" spawntime="60"/>
-    <monster name="wolf" x="-2" y="1" z="7" spawntime="60"/>
-    <monster name="wolf" x="3" y="1" z="7" spawntime="60"/>
-  </spawn>
-  <spawn centerx="126" centery="502" centerz="7" radius="5">
-    <monster name="wolf" x="-1" y="-1" z="7" spawntime="60"/>
-    <monster name="wolf" x="4" y="-1" z="7" spawntime="60"/>
-    <monster name="wolf" x="0" y="0" z="7" spawntime="60"/>
-    <monster name="wolf" x="-2" y="2" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="246" centery="31" centerz="8" radius="20">
     <monster name="orc spearman" x="0" y="0" z="8" spawntime="60"/>
@@ -2922,12 +2891,6 @@
     <monster name="crab" x="-2" y="1" z="8" spawntime="60"/>
     <monster name="crab" x="2" y="2" z="8" spawntime="60"/>
   </spawn>
-  <spawn centerx="179" centery="440" centerz="8" radius="5">
-    <monster name="dwarf" x="-3" y="0" z="8" spawntime="60"/>
-    <monster name="dwarf" x="0" y="0" z="8" spawntime="60"/>
-    <monster name="dwarf" x="1" y="0" z="8" spawntime="60"/>
-    <monster name="dwarf" x="0" y="3" z="8" spawntime="60"/>
-  </spawn>
   <spawn centerx="484" centery="442" centerz="8" radius="3">
     <monster name="crab" x="2" y="-2" z="8" spawntime="60"/>
     <monster name="crab" x="-1" y="-1" z="8" spawntime="60"/>
@@ -2939,18 +2902,6 @@
     <monster name="crab" x="-1" y="-1" z="8" spawntime="60"/>
     <monster name="crab" x="1" y="1" z="8" spawntime="60"/>
     <monster name="crab" x="-1" y="2" z="8" spawntime="60"/>
-  </spawn>
-  <spawn centerx="176" centery="449" centerz="8" radius="5">
-    <monster name="dwarf" x="0" y="-3" z="8" spawntime="60"/>
-    <monster name="dwarf" x="1" y="0" z="8" spawntime="60"/>
-    <monster name="dwarf" x="-1" y="1" z="8" spawntime="60"/>
-    <monster name="dwarf" x="2" y="2" z="8" spawntime="60"/>
-  </spawn>
-  <spawn centerx="206" centery="449" centerz="8" radius="5">
-    <monster name="dwarf" x="0" y="0" z="8" spawntime="60"/>
-    <monster name="dwarf" x="-2" y="2" z="8" spawntime="60"/>
-    <monster name="dwarf" x="0" y="3" z="8" spawntime="60"/>
-    <monster name="dwarf" x="-2" y="5" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="604" centery="449" centerz="8" radius="4">
     <monster name="sibang" x="-1" y="-1" z="8" spawntime="60"/>
@@ -2971,24 +2922,10 @@
     <monster name="sibang" x="-1" y="3" z="8" spawntime="60"/>
     <monster name="merlkin" x="3" y="4" z="8" spawntime="60"/>
   </spawn>
-  <spawn centerx="169" centery="455" centerz="8" radius="5">
-    <monster name="dwarf" x="0" y="-2" z="8" spawntime="60"/>
-    <monster name="dwarf" x="-2" y="-1" z="8" spawntime="60"/>
-    <monster name="dwarf" x="0" y="1" z="8" spawntime="60"/>
-  </spawn>
-  <spawn centerx="207" centery="455" centerz="8" radius="5">
-    <monster name="dwarf" x="2" y="0" z="8" spawntime="60"/>
-    <monster name="dwarf" x="0" y="1" z="8" spawntime="60"/>
-  </spawn>
   <spawn centerx="603" centery="462" centerz="8" radius="3">
     <monster name="merlkin" x="2" y="-2" z="8" spawntime="60"/>
     <monster name="sibang" x="1" y="0" z="8" spawntime="60"/>
     <monster name="sibang" x="-1" y="1" z="8" spawntime="60"/>
-  </spawn>
-  <spawn centerx="190" centery="463" centerz="8" radius="5">
-    <monster name="dwarf" x="-3" y="-1" z="8" spawntime="60"/>
-    <monster name="dwarf" x="1" y="1" z="8" spawntime="60"/>
-    <monster name="dwarf" x="2" y="1" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="562" centery="464" centerz="8" radius="5">
     <monster name="kongra" x="-1" y="-2" z="8" spawntime="60"/>
@@ -2999,9 +2936,6 @@
     <monster name="sibang" x="-4" y="4" z="8" spawntime="60"/>
     <monster name="merlkin" x="0" y="4" z="8" spawntime="60"/>
   </spawn>
-  <spawn centerx="138" centery="469" centerz="8" radius="5">
-    <monster name="bandit" x="-2" y="3" z="8" spawntime="60"/>
-  </spawn>
   <spawn centerx="556" centery="469" centerz="8" radius="3">
     <monster name="kongra" x="-1" y="-1" z="8" spawntime="60"/>
     <monster name="sibang" x="-1" y="2" z="8" spawntime="60"/>
@@ -3011,113 +2945,6 @@
     <monster name="kongra" x="1" y="-2" z="8" spawntime="60"/>
     <monster name="merlkin" x="-3" y="2" z="8" spawntime="60"/>
     <monster name="kongra" x="0" y="2" z="8" spawntime="60"/>
-  </spawn>
-  <spawn centerx="148" centery="473" centerz="8" radius="5">
-    <monster name="hunter" x="2" y="-2" z="8" spawntime="60"/>
-    <monster name="smuggler" x="-3" y="-1" z="8" spawntime="60"/>
-    <monster name="smuggler" x="-2" y="0" z="8" spawntime="60"/>
-    <monster name="wild warrior" x="-3" y="1" z="8" spawntime="60"/>
-  </spawn>
-  <spawn centerx="130" centery="474" centerz="8" radius="5">
-    <monster name="bandit" x="2" y="-3" z="8" spawntime="60"/>
-    <monster name="wild warrior" x="1" y="0" z="8" spawntime="60"/>
-    <monster name="smuggler" x="2" y="1" z="8" spawntime="60"/>
-  </spawn>
-  <spawn centerx="203" centery="474" centerz="8" radius="5">
-    <monster name="dwarf" x="-1" y="-2" z="8" spawntime="60"/>
-    <monster name="dwarf" x="-1" y="2" z="8" spawntime="60"/>
-  </spawn>
-  <spawn centerx="184" centery="476" centerz="8" radius="5">
-    <monster name="dwarf" x="1" y="-3" z="8" spawntime="60"/>
-    <monster name="dwarf" x="-1" y="-1" z="8" spawntime="60"/>
-    <monster name="dwarf" x="1" y="1" z="8" spawntime="60"/>
-    <monster name="dwarf" x="-3" y="2" z="8" spawntime="60"/>
-    <monster name="dwarf" x="0" y="2" z="8" spawntime="60"/>
-  </spawn>
-  <spawn centerx="120" centery="477" centerz="8" radius="5">
-    <monster name="wild warrior" x="0" y="-1" z="8" spawntime="60"/>
-    <monster name="wild warrior" x="0" y="1" z="8" spawntime="60"/>
-    <monster name="smuggler" x="2" y="1" z="8" spawntime="60"/>
-  </spawn>
-  <spawn centerx="139" centery="479" centerz="8" radius="5">
-    <monster name="smuggler" x="-2" y="-2" z="8" spawntime="60"/>
-    <monster name="smuggler" x="-2" y="2" z="8" spawntime="60"/>
-    <monster name="smuggler" x="3" y="2" z="8" spawntime="60"/>
-  </spawn>
-  <spawn centerx="105" centery="483" centerz="8" radius="5">
-    <monster name="tarantula" x="2" y="-2" z="8" spawntime="60"/>
-    <monster name="tarantula" x="-2" y="-1" z="8" spawntime="60"/>
-    <monster name="smuggler" x="1" y="-1" z="8" spawntime="60"/>
-    <monster name="wild warrior" x="5" y="0" z="8" spawntime="60"/>
-    <monster name="smuggler" x="-1" y="1" z="8" spawntime="60"/>
-    <monster name="tarantula" x="3" y="2" z="8" spawntime="60"/>
-    <monster name="tarantula" x="-2" y="4" z="8" spawntime="60"/>
-  </spawn>
-  <spawn centerx="148" centery="484" centerz="8" radius="5">
-    <monster name="smuggler" x="-1" y="0" z="8" spawntime="60"/>
-    <monster name="wild warrior" x="1" y="0" z="8" spawntime="60"/>
-  </spawn>
-  <spawn centerx="114" centery="485" centerz="8" radius="5">
-    <monster name="smuggler" x="-2" y="-1" z="8" spawntime="60"/>
-    <monster name="tarantula" x="-3" y="0" z="8" spawntime="60"/>
-    <monster name="tarantula" x="-3" y="4" z="8" spawntime="60"/>
-  </spawn>
-  <spawn centerx="129" centery="485" centerz="8" radius="5">
-    <monster name="smuggler" x="-3" y="-1" z="8" spawntime="60"/>
-    <monster name="smuggler" x="3" y="0" z="8" spawntime="60"/>
-    <monster name="wild warrior" x="0" y="2" z="8" spawntime="60"/>
-  </spawn>
-  <spawn centerx="197" centery="486" centerz="8" radius="5">
-    <monster name="dwarf" x="1" y="-1" z="8" spawntime="60"/>
-    <monster name="dwarf" x="-2" y="1" z="8" spawntime="60"/>
-    <monster name="dwarf" x="2" y="2" z="8" spawntime="60"/>
-  </spawn>
-  <spawn centerx="176" centery="487" centerz="8" radius="5">
-    <monster name="dwarf" x="1" y="-3" z="8" spawntime="60"/>
-    <monster name="dwarf" x="-1" y="-2" z="8" spawntime="60"/>
-    <monster name="dwarf" x="1" y="0" z="8" spawntime="60"/>
-  </spawn>
-  <spawn centerx="216" centery="488" centerz="8" radius="5">
-    <monster name="dwarf" x="0" y="-2" z="8" spawntime="60"/>
-    <monster name="dwarf" x="-1" y="0" z="8" spawntime="60"/>
-    <monster name="dwarf" x="2" y="0" z="8" spawntime="60"/>
-    <monster name="dwarf" x="2" y="1" z="8" spawntime="60"/>
-    <monster name="dwarf" x="0" y="2" z="8" spawntime="60"/>
-  </spawn>
-  <spawn centerx="137" centery="490" centerz="8" radius="5">
-    <monster name="smuggler" x="-1" y="0" z="8" spawntime="60"/>
-    <monster name="wild warrior" x="1" y="1" z="8" spawntime="60"/>
-  </spawn>
-  <spawn centerx="123" centery="491" centerz="8" radius="5">
-    <monster name="wild warrior" x="-2" y="1" z="8" spawntime="60"/>
-    <monster name="smuggler" x="0" y="1" z="8" spawntime="60"/>
-    <monster name="smuggler" x="-2" y="3" z="8" spawntime="60"/>
-  </spawn>
-  <spawn centerx="204" centery="495" centerz="8" radius="5">
-    <monster name="dwarf" x="-2" y="-2" z="8" spawntime="60"/>
-    <monster name="dwarf" x="0" y="0" z="8" spawntime="60"/>
-    <monster name="dwarf" x="-1" y="1" z="8" spawntime="60"/>
-  </spawn>
-  <spawn centerx="128" centery="499" centerz="8" radius="5">
-    <monster name="wild warrior" x="-1" y="2" z="8" spawntime="60"/>
-  </spawn>
-  <spawn centerx="189" centery="499" centerz="8" radius="5">
-    <monster name="dwarf" x="0" y="-1" z="8" spawntime="60"/>
-    <monster name="dwarf" x="-2" y="1" z="8" spawntime="60"/>
-    <monster name="dwarf" x="0" y="1" z="8" spawntime="60"/>
-    <monster name="dwarf" x="1" y="1" z="8" spawntime="60"/>
-  </spawn>
-  <spawn centerx="121" centery="507" centerz="8" radius="5">
-    <monster name="wild warrior" x="3" y="-2" z="8" spawntime="60"/>
-    <monster name="smuggler" x="0" y="-1" z="8" spawntime="60"/>
-    <monster name="smuggler" x="3" y="1" z="8" spawntime="60"/>
-  </spawn>
-  <spawn centerx="208" centery="509" centerz="8" radius="5">
-    <monster name="dwarf" x="-2" y="-3" z="8" spawntime="60"/>
-    <monster name="dwarf" x="-2" y="-1" z="8" spawntime="60"/>
-    <monster name="dwarf" x="0" y="0" z="8" spawntime="60"/>
-    <monster name="dwarf" x="1" y="0" z="8" spawntime="60"/>
-    <monster name="dwarf" x="0" y="1" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="562" centery="31" centerz="9" radius="5">
     <monster name="necromancer" x="1" y="-4" z="9" spawntime="60"/>
@@ -3934,31 +3761,12 @@
     <monster name="sibang" x="1" y="0" z="9" spawntime="60"/>
     <monster name="merlkin" x="-1" y="1" z="9" spawntime="60"/>
   </spawn>
-  <spawn centerx="208" centery="466" centerz="9" radius="5">
-    <monster name="dwarf soldier" x="2" y="-1" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="0" y="0" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="1" y="0" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="-1" y="2" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="143" centery="467" centerz="9" radius="5">
-    <monster name="dwarf soldier" x="-2" y="-2" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="0" y="-1" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="-2" y="0" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="0" y="2" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="2" y="2" z="9" spawntime="60"/>
-  </spawn>
   <spawn centerx="599" centery="467" centerz="9" radius="3">
     <monster name="merlkin" x="0" y="-3" z="9" spawntime="60"/>
     <monster name="kongra" x="-1" y="-1" z="9" spawntime="60"/>
     <monster name="merlkin" x="-3" y="0" z="9" spawntime="60"/>
     <monster name="kongra" x="-1" y="1" z="9" spawntime="60"/>
     <monster name="sibang" x="0" y="3" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="232" centery="468" centerz="9" radius="5">
-    <monster name="dwarf guard" x="1" y="-1" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="1" y="0" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="-2" y="2" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="-1" y="3" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="574" centery="473" centerz="9" radius="5">
     <monster name="merlkin" x="0" y="-5" z="9" spawntime="60"/>
@@ -3968,45 +3776,12 @@
     <monster name="kongra" x="-3" y="1" z="9" spawntime="60"/>
     <monster name="sibang" x="0" y="2" z="9" spawntime="60"/>
   </spawn>
-  <spawn centerx="161" centery="474" centerz="9" radius="5">
-    <monster name="dwarf soldier" x="1" y="-1" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="1" y="1" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="-1" y="2" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="186" centery="474" centerz="9" radius="5">
-    <monster name="dwarf soldier" x="0" y="-2" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="1" y="-1" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="-1" y="0" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="2" y="1" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="2" y="3" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="226" centery="475" centerz="9" radius="5">
-    <monster name="dwarf soldier" x="-1" y="-2" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="1" y="0" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="-1" y="1" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="-2" y="2" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="-1" y="2" z="9" spawntime="60"/>
-    <monster name="dwarf guard" x="1" y="2" z="9" spawntime="60"/>
-  </spawn>
   <spawn centerx="557" centery="477" centerz="9" radius="4">
     <monster name="sibang" x="-1" y="-1" z="9" spawntime="60"/>
     <monster name="kongra" x="-3" y="0" z="9" spawntime="60"/>
     <monster name="sibang" x="2" y="0" z="9" spawntime="60"/>
     <monster name="merlkin" x="4" y="0" z="9" spawntime="60"/>
     <monster name="sibang" x="2" y="1" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="210" centery="478" centerz="9" radius="5">
-    <monster name="dwarf soldier" x="0" y="-3" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="-2" y="-2" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="0" y="-1" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="1" y="1" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="151" centery="480" centerz="9" radius="5">
-    <monster name="dwarf soldier" x="-1" y="-2" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="-1" y="0" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="-3" y="1" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="-2" y="1" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="0" y="2" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="580" centery="483" centerz="9" radius="3">
     <monster name="sibang" x="-1" y="-1" z="9" spawntime="60"/>
@@ -4019,178 +3794,6 @@
     <monster name="merlkin" x="2" y="1" z="9" spawntime="60"/>
     <monster name="kongra" x="-3" y="2" z="9" spawntime="60"/>
     <monster name="sibang" x="-2" y="2" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="219" centery="489" centerz="9" radius="5">
-    <monster name="dwarf soldier" x="-2" y="-4" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="-2" y="-3" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="-3" y="-2" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="2" y="1" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="-2" y="2" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="178" centery="490" centerz="9" radius="5">
-    <monster name="dwarf soldier" x="-2" y="-3" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="-3" y="-1" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="2" y="-1" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="0" y="1" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="2" y="1" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="202" centery="491" centerz="9" radius="5">
-    <monster name="dwarf soldier" x="3" y="-2" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="-1" y="-1" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="-3" y="0" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="1" y="0" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="-1" y="1" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="133" centery="493" centerz="9" radius="5">
-    <monster name="dwarf soldier" x="2" y="-3" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="4" y="-1" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="-1" y="0" z="9" spawntime="60"/>
-    <monster name="dwarf guard" x="-1" y="2" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="141" centery="496" centerz="9" radius="5">
-    <monster name="dwarf soldier" x="0" y="-1" z="9" spawntime="60"/>
-    <monster name="dwarf guard" x="3" y="-1" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="-1" y="0" z="9" spawntime="60"/>
-    <monster name="dwarf guard" x="1" y="2" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="237" centery="496" centerz="9" radius="5">
-    <monster name="dwarf soldier" x="-3" y="-2" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="1" y="-1" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="-1" y="0" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="2" y="0" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="1" y="2" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="213" centery="500" centerz="9" radius="5">
-    <monster name="dwarf soldier" x="1" y="-3" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="-1" y="0" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="0" y="1" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="1" y="1" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="193" centery="502" centerz="9" radius="5">
-    <monster name="dwarf soldier" x="1" y="-2" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="-1" y="-1" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="-2" y="2" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="-1" y="2" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="173" centery="505" centerz="9" radius="5">
-    <monster name="dwarf soldier" x="-1" y="-3" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="1" y="-3" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="-2" y="0" z="9" spawntime="60"/>
-    <monster name="dwarf soldier" x="-1" y="2" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="123" centery="516" centerz="9" radius="5">
-    <monster name="smuggler" x="-2" y="-4" z="9" spawntime="60"/>
-    <monster name="smuggler" x="0" y="-3" z="9" spawntime="60"/>
-    <monster name="smuggler" x="-1" y="0" z="9" spawntime="60"/>
-    <monster name="bandit" x="-3" y="1" z="9" spawntime="60"/>
-    <monster name="bandit" x="2" y="1" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="152" centery="524" centerz="9" radius="5">
-    <monster name="smuggler" x="1" y="-1" z="9" spawntime="60"/>
-    <monster name="smuggler" x="-1" y="0" z="9" spawntime="60"/>
-    <monster name="smuggler" x="1" y="1" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="144" centery="530" centerz="9" radius="5">
-    <monster name="bandit" x="0" y="-1" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="132" centery="531" centerz="9" radius="5">
-    <monster name="smuggler" x="-2" y="-1" z="9" spawntime="60"/>
-    <monster name="smuggler" x="-1" y="-1" z="9" spawntime="60"/>
-    <monster name="smuggler" x="0" y="-1" z="9" spawntime="60"/>
-    <monster name="smuggler" x="1" y="-1" z="9" spawntime="60"/>
-    <monster name="wild warrior" x="-2" y="3" z="9" spawntime="60"/>
-    <monster name="wild warrior" x="-1" y="3" z="9" spawntime="60"/>
-    <monster name="wild warrior" x="0" y="3" z="9" spawntime="60"/>
-    <monster name="wild warrior" x="1" y="3" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="116" centery="533" centerz="9" radius="5">
-    <monster name="bandit" x="-1" y="0" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="97" centery="540" centerz="9" radius="5">
-    <monster name="smuggler" x="0" y="1" z="9" spawntime="60"/>
-    <monster name="smuggler" x="-2" y="2" z="9" spawntime="60"/>
-    <monster name="smuggler" x="2" y="2" z="9" spawntime="60"/>
-    <monster name="bandit" x="2" y="4" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="131" centery="540" centerz="9" radius="5">
-    <monster name="bandit" x="0" y="-2" z="9" spawntime="60"/>
-    <monster name="bandit" x="1" y="-2" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="160" centery="542" centerz="9" radius="5">
-    <monster name="bandit" x="-2" y="0" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="144" centery="543" centerz="9" radius="5">
-    <monster name="bandit" x="0" y="-1" z="9" spawntime="60"/>
-    <monster name="bandit" x="-2" y="2" z="9" spawntime="60"/>
-    <monster name="bandit" x="2" y="3" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="113" centery="544" centerz="9" radius="5">
-    <monster name="bandit" x="2" y="-2" z="9" spawntime="60"/>
-    <monster name="bandit" x="-3" y="0" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="123" centery="549" centerz="9" radius="5">
-    <monster name="smuggler" x="3" y="-1" z="9" spawntime="60"/>
-    <monster name="smuggler" x="0" y="2" z="9" spawntime="60"/>
-    <monster name="smuggler" x="0" y="5" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="148" centery="550" centerz="9" radius="5">
-    <monster name="necromancer" x="0" y="-1" z="9" spawntime="60"/>
-    <monster name="necromancer" x="0" y="1" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="177" centery="552" centerz="9" radius="5">
-    <monster name="bandit" x="-2" y="-3" z="9" spawntime="60"/>
-    <monster name="bandit" x="1" y="-3" z="9" spawntime="60"/>
-    <monster name="smuggler" x="0" y="-2" z="9" spawntime="60"/>
-    <monster name="smuggler" x="-5" y="0" z="9" spawntime="60"/>
-    <monster name="bandit" x="0" y="0" z="9" spawntime="60"/>
-    <monster name="smuggler" x="2" y="0" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="98" centery="553" centerz="9" radius="5">
-    <monster name="smuggler" x="0" y="-3" z="9" spawntime="60"/>
-    <monster name="smuggler" x="1" y="2" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="137" centery="553" centerz="9" radius="5">
-    <monster name="smuggler" x="-1" y="-3" z="9" spawntime="60"/>
-    <monster name="smuggler" x="-2" y="-1" z="9" spawntime="60"/>
-    <monster name="smuggler" x="1" y="0" z="9" spawntime="60"/>
-    <monster name="bandit" x="-1" y="3" z="9" spawntime="60"/>
-    <monster name="bandit" x="0" y="3" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="159" centery="556" centerz="9" radius="5">
-    <monster name="necromancer" x="-2" y="-1" z="9" spawntime="60"/>
-    <monster name="necromancer" x="2" y="0" z="9" spawntime="60"/>
-    <monster name="necromancer" x="-1" y="1" z="9" spawntime="60"/>
-    <monster name="necromancer" x="1" y="1" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="145" centery="559" centerz="9" radius="5">
-    <monster name="necromancer" x="3" y="-3" z="9" spawntime="60"/>
-    <monster name="necromancer" x="1" y="-2" z="9" spawntime="60"/>
-    <monster name="necromancer" x="2" y="-1" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="123" centery="561" centerz="9" radius="5">
-    <monster name="bandit" x="-2" y="-4" z="9" spawntime="60"/>
-    <monster name="smuggler" x="2" y="-4" z="9" spawntime="60"/>
-    <monster name="bandit" x="1" y="-3" z="9" spawntime="60"/>
-    <monster name="bandit" x="-1" y="-1" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="108" centery="562" centerz="9" radius="5">
-    <monster name="smuggler" x="-2" y="-1" z="9" spawntime="60"/>
-    <monster name="bandit" x="0" y="0" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="151" centery="565" centerz="9" radius="5">
-    <monster name="necromancer" x="0" y="-1" z="9" spawntime="60"/>
-    <monster name="necromancer" x="1" y="0" z="9" spawntime="60"/>
-    <monster name="necromancer" x="-1" y="1" z="9" spawntime="60"/>
-    <monster name="necromancer" x="2" y="1" z="9" spawntime="60"/>
-    <monster name="necromancer" x="0" y="2" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="161" centery="567" centerz="9" radius="5">
-    <monster name="necromancer" x="-3" y="-4" z="9" spawntime="60"/>
-    <monster name="necromancer" x="-1" y="-3" z="9" spawntime="60"/>
-    <monster name="necromancer" x="-3" y="-2" z="9" spawntime="60"/>
-    <monster name="necromancer" x="-1" y="-1" z="9" spawntime="60"/>
-    <monster name="necromancer" x="-1" y="0" z="9" spawntime="60"/>
-    <monster name="necromancer" x="1" y="0" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="617" centery="28" centerz="10" radius="5">
     <monster name="banshee" x="-2" y="-1" z="10" spawntime="60"/>
@@ -4901,16 +4504,6 @@
     <monster name="merlkin" x="1" y="1" z="10" spawntime="60"/>
     <monster name="merlkin" x="-1" y="2" z="10" spawntime="60"/>
   </spawn>
-  <spawn centerx="171" centery="472" centerz="10" radius="5">
-    <monster name="dwarf guard" x="-2" y="-1" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="2" y="0" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="1" y="1" z="10" spawntime="60"/>
-  </spawn>
-  <spawn centerx="205" centery="476" centerz="10" radius="5">
-    <monster name="dwarf guard" x="2" y="-2" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="-1" y="0" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="1" y="1" z="10" spawntime="60"/>
-  </spawn>
   <spawn centerx="555" centery="477" centerz="10" radius="5">
     <monster name="kongra" x="-1" y="-3" z="10" spawntime="60"/>
     <monster name="kongra" x="2" y="-2" z="10" spawntime="60"/>
@@ -4919,145 +4512,6 @@
     <monster name="kongra" x="2" y="1" z="10" spawntime="60"/>
     <monster name="kongra" x="-2" y="2" z="10" spawntime="60"/>
     <monster name="kongra" x="1" y="2" z="10" spawntime="60"/>
-  </spawn>
-  <spawn centerx="152" centery="479" centerz="10" radius="5">
-    <monster name="dwarf guard" x="2" y="0" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="-1" y="1" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="0" y="3" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="1" y="4" z="10" spawntime="60"/>
-  </spawn>
-  <spawn centerx="163" centery="484" centerz="10" radius="5">
-    <monster name="dwarf guard" x="1" y="-2" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="-2" y="1" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="-1" y="1" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="1" y="1" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="-1" y="3" z="10" spawntime="60"/>
-  </spawn>
-  <spawn centerx="172" centery="486" centerz="10" radius="5">
-    <monster name="dwarf guard" x="2" y="-3" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="1" y="-2" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="0" y="-1" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="-1" y="1" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="0" y="3" z="10" spawntime="60"/>
-  </spawn>
-  <spawn centerx="212" centery="486" centerz="10" radius="5">
-    <monster name="dwarf guard" x="-2" y="-2" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="-1" y="0" z="10" spawntime="60"/>
-  </spawn>
-  <spawn centerx="193" centery="490" centerz="10" radius="5">
-    <monster name="dwarf guard" x="2" y="-2" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="-1" y="-1" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="1" y="0" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="0" y="1" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="0" y="3" z="10" spawntime="60"/>
-  </spawn>
-  <spawn centerx="223" centery="490" centerz="10" radius="5">
-    <monster name="dwarf guard" x="-1" y="-3" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="0" y="0" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="2" y="1" z="10" spawntime="60"/>
-  </spawn>
-  <spawn centerx="144" centery="497" centerz="10" radius="5">
-    <monster name="dwarf guard" x="0" y="-2" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="2" y="-1" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="-1" y="0" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="1" y="1" z="10" spawntime="60"/>
-  </spawn>
-  <spawn centerx="161" centery="501" centerz="10" radius="5">
-    <monster name="dwarf guard" x="2" y="-2" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="-1" y="-1" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="1" y="-1" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="1" y="0" z="10" spawntime="60"/>
-  </spawn>
-  <spawn centerx="202" centery="501" centerz="10" radius="5">
-    <monster name="dwarf guard" x="-3" y="-2" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="1" y="-2" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="0" y="-1" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="-1" y="0" z="10" spawntime="60"/>
-  </spawn>
-  <spawn centerx="175" centery="503" centerz="10" radius="5">
-    <monster name="dwarf guard" x="-1" y="-1" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="0" y="-1" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="2" y="-1" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="-2" y="0" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="1" y="0" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="3" y="0" z="10" spawntime="60"/>
-  </spawn>
-  <spawn centerx="216" centery="504" centerz="10" radius="5">
-    <monster name="dwarf guard" x="0" y="-1" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="2" y="1" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="-1" y="3" z="10" spawntime="60"/>
-  </spawn>
-  <spawn centerx="231" centery="505" centerz="10" radius="5">
-    <monster name="dwarf guard" x="3" y="-3" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="1" y="-2" z="10" spawntime="60"/>
-    <monster name="dwarf geomancer" x="-2" y="-1" z="10" spawntime="60"/>
-    <monster name="dwarf geomancer" x="-1" y="1" z="10" spawntime="60"/>
-    <monster name="dwarf geomancer" x="0" y="1" z="10" spawntime="60"/>
-  </spawn>
-  <spawn centerx="162" centery="509" centerz="10" radius="5">
-    <monster name="dwarf guard" x="1" y="-2" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="-2" y="0" z="10" spawntime="60"/>
-    <monster name="dwarf guard" x="0" y="0" z="10" spawntime="60"/>
-  </spawn>
-  <spawn centerx="168" centery="535" centerz="10" radius="5">
-    <monster name="necromancer" x="-2" y="-2" z="10" spawntime="60"/>
-    <monster name="necromancer" x="2" y="0" z="10" spawntime="60"/>
-    <monster name="necromancer" x="1" y="2" z="10" spawntime="60"/>
-    <monster name="necromancer" x="-2" y="3" z="10" spawntime="60"/>
-  </spawn>
-  <spawn centerx="180" centery="547" centerz="10" radius="5">
-    <monster name="necromancer" x="0" y="0" z="10" spawntime="60"/>
-    <monster name="necromancer" x="0" y="1" z="10" spawntime="60"/>
-  </spawn>
-  <spawn centerx="195" centery="550" centerz="10" radius="5">
-    <monster name="necromancer" x="-3" y="-1" z="10" spawntime="60"/>
-    <monster name="necromancer" x="0" y="2" z="10" spawntime="60"/>
-    <monster name="necromancer" x="-3" y="3" z="10" spawntime="60"/>
-  </spawn>
-  <spawn centerx="181" centery="560" centerz="10" radius="5">
-    <monster name="necromancer" x="-2" y="0" z="10" spawntime="60"/>
-  </spawn>
-  <spawn centerx="136" centery="565" centerz="10" radius="5">
-    <monster name="smuggler" x="0" y="-5" z="10" spawntime="60"/>
-    <monster name="bandit" x="1" y="-3" z="10" spawntime="60"/>
-    <monster name="bandit" x="0" y="-2" z="10" spawntime="60"/>
-  </spawn>
-  <spawn centerx="105" centery="568" centerz="10" radius="5">
-    <monster name="smuggler" x="2" y="-4" z="10" spawntime="60"/>
-    <monster name="smuggler" x="5" y="-3" z="10" spawntime="60"/>
-    <monster name="bandit" x="0" y="-2" z="10" spawntime="60"/>
-    <monster name="smuggler" x="5" y="-2" z="10" spawntime="60"/>
-    <monster name="bandit" x="2" y="0" z="10" spawntime="60"/>
-    <monster name="bandit" x="4" y="1" z="10" spawntime="60"/>
-    <monster name="bandit" x="1" y="2" z="10" spawntime="60"/>
-    <monster name="bandit" x="5" y="2" z="10" spawntime="60"/>
-  </spawn>
-  <spawn centerx="112" centery="568" centerz="10" radius="5">
-    <monster name="bandit" x="-1" y="-1" z="10" spawntime="60"/>
-  </spawn>
-  <spawn centerx="182" centery="569" centerz="10" radius="5">
-    <monster name="necromancer" x="3" y="-1" z="10" spawntime="60"/>
-    <monster name="necromancer" x="0" y="0" z="10" spawntime="60"/>
-    <monster name="necromancer" x="2" y="2" z="10" spawntime="60"/>
-    <monster name="necromancer" x="0" y="3" z="10" spawntime="60"/>
-  </spawn>
-  <spawn centerx="152" centery="570" centerz="10" radius="5">
-    <monster name="bandit" x="2" y="-2" z="10" spawntime="60"/>
-    <monster name="smuggler" x="-4" y="1" z="10" spawntime="60"/>
-    <monster name="smuggler" x="-4" y="2" z="10" spawntime="60"/>
-    <monster name="bandit" x="1" y="3" z="10" spawntime="60"/>
-  </spawn>
-  <spawn centerx="191" centery="570" centerz="10" radius="5">
-    <monster name="necromancer" x="-2" y="-2" z="10" spawntime="60"/>
-    <monster name="necromancer" x="2" y="0" z="10" spawntime="60"/>
-    <monster name="necromancer" x="-2" y="2" z="10" spawntime="60"/>
-  </spawn>
-  <spawn centerx="137" centery="581" centerz="10" radius="5">
-    <monster name="smuggler" x="0" y="-4" z="10" spawntime="60"/>
-    <monster name="smuggler" x="-1" y="-3" z="10" spawntime="60"/>
-    <monster name="bandit" x="-3" y="-1" z="10" spawntime="60"/>
-    <monster name="bandit" x="2" y="-1" z="10" spawntime="60"/>
-    <monster name="bandit" x="-1" y="0" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="212" centery="47" centerz="11" radius="20">
     <monster name="vampire" x="0" y="0" z="11" spawntime="60"/>
@@ -5549,48 +5003,6 @@
     <monster name="merlkin" x="-1" y="2" z="11" spawntime="60"/>
     <monster name="sibang" x="1" y="2" z="11" spawntime="60"/>
   </spawn>
-  <spawn centerx="200" centery="485" centerz="11" radius="5">
-    <monster name="dwarf geomancer" x="1" y="-2" z="11" spawntime="60"/>
-    <monster name="dwarf geomancer" x="-3" y="-1" z="11" spawntime="60"/>
-    <monster name="dwarf soldier" x="3" y="-1" z="11" spawntime="60"/>
-    <monster name="dwarf guard" x="-1" y="2" z="11" spawntime="60"/>
-    <monster name="dwarf geomancer" x="1" y="2" z="11" spawntime="60"/>
-  </spawn>
-  <spawn centerx="213" centery="485" centerz="11" radius="5">
-    <monster name="dwarf geomancer" x="-1" y="-3" z="11" spawntime="60"/>
-    <monster name="dwarf guard" x="2" y="-1" z="11" spawntime="60"/>
-    <monster name="dwarf geomancer" x="-3" y="0" z="11" spawntime="60"/>
-    <monster name="dwarf soldier" x="-1" y="0" z="11" spawntime="60"/>
-    <monster name="dwarf guard" x="0" y="2" z="11" spawntime="60"/>
-    <monster name="dwarf soldier" x="2" y="2" z="11" spawntime="60"/>
-    <monster name="dwarf geomancer" x="3" y="3" z="11" spawntime="60"/>
-  </spawn>
-  <spawn centerx="182" centery="489" centerz="11" radius="5">
-    <monster name="dwarf guard" x="-2" y="-2" z="11" spawntime="60"/>
-    <monster name="dwarf geomancer" x="1" y="-2" z="11" spawntime="60"/>
-    <monster name="dwarf soldier" x="-1" y="-1" z="11" spawntime="60"/>
-    <monster name="dwarf guard" x="2" y="0" z="11" spawntime="60"/>
-    <monster name="dwarf geomancer" x="0" y="1" z="11" spawntime="60"/>
-    <monster name="dwarf geomancer" x="-3" y="2" z="11" spawntime="60"/>
-    <monster name="dwarf geomancer" x="1" y="3" z="11" spawntime="60"/>
-  </spawn>
-  <spawn centerx="194" centery="494" centerz="11" radius="5">
-    <monster name="dwarf geomancer" x="0" y="-3" z="11" spawntime="60"/>
-    <monster name="dwarf guard" x="-3" y="-2" z="11" spawntime="60"/>
-    <monster name="dwarf guard" x="2" y="-1" z="11" spawntime="60"/>
-    <monster name="dwarf guard" x="-1" y="0" z="11" spawntime="60"/>
-    <monster name="dwarf geomancer" x="-2" y="2" z="11" spawntime="60"/>
-    <monster name="dwarf geomancer" x="3" y="2" z="11" spawntime="60"/>
-    <monster name="dwarf guard" x="1" y="3" z="11" spawntime="60"/>
-  </spawn>
-  <spawn centerx="210" centery="495" centerz="11" radius="5">
-    <monster name="dwarf geomancer" x="-3" y="-3" z="11" spawntime="60"/>
-    <monster name="dwarf soldier" x="1" y="-2" z="11" spawntime="60"/>
-    <monster name="dwarf geomancer" x="3" y="-1" z="11" spawntime="60"/>
-    <monster name="dwarf guard" x="2" y="1" z="11" spawntime="60"/>
-    <monster name="dwarf geomancer" x="-1" y="2" z="11" spawntime="60"/>
-    <monster name="dwarf geomancer" x="1" y="3" z="11" spawntime="60"/>
-  </spawn>
   <spawn centerx="404" centery="54" centerz="12" radius="20">
     <monster name="demon skeleton" x="0" y="0" z="12" spawntime="60"/>
     <monster name="hero" x="5" y="1" z="12" spawntime="60"/>
@@ -5844,13 +5256,6 @@
     <monster name="kongra" x="4" y="10" z="12" spawntime="60"/>
     <monster name="kongra" x="-2" y="12" z="12" spawntime="60"/>
   </spawn>
-  <spawn centerx="213" centery="465" centerz="12" radius="5">
-    <monster name="demon" x="1" y="-3" z="12" spawntime="60"/>
-    <monster name="demon" x="-3" y="-1" z="12" spawntime="60"/>
-    <monster name="demon" x="1" y="0" z="12" spawntime="60"/>
-    <monster name="demon" x="1" y="2" z="12" spawntime="60"/>
-    <monster name="demon" x="-1" y="3" z="12" spawntime="60"/>
-  </spawn>
   <spawn centerx="596" centery="465" centerz="12" radius="5">
     <monster name="merlkin" x="1" y="-3" z="12" spawntime="60"/>
     <monster name="merlkin" x="3" y="-1" z="12" spawntime="60"/>
@@ -5876,24 +5281,6 @@
     <monster name="sibang" x="13" y="4" z="12" spawntime="60"/>
     <monster name="sibang" x="5" y="6" z="12" spawntime="60"/>
     <monster name="sibang" x="10" y="9" z="12" spawntime="60"/>
-  </spawn>
-  <spawn centerx="188" centery="481" centerz="12" radius="5">
-    <monster name="demon" x="0" y="0" z="12" spawntime="60"/>
-  </spawn>
-  <spawn centerx="223" centery="499" centerz="12" radius="5">
-    <monster name="demon" x="0" y="-2" z="12" spawntime="60"/>
-  </spawn>
-  <spawn centerx="228" centery="504" centerz="12" radius="5">
-    <monster name="demon" x="0" y="1" z="12" spawntime="60"/>
-    <monster name="demon" x="3" y="3" z="12" spawntime="60"/>
-  </spawn>
-  <spawn centerx="170" centery="505" centerz="12" radius="5">
-    <monster name="demon" x="-1" y="-2" z="12" spawntime="60"/>
-    <monster name="demon" x="1" y="0" z="12" spawntime="60"/>
-  </spawn>
-  <spawn centerx="199" centery="505" centerz="12" radius="5">
-    <monster name="demon" x="-1" y="-1" z="12" spawntime="60"/>
-    <monster name="demon" x="1" y="2" z="12" spawntime="60"/>
   </spawn>
   <spawn centerx="245" centery="62" centerz="13" radius="20">
     <monster name="warlock" x="0" y="0" z="13" spawntime="120"/>
@@ -6134,15 +5521,6 @@
   <spawn centerx="105" centery="200" centerz="13" radius="20">
     <monster name="warlock" x="0" y="0" z="13" spawntime="120"/>
     <monster name="warlock" x="20" y="16" z="13" spawntime="120"/>
-  </spawn>
-  <spawn centerx="269" centery="517" centerz="13" radius="5">
-    <monster name="demon" x="-3" y="-2" z="13" spawntime="60"/>
-    <monster name="demon" x="4" y="0" z="13" spawntime="60"/>
-  </spawn>
-  <spawn centerx="280" centery="520" centerz="13" radius="5">
-    <monster name="demon" x="0" y="-5" z="13" spawntime="60"/>
-    <monster name="demon" x="3" y="-2" z="13" spawntime="60"/>
-    <monster name="demon" x="-3" y="3" z="13" spawntime="60"/>
   </spawn>
   <spawn centerx="422" centery="64" centerz="14" radius="20">
     <monster name="warlock" x="0" y="0" z="14" spawntime="120"/>

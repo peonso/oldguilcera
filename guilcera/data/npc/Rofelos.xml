@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<npc name="Rofelos" script="ferrus.lua" walkinterval="2000" floorchange="0" idleinterval="30">
+<npc name="Rofelos" script="default.lua" walkinterval="2000" floorchange="0" idleinterval="30">
 	<health now="100" max="100"/>
 	<look type="144" head="121" body="40" legs="21" feet="95"/>
 </npc>

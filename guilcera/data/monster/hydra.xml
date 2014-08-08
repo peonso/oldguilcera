@@ -40,11 +40,10 @@
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
   </defenses>
+  	<elements>
+		<element earthPercent="100"/>
+	</elements>
   <immunities>
-    <immunity physical="0"/>
-    <immunity energy="0"/>
-    <immunity fire="0"/>
-    <immunity poison="1"/>
     <immunity lifedrain="1"/>
     <immunity paralyze="1"/>
     <immunity outfit="1"/>
@@ -67,7 +66,7 @@
 	<item id="2475" chance="1000"/><!-- 1% 2475 warrior helmet -->
 	<item id="2498" chance="200"/><!-- 0,2% 2498 royal helmet -->
 	<item id="2195" chance="200"/><!-- 0,2% 2195 boots of haste -->
-	<item id="2492" chance="200"/><!-- 0,2% 2492 dragon scale mail -->
+	<!-- no real info concerning this drop item id="2492" chance="200"/ --><!-- 0,2% 2492 dragon scale mail -->
 		<item id="1987" chance="100000"><!-- bag -->
 			<inside>
 			<item id="2214" chance="1000"/><!-- 1% 2214 ring of healing -->

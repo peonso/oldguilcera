@@ -1,70 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="ancient scarab" nameDescription="a ancient scarab" race="VENOM" experience="720" speed="330" manacost="0">
-  <health now="1000" max="1000"/>
-  <look type="79" head="20" body="30" legs="40" feet="50" corpse="3004"/>
-  <targetchange interval="5000" chance="8"/>
-  <strategy attack="100" defense="0"/>
-  <flags>
-    <flag summonable="0"/>
-    <flag attackable="1"/>
-    <flag hostile="1"/>
-    <flag illusionable="0"/>
-    <flag convinceable="0"/>
-    <flag pushable="0"/>
-    <flag canpushitems="1"/>
-    <flag canpushcreatures="1"/>
-    <flag targetdistance="1"/>
-    <flag staticattack="90"/>
-    <flag runonhealth="0"/>
-  </flags>
-  <attacks>
-    <attack name="melee" interval="2000" min="-30" max="-130" poison="100"/>
-    <attack name="poison" interval="1000" chance="12" range="7" min="-15" max="-135">
-      <attribute key="shootEffect" value="poison"/>
-      <attribute key="areaEffect" value="poison"/>
-    </attack>
-    <attack name="speed" interval="1000" chance="13" range="7" speedchange="-700" duration="25000">
-      <attribute key="shootEffect" value="poison"/>
-      <attribute key="areaEffect" value="poison"/>
-    </attack>
-    <attack name="poisoncondition" interval="3000" chance="17" radius="5" target="0" min="-30" max="-100">
-      <attribute key="areaEffect" value="poison"/>
-    </attack>
-  </attacks>
-  <defenses armor="25" defense="20">
-    <defense name="speed" interval="1000" chance="8" speedchange="350" duration="9000">
-      <attribute key="areaEffect" value="redshimmer"/>
-    </defense>
-  </defenses>
-  <immunities>
-    <immunity physical="0"/>
-    <immunity energy="0"/>
-    <immunity fire="0"/>
-    <immunity poison="1"/>
-    <immunity lifedrain="1"/>
-    <immunity paralyze="1"/>
-    <immunity outfit="1"/>
-    <immunity drunk="1"/>
-    <immunity invisible="1"/>
-  </immunities>
-  <summons maxSummons="3">
-    <summon name="larva" interval="1000" chance="15" max="3"/>
-  </summons>
-<loot>
-    <item id="2148" countmax="93" chance1="100000" chancemax="5000"/><!-- gold coin -->
-	<item id="2148" countmax="93" chance1="100000" chancemax="5000"/><!-- gold coin -->
-	<item id="2159" countmax="2" chance1="8000" chancemax="4000"/><!-- scarab coin -->
-	<item id="2150" countmax="4" chance1="6001" chancemax="3000"/><!-- small amethyst -->
-	<item id="2149" countmax="3" chance1="6000" chancemax="3000"/><!-- small emerald -->
-	<item id="2135" chance="4000"/><!-- scarab amulet -->
-	<item id="2463" chance="11000"/><!-- plate armor -->
-	<item id="2162" chance="11000"/><!-- magic light wand -->
-	<item id="2142" chance="3000"/> <!-- ancient amulet -->
+<monster name="ancient scarab" nameDescription="an ancient scarab" race="venom" experience="720" speed="218" manacost="0">
+	<health now="1000" max="1000"/>
+	<look type="79" head="0" body="0" legs="0" feet="0" corpse="3004"/>
+	<targetchange interval="1000" chance="5"/>
+	<flags>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag summonable="0"/>
+		<flag convinceable="0"/>
+		<flag illusionable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="80" attack="50"/>
+		<attack name="poison" interval="1000" chance="12" range="7" min="-15" max="-135">
+			<attribute key="shootEffect" value="poison"/>
+			<attribute key="areaEffect" value="poison"/>
+		</attack>
+		<attack name="speed" interval="1000" chance="13" range="7" speedchange="-180" duration="25000">
+			<attribute key="shootEffect" value="poison"/>
+			<attribute key="areaEffect" value="poison"/>
+		</attack>
+		<attack name="poisoncondition" interval="1000" chance="17" radius="5" target="0" min="-440" max="-520">
+			<attribute key="areaEffect" value="poison"/>
+		</attack>
+		<attack name="poisoncondition" interval="1000" chance="17" radius="5" target="0" min="-440" max="-520">
+			<attribute key="areaEffect" value="poison"/>
+		</attack>
+		<attack name="speed" interval="1000" chance="25" radius="5" target="0" speedchange="-160" duration="20000">
+			<attribute key="areaEffect" value="poison"/>
+		</attack>
+	</attacks>
+	<summons maxSummons="3">
+		<summon name="larva" interval="1000" chance="15" max="3"/>
+	</summons>
+	<defenses armor="36" defense="33">
+	    <defense name="speed" interval="1000" chance="8" speedchange="170" duration="9000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element earthPercent="100"/>
+	</elements>
+	<immunities>
+		<immunity lifedrain="1"/>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="2000" chance="10">
+	</voices>
+	<loot>
 		<item id="1987" chance="100000"><!-- bag -->
 			<inside>
-			<item id="2540" chance="500"/><!-- 0,5% scarab shield -->
-			<item id="2440" chance="500"/><!-- 0,5% daramanian waraxe -->
+				<item id="2162" chance="21800"/><!-- 21.8% magic light wand -->
+				<item id="2540" chance="1000"/><!-- 1% scarab shield -->
+				<item id="2440" chance="600"/><!-- 0.6% daramanian waraxe -->
 			</inside>
 		</item>
-</loot>
+		<item id="2150" count="4" chance="2400"/><!-- 4 2.4% small amethyst -->
+		<item id="2149" count="3" chance="1200"/><!-- 3 1.2% small emerald -->
+		<item id="2159" count="2" chance="10000"/><!-- 2 10% scarab coin -->
+		<item id="2159" chance="2000"/><!-- 2% scarab coin -->
+		<item id="2135" chance="1000"/><!-- 1% scarab amulet -->
+		<item id="2142" chance="2000"/><!-- 2% ancient amulet -->
+		<item id="2463" chance="20000"/><!-- 20% plate armor -->
+		<item id="2148" count="100" chance="88800"/><!-- 100 88.8% gold coin -->
+	    <item id="2148" count="66" chance="75700"/><!-- 66 75.7% gold coin -->
+		<item id="2148" count="22" chance="99900"/><!-- 22 99.9% gold coin -->
+	</loot>
 </monster>

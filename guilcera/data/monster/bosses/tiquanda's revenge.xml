@@ -34,11 +34,12 @@
 	<defenses armor="30" defense="31">
 		<defense name="ultimate healing" interval="1200" chance="35" min="600" max="800"/>
 	</defenses>
+		<elements>
+		<element energyPercent="100"/>
+		<element firePercent="100"/>
+		<element earthPercent="100"/>
+	</elements>
 	<immunities>
-	    <immunity physical="0"/>
-		<immunity energy="0"/>
-		<immunity fire="0"/>
-		<immunity poison="1"/>
 		<immunity lifedrain="0"/>
 		<immunity paralyze="1"/>
 		<immunity outfit="0"/>

@@ -19,18 +19,17 @@
   </flags>
   <attacks>
     <attack name="physical" interval="2000" chance="50" range="7" min="-305" max="-410">
-      <attribute key="shootEffect" value="suddendeath"/>
+      <attribute key="shootEffect" value="death"/>
     </attack>
 	    <attack name="fire" interval="4000" chance="50" length="8" spread="0" min="-390" max="-550">
       <attribute key="areaEffect" value="firearea"/>
     </attack>
   </attacks>
   <defenses armor="3" defense="5"/>
+  	<elements>
+		<element physicalPercent="100"/><element deathPercent="100"/>
+	</elements>
   <immunities>
-    <immunity physical="1"/>
-    <immunity energy="0"/>
-    <immunity fire="0"/>
-    <immunity poison="0"/>
     <immunity lifedrain="1"/>
     <immunity paralyze="1"/>
     <immunity outfit="1"/>

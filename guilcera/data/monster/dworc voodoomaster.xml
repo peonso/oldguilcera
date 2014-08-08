@@ -25,7 +25,7 @@
     </attack>
     <attack name="drunk" interval="1000" chance="10" range="7">
       <attribute key="shooteffect" value="energy"/>
-      <attribute key="areaeffect" value="energyarea"/>
+      <attribute key="areaeffect" value="energy"/>
     </attack>
     <attack name="outfit" interval="1000" chance="9" range="7" monster="chicken" duration="5000">
       <attribute key="areaeffect" value="blueshimmer"/>
@@ -48,17 +48,10 @@
       <attribute key="areaeffect" value="blueshimmer"/>
     </defense>
   </defenses>
-  <immunities>
-    <immunity physical="0"/>
-    <immunity energy="0"/>
-    <immunity fire="0"/>
-    <immunity poison="1"/>
-    <immunity lifedrain="0"/>
-    <immunity paralyze="0"/>
-    <immunity outfit="0"/>
-    <immunity drunk="0"/>
-    <immunity invisible="0"/>
-  </immunities>
+  	<elements>
+		<element earthPercent="100"/>
+	</elements>
+  <immunities></immunities>
   <voices interval="5000" chance="10">
 		<voice sentence="Grow truk grrrrr."/>
 		<voice sentence="Brak brrretz!"/>

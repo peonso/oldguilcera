@@ -24,13 +24,13 @@
     </attack>
   </attacks>
   <defenses armor="199" defense="199"/>
+  	<elements>
+		<element physicalPercent="100"/><element deathPercent="100"/>
+		<element energyPercent="100"/>
+		<element earthPercent="100"/>
+	</elements>
   <immunities>
-    <immunity physical="1"/>
-    <immunity energy="1"/>
-    <immunity fire="0"/>
-    <immunity poison="1"/>
-    <immunity lifedrain="1"/>
-    <immunity paralyze="0"/>
+    <immunity lifedrain="1"/>  
     <immunity outfit="1"/>
     <immunity drunk="1"/>
     <immunity invisible="1"/>

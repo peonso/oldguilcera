@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<npc name="King Peonso VII" script="king_peonso_vii.lua" walkinterval="2000" floorchange="0" idleinterval="30">
+<npc name="King Peonso VII" script="default.lua" walkinterval="2000" floorchange="0" idleinterval="30">
 	<health now="100" max="100"/>
 	<look type="132" head="114" body="4" legs="57" feet="14"/>
 </npc>

@@ -32,13 +32,11 @@
     </attack>
   </attacks>
   <defenses armor="26" defense="10"/>
+  	<elements>
+		<element earthPercent="100"/>
+	</elements>
   <immunities>
-    <immunity physical="0"/>
-    <immunity energy="0"/>
-    <immunity fire="0"/>
-    <immunity poison="1"/>
     <immunity lifedrain="1"/>
-    <immunity paralyze="0"/>
     <immunity outfit="1"/>
     <immunity drunk="1"/>
     <immunity invisible="1"/>

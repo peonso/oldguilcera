@@ -22,11 +22,10 @@
     <attack name="lifedrain" interval="1000" chance="15" range="1" min="-25" max="-45"/>
   </attacks>
   <defenses armor="10" defense="10"/>
+  	<elements>
+		<element physicalPercent="100"/><element deathPercent="100"/>
+	</elements>
   <immunities>
-    <immunity physical="1"/>
-    <immunity energy="0"/>
-    <immunity fire="0"/>
-    <immunity poison="1"/>
     <immunity lifedrain="1"/>
     <immunity paralyze="1"/>
     <immunity outfit="1"/>

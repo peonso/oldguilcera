@@ -28,11 +28,10 @@
     </attack>
   </attacks>
   <defenses armor="18" defense="20"/>
+  	<elements>
+		<element firePercent="100"/>
+	</elements>
   <immunities>
-    <immunity physical="0"/>
-    <immunity energy="0"/>
-    <immunity fire="1"/>
-    <immunity poison="0"/>
     <immunity lifedrain="1"/>
     <immunity paralyze="1"/>
     <immunity outfit="1"/>

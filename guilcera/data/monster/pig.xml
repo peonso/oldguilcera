@@ -18,17 +18,7 @@
     <flag runonhealth="25"/>
   </flags>
   <defenses armor="2" defense="2"/>
-  <immunities>
-    <immunity physical="0"/>
-    <immunity energy="0"/>
-    <immunity fire="0"/>
-    <immunity poison="0"/>
-    <immunity lifedrain="0"/>
-    <immunity paralyze="0"/>
-    <immunity outfit="0"/>
-    <immunity drunk="0"/>
-    <immunity invisible="0"/>
-  </immunities>
+  <immunities></immunities>
 <loot>
 	<item id="2666" countmax="4" chance1="64000" chancemax="0"/><!-- 64% 2666 meat -->
 </loot>
