@@ -1,52 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="hunter" nameDescription="a hunter" race="blood" experience="150" speed="215" manacost="0">
-  <health now="150" max="150"/>
-  <look type="129" head="95" body="116" legs="121" feet="115" corpse="3128"/>
-  <targetchange interval="5000" chance="8"/>
-  <strategy attack="100" defense="0"/>
-   <flags>
-    <flag summonable="0"/>
-    <flag attackable="1"/>
-    <flag hostile="1"/>
-    <flag illusionable="1"/>
-    <flag convinceable="1"/>
-    <flag pushable="0"/>
-    <flag canpushitems="1"/>
-    <flag canpushcreatures="0"/>
-    <flag targetdistance="4"/>
-    <flag staticattack="90"/>
-    <flag runonhealth="10"/>
-  </flags>
-  <attacks>
-    <attack name="melee" interval="2000" min="-0" max="-50"/>
-    <attack name="physical" interval="2000" chance="50" range="7" min="-50" max="-100">
-      <attribute key="shootEffect" value="arrow"/>
-    </attack>
-  </attacks>
-  <defenses armor="8" defense="10"/>
-  	<elements>
-		<element earthPercent="100"/>
+<monster name="hunter" nameDescription="a hunter" race="blood" experience="150" speed="210" manacost="530">
+	<health now="150" max="150"/>
+	<look type="129" head="95" body="116" legs="120" feet="115" corpse="3128"/>
+	<targetchange interval="1000" chance="50"/>
+	<flags>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag summonable="0"/>
+		<flag convinceable="1"/>
+		<flag illusionable="1"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="4"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="10"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="18" attack="13"/>
+		<attack name="physical" interval="1000" chance="50" range="7" min="-50" max="-100">
+			<attribute key="shootEffect" value="arrow"/>
+		</attack>
+	</attacks>
+	<defenses armor="8" defense="10">
+	</defenses>
+	<elements>
 	</elements>
-  <immunities></immunities>
-  <voices interval="5000" chance="10">
-    <voice sentence="Guess who we're hunting, haha!"/>
-  </voices>
-<loot>
-	<item id="2675" countmax="2" chance1="20000" chancemax="0"/><!-- 1-2 20% 2675 orange -->
-	<item id="2690" countmax="2" chance1="11000" chancemax="0"/><!-- 1-2 11% 2690 roll -->
-	<item id="2147" countmax="1" chance1="1000" chancemax="0"/><!-- 1% 2147 small ruby -->
-	<item id="2050" chance="3000"/><!-- 3% 2050 torch -->
-	<item id="2201" chance="3000"/><!-- 3% 2201 dragon necklace -->
-	<item id="2460" chance="5000"/><!-- 5% 2460 brass helmet -->
-	<item id="2465" chance="5000"/><!-- 5% 2465 brass armor -->
-	<item id="2649" chance="15000"/><!-- 15% 2649 leather legs -->
-	<item id="2544" countmax="22" chance1="82000" chancemax="0"/><!-- 1-22 82% 2544 arrow -->
-	<item id="2545" countmax="4" chance1="3000" chancemax="0"/><!-- 1-4 3% 2545 poison arrow -->
-	<item id="2546" countmax="3" chance1="5000" chancemax="0"/><!-- 1-3 5% 2546 burst arrow -->
+	<immunities>
+	</immunities>
+	<voices interval="2000" chance="5">
+		<voice sentence="Guess who we are hunting, hahaha!"/>
+	</voices>
+	<loot>
 		<item id="1987" chance="100000"><!-- bag -->
 			<inside>
-			<item id="2456" chance="6000"/><!-- 6% 2456 bow -->
+				<item id="2050" chance="10000"/><!-- 10% torch -->
+				<item id="2456" chance="60000"/><!-- 60% bow -->
+				<item id="2201" chance="6000"/><!-- 6% dragon necklace -->
 			</inside>
 		</item>
-</loot>
+		<item id="2465" chance="10000"/><!-- 10% brass armor -->
+		<item id="2649" chance="28000"/><!-- 28% leather legs -->
+		<item id="2460" chance="10000"/><!-- 10% brass helmet -->
+		<item id="2461" chance="20000"/><!-- 20% leather helmet -->
+		<item id="2544" chance="70000" countmax="10"/><!-- 10 70% arrow -->
+		<item id="2544" chance="80000" countmax="12"/><!-- 12 80% arrow -->
+		<item id="2546" chance="10000" countmax="3"/><!-- 3 10% burst arrow -->
+		<item id="2147" chance="300"/><!-- 0.2% small ruby -->
+		<item id="2690" chance="22000" countmax="2"/><!-- 2 22% roll -->
+		<item id="2675" chance="40000" countmax="2"/><!-- 2 40% orange -->
+	</loot>
 </monster>

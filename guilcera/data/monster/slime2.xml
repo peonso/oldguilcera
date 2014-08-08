@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="snake" nameDescription="a snake" race="venom" experience="10" speed="120" manacost="205">
-	<health now="15" max="15"/>
-	<look type="28" corpse="2817"/>
+<monster name="slime" nameDescription="a slime" race="venom" experience="0" speed="120" manacost="0">
+	<health now="150" max="150"/>
+	<look type="19" corpse="1496"/>
 	<targetchange interval="1000" chance="0"/>
 	<flags>
 		<flag attackable="1"/>
 		<flag hostile="1"/>
-		<flag summonable="1"/>
-		<flag convinceable="1"/>
-		<flag illusionable="1"/>
-		<flag pushable="1"/>
-		<flag canpushitems="0"/>
+		<flag summonable="0"/>
+		<flag convinceable="0"/>
+		<flag illusionable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
 		<flag canpushcreatures="0"/>
 		<flag targetdistance="1"/>
 		<flag staticattack="90"/>
 		<flag runonhealth="0"/>
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="11" attack="5" poison="20"/>
+		<attack name="melee" interval="2000" skill="22" attack="42"/>
 	</attacks>
-	<defenses armor="0" defense="1">
+	<defenses armor="3" defense="10">
 	</defenses>
 	<elements>
 		<element earthPercent="100"/>
@@ -27,7 +27,7 @@
 	<immunities>
 	</immunities>
 	<voices interval="2000" chance="5">
-		<voice sentence="Zzzzzzt"/>
+		<voice sentence="Blubb"/>
 	</voices>
 	<loot>
 	</loot>

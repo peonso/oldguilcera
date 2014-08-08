@@ -1,60 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="giant spider" nameDescription="a giant spider" race="VENOM" experience="900" speed="280" manacost="0">
-  <health now="1300" max="1300"/>
-  <look type="38" head="0" body="0" legs="0" feet="0" corpse="2857"/>
-  <targetchange interval="5000" chance="8"/>
-  <strategy attack="100" defense="0"/>
-  <flags>
-    <flag summonable="0"/>
-    <flag attackable="1"/>
-    <flag hostile="1"/>
-    <flag illusionable="0"/>
-    <flag convinceable="0"/>
-    <flag pushable="0"/>
-    <flag canpushitems="1"/>
-    <flag canpushcreatures="1"/>
-    <flag targetdistance="1"/>
-    <flag staticattack="90"/>
-    <flag runonhealth="0"/>
-  </flags>
-  <attacks>
-    <attack name="melee" interval="2000" min="-80" max="-220"/>
-    <attack name="poisonfield" interval="1000" chance="17" range="7" radius="1" target="1">
-      <attribute key="shootEffect" value="poison"/>
-    </attack>
-  </attacks>
-  <defenses armor="20" defense="20">
-    <defense name="speed" interval="1000" chance="6" speedchange="310" duration="20000">
-      <attribute key="areaEffect" value="redshimmer"/>
-    </defense>
-  </defenses>
-  	<elements>
+<monster name="giant spider" nameDescription="a giant spider" race="venom" experience="900" speed="240" manacost="0">
+	<health now="1300" max="1300"/>
+	<look type="38" corpse="2857"/>
+	<targetchange interval="1000" chance="10"/>
+	<flags>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag summonable="0"/>
+		<flag convinceable="0"/>
+		<flag illusionable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="80" attack="65"/>
+		<attack name="poisonfield" interval="1000" chance="17" range="7" radius="1" target="1">
+			<attribute key="shootEffect" value="poison"/>
+		</attack>
+	</attacks>
+	<defenses armor="30" defense="40">
+		<defense name="speed" interval="1000" chance="6" speedchange="130" duration="20000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</defense>
+	</defenses>
+	<summons maxSummons="2">
+		<summon name="poison spider" interval="1000" chance="10" max="2"/>
+	</summons>
+	<elements>
 		<element firePercent="100"/>
 		<element earthPercent="100"/>
 	</elements>
-  <immunities>
-    <immunity lifedrain="1"/>
-    <immunity outfit="1"/>
-    <immunity drunk="1"/>
-    <immunity invisible="1"/>
-  </immunities>
-  <summons maxSummons="2">
-    <summon name="poison spider" interval="1000" chance="30" max="2"/>
-  </summons>
-<loot>
-	<item id="2148" countmax="99" chance1="100000" chancemax="0"/>
-	<item id="2148" countmax="97" chance1="60000" chancemax="0"/><!-- 1-196 100% 2148 gold -->
-	<!--<item id="2545" countmax="12" chance1="12000" chancemax="0"/>--><!-- 1-12 12% 2545 poison arrow -->
-	<item id="2463" chance="10000"/><!-- 10% 2463 plate armor -->
-	<item id="2478" chance="9000"/><!-- 9% 2478 brass legs -->
-	<item id="2457" chance="5000"/><!-- 5% 2457 steel helmet -->
-	<item id="2477" chance="1000"/><!-- 1% 2477 knight legs -->
-	<item id="2476" chance="500"/><!-- 0,5% 2476 knight armor -->
-	<item id="2171" chance="500"/><!-- 0,5% 2171 platinum amulet -->
+	<immunities>
+		<immunity lifedrain="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="2000" chance="5">
+	</voices>
+	<loot>
 		<item id="1987" chance="100000"><!-- bag -->
 			<inside>
-			<item id="2169" chance="1000"/><!-- 1% 2169 time ring -->
+				<item id="2169" chance="1400"/><!-- 1.4% time ring -->
 			</inside>
 		</item>
-</loot>
+		<item id="2171" chance="300"/><!-- 0.1% platinum amulet -->
+		<item id="2463" chance="20000"/><!-- 20% plate armor -->
+		<item id="2478" chance="16000"/><!-- 16% brass legs -->
+		<item id="2457" chance="10000"/><!-- 10% steel helmet -->
+		<item id="2477" chance="600"/><!-- 0.6% knight legs -->
+		<item id="2476" chance="600"/><!-- 0.6% knight armor -->
+		<item id="2148" chance="66600" countmax="55"/><!-- 55 66.6% gold coin -->
+		<item id="2148" chance="66600" countmax="33"/><!-- 33 66.6% gold coin -->
+		<item id="2148" chance="99900" countmax="11"/><!-- 11 99.9% gold coin -->
+	</loot>
 </monster>

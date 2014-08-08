@@ -44,8 +44,8 @@
 		<item id="2125" chance="300"/><!-- 0.2% crystal necklace -->
 		<item id="2467" chance="50000"/><!-- 50% leather armor -->
 		<item id="2147" chance="300"/><!-- 0.1% small ruby -->
-		<item id="2229" chance="80000" count="2" /><!-- 2 80% skull -->
-		<item id="2148" chance="80000" count="10"/><!-- 10 80% gold coin -->
+		<item id="2229" chance="80000" countmax="2"/><!-- 2 80% skull -->
+		<item id="2148" chance="80000" countmax="10"/><!-- 10 80% gold coin -->
 		<item id="2691" chance="60000"/><!-- 60% brown bread -->
 	</loot>
 </monster>

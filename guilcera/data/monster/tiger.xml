@@ -1,32 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="tiger" nameDescription="a tiger" race="blood" experience="40" speed="240" manacost="420">
-  <health now="75" max="75"/>
-  <look type="125" head="20" body="30" legs="40" feet="50" corpse="4292"/>
-  <targetchange interval="5000" chance="8"/>
-  <strategy attack="100" defense="0"/>
-  <flags>
-    <flag summonable="1"/>
-    <flag attackable="1"/>
-    <flag hostile="1"/>
-    <flag illusionable="1"/>
-    <flag convinceable="1"/>
-    <flag pushable="0"/>
-    <flag canpushitems="1"/>
-    <flag canpushcreatures="1"/>
-    <flag targetdistance="1"/>
-    <flag staticattack="90"/>
-    <flag runonhealth="0"/>
-  </flags>
-  <attacks>
-    <attack name="melee" interval="1500" skill="42" attack="15"/>
-  </attacks>
-  <defenses armor="5" defense="15">
-    <defense name="speed" interval="1000" chance="12" speedchange="567" duration="3000">
-      <attribute key="areaEffect" value="redshimmer"/>
-    </defense>
-  </defenses>
-  <immunities></immunities>
-<loot>
-	<item id="2666" countmax="4" chance1="35000" chancemax="0"/><!-- 35% 2666 meat -->
-</loot>
+<monster name="tiger" nameDescription="a tiger" race="blood" experience="40" speed="200" manacost="420">
+	<health now="75" max="75"/>
+	<look type="125" head="0" body="0" legs="0" feet="0" corpse="4292"/>
+	<targetchange interval="1000" chance="5"/>
+	<flags>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag summonable="1"/>
+		<flag convinceable="1"/>
+		<flag illusionable="1"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="42" attack="15"/>
+	</attacks>
+	<defenses armor="5" defense="15">
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+	</immunities>
+	<voices interval="2000" chance="5">
+	</voices>
+	<loot>
+		<item id="2666" chance="55000" countmax="3"/><!-- 3 55% meat -->
+		<item id="2671" chance="44000" countmax="2"/><!-- 2 44% ham -->
+	</loot>
 </monster>

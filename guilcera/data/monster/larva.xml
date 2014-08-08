@@ -1,34 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="larva" nameDescription="a larva" race="VENOM" experience="40" speed="135" manacost="355">
-  <health now="70" max="70"/>
-  <look type="82" head="20" body="30" legs="40" feet="50" corpse="3010"/>
-  <targetchange interval="5000" chance="8"/>
-  <strategy attack="100" defense="0"/>
-  <flags>
-    <flag summonable="1"/>
-    <flag attackable="1"/>
-    <flag hostile="1"/>
-    <flag illusionable="1"/>
-    <flag convinceable="1"/>
-    <flag pushable="1"/>
-    <flag canpushitems="0"/>
-    <flag canpushcreatures="0"/>
-    <flag targetdistance="1"/>
-    <flag staticattack="90"/>
-    <flag runonhealth="0"/>
-  </flags>
-  <attacks>
-    <attack name="melee" interval="2000" min="-10" max="-40" poison="15"/>
-  </attacks>
-  <defenses armor="5" defense="11"/>
-  	<elements>
+<monster name="larva" nameDescription="a larva" race="venom" experience="44" speed="124" manacost="355">
+	<health now="70" max="70"/>
+	<look type="82" corpse="3010"/>
+	<targetchange interval="1000" chance="0"/>
+	<flags>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag summonable="1"/>
+		<flag convinceable="1"/>
+		<flag illusionable="1"/>
+		<flag pushable="1"/>
+		<flag canpushitems="0"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="30" attack="20" poison="15"/>
+	</attacks>
+	<defenses armor="5" defense="11">
+	</defenses>
+	<elements>
 		<element earthPercent="100"/>
 	</elements>
-  <immunities>
-    <immunity paralyze="1"/>
-  </immunities>
-<loot>
-	<item id="2148" countmax="15" chance1="64000" chancemax="0"/><!-- 1-15 64% 2148 gold -->
-	<item id="2666" countmax="2" chance1="15000" chancemax="0"/><!-- 15% 2666 meat -->
-</loot>
+	<immunities>
+		<immunity paralyze="1"/>
+	</immunities>
+	<voices interval="2000" chance="5">
+	</voices>
+	<loot>
+		<item id="2148" chance="70000" countmax="10"/><!-- 10 70% gold coin -->
+		<item id="2666" chance="60000"/><!-- 60% meat -->
+	</loot>
 </monster>

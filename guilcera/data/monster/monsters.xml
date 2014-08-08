@@ -105,7 +105,7 @@
 	<monster name="Sibang" file="sibang.xml"/>
 	<monster name="Skeleton" file="skeleton.xml"/>
 	<monster name="Skunk" file="skunk.xml"/>
-	<monster name="Slime Summon" file="slime summon.xml"/>
+	<monster name="Slime2" file="slime2.xml"/>
 	<monster name="Slime" file="slime.xml"/>
 	<monster name="Smuggler" file="smuggler.xml"/>
 	<monster name="Snake" file="snake.xml"/>

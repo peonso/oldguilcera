@@ -1,44 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="orc safado" nameDescription="a orc" race="blood" experience="2" speed="100" manacost="300">
-  <health now="50" max="50"/>
-  <look type="5" head="0" body="0" legs="0" feet="0" corpse="2820"/>
-  <targetchange interval="1000" chance="0"/>
-  <flags>
-    <!--<flag summonable="1"/>-->
-    <!--<flag attackable="1"/>-->
-    <!--<flag hostile="1"/>-->
-    <!--<flag illusionable="1"/>-->
-    <!--<flag convinceable="1"/>-->
-    <!--<flag pushable="1"/>-->
-    <!--<flag canpushitems="0"/>-->
-    <!--<flag canpushcreatures="0"/>-->
-	<flag lightlevel="5"/>
-	<flag lightcolor="89"/>
-    <flag targetdistance="1"/>
-    <flag staticattack="100"/>
-    <flag runonhealth="0"/>
-  </flags>
-  <attacks>
-    <attack name="melee" interval="2000" skill="12" attack="7"/>
-  </attacks>
-  <defenses armor="0" defense="0"/>
-  <immunities></immunities>
-  <voices interval="5000" chance="10">
-    <voice sentence="Grak brrretz!"/>
-    <voice sentence="Grow truk grrrrr."/>
-    <voice sentence="Prek tars, dekklep zurk."/>
-  </voices>
-<loot>
-	<item id="2176" chance="5000"/><!-- orb -->
-	<item id="2165" chance="10000"/><!-- stealth ring -->
-	<item id="1982" chance="20000"/><!-- purple tome -->
-	<item id="2179" chance="30000"/><!-- gold ring -->
-	<item id="2214" chance="40000"/><!-- ring of healing -->
-	<item id="2164" chance="50000"/><!-- might ring -->
-	<item id="2462" chance="60000"/><!-- devil helmet -->
-	<item id="2470" chance="70000"/><!-- golden legs -->
-	<item id="2171" chance="80000"/><!-- platinum amulet -->
-	<item id="2472" chance="90000"/><!-- magic plate armor -->
-	<item id="2432" chance="100000"/><!-- fire axe -->
-</loot>
+<monster name="orc" nameDescription="an orc" race="blood" experience="25" speed="150" manacost="300">
+	<health now="70" max="70"/>
+	<look type="5" corpse="2820"/>
+	<targetchange interval="1000" chance="0"/>
+	<flags>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag summonable="1"/>
+		<flag convinceable="1"/>
+		<flag illusionable="1"/>
+		<flag pushable="1"/>
+		<flag canpushitems="0"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="15"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="22" attack="13"/>
+	</attacks>
+	<defenses armor="4" defense="8">
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+	</immunities>
+	<voices interval="2000" chance="5">
+		<voice sentence="Grak brrretz!"/>
+		<voice sentence="Grow truk grrrrr."/>
+		<voice sentence="Prek tars, dekklep zurk."/>
+	</voices>
+	<loot>
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+				<item id="2526" chance="20000"/><!-- 20% studded shield -->
+				<item id="2386" chance="16000"/><!-- 16% axe -->
+				<item id="2385" chance="12000"/><!-- 12% sabre -->
+			</inside>
+		</item>
+		<item id="2484" chance="24000"/><!-- 24% studded armor -->
+		<item id="2482" chance="18000"/><!-- 18% studded helmet -->
+		<item id="2148" chance="85000" countmax="8"/><!-- 8 85% gold coin -->
+		<item id="2666" chance="40000"/><!-- 40% meat -->
+	</loot>
 </monster>
