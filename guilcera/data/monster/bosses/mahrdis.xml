@@ -19,31 +19,24 @@
   </flags>
   <attacks>
     <attack name="melee" interval="2000" min="-100" max="-400" poison="65"/>
-
     <attack name="physical" interval="1600" chance="7" range="1" min="-60" max="-600"/>
 	    <attribute key="areaEffect" value="redshimmer"/>	
-
     <attack name="fire" interval="1000" chance="7" range="7" min="-60" max="-600">
       <attribute key="shootEffect" value="fire"/>
       <attribute key="areaEffect" value="firearea"/>
     </attack>
-
     <attack name="speed" interval="2000" chance="13" range="7" speedchange="-850" duration="50000">
       <attribute key="areaEffect" value="redshimmer"/>
     </attack>
-
     <attack name="fire" interval="2000" chance="34" radius="3" target="0" min="-80" max="-800">
       <attribute key="areaEffect" value="explosionarea"/>
     </attack>
-
     <attack name="firefield" interval="1000" chance="12" radius="4" target="0">
       <attribute key="areaEffect" value="yellowspark"/>
     </attack>
-
     <attack name="firecondition" interval="2000" chance="13" length="8" spread="3" min="-50" max="-500">
       <attribute key="areaEffect" value="explosion"/>
     </attack>
-
   </attacks>
   <defenses armor="20" defense="30">
     <defense name="healing" interval="1000" chance="20" min="20" max="800">

@@ -249,7 +249,11 @@
         <conjure name="Conjure Arrow" words="exevo con" lvl="13" soul="1" mana="100" conjureId="2544" conjureCount="10" function="conjureItem">
             <vocation name="Paladin"/>  <vocation name="Royal Paladin"/>
         </conjure>
-
+		
+	<!-- Monster Spells -->
+		<instant name="djinn electrify"  words="###1"  aggressive="1" blockwalls="1" needtarget="1" needlearn="1" script="monster/djinn electrify.lua"/>
+		<instant name="djinn electrify area"  words="###2"  aggressive="1" blockwalls="1" selftarget="1" needlearn="1" script="monster/djinn electrify area.lua"/>
+	
     <!-- House Spells -->
         <instant name="House Guest List" words="aleta sio"  enabled="1" function="editHouseGuest"/>
         <instant name="House Subowner List" words="aleta som" enabled="1" function="editHouseSubOwner"/>

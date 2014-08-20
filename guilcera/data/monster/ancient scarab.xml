@@ -22,7 +22,8 @@
 			<attribute key="shootEffect" value="poison"/>
 			<attribute key="areaEffect" value="poison"/>
 		</attack>
-		<attack name="speed" interval="1000" chance="13" range="7" speedchange="-180" duration="25000">
+		<attack name="speed" interval="1000" chance="13" range="7" speedchange="-600" duration="25000">
+		<!--<attack name="speed" interval="1000" chance="13" range="7" speedchange="-180" duration="25000">-->
 			<attribute key="shootEffect" value="poison"/>
 			<attribute key="areaEffect" value="poison"/>
 		</attack>
@@ -32,7 +33,8 @@
 		<attack name="poisoncondition" interval="1000" chance="17" radius="5" target="0" min="-440" max="-520">
 			<attribute key="areaEffect" value="poison"/>
 		</attack>
-		<attack name="speed" interval="1000" chance="25" radius="5" target="0" speedchange="-160" duration="20000">
+		<attack name="speed" interval="1000" chance="25" radius="5" target="0" speedchange="-600" duration="20000">
+		<!--<attack name="speed" interval="1000" chance="25" radius="5" target="0" speedchange="-160" duration="20000">-->
 			<attribute key="areaEffect" value="poison"/>
 		</attack>
 	</attacks>

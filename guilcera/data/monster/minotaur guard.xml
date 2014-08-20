@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="minotaur guard" nameDescription="a minotaur guard" race="blood" experience="160" speed="190" manacost="550">
-	<health now="100" max="100"/>
+	<health now="185" max="185"/>
 	<look type="29" corpse="2876"/>
 	<targetchange interval="1000" chance="5"/>
 	<flags>
