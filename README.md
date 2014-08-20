@@ -1,6 +1,7 @@
 Guilcera otserv for Tibia client version 7.72
 =============================================
 https://github.com/peonso/guilcera
+
 http://guilcera.t15.org/
 
 Information
@@ -13,12 +14,12 @@ Information
 
 Downloads
 ---------
-- XAMMP can be downloaded [HERE](https://www.apachefriends.org/index.html)
 - Uniform Server can be downloaded [HERE](http://www.uniformserver.com/)
 - Notedpad ++ can be downloaded [HERE](http://filehippo.com/download_notepad)
 - Remere's Map Editor can be downloaded [HERE](http://remeresmapeditor.com/), to make it functional with Guilcera please follow the steps from [SETUP_GUIDE](https://github.com/peonso/guilcera/blob/master/docs/SETUP_GUIDE.md)
 - otitemeditor-0.2.2 can be downloaded [HERE](http://www.4shared.com/zip/jFtWifSjce/otitemeditor-022.html), to make it functional with Guilcera please follow the steps from [SETUP_GUIDE](https://github.com/peonso/guilcera/blob/master/docs/SETUP_GUIDE.md)
 - OtLand ip changer [HERE](http://otland.net/threads/otland-ip-changer.134369/), you can found it [HERE](http://static.otland.net/ipchanger.exe)
+- XAMMP can be downloaded [HERE](https://www.apachefriends.org/index.html)
 
 Structure
 ---------
