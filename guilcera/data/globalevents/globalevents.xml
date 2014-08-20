@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <globalevents>
-	<!-- Server Events -->
-	<globalevent name="save" interval="900000" event="script" value="save.lua"/>
-	<globalevent name="clean" interval="7200000" event="script" value="clean.lua"/>
-	<globalevent name="init" type="startup" event="script" value="init.lua"/>
-	<globalevent name="globalsave" type="globalsave" event="script" value="init.lua"/>
-	<globalevent name="record" type="record" event="script" value="record.lua"/>
+	<!--
+	EXAMPLES
+	execute something.lua every 20 seconds the interval is in ms , 1sec = 1000ms 
+	<globalevent name="something" interval="20000" script="something.lua"/> 
 	
-	<!-- Examples -->
-	<!-- <globalevent name="timer_example" time="21:35:11" event="script" value="my_script.lua"/> -->
+	execute my_script.lua at 12:00
+	<globalevent name="timer_example" time="12:00:00" script="my_script.lua"/>
+	
+	execute shutdown.lua at the moment of shutdown 
+	<globalevent name="shutdown" type="shutdown" script="shutdown.lua"/>
+	
+	execute startup.lua at start of the server
+	<globalevent name="startup" type="startup" script="startup.lua"/>
+	-->
 </globalevents>

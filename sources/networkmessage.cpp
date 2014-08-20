@@ -1,121 +1,144 @@
-////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
 // OpenTibia - an opensource roleplaying game
-////////////////////////////////////////////////////////////////////////
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
+//////////////////////////////////////////////////////////////////////
+//
+//////////////////////////////////////////////////////////////////////
+// This program is free software; you can redistribute it and/or
+// modify it under the terms of the GNU General Public License
+// as published by the Free Software Foundation; either version 2
+// of the License, or (at your option) any later version.
 //
 // This program is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
 //
 // You should have received a copy of the GNU General Public License
-// along with this program. If not, see <http://www.gnu.org/licenses/>.
-////////////////////////////////////////////////////////////////////////
+// along with this program; if not, write to the Free Software Foundation,
+// Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+//////////////////////////////////////////////////////////////////////
 #include "otpch.h"
-#include <iostream>
 
 #include "networkmessage.h"
-#include "position.h"
-#include "item.h"
+#include "container.h"
+#include "creature.h"
 #include "player.h"
-
-std::string NetworkMessage::getString(bool peek/* = false*/, uint16_t size/* = 0*/)
-{
-	if(!size)
-		size = get<uint16_t>(peek);
-
-	uint16_t position = m_position;
-	if(peek)
-		position += 2;
-
-	if(size >= (16384 - position))
-		return std :: string();
-
-	char* v = (char*)(m_buffer + position);
-	if(peek)
-		return std::string(v, size);
-
-	m_position += size;
-	return std::string(v, size);
-}
-
-Position NetworkMessage::getPosition()
-{
-	Position pos;
-	pos.x = get<uint16_t>();
-	pos.y = get<uint16_t>();
-	pos.z = get<char>();
-	return pos;
-}
-
-void NetworkMessage::putString(const char* value, int length, bool addSize/* = true*/)
-{
-	uint32_t size = (uint32_t)length;
-	if(!hasSpace(size + (addSize ? 2 : 0)) || size > 8192)
-		return;
-
-	if(addSize)
-		put<uint16_t>(size);
-
-	memcpy((char*)(m_buffer + m_position), value, length);
-	m_position += size;
-	m_size += size;
-}
-
-void NetworkMessage::putPadding(uint32_t amount)
-{
-	if(!hasSpace(amount))
-		return;
-
-	memset((void*)&m_buffer[m_position], 0x33, amount);
-	m_size += amount;
-}
-
-void NetworkMessage::putPosition(const Position& pos)
-{
-	put<uint16_t>(pos.x);
-	put<uint16_t>(pos.y);
-	put<char>(pos.z);
-}
-
-void NetworkMessage::putItem(uint16_t id, uint8_t count)
-{
-	const ItemType &it = Item::items[id];
-	put<uint16_t>(it.clientId);
-	if(it.stackable)
-		put<char>(count);
-	else if(it.isSplash() || it.isFluidContainer())
-		put<char>(fluidMap[count % 8]);
-}
-
-void NetworkMessage::putItem(const Item* item)
-{
-	const ItemType& it = Item::items[item->getID()];
-	put<uint16_t>(it.clientId);
-	if(it.stackable)
-		put<char>(item->getSubType());
-	else if(it.isSplash() || it.isFluidContainer())
-		put<char>(fluidMap[item->getSubType() % 8]);
-}
-
-void NetworkMessage::putItemId(const Item* item)
-{
-	const ItemType& it = Item::items[item->getID()];
-	put<uint16_t>(it.clientId);
-}
-
-void NetworkMessage::putItemId(uint16_t itemId)
-{
-	const ItemType& it = Item::items[itemId];
-	put<uint16_t>(it.clientId);
-}
+#include "position.h"
+#include "rsa.h"
+#include <string>
+#include <iostream>
+#include <sstream>
 
 int32_t NetworkMessage::decodeHeader()
 {
-	int32_t size = (int32_t)(m_buffer[0] | m_buffer[1] << 8);
-	m_size = size;
-	return size;
+	return (int32_t)(m_MsgBuf[0] | m_MsgBuf[1] << 8);
+}
+
+/******************************************************************************/
+std::string NetworkMessage::GetString()
+{
+	uint16_t stringlen = GetU16();
+	if(stringlen >= (NETWORKMESSAGE_MAXSIZE - m_ReadPos))
+		return std::string();
+
+	char* v = (char*)(m_MsgBuf + m_ReadPos);
+	m_ReadPos += stringlen;
+	return std::string(v, stringlen);
+}
+
+std::string NetworkMessage::GetRaw()
+{
+	uint16_t stringlen = m_MsgSize- m_ReadPos;
+	if(stringlen >= (NETWORKMESSAGE_MAXSIZE - m_ReadPos))
+		return std::string();
+
+	char* v = (char*)(m_MsgBuf + m_ReadPos);
+	m_ReadPos += stringlen;
+	return std::string(v, stringlen);
+}
+
+Position NetworkMessage::GetPosition()
+{
+	Position pos;
+	pos.x = GetU16();
+	pos.y = GetU16();
+	pos.z = GetByte();
+	return pos;
+}
+/******************************************************************************/
+
+void NetworkMessage::AddString(const char* value)
+{
+	uint32_t stringlen = (uint32_t)strlen(value);
+	if(!canAdd(stringlen+2) || stringlen > 8192)
+		return;
+
+	AddU16(stringlen);
+	strcpy((char*)(m_MsgBuf + m_ReadPos), value);
+	m_ReadPos += stringlen;
+	m_MsgSize += stringlen;
+}
+
+void NetworkMessage::AddBytes(const char* bytes, uint32_t size)
+{
+	if(!canAdd(size) || size > 8192)
+		return;
+
+	memcpy(m_MsgBuf + m_ReadPos, bytes, size);
+	m_ReadPos += size;
+	m_MsgSize += size;
+}
+
+void NetworkMessage::AddPaddingBytes(uint32_t n)
+{
+	if(!canAdd(n))
+		return;
+
+	memset((void*)&m_MsgBuf[m_ReadPos], 0x33, n);
+	m_MsgSize = m_MsgSize + n;
+}
+
+void NetworkMessage::AddPosition(const Position& pos)
+{
+	AddU16(pos.x);
+	AddU16(pos.y);
+	AddByte(pos.z);
+}
+
+void NetworkMessage::AddItem(uint16_t id, uint8_t count)
+{
+	const ItemType &it = Item::items[id];
+
+	AddU16(it.clientId);
+
+	if(it.stackable){
+		AddByte(count);
+	}
+	else if(it.isSplash() || it.isFluidContainer()){
+		AddByte(Item::items.getClientFluidType(FluidTypes_t(count)));
+	}
+}
+
+void NetworkMessage::AddItem(const Item* item)
+{
+	const ItemType &it = Item::items[item->getID()];
+
+	AddU16(it.clientId);
+
+	if(it.stackable){
+		AddByte(item->getSubType());
+	}
+	else if(it.isSplash() || it.isFluidContainer()){
+		AddByte(Item::items.getClientFluidType(FluidTypes_t(item->getSubType())));
+	}
+}
+
+void NetworkMessage::AddItemId(const Item *item){
+	const ItemType &it = Item::items[item->getID()];
+	AddU16(it.clientId);
+}
+
+void NetworkMessage::AddItemId(uint16_t itemId){
+	const ItemType &it = Item::items[itemId];
+	AddU16(it.clientId);
 }

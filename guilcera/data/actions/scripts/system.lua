@@ -7,13 +7,6 @@ local questsExperience = {
 }
 
 function onUse(cid, item, fromPosition, itemEx, toPosition)
-	if(getBooleanFromString(getConfigValue('enableProtectionQuestForGM'))) then
-		if(getPlayerCustomFlagValue(cid, PLAYERCUSTOMFLAG_GAMEMASTERPRIVILEGES)) then
-			doSendMagicEffect(getCreaturePosition(cid), CONST_ME_POFF, cid)
-			return true
-		end
-	end
-
 	local storage = specialQuests[item.actionid]
 	if(not storage) then
 		storage = item.uid
@@ -49,7 +42,7 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 
 	local result = ""
 	if(reward ~= 0) then
-		local ret = getItemDescriptions(reward.uid)
+		local ret = getItemDescriptions(reward.itemid)
 		if(reward.type > 0 and isItemRune(reward.itemid)) then
 			result = reward.type .. " charges " .. ret.name
 		elseif(reward.type > 0 and isItemStackable(reward.itemid)) then

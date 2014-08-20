@@ -853,7 +853,6 @@
     <monster name="hyaena" x="2" y="1" z="7" spawntime="60"/>
     <monster name="hyaena" x="-2" y="3" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="584" centery="120" centerz="7" radius="2"/>
   <spawn centerx="718" centery="131" centerz="7" radius="5">
     <monster name="cyclops" x="-2" y="1" z="7" spawntime="60"/>
     <monster name="cyclops" x="2" y="1" z="7" spawntime="60"/>
@@ -871,7 +870,6 @@
     <monster name="goblin" x="-8" y="6" z="7" spawntime="60"/>
     <monster name="goblin" x="-12" y="9" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="586" centery="138" centerz="7" radius="2"/>
   <spawn centerx="247" centery="140" centerz="7" radius="3">
     <monster name="wild warrior" x="0" y="0" z="7" spawntime="60"/>
     <monster name="wild warrior" x="1" y="0" z="7" spawntime="60"/>
@@ -883,7 +881,6 @@
     <monster name="troll" x="1" y="0" z="7" spawntime="60"/>
     <monster name="swamp troll" x="-1" y="1" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="612" centery="144" centerz="7" radius="2"/>
   <spawn centerx="740" centery="144" centerz="7" radius="5">
     <monster name="giant spider" x="-4" y="-2" z="7" spawntime="60"/>
     <monster name="giant spider" x="3" y="2" z="7" spawntime="60"/>
@@ -2194,24 +2191,11 @@
     <monster name="rotworm" x="0" y="1" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="208" centery="119" centerz="8" radius="20"/>
-  <spawn centerx="613" centery="119" centerz="8" radius="5">
-    <monster name="rat" x="-1" y="-4" z="8" spawntime="60"/>
-    <monster name="rat" x="1" y="-4" z="8" spawntime="60"/>
-    <monster name="rat" x="-1" y="-2" z="8" spawntime="60"/>
-    <monster name="rat" x="1" y="2" z="8" spawntime="60"/>
-    <monster name="rat" x="0" y="4" z="8" spawntime="60"/>
-  </spawn>
   <spawn centerx="232" centery="121" centerz="8" radius="20">
     <monster name="wild warrior" x="13" y="18" z="8" spawntime="60"/>
     <monster name="wild warrior" x="14" y="18" z="8" spawntime="60"/>
     <monster name="wild warrior" x="15" y="18" z="8" spawntime="60"/>
     <monster name="valkyrie" x="17" y="20" z="8" spawntime="60"/>
-  </spawn>
-  <spawn centerx="601" centery="121" centerz="8" radius="5">
-    <monster name="rat" x="-2" y="-4" z="8" spawntime="60"/>
-    <monster name="rat" x="-1" y="-2" z="8" spawntime="60"/>
-    <monster name="rat" x="1" y="-1" z="8" spawntime="60"/>
-    <monster name="rat" x="-1" y="0" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="705" centery="121" centerz="8" radius="5">
     <monster name="troll" x="-3" y="-4" z="8" spawntime="60"/>
@@ -2245,11 +2229,6 @@
     <monster name="troll" x="-3" y="3" z="8" spawntime="60"/>
     <monster name="swamp troll" x="2" y="3" z="8" spawntime="60"/>
   </spawn>
-  <spawn centerx="599" centery="136" centerz="8" radius="5">
-    <monster name="rat" x="-3" y="-4" z="8" spawntime="60"/>
-    <monster name="rat" x="4" y="-2" z="8" spawntime="60"/>
-    <monster name="rat" x="3" y="3" z="8" spawntime="60"/>
-  </spawn>
   <spawn centerx="647" centery="136" centerz="8" radius="5">
     <monster name="rotworm" x="-1" y="-4" z="8" spawntime="60"/>
     <monster name="rotworm" x="2" y="-3" z="8" spawntime="60"/>
@@ -2279,11 +2258,6 @@
     <monster name="wild warrior" x="10" y="12" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="249" centery="141" centerz="8" radius="20"/>
-  <spawn centerx="607" centery="142" centerz="8" radius="5">
-    <monster name="rat" x="-1" y="-1" z="8" spawntime="60"/>
-    <monster name="rat" x="3" y="0" z="8" spawntime="60"/>
-    <monster name="rat" x="0" y="1" z="8" spawntime="60"/>
-  </spawn>
   <spawn centerx="246" centery="143" centerz="8" radius="20">
     <monster name="troll" x="12" y="19" z="8" spawntime="60"/>
     <monster name="troll" x="14" y="20" z="8" spawntime="60"/>
@@ -3340,16 +3314,6 @@
   </spawn>
   <spawn centerx="249" centery="120" centerz="9" radius="20">
     <monster name="dwarf soldier" x="2" y="20" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="613" centery="120" centerz="9" radius="8">
-    <monster name="rat" x="0" y="-5" z="9" spawntime="60"/>
-    <monster name="rat" x="-3" y="-1" z="9" spawntime="60"/>
-    <monster name="rat" x="3" y="0" z="9" spawntime="60"/>
-    <monster name="rat" x="1" y="2" z="9" spawntime="60"/>
-    <monster name="rat" x="-2" y="3" z="9" spawntime="60"/>
-    <monster name="rat" x="-1" y="6" z="9" spawntime="60"/>
-    <monster name="troll" x="-2" y="7" z="9" spawntime="60"/>
-    <monster name="rat" x="-1" y="8" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="243" centery="122" centerz="9" radius="20">
     <monster name="dwarf" x="11" y="20" z="9" spawntime="60"/>

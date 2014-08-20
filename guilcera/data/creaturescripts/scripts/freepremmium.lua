@@ -3,5 +3,5 @@ function onLogin(cid)
 		doPlayerAddPremiumDays(cid, 30)
 		-- doPlayerSendTextMessage(cid, 17, "You received 30 premium days for free.")
 	end
-	return TRUE
+	return true
 end

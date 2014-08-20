@@ -1,78 +1,96 @@
-////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
 // OpenTibia - an opensource roleplaying game
-////////////////////////////////////////////////////////////////////////
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
+//////////////////////////////////////////////////////////////////////
+// Base class for the map serialization
+//////////////////////////////////////////////////////////////////////
+// This program is free software; you can redistribute it and/or
+// modify it under the terms of the GNU General Public License
+// as published by the Free Software Foundation; either version 2
+// of the License, or (at your option) any later version.
 //
 // This program is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
 //
 // You should have received a copy of the GNU General Public License
-// along with this program.  If not, see <http://www.gnu.org/licenses/>.
-////////////////////////////////////////////////////////////////////////
+// along with this program; if not, write to the Free Software Foundation,
+// Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+//////////////////////////////////////////////////////////////////////
 
-#ifndef __IOMAPSERIALIZE__
-#define __IOMAPSERIALIZE__
-#include "otsystem.h"
 
+#ifndef __OTSERV_IOMAPSERIALIZE_H__
+#define __OTSERV_IOMAPSERIALIZE_H__
+
+class Map;
+
+#include "definitions.h"
+#include "iomapserialize.h"
 #include "database.h"
 #include "map.h"
+#include <string>
 
-typedef std::map<int32_t, std::pair<Item*, int32_t> > ItemMap;
-typedef std::list<std::pair<Container*, int32_t> > ContainerStackList;
+class IOMapSerialize{
+public:
+	static IOMapSerialize* getInstance()
+	{
+		static IOMapSerialize instance;
+		return &instance;
+	}
 
-class House;
-class IOMapSerialize
-{
-	public:
-		virtual ~IOMapSerialize() {}
-		static IOMapSerialize* getInstance()
-		{
-			static IOMapSerialize instance;
-			return &instance;
-		}
+	IOMapSerialize() {}
+	~IOMapSerialize() {}
 
-		bool loadMap(Map* map);
-		bool saveMap(Map* map);
+	/** Load the map from a data storage
+	  * \param map pointer to the Map class
+	  * \return Returns true if the map was loaded successfully
+	*/
+	bool loadMap(Map* map);
 
-		bool updateAuctions();
+	/** Save the map to a data storage
+	  * \param map pointer to the Map class
+	  * \return Returns true if the map was saved successfully
+	*/
+	bool saveMap(Map* map);
 
-		bool loadHouses();
-		bool updateHouses();
-		bool saveHouses();
+	/** Synchronize the house information from the map
+	  * \return Returns true if all houses where updated correctly
+	*/
+	bool updateHouseInfo();
 
-		bool saveHouse(Database* db, House* house);
-		bool saveHouseItems(Database* db, House* house);
+	/** Checks if any house auctions has ended and update to the new owner
+	  * \return Returns true if all houses where updated successfully
+	*/
+	bool processHouseAuctions();
 
-	protected:
-		IOMapSerialize() {}
+	/** Load the house access list from a data storage
+	  * \param map pointer to the Map class
+	  * \return Returns true if the house access list was opened successfully
+	*/
+	bool loadHouseInfo(Map* map);
 
-		// Relational storage uses a row for each item/tile
-		bool loadMapRelational(Map* map);
-		bool saveMapRelational(Map* map);
-		bool saveHouseRelational(Database* db, House* house, uint32_t& tileId);
+	/** Save the house access list to a data storage
+	  * \param map pointer to the Map class
+	  * \return Returns true if the house access list was saved successfully
+	*/
+	bool saveHouseInfo(Map* map);
 
-		// Binary storage uses a giant BLOB field for storing everything
-		bool loadMapBinary(Map* map);
-		bool saveMapBinary(Map* map);
-		bool saveHouseBinary(Database* db, DBInsert& stmt, House* house);
+protected:
+	// Relational storage uses a row for each item/tile
+	bool loadMapRelational(Map* map);
+	bool saveMapRelational(Map* map);
+	
+	bool saveItems(Database* db, uint32_t tileId, uint32_t houseId, const Tile* tile);
+	bool loadItems(Database* db, DBResult* result, Cylinder* parent, bool depotTransfer = false);
 
-		// Binary-tilebased storage uses a BLOB field for each tile in houses, so that corrupt blobs will only wipe tiles instead of entire houses
-		bool loadMapBinaryTileBased(Map* map);
-		bool saveMapBinaryTileBased(Map* map);
-		bool saveHouseBinaryTileBased(Database* db, DBInsert& stmt, House* house);
+	// Binary storage uses a giant BLOB field for storing everything
+	bool loadMapBinary(Map* map);
+	bool saveMapBinary(Map* map);
 
-		bool loadItems(DBResult* result, Cylinder* parent, bool depotTransfer);
-		bool saveItems(Database* db, uint32_t& tileId, uint32_t houseId, const Tile* tile);
-
-		bool loadItem(PropStream& propStream, Cylinder* parent, bool depotTransfer);
-		bool loadContainer(PropStream& propStream, Container* container);
-
-		bool saveTile(PropWriteStream& stream, const Tile* tile);
-		bool saveItem(PropWriteStream& stream, const Item* item);
+	bool saveItem(PropWriteStream& stream, const Item* item);
+	bool saveTile(PropWriteStream& stream, const Tile* tile);
+	bool loadItem(PropStream& propStream, Cylinder* parent, bool depotTransfer = false);
+	bool loadContainer(PropStream& propStream, Container* container);
 };
+
 #endif

@@ -1,34 +1,32 @@
-function onSay(cid, words, param, channel)
-	if(param == '') then
-		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Command param required.")
-		return true
+function onSay(cid, words, param)
+	if(param == "") then
+		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "You need to type the parameter.")
+		return false
 	end
 
-	local target = getPlayerByNameWildcard(param)
-	if(not target) then
-		target = getCreatureByName(param)
-		if(not target) then
-			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Creature not found.")
-			return true
+	local creature = getCreatureByName(param)
+	if creature == cid or creature == LUA_NULL then
+		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Creature or player not found.")
+		return false
+	end
+
+	local creatureAccess = 0
+	if(isPlayer(creature) == true) then
+		creatureAccess = getPlayerAccess(creature)
+	end
+
+	if creatureAccess <= getPlayerAccess(cid) then
+		local playerPos = getPlayerPosition(cid)
+		local oldCreaturePos = getCreaturePosition(creature)
+		if(doTeleportThing(creature, playerPos)) then
+			doSendMagicEffect(oldCreaturePos, CONST_ME_POFF)
+			doSendMagicEffect(playerPos, CONST_ME_TELEPORT)
+		else
+			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Can not teleport creature to your position.")
 		end
+	else
+		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "You do not have access to do that.")
 	end
 
-	if(isPlayerGhost(target) and getPlayerGhostAccess(target) > getPlayerGhostAccess(cid)) then
-		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Creature not found.")
-		return true
-	end
-
-	local pos = getClosestFreeTile(target, getCreaturePosition(cid), false, false)
-	if(not pos or isInArray({pos.x, pos.y}, 0)) then
-		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Cannot perform action.")
-		return true
-	end
-
-	local tmp = getCreaturePosition(target)
-	if(doTeleportThing(target, pos, true) and not isPlayerGhost(target)) then
-		doSendMagicEffect(tmp, CONST_ME_POFF)
-		doSendMagicEffect(pos, CONST_ME_TELEPORT)
-	end
-
-	return true
+	return false
 end

@@ -1,1 +1,3 @@
-autoreconf -vfi --warnings=none
+#!/bin/sh
+
+autoreconf -vfi

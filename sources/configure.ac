@@ -1,118 +1,91 @@
-AC_PREREQ([2.50])
-AC_INIT([OTXServer], [2.10])
-AM_INIT_AUTOMAKE([1.10 foreign silent-rules])
-AC_CONFIG_SRCDIR([account.h])
-AM_CONFIG_HEADER([config.h])
-m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
 
+AC_PREREQ([2.50])
+AC_INIT([otserv], [0.6.3.SVN])
+AM_INIT_AUTOMAKE([1.10 foreign])
+AC_CONFIG_SRCDIR([raids.h])
+AC_CONFIG_HEADER([config.h])
+
+# Checks for programs.
 AC_PROG_CXX
 AC_LANG(C++)
 
-OPTIONAL_FLAGS=""
-
-# Config for 32Bits
-DEBUG_FLAGS="-O0 -march=native -fomit-frame-pointer"
-#DEBUG_FLAGS="-O3 -march=native -fomit-frame-pointer"
-
-# Config for 64Bits
-#DEBUG_FLAGS="-O0 -march=core2 -fomit-frame-pointer"
-#DEBUG_FLAGS="-O3 -march=core2 -fomit-frame-pointer"
-
-# check if we want server diag enabled
-serverDiag=no
-AC_ARG_ENABLE(server-diag, [  --enable-server-diag		enable server diagnostic],
-	[OPTIONAL_FLAGS="$OPTIONAL_FLAGS -D__ENABLE_SERVER_DIAGNOSTIC__"]
-	serverDiag=yes
+# check if we want debuging
+AC_ARG_ENABLE(debug, [  --enable-debug      enable debuging], 
+	[DEBUG_FLAGS="-D__DEBUG__MOVESYS__ -D__DEBUG_HOUSES__ -D__DEBUG_MAILBOX__ -D__DEBUG_LUASCRIPTS__ -D__DEBUG_NET__"]
 )
-
-# check if we want login server mode
-AM_CONDITIONAL(LOGIN_SERVER, false)
-loginServer=no
-AC_ARG_ENABLE(login-server, [  --enable-login-server		enable login server mode],
-	[OPTIONAL_FLAGS="$OPTIONAL_FLAGS -D__LOGIN_SERVER__"]
-	AM_CONDITIONAL(LOGIN_SERVER, true)
-	loginServer=yes
-)
-
-# check if we want homedir conf enabled
-homedirConf=no
-AC_ARG_ENABLE(homedir-conf, [  --enable-homedir-conf		enable home directory configuration],
-	[OPTIONAL_FLAGS="$OPTIONAL_FLAGS -D__HOMEDIR_CONF__"]
-	homedirConf=yes
-)
-
-# check do we want to allow running on root user
-rootPermission=no
-AC_ARG_ENABLE(root-permission, [  --enable-root-permission	enable running on root user],
-	[OPTIONAL_FLAGS="$OPTIONAL_FLAGS -D__ROOT_PERMISSION__"]
-	rootPermission=yes
-)
-
-# check if we want to use luajit instead of lua
-luaJIT=no
-AC_ARG_ENABLE(luajit, [  --enable-luajit		enable luajit instead of lua],
-	[OPTIONAL_FLAGS="$OPTIONAL_FLAGS -D__LUAJIT__"]
-	luaJIT=yes
-)
-
-# check if we want to cache ground items
-groundCache=no
-AC_ARG_ENABLE(groundcache, [  --enable-groundcache		enable caching of ground items],
-	[OPTIONAL_FLAGS="$OPTIONAL_FLAGS -D__GROUND_CACHE__"]
-	groundCache=yes
-)
-
-# check if we want a debug build
-debugBuild=no
-AC_ARG_ENABLE(debug, [  --enable-debug		enable debuging],
-	[DEBUG_FLAGS="-D__DEBUG__ -D__DEBUG_MOVESYS__ -D__DEBUG_CHAT__ -D__DEBUG_HOUSES__ -D__DEBUG_LUASCRIPTS__ -D__DEBUG_MAILBOX__ -D__DEBUG_NET__ -D__DEBUG_NET_DETAIL__ -D__DEBUG_RAID__ -D__DEBUG_SCHEDULER__ -D__DEBUG_SPAWN__ -D__SQL_QUERY_DEBUG__ -O0 -g3"]
-	debugBuild=yes
+# check if we want verbose debuging
+AC_ARG_ENABLE(net-debug, [  --enable-net-debug  enable verbose net debuging], 
+    [DEBUG_FLAGS="$DEBUG_FLAGS -D__DEBUG_NET_DETAIL__"]
 )
 AC_SUBST(DEBUG_FLAGS)
 
+# check if we want server diagnostics enabled
+AC_ARG_ENABLE(server-diag, [  --enable-server-diag      enable server diagnostics], [OPTIONAL_FLAGS="$OPTIONAL_FLAGS -D__ENABLE_SERVER_DIAGNOSTIC__"])
+
+# check if we want reloading guild wars in lua without restarting server just to reload guild wars.
+AC_ARG_ENABLE(guild-wars-reload, [  --enable-guild-wars-reload     enable guild wars reload], [OPTIONAL_FLAGS="$OPTIONAL_FLAGS -D__GUILDWARSLUARELOAD__"])
+
+# check if we want old guild system enabled (rank_id and nickname instead of guild_members)
+# currently it is enabled by default.
+AC_ARG_ENABLE(old-guild-system, [  --enable-old-guild-system     enable old guild system], [OPTIONAL_FLAGS="$OPTIONAL_FLAGS -D__OLD_GUILD_SYSTEM__"])
+
+
+# check if we want to use otserv.lua instead config.lua
+AC_ARG_ENABLE(otconfig, [  --enable-otconfig      use otserv.lua configuration], [ OPTIONAL_FLAGS="$OPTIONAL_FLAGS -D__LUA_NAME_ALTER__"])
+
+# check if we want skulls
+AC_ARG_ENABLE(skulls, [  --enable-skulls      enable skull system], [OPTIONAL_FLAGS="$OPTIONAL_FLAGS -D__SKULLSYSTEM__"])
+
+# check if we want otserv allocator
+AC_ARG_ENABLE(otallocator, [  --enable-otallocator   enable otserv custom allocator], [OPTIONAL_FLAGS="$OPTIONAL_FLAGS -D__OTSERV_ALLOCATOR__"])
+
+AC_SUBST(OPTIONAL_FLAGS)
+
 AM_CONDITIONAL(USE_MYSQL, false)
-useMySQL=no
-AM_CONDITIONAL(USE_MYSQLPP, false)
-useMySQLpp=no
 AM_CONDITIONAL(USE_PGSQL, false)
-usePostgreSQL=no
-AM_CONDITIONAL(USE_SQLITE, false)
-useSQLite=no
+AM_CONDITIONAL(USE_ODBC, false)
+AM_CONDITIONAL(USE_SQLITE, true)
+SQLITE_FLAGS=-D__USE_SQLITE__
 
-# check if we want mysql enabled
-AC_ARG_ENABLE(mysql, [  --enable-mysql		enable MySQL support], [
+#check if we want mysql
+AC_ARG_ENABLE(mysql, [  --enable-mysql          enable MySQL support], [
 	AM_CONDITIONAL(USE_MYSQL, true)
+	AM_CONDITIONAL(USE_SQLITE, false)
 	MYSQL_FLAGS=-D__USE_MYSQL__
+	SQLITE_FLAGS=
 	AC_SUBST(MYSQL_FLAGS)
-	useMySQL=yes
 ])
 
-# check if we want mysql++ enabled
-AC_ARG_ENABLE(mysqlpp, [  --enable-mysqlpp		enable MySQL++Connector support], [
-	AM_CONDITIONAL(USE_MYSQLPP, true)
-	MYSQLPP_FLAGS=-D__USE_MYSQLPP__
-	AC_SUBST(MYSQLPP_FLAGS)
-	useMySQLpp=yes
-])
-
-# check if we want postgresql enabled
-AC_ARG_ENABLE(pgsql, [  --enable-pgsql		enable PostgreSQL support], [
+#check if we want postgresql
+AC_ARG_ENABLE(pgsql, [  --enable-pgsql          enable PostgreSQL support], [
 	AM_CONDITIONAL(USE_PGSQL, true)
-	PGSQL_FLAGS="-D__USE_PGSQL__ -I`pg_config --includedir`"
+	AM_CONDITIONAL(USE_SQLITE, false)
+	PGSQL_FLAGS=-D__USE_PGSQL__
+	SQLITE_FLAGS=
 	AC_SUBST(PGSQL_FLAGS)
-	usePostgreSQL=yes
 ])
 
-# check if we want sqlite enabled
-AC_ARG_ENABLE(sqlite, [  --enable-sqlite		enable SQLite support], [
+#check if we want odbc
+AC_ARG_ENABLE(odbc, [  --enable-odbc           enable ODBC support], [
+	AM_CONDITIONAL(USE_ODBC, true)
+	AM_CONDITIONAL(USE_SQLITE, false)
+	ODBC_FLAGS=-D__USE_ODBC__
+	SQLITE_FLAGS=
+	AC_SUBST(ODBC_FLAGS)
+])
+
+#check if we want sqlite
+AC_ARG_ENABLE(sqlite, [  --enable-sqlite         enable SQLite support (default))], [
 	AM_CONDITIONAL(USE_SQLITE, true)
 	SQLITE_FLAGS=-D__USE_SQLITE__
-	AC_SUBST(SQLITE_FLAGS)
-	useSQLite=yes
 ])
 
-# check if we want the profiler
-AC_ARG_ENABLE(profiler, [  --enable-profiler		enable profiler support], [PROFILER_FLAGS=-pg])
+AC_SUBST(SQLITE_FLAGS)
+
+#check if we want the profiler
+AC_ARG_ENABLE(profiler, [  --enable-profiler       enable profiler support], [PROFILER_FLAGS=-pg])
 AC_SUBST(PROFILER_FLAGS)
 
 # Checks for header files.
@@ -138,57 +111,45 @@ AC_CHECK_TYPES([ptrdiff_t])
 AC_FUNC_MALLOC
 AC_FUNC_MEMCMP
 AC_FUNC_REALLOC
-AC_CHECK_FUNCS([ceil floor ftime gethostbyname gethostname memset pow sqrt strcasecmp strncasecmp strstr strtol])
+AC_CHECK_FUNCS([floor ftime gethostbyname gethostname memset pow sqrt strcasecmp strncasecmp strstr strtol])
 
-# check for xml2
-AM_PATH_XML2(2.6.5, , AC_MSG_ERROR([You need libxml2 >= 2.6.5 to compile otxserver!]))
+# check for libxml2
+AM_PATH_XML2(2.6.5, , AC_MSG_ERROR([you need libxml2 >= 2.6.5 to compile otserv!]))
 LIBS="$LIBS $XML_LIBS"
 
-# check for zlib
-AC_CHECK_HEADERS([zlib.h], ,[AC_MSG_ERROR("zlib header not found.")])
-AC_CHECK_LIB(z, main, ,[AC_MSG_ERROR("Linking against zlib library failed.")])
+#check pthread
+AC_CHECK_HEADERS(pthread.h,, [AC_MSG_ERROR([pthread.h required])])
+AC_CHECK_LIB(pthread, pthread_create, ,[AC_MSG_ERROR("Linking against pthread failed.")])
 
-# check for pthread
-AC_CHECK_HEADERS([pthread.h], ,[AC_MSG_ERROR("pthread header not found.")])
-AC_CHECK_LIB(pthread, main, ,[AC_MSG_ERROR("Linking against pthread library failed)])
-
-# check for OpenSSL
-AC_CHECK_HEADERS([openssl/rsa.h openssl/bn.h openssl/err.h openssl/sha.h openssl/md5.h], , [AC_MSG_ERROR("Required OpenSSL headers not found.")])
-AC_CHECK_LIB(crypto, main, , [AC_MSG_ERROR("Linking against OpenSSL library failed")])
+#check GMP
+AC_CHECK_HEADERS([gmp.h], ,[AC_MSG_ERROR("GMP header not found.")])
+AC_CHECK_LIB(gmp, __gmpz_init2, ,[AC_MSG_ERROR("Linking against GMP failed.")])
 
 # check for boost
 AC_CHECK_LIB(boost_thread-gcc-mt, main, , [
 	AC_CHECK_LIB(boost_thread-mt, main, , [
 		AC_CHECK_LIB(boost_thread, main, , [
-			AC_MSG_ERROR("Linking against boost::thread library failed.")
-		])
+			AC_MSG_ERROR("Linking against boost::thread library failed.")])
 	])
 ])
-
 AC_CHECK_LIB(boost_regex-gcc-mt, main, , [
 	AC_CHECK_LIB(boost_regex-mt, main, , [
 		AC_CHECK_LIB(boost_regex, main, , [
-			AC_MSG_ERROR("Linking against boost::regex library failed.")
-		])
+			AC_MSG_ERROR("Linking against boost::regex library failed.")])
 	])
 ])
-
 AC_CHECK_LIB(boost_system-gcc-mt, main, , [
 	AC_CHECK_LIB(boost_system-mt, main, , [
 		AC_CHECK_LIB(boost_system, main, , [
-			AC_MSG_ERROR("Linking against boost::system library failed.")
-		])
+			AC_MSG_ERROR("Linking against boost::system library failed.")])
 	])
 ])
-
 AC_CHECK_LIB(boost_date_time-gcc-mt, main, , [
 	AC_CHECK_LIB(boost_date_time-mt, main, , [
 		AC_CHECK_LIB(boost_date_time, main, , [
-			AC_MSG_ERROR("Linking against boost::date-time library failed.")
-		])
+			AC_MSG_ERROR("Linking against boost::date-time library failed.")])
 	])
 ])
-
 AC_CHECK_LIB(boost_filesystem-gcc-mt, main, , [
 	AC_CHECK_LIB(boost_filesystem-mt, main, , [
 		AC_CHECK_LIB(boost_filesystem, main, , [
@@ -196,114 +157,63 @@ AC_CHECK_LIB(boost_filesystem-gcc-mt, main, , [
 		])
 	])
 ])
+#check boost asio
+AC_CHECK_HEADERS([boost/asio.hpp], ,[AC_MSG_ERROR("boost::asio header not found.")])
 
-# check for boost::unordered_set (should only check if gnu compiler version is below 4)
-# AC_CHECK_HEADERS([boost/tr1/unordered_set.hpp], , [AC_MSG_ERROR("boost::unordered_set header not found. Please update your boost to at least 1.40.")])
-
-# check for Lua
-if test "$luaJIT" = "yes" ; then
-	PKG_CHECK_MODULES(LUA, luajit, , [
-		AC_CHECK_HEADERS([luajit-2.0/lua.hpp], ,[AC_MSG_ERROR("LuaJIT header not found.")])
-		AC_CHECK_LIB(luajit, main, , [
-			AC_CHECK_LIB(luajit-5.1, main, , [AC_MSG_ERROR("Linking against LuaJIT library failed.")])
-		])
-	])
-else
-	PKG_CHECK_MODULES(LUA, lua5.1 >= 5.1, , [
-		AC_CHECK_HEADERS([lua.h], , [
-			OPTIONAL_FLAGS="$OPTIONAL_FLAGS -D__ALT_LUA_PATH__"
-			AC_CHECK_HEADERS([lua5.1/lua.h], , [AC_MSG_ERROR("Lua header not found.")])
-		])
-		AC_CHECK_LIB(lua, main, , [
-			AC_CHECK_LIB(lua5.1, main, , [AC_MSG_ERROR("Linking against Lua library failed.")])
-		])
-	])
-fi
-
-AC_SUBST(OPTIONAL_FLAGS)
+#check lua 5.1
+PKG_CHECK_MODULES(LUA, lua5.1 >= 5.1, , [
+	AC_CHECK_HEADERS([lua.h],[],[AC_MSG_ERROR("lua header not found.")])
+	AC_CHECK_LIB(lua, main, , [AC_MSG_ERROR("Linking against lua failed.")])
+])
 AC_SUBST(LUA_CFLAGS)
 AC_SUBST(LUA_LIBS)
 
-if test "$useMySQL" = "no" ; then
-	if test "$useMySQLpp" = "no" ; then
-		if test "$useSQLite" = "no" ; then
-			if test "$usePostgreSQL" = "no" ; then
-				AM_CONDITIONAL(USE_SQLITE, true)
-				SQLITE_FLAGS=-D__USE_SQLITE__
-				AC_SUBST(SQLITE_FLAGS)
-				useSQLite=yes
-
-				echo WARNING: Any of available database drivers was enabled, using SQLite as default. To enable a database driver, configure with --enable-\<driver\> \(example: --enable-mysqlpp\)
-				echo
-			fi
-		fi
-	fi
-fi
-
 # check for mysql if it is enabled
 if test -n "$MYSQL_FLAGS"; then
-	AC_CHECK_HEADERS([mysql/mysql.h],[MYSQL_LIBS=-lmysqlclient],[AC_MSG_ERROR("MySQL headers missing.")])
+	AC_CHECK_HEADERS([mysql/mysql.h],[MYSQL_LIBS=-lmysqlclient],[AC_MSG_ERROR("mysql headers missing.")])
+	# It would be nice if this function didn't cache its value
+	# If we could clear the cache value of this
+	# function, or not cache it at all, we wouldn't need to
+	# re-run the configuration.ac after we've copied the libs
 	AC_CHECK_LIB(mysqlclient, main,[],[
-		if test -d /usr/lib64/mysql ; then
-			echo "NOTICE -- Copying mysqlclient files into the /usr/lib64 directory."
-			echo "NOTICE -- If mysqlclient is not found, please re-run the configure script."
-			cp -Rsf /usr/lib64/mysql/libmysqlclient* /usr/lib64
-			AC_CHECK_LIB(mysqlclient, main,[], [AC_MSG_ERROR("Linking against mysqlclient failed.")])
-		elif test -d /usr/lib/mysql ; then
-			echo "NOTICE -- Copying mysqlclient files into the /usr/lib directory."
-			echo "NOTICE -- If mysqlclient is not found, please re-run the configure script."
-			cp -Rsf /usr/lib/mysql/libmysqlclient* /usr/lib
-			AC_CHECK_LIB(mysqlclient, main,[], [AC_MSG_ERROR("Linking against mysqlclient failed.")])
+		# 64-bit libs are in a different dir
+		if test -d /usr/lib64/mysql; then
+			echo "NOTICE -- Copying mysql-client files into the /usr/lib64 directory."
+			echo "NOTICE -- If mysql-client is not found, please re-run the configure script."
+			cp -R -s -f /usr/lib64/mysql/libmysqlclient* /usr/lib64
+			AC_CHECK_LIB(mysqlclient, main,[], [AC_MSG_ERROR("Linking against mysql-client failed.")])
+		elif test -d /usr/lib/mysql; then
+			echo "NOTICE -- Copying mysql-client files into the /usr/lib directory."
+			echo "NOTICE -- If mysql-client is not found, please re-run the configure script."
+			cp -R -s -f /usr/lib/mysql/libmysqlclient* /usr/lib
+			AC_CHECK_LIB(mysqlclient, main,[], [AC_MSG_ERROR("Linking against mysql-client failed.")])
 		else
 			AC_MSG_ERROR("Linking against mysql-client failed.")
 		fi
 	])
-
 	AC_SUBST(MYSQL_LIBS)
 fi
 
-# check for mysqlcppconn if it is enabled
-if test -n "$MYSQLPP_FLAGS"; then
-	AC_CHECK_HEADERS([cppconn/config.h],[MYSQLPP_LIBS=-lmysqlcppconn],[AC_MSG_ERROR("MySQL++Connector headers missing.")])
-	AC_CHECK_LIB(mysqlcppconn, main,[],[AC_MSG_ERROR("Linking against libmysqlcppconn failed.")])
-	AC_SUBST(MYSQLPP_LIBS)
-fi
-
 # check for postgresql if it is enabled
-if test -n "$PGSQL_FLAGS"; then
-	AC_CHECK_HEADERS([`pg_config --includedir`/libpq-fe.h],[PGSQL_LIBS=-lpg],[AC_MSG_ERROR("PostgreSQL headers missing.")])
+if test -n "$PGSQL_FLAGS"; then 
+	AC_CHECK_HEADERS([postgresql/libpq-fe.h],[/usr/include/libpq-fe.h],[PGSQL_LIBS=-lpg],[AC_MSG_ERROR("postgresql headers missing.")])
 	AC_CHECK_LIB(pq, main,[],[AC_MSG_ERROR("Linking against libpq failed.")])
 	AC_SUBST(PGSQL_LIBS)
 fi
 
+# check for odbc if it is enabled
+if test -n "$ODBC_FLAGS"; then
+	AC_CHECK_HEADERS([sql.h sqlext.h sqltypes.h],[ODBC_LIBS=-lodbc],[AC_MSG_ERROR("unixodbc headers missing.")])
+	AC_CHECK_LIB(odbc, main, [], [AC_MSG_ERROR("Linking against odbc failed.")])
+	AC_SUBST(ODBC_LIBS)
+fi
+
 # check for sqlite if it is enabled
-if test -n "$SQLITE_FLAGS"; then
-	AC_CHECK_HEADERS([sqlite3.h],[SQLITE_LIBS=-lsqlite3],[AC_MSG_ERROR("SQLite3 headers missing.")])
+if test -n "$SQLITE_FLAGS"; then 
+	AC_CHECK_HEADERS([sqlite3.h],[SQLITE_LIBS=-lsqlite3],[AC_MSG_ERROR("sqlite3 headers missing.")])
 	AC_CHECK_LIB(sqlite3, main,[],[AC_MSG_ERROR("Linking against sqlite3 failed.")])
 	AC_SUBST(SQLITE_LIBS)
 fi
 
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
-
-echo
-#echo The OTX Server 2.10
-echo $PACKAGE $VERSION
-echo
-echo Using LuaJIT................ : $luaJIT
-echo Using ground cache.......... : $groundCache
-echo Server diagnostics.......... : $serverDiag
-echo Home-directory configuration : $homedirConf
-echo Root run permission......... : $rootPermission
-echo Login server mode........... : $loginServer
-echo OTAdmin protocol............ : $otAdmin
-echo OTServ custom allocator..... : $otservAllocator
-echo Debug build................. : $debugBuild
-echo
-echo Build with MySQL............ : $useMySQL
-echo Build with MySQL++Connector. : $useMySQLpp
-echo Build with SQLite........... : $useSQLite
-echo Build with PostgreSQL....... : $usePostgreSQL
-echo
-
-echo Configure complete, now you may type \'./build.sh\'.

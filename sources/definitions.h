@@ -1,170 +1,141 @@
-////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
 // OpenTibia - an opensource roleplaying game
-////////////////////////////////////////////////////////////////////////
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
+//////////////////////////////////////////////////////////////////////
+// various definitions needed by most files
+//////////////////////////////////////////////////////////////////////
+// This program is free software; you can redistribute it and/or
+// modify it under the terms of the GNU General Public License
+// as published by the Free Software Foundation; either version 2
+// of the License, or (at your option) any later version.
 //
 // This program is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
 //
 // You should have received a copy of the GNU General Public License
-// along with this program.  If not, see <http://www.gnu.org/licenses/>.
-////////////////////////////////////////////////////////////////////////
+// along with this program; if not, write to the Free Software Foundation,
+// Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+//////////////////////////////////////////////////////////////////////
 
-#ifndef __DEFINITIONS__
-#define __DEFINITIONS__
+#ifndef __OTSERV_DEFINITIONS_H__
+#define __OTSERV_DEFINITIONS_H__
 
-// Compatible with 7.40 to 7.72
-#define SOFTWARE_NAME "OTX Server"
-#define SOFTWARE_VERSION "2"
-#define MINOR_VERSION "10"
-#define PATCH_VERSION "0"
-#define REVISION_VERSION "6000"
-#define SOFTWARE_CODENAME "FINAL"
-#define SOFTWARE_DEVELOPERS "Mattyx14, Comedinha and The Forgotten Server Developers"
-#define FORUMS "www.blacktibia.org - www.tibiaking.com - www.otland.net"
+#define OTSERV_VERSION "0.0.2"
+#define OTSERV_NAME "OTHire"
+#define OTSERV_CLIENT_VERSION "7.72"
 
-#if defined(_MULTIPLATFORM77)
-	#define _MULTIPLATFORM76
-	#define ITEMS_PATH std::string("77")
-	#define CLIENT_VERSION_ITEMS 3
-	#define CLIENT_VERSION_MIN 770
-	#define CLIENT_VERSION_MAX 772
-	#define CLIENT_VERSION_STRING "7.70/72"
-#elif defined(_MULTIPLATFORM76)
-	#define ITEMS_PATH std::string("76")
-	#define CLIENT_VERSION_ITEMS 3
-	#define CLIENT_VERSION_MIN 760
-	#define CLIENT_VERSION_MAX 760
-	#define CLIENT_VERSION_STRING "7.60"
-#else
-	#define ITEMS_PATH std::string("74")
-	#define CLIENT_VERSION_ITEMS 1
-	#define CLIENT_VERSION_MIN 740
-	#define CLIENT_VERSION_MAX 741
-	#define CLIENT_VERSION_STRING "7.40/41"
+#define CURRENT_SCHEMA_VERSION 24
+
+#ifdef __USE_SQLITE__
+	#define SINGLE_SQL_DRIVER
 #endif
 
-//#define CLIENT_VERSION_DATA
-#define CLIENT_VERSION_DAT 0
-#define CLIENT_VERSION_SPR 0
-#define CLIENT_VERSION_PIC 0
-
-#define VERSION_DATABASE 2
-
-#undef MULTI_SQL_DRIVERS
-#define SQL_DRIVERS __USE_SQLITE__+__USE_MYSQL__+__USE_PGSQL__
-
-#if SQL_DRIVERS > 1
-	#define MULTI_SQL_DRIVERS
+//This is an code fully tested and shouldn't cause weird errors but marked it under flag for easier removing.
+#ifndef __GLOBALEVENTS__
+	#define __GLOBALEVENTS__
 #endif
 
-#define MAX_RAND_RANGE 10000000
+#ifdef __USE_MYSQL__
+	#ifdef SINGLE_SQL_DRIVER
+		#define MULTI_SQL_DRIVERS
+	#else
+		#define SINGLE_SQL_DRIVER
+	#endif
+#endif
+
+#ifdef __USE_ODBC__
+	#ifdef SINGLE_SQL_DRIVER
+		#define MULTI_SQL_DRIVERS
+	#else
+		#define SINGLE_SQL_DRIVER
+	#endif
+#endif
+
+#ifdef __USE_PGSQL__
+	#ifdef SINGLE_SQL_DRIVER
+		#define MULTI_SQL_DRIVERS
+	#else
+		#define SINGLE_SQL_DRIVER
+	#endif
+#endif
+
+//Default sql driver
+#if !defined(SINGLE_SQL_DRIVER) && !defined(MULTI_SQL_DRIVERS)
+	#define __USE_SQLITE__
+	#define SINGLE_SQL_DRIVER
+#endif
+
+enum passwordType_t{
+	PASSWORD_TYPE_PLAIN = 0,
+	PASSWORD_TYPE_MD5,
+	PASSWORD_TYPE_SHA1
+};
+
+// Boost won't complain about non-working function
+#define BOOST_ASIO_ENABLE_CANCELIO 1
+
 #ifndef __FUNCTION__
 	#define	__FUNCTION__ __func__
 #endif
 
-#define BOOST_ASIO_ENABLE_CANCELIO 1
-#ifdef _MSC_VER
-	#define __PRETTY_FUNCTION__ __FUNCDNAME__
-	#ifndef NOMINMAX
-		#define NOMINMAX
-	#endif
+#define xmake_str(str) #str
+#define make_str(str) xmake_str(str)
 
-	#ifdef NDEBUG
-		#define _SECURE_SCL 0
-		#define HAS_ITERATOR_DEBUGGING 0
-	#endif
+/*
+	Compiler setup
+*/
+#if defined __GNUC__
+	#include "compiler/gcc.h"
+#elif defined(_MSC_VER)
+	#include "compiler/msvc.h"
+#endif
 
-	#include <cstring>
-	#define atoll _atoi64
-	#if VISUALC_VERSION < 10
-		typedef unsigned long long uint64_t;
-		typedef signed long long int64_t;
-		typedef unsigned int uint32_t;
-		typedef signed int int32_t;
-		typedef unsigned short uint16_t;
-		typedef signed short int16_t;
-		typedef unsigned char uint8_t;
-		typedef signed char int8_t;
-	#endif
-
-	#pragma warning(disable:4786) // msvc too long debug names in stl
-	#pragma warning(disable:4250) // 'class1' : inherits 'class2::member' via dominance
-	#pragma warning(disable:4244)
-	#pragma warning(disable:4267)
-	#pragma warning(disable:4018)
-	#pragma warning(disable:4309)
-	#pragma warning(disable:4996) // '_ftime64' : this function or variable may be unsafe
-
-	#ifndef _WIN32
-		#define _WIN32
-	#endif
-	#ifndef WIN32
-		#define WIN32
-	#endif
-
-	#ifndef __WINDOWS__
-		#define __WINDOWS__
-	#endif
-	#ifndef WINDOWS
-		#define WINDOWS
-	#endif
+/*
+	If the compiler supports the upcoming standard,
+	call some of the useful headers.
+*/
+#ifdef __OTSERV_CXX0X__
+	#include <cstdint>
+	#include <unordered_map>
+	#include <unordered_set>
 #else
-	#if defined _WIN32 || defined WIN32 || defined __WINDOWS__ || defined WINDOWS
-		#ifndef _WIN32
-			#define _WIN32
-		#endif
-		#ifndef WIN32
-			#define WIN32
-		#endif
+	#include "compiler/workarounds.h"
+#endif
 
-		#ifndef __WINDOWS__
-			#define __WINDOWS__
-		#endif
-		#ifndef WINDOWS
-			#define WINDOWS
-		#endif
+#ifdef _WIN32_WINNT
+	#undef _WIN32_WINNT
+#endif
+//Windows 2000	0x0500
+//Windows Xp	0x0501
+//Windows 2003	0x0502
+//Windows Vista	0x0600
+//Windows Seven 0x0601
+#define _WIN32_WINNT 0x0501
+
+ #define __MIN_PVP_LEVEL_APPLIES_TO_SUMMONS__
+
+// OpenTibia configuration
+#if !defined(__NO_SKULLSYSTEM__) && !defined(__SKULLSYSTEM__)
+	#define __SKULLSYSTEM__
+#endif
+
+// Boost exception handling must be enabled
+#ifdef BOOST_NO_EXCEPTIONS
+	#error "Boost exception handling must be enabled."
+#endif
+
+//Enable multi-byte character set under MSVC
+#ifdef _MSC_VER
+	#ifndef _MBCS
+		#define _MBCS
 	#endif
-
-	#ifdef __CYGWIN__
-		#undef WIN32
-		#undef _WIN32
-		#undef WINDOWS
-		#undef __WINDOWS__
-		#define HAVE_ERRNO_AS_DEFINE
+	#ifdef _UNICODE
+		#undef _UNICODE 
+	#endif
+	#ifdef UNICODE
+		#undef UNICODE
 	#endif
 #endif
 
-#ifdef __WINDOWS__
-	#ifdef _WIN32_WINNT
-		#undef _WIN32_WINNT
-	#endif
-
-	//Windows 2000	0x0500
-	//Windows XP	0x0501
-	//Windows 2003	0x0502
-	//Windows Vista	0x0600
-	//Windows Seven 0x0601
-
-	#define _WIN32_WINNT 0x0501
-#elif defined __GNUC__
-	#define __USE_ZLIB__
-#endif
-
-#ifdef __MINGW32__
-	#define XML_GCC_FREE
-#endif
-
-#ifdef XML_GCC_FREE
-	#define xmlFree(s) free(s)
-#endif
-
-#ifndef __EXCEPTION_TRACER__
-	#define DEBUG_REPORT
-#endif
 #endif

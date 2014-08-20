@@ -1,12 +1,11 @@
--- Prevent spamm commands --
-function checkExhausted(cid, storage, seconds)
-	local v = exhaustion.get(cid, storage)
-	if(not v) then
-		exhaustion.set(cid, storage, seconds)
-	else
-		doPlayerSendTextMessage(cid, MESSAGE_EVENT_DEFAULT, "Please wait " .. v .. " seconds before trying this command again.")
-		return false
+function serializeParam( param )
+	local values = {}
+	for value in string.gmatch( param, "%s*([%s%w]+)%s*" ) do
+		local _, _, isString = string.find( value, "(%a+)" )
+		if not( isString )then
+			value = tonumber( value )
+		end
+		table.insert( values, value )
 	end
-
-	return true
+	return values
 end

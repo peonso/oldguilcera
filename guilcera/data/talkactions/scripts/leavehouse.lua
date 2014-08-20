@@ -1,23 +1,10 @@
-function onSay(cid, words, param, channel)
-	if(not checkExhausted(cid, 666, 10)) then
-		return false
+function onSay(cid, words, param)
+	local house = House.getHouseByOwner(cid)
+	if(house) then
+		house:setOwner(0)
+		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "You have successfully left your house!")
+	else
+		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "You do not own a house!")
 	end
-
-	local house = getHouseFromPos(getCreaturePosition(cid))
-	if(not house) then
-		doPlayerSendCancel(cid, "You are not inside a house.")
-		doSendMagicEffect(getCreaturePosition(cid), CONST_ME_POFF)
-		return false
-	end
-
-	local owner = getHouseInfo(house).owner
-	if(owner ~= getPlayerGUID(cid) and (owner ~= getPlayerGuildId(cid) or getPlayerGuildLevel(cid) ~= GUILDLEVEL_LEADER)) then
-		doPlayerSendCancel(cid, "You are not the owner of this house.")
-		doSendMagicEffect(getCreaturePosition(cid), CONST_ME_POFF)
-		return false
-	end
-
-	setHouseOwner(house, 0)
-	doSendMagicEffect(getCreaturePosition(cid), CONST_ME_MAGIC_BLUE)
 	return false
 end

@@ -2,13 +2,11 @@ Guilcera is an OpenTibia map made by *Peonso*.
 
 guilcera.otbm has some locations ripped off from *Cipsoft* map, also there is a dungeon made by *Melara* @forums.otserv.com.br
 
-It's actually working with OTX 2.10, a work of *Mattyx14/Kaiser* @blacktibia.org, based on 0.3.7 TFS by *Talaturen/Mark and team*. [Original GitHub](https://github.com/mattyx14/otxserver)
+It's actually working with OTHire 0.0.2, a work of *TwistedScorpio/Ezzz* @otland.net, based on lastest otserv by *opentibia team*. [Original GitHub](https://github.com/TwistedScorpio/OTHire)
 
-Actual AAC is Gesior2012, a work of Gesior.pl @otland.net. [Original GitHub](https://github.com/gesior/Gesior2012)
+Actual AAC is ZnoteAAC 1.5, a work of Znote @otland.net. [Original GitHub](https://github.com/Znote/ZnoteAAC)
 
-Old versions with Avesta, a work of *Ferrus* @otland.net, based on OpenTibia by *OpenTibia team*.
-
-Old versions with HoTServ, a work of *Rex* @forums.otserv.com.br, based on OpenTibia by *OpenTibia team*.
+Old versions files by Rex, Ferrus, Kaiser/mattyx14, Gesior, Nicaw and others.
 
 During long time of OpenTibia development process many people worked
 on it and cooperated with us. Note that OpenTibia is not only Open

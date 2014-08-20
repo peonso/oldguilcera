@@ -1,59 +1,75 @@
-local config = {
-	loginMessage = getConfigValue('loginMessage'),
-	useFragHandler = getBooleanFromString(getConfigValue('useFragHandler'))
-}
-
 function onLogin(cid)
+
+	--PowerGamers
     if(InitHistory == 0) then
         local historyPage = addEvent(historyPage, 60000, {})
         InitHistory = historyPage
     end
+	
     registerCreatureEvent(cid, "PlayerDeath")
+	
+	--Register the kill/die event
+	registerCreatureEvent(cid, "RemoveBlesses")
 
-	if(getBooleanFromString(getConfigValue('accountManager')) == false) then
-		if (getCreatureName(cid) == "Account Manager") then
-			return doRemoveCreature(cid, true)
+	--Register the Stage event
+	if getBooleanFromString(getConfigInfo("experience_stages"), false) then
+		registerCreatureEvent(cid, "ExpStage")
+		checkStageChange(cid)
+	end
+
+	--Remove blesses if necessary
+	if getPlayerStorageValue(cid, STORAGE_REMOVE_BLESSES) == 1 then
+		local i = 0
+		while i < 5 do
+			doPlayerRemoveBless(cid, i)
+			i = i + 1
 		end
+		setPlayerStorageValue(cid, STORAGE_REMOVE_BLESSES, -1)
 	end
 
-	local loss = getConfigValue('deathLostPercent')
-	if(loss ~= nil) then
-		doPlayerSetLossPercent(cid, PLAYERLOSS_EXPERIENCE, loss * 10)
-	end
-
-	local accountManager = getPlayerAccountManager(cid)
-	if(accountManager == MANAGER_NONE) then
-		local lastLogin, str = getPlayerLastLoginSaved(cid), config.loginMessage
-		if(lastLogin > 0) then
-			doPlayerSendTextMessage(cid, MESSAGE_STATUS_DEFAULT, str)
-			str = "Your last visit was on " .. os.date("%a %b %d %X %Y", lastLogin) .. "."
-		else
-			str = str .. " Please choose your outfit."
-			doPlayerSendOutfitWindow(cid)
+	--Promotes player if necessary
+	if(isPremium(cid) ) then
+		if(getPlayerStorageValue(cid, STORAGE_PROMOTION) == 1 and getPlayerVocation(cid) <= 4) then
+			doPlayerSetVocation(cid, getPlayerVocation(cid)+4)
+			doPlayerRemoveSkillLossPercent(cid, 30)
+			setPlayerStorageValue(cid, STORAGE_PROMOTION, -1)
 		end
-
-		doPlayerSendTextMessage(cid, MESSAGE_STATUS_DEFAULT, str)
-	elseif(accountManager == MANAGER_NAMELOCK) then
-		addEvent(valid(doCreatureSay), 500, cid, "Hello, it appears that your character has been locked for name violating rules, what new name would you like to have?", TALKTYPE_PRIVATE_NP, true, cid)
-	elseif(accountManager == MANAGER_ACCOUNT) then
-		addEvent(valid(doCreatureSay), 500, cid, "Hello, type 'account' to manage your account. If you would like to start over, type 'cancel' anywhere.", TALKTYPE_PRIVATE, true, cid)
-	else
-		addEvent(valid(doCreatureSay), 500, cid, "Hello, type 'account' to create an account or 'recover' to recover an account.", TALKTYPE_PRIVATE, true, cid)
+		if(getPlayerStorageValue(cid, STORAGE_PREMIUM_ACCOUNT) == 1) then
+			setPlayerStorageValue(cid, STORAGE_PREMIUM_ACCOUNT, -1)
+		end
+		return true
 	end
 
-	if(not isPlayerGhost(cid)) then
-		doSendMagicEffect(getCreaturePosition(cid), CONST_ME_TELEPORT)
+	--Player is not premium - remove premium privileges
+	--Change outfit
+	if(getPlayerStorageValue(cid, STORAGE_PREMIUM_ACCOUNT) == -1) then
+		local lookType = 128
+		if(getPlayerSex(cid) == 0) then
+			lookType = 136
+		end
+		local house = House.getHouseByOwner(cid)
+		if(house) and getBooleanFromString(getConfigInfo("house_only_premium"), true) then
+			house:setOwner(0) --Remove the house from the player, the server takes care of the rest
+		end
+		doCreatureChangeOutfit(cid, {lookType = lookType, lookHead = 78, lookBody = 69, lookLegs = 97, lookFeet = 95, lookAddons = 0})
+		setPlayerStorageValue(cid, STORAGE_PREMIUM_ACCOUNT, 1)
 	end
 
-	registerCreatureEvent(cid, "Idle")
-	registerCreatureEvent(cid, "Mail")
-	registerCreatureEvent(cid, "ReportBug")
-	if(config.useFragHandler) then
-		registerCreatureEvent(cid, "SkullCheck")
-	end
+	--Teleport to free town, change here
+	--[[
+	doPlayerSetTown(cid, Z)
+	local masterFreePos = {x=100, y=100, z=7}
+	doTeleportThing(cid, masterFreePos)
+	]]-- Hoster's premium towns changes according to the map
 
-	registerCreatureEvent(cid, "GuildEvents")
-	registerCreatureEvent(cid, "AdvanceSave")
+	--Remove promotion
+	local isPromo = (getPlayerVocation(cid) > 4 and isPremium(cid) == false)
+	if(isPromo) then
+		doPlayerSetVocation(cid, getPlayerVocation(cid)-4)
+		doPlayerRemoveSkillLossPercent(cid, -30)
+		setPlayerStorageValue(cid, STORAGE_PROMOTION, 1)
+	end
+	
 	return true
 end
 

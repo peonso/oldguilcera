@@ -1,82 +1,86 @@
-////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
 // OpenTibia - an opensource roleplaying game
-////////////////////////////////////////////////////////////////////////
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
+//////////////////////////////////////////////////////////////////////
+// Item represents an existing item.
+//////////////////////////////////////////////////////////////////////
+// This program is free software; you can redistribute it and/or
+// modify it under the terms of the GNU General Public License
+// as published by the Free Software Foundation; either version 2
+// of the License, or (at your option) any later version.
 //
 // This program is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
 //
 // You should have received a copy of the GNU General Public License
-// along with this program.  If not, see <http://www.gnu.org/licenses/>.
-////////////////////////////////////////////////////////////////////////
+// along with this program; if not, write to the Free Software Foundation,
+// Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+//////////////////////////////////////////////////////////////////////
 
-#ifndef __ITEM__
-#define __ITEM__
-#include "otsystem.h"
 
+#ifndef __OTSERV_ITEM_H__
+#define __OTSERV_ITEM_H__
+
+#include "definitions.h"
+#include "thing.h"
+#include "items.h"
 #include <libxml/xmlmemory.h>
 #include <libxml/parser.h>
-
-#include "thing.h"
-#include "itemattributes.h"
-
-#include "items.h"
-#include "raids.h"
+#include <iostream>
+#include <list>
+#include <vector>
 
 class Creature;
 class Player;
-
 class Container;
 class Depot;
-
+class Teleport;
 class TrashHolder;
 class Mailbox;
-
-class Teleport;
-class MagicField;
-
 class Door;
+class MagicField;
+//[ added for beds system
 class BedItem;
+//]
 
-enum ITEMPROPERTY
-{
+enum ITEMPROPERTY{
 	BLOCKSOLID = 0,
 	HASHEIGHT,
 	BLOCKPROJECTILE,
 	BLOCKPATH,
 	ISVERTICAL,
 	ISHORIZONTAL,
-	MOVABLE,
+	MOVEABLE,
 	IMMOVABLEBLOCKSOLID,
 	IMMOVABLEBLOCKPATH,
 	IMMOVABLENOFIELDBLOCKPATH,
 	NOFIELDBLOCKPATH,
-	SUPPORTHANGABLE,
-	FLOORCHANGEDOWN,
-	FLOORCHANGEUP
+	SUPPORTHANGABLE
 };
 
-enum TradeEvents_t
-{
+enum TradeEvents_t{
 	ON_TRADE_TRANSFER,
-	ON_TRADE_CANCEL,
+	ON_TRADE_CANCEL
 };
 
-enum ItemDecayState_t
-{
+enum ItemDecayState_t{
 	DECAYING_FALSE = 0,
 	DECAYING_TRUE,
 	DECAYING_PENDING
 };
 
-enum AttrTypes_t
-{
-	ATTR_END = 0,
+/*from iomapotbm.h*/
+#pragma pack(1)
+struct TeleportDest{
+	uint16_t _x;
+	uint16_t _y;
+	uint8_t	_z;
+};
+#pragma pack()
+
+enum AttrTypes_t{
+	// attr 0 means end of attribute list
 	//ATTR_DESCRIPTION = 1,
 	//ATTR_EXT_FILE = 2,
 	ATTR_TILE_FLAGS = 3,
@@ -94,534 +98,309 @@ enum AttrTypes_t
 	ATTR_COUNT = 15,
 	ATTR_DURATION = 16,
 	ATTR_DECAYING_STATE = 17,
-	ATTR_WRITTENDATE = 18,
 	ATTR_WRITTENBY = 19,
 	ATTR_SLEEPERGUID = 20,
 	ATTR_SLEEPSTART = 21,
 	ATTR_CHARGES = 22,
-	ATTR_CONTAINER_ITEMS = 23,
-	ATTR_NAME = 30,
-	ATTR_PLURALNAME = 31,
-	ATTR_ATTACK = 33,
-	ATTR_EXTRAATTACK = 34,
-	ATTR_DEFENSE = 35,
-	ATTR_EXTRADEFENSE = 36,
-	ATTR_ARMOR = 37,
-	ATTR_ATTACKSPEED = 38,
-	ATTR_HITCHANCE = 39,
-	ATTR_SHOOTRANGE = 40,
-	ATTR_ARTICLE = 41,
-	ATTR_SCRIPTPROTECTED = 42,
-	ATTR_DUALWIELD = 43,
-	ATTR_ATTRIBUTE_MAP = 128
+	// This is NOT stored in serializeAttr, but rather used by IOMapSerialize
+	// look at that code for the ugly hack that makes this work. :)
+	ATTR_CONTAINER_ITEMS = 23
 };
 
-enum Attr_ReadValue
-{
+enum Attr_ReadValue{
 	ATTR_READ_CONTINUE,
 	ATTR_READ_ERROR,
 	ATTR_READ_END
 };
 
-// from iomap.h
-#pragma pack(1)
-struct TeleportDest
-{
-	uint16_t _x, _y;
-	uint8_t _z;
-};
-#pragma pack()
+class ItemAttributes{
+public:
+	ItemAttributes(){
+		m_attributes = 0;
+		m_firstAttr = NULL;
+	}
+	virtual ~ItemAttributes(){
+		if(m_firstAttr){
+			deleteAttrs(m_firstAttr);
+		}
+	}
+	ItemAttributes(const ItemAttributes &i){
+		m_attributes = i.m_attributes;
+		if(i.m_firstAttr){
+			m_firstAttr = new Attribute(*i.m_firstAttr);
+		}
+	}
 
-typedef std::list<Item*> ItemList;
-typedef std::vector<Item*> ItemVector;
+	void setSpecialDescription(const std::string& desc) {setStrAttr(ATTR_ITEM_DESC, desc);}
+	void resetSpecialDescription() {removeAttribute(ATTR_ITEM_DESC);}
+	const std::string& getSpecialDescription() const {return getStrAttr(ATTR_ITEM_DESC);}
+
+	void setText(const std::string& text) {setStrAttr(ATTR_ITEM_TEXT, text);}
+	void resetText() {removeAttribute(ATTR_ITEM_TEXT);}
+	const std::string& getText() const {return getStrAttr(ATTR_ITEM_TEXT);}
+
+	void setWriter(std::string _writer) {setStrAttr(ATTR_ITEM_WRITTENBY, _writer);}
+	void resetWriter() {removeAttribute(ATTR_ITEM_WRITTENBY);}
+	const std::string& getWriter() const {return getStrAttr(ATTR_ITEM_WRITTENBY);}
+
+	void setActionId(uint16_t n) {if(n < 100) n = 100; setIntAttr(ATTR_ITEM_ACTIONID, n);}
+	uint16_t getActionId() const {return (uint16_t)getIntAttr(ATTR_ITEM_ACTIONID);}
+
+	void setUniqueId(uint16_t n) {if(n < 1000) n = 1000; setIntAttr(ATTR_ITEM_UNIQUEID, n);}
+	uint16_t getUniqueId() const {return (uint16_t)getIntAttr(ATTR_ITEM_UNIQUEID);}
+
+	void setCharges(uint16_t n) {setIntAttr(ATTR_ITEM_CHARGES, n);}
+	uint16_t getCharges() const {return (uint16_t)getIntAttr(ATTR_ITEM_CHARGES);}
+
+	void setFluidType(uint16_t n) {setIntAttr(ATTR_ITEM_FLUIDTYPE, n);}
+	uint16_t getFluidType() const {return (uint16_t)getIntAttr(ATTR_ITEM_FLUIDTYPE);}
+
+	void setOwner(uint32_t _owner) {setIntAttr(ATTR_ITEM_OWNER, _owner);}
+	uint32_t getOwner() const {return (uint32_t)getIntAttr(ATTR_ITEM_OWNER);}
+
+	void setDuration(int32_t time) {setIntAttr(ATTR_ITEM_DURATION, time);}
+	void decreaseDuration(int32_t time) {increaseIntAttr(ATTR_ITEM_DURATION, -time);}
+	int32_t getDuration() const {return (int32_t)getIntAttr(ATTR_ITEM_DURATION);}
+
+	void setDecaying(ItemDecayState_t decayState) {setIntAttr(ATTR_ITEM_DECAYING, decayState);}
+	uint32_t getDecaying() const {return (uint32_t)getIntAttr(ATTR_ITEM_DECAYING);}
+
+protected:
+	enum itemAttrTypes{
+		ATTR_ITEM_ACTIONID = 1 << 0,
+		ATTR_ITEM_UNIQUEID = 1 << 1,
+		ATTR_ITEM_DESC = 1 << 2,
+		ATTR_ITEM_TEXT = 1 << 3,
+		ATTR_ITEM_WRITTENBY = 1 << 5,
+		ATTR_ITEM_OWNER = 1 << 6,
+		ATTR_ITEM_DURATION = 1 << 7,
+		ATTR_ITEM_DECAYING = 1 << 8,
+		ATTR_ITEM_CHARGES = 1 << 10,
+		ATTR_ITEM_FLUIDTYPE = 1 << 11,
+		ATTR_ITEM_DOORID = 1 << 12
+	};
+
+	bool hasAttribute(itemAttrTypes type) const;
+	void removeAttribute(itemAttrTypes type);
+
+protected:
+	static std::string emptyString;
+
+	class Attribute{
+	public:
+		itemAttrTypes type;
+		void* value;
+		Attribute* next;
+		Attribute(itemAttrTypes _type){
+			type = _type;
+			value = NULL;
+			next = NULL;
+		}
+
+		Attribute(const Attribute &i){
+			type = i.type;
+			if(ItemAttributes::validateIntAttrType(type)){
+				value = i.value;
+			}
+			else if(ItemAttributes::validateStrAttrType(type)){
+				value = (void*)new std::string( *((std::string*)i.value) );
+			}
+			else{
+				value = NULL;
+			}
+
+			next = NULL;
+			if(i.next){
+				next = new Attribute(*i.next);
+			}
+		}
+	};
+
+	uint32_t m_attributes;
+	Attribute* m_firstAttr;
+
+	const std::string& getStrAttr(itemAttrTypes type) const;
+	void setStrAttr(itemAttrTypes type, const std::string& value);
+
+	uint32_t getIntAttr(itemAttrTypes type) const;
+	void setIntAttr(itemAttrTypes type, int32_t value);
+	void increaseIntAttr(itemAttrTypes type, int32_t value);
+
+	static bool validateIntAttrType(itemAttrTypes type);
+	static bool validateStrAttrType(itemAttrTypes type);
+
+	void addAttr(Attribute* attr);
+	Attribute* getAttrConst(itemAttrTypes type) const;
+	Attribute* getAttr(itemAttrTypes type);
+
+	void deleteAttrs(Attribute* attr);
+};
 
 class Item : virtual public Thing, public ItemAttributes
 {
-	public:
-		static Items items;
+public:
+	//Factory member to create item of right type based on type
+	static Item* CreateItem(const uint16_t _type, uint16_t _count = 0);
+	static Item* CreateItem(PropStream& propStream);
+	static bool loadItem(xmlNodePtr node, Container* parent);
+	static bool loadContainer(xmlNodePtr node, Container* parent);
 
-		//Factory member to create item of right type based on type
-		static Item* CreateItem(const uint16_t type, uint16_t amount = 0);
-		static Item* CreateItem(PropStream& propStream);
+	static Items items;
 
-		static bool loadItem(xmlNodePtr node, Container* parent);
-		static bool loadContainer(xmlNodePtr node, Container* parent);
+	// Constructor for items
+	Item(const uint16_t _type, uint16_t _count = 0);
+	Item(const Item &i);
+	virtual Item* clone() const;
+	virtual void copyAttributes(Item* item);
 
-		// Constructor for items
-		Item(const uint16_t type, uint16_t amount = 0);
-		Item(const Item &i): Thing(), ItemAttributes(i), id(i.id), count(i.count) {}
-		virtual ~Item() {}
+	virtual ~Item();
 
-		virtual Item* clone() const;
-		virtual void copyAttributes(Item* item);
-		void makeUnique(Item* parent);
+	virtual Item* getItem() {return this;};
+	virtual const Item* getItem() const {return this;};
+	virtual Container* getContainer() {return NULL;};
+	virtual const Container* getContainer() const {return NULL;};
+	virtual Teleport* getTeleport() {return NULL;};
+	virtual const Teleport* getTeleport() const {return NULL;};
+	virtual TrashHolder* getTrashHolder() {return NULL;};
+	virtual const TrashHolder* getTrashHolder() const {return NULL;};
+	virtual Mailbox* getMailbox() {return NULL;};
+	virtual const Mailbox* getMailbox() const {return NULL;};
+	virtual Door* getDoor() {return NULL;};
+	virtual const Door* getDoor() const {return NULL;};
+	virtual MagicField* getMagicField() {return NULL;};
+	virtual const MagicField* getMagicField() const {return NULL;};
+	//[ added for beds system
+	virtual BedItem* getBed(){ return NULL; }
+	virtual const BedItem* getBed() const { return NULL; }
+	//]
 
-		virtual Item* getItem() {return this;}
-		virtual const Item* getItem() const {return this;}
+	static std::string getDescription(const ItemType& it, int32_t lookDistance,
+		const Item* item = NULL, int32_t subType = -1, bool addArticle = true);
+	static std::string getLongName(const ItemType& it, int32_t lookDistance,
+		const Item* item = NULL, int32_t subType = -1, bool addArticle = true);
+	static std::string getWeightDescription(const ItemType& it, double weight, uint32_t count = 1);
 
-		virtual Container* getContainer() {return NULL;}
-		virtual const Container* getContainer() const {return NULL;}
+	//serialization
+	virtual Attr_ReadValue readAttr(AttrTypes_t attr, PropStream& propStream);
+	virtual bool unserializeAttr(PropStream& propStream);
+	virtual bool unserializeItemNode(FileLoader& f, NODE node, PropStream& propStream);
+	virtual bool serializeAttr(PropWriteStream& propWriteStream) const;
 
-		virtual Teleport* getTeleport() {return NULL;}
-		virtual const Teleport* getTeleport() const {return NULL;}
+	virtual bool isPushable() const {return !isNotMoveable();};
+	virtual int getThrowRange() const {return (isPickupable() ? 15 : 2);};
 
-		virtual TrashHolder* getTrashHolder() {return NULL;}
-		virtual const TrashHolder* getTrashHolder() const {return NULL;}
+	virtual std::string getDescription(int32_t lookDistance) const;
+	virtual std::string getXRayDescription() const;
+	std::string getWeightDescription() const;
 
-		virtual Mailbox* getMailbox() {return NULL;}
-		virtual const Mailbox* getMailbox() const {return NULL;}
+	uint16_t getID() const {return id;}
+	uint16_t getClientID() const {return items[id].clientId;}
+	void setID(uint16_t newid);
 
-		virtual Door* getDoor() {return NULL;}
-		virtual const Door* getDoor() const {return NULL;}
+	// Returns the player that is holding this item in his inventory
+	Player* getHoldingPlayer();
+	const Player* getHoldingPlayer() const;
 
-		virtual MagicField* getMagicField() {return NULL;}
-		virtual const MagicField* getMagicField() const {return NULL;}
+	WeaponType_t getWeaponType() const {return items[id].weaponType;}
+	Ammo_t	getAmuType() const {return items[id].amuType;}
+	int32_t	getShootRange() const {return items[id].shootRange;}
 
-		virtual BedItem* getBed() {return NULL;}
-		virtual const BedItem* getBed() const {return NULL;}
+	virtual double getWeight() const;
+	int getAttack() const {return items[id].attack;}
+	int getArmor() const {return items[id].armor;}
+	int getDefense() const {return items[id].defense;}
+	int getExtraDef() const {return items[id].extraDef;}
+	int getSlotPosition() const {return items[id].slot_position;}
+	int getWieldPosition() const {return items[id].wield_position;}
+	int getHitChance() const {return items[id].hitChance;}
 
-		uint16_t getID() const {return id;}
-		void setID(uint16_t newid);
-		uint16_t getClientID() const {return items[id].clientId;}
+	bool isReadable() const {return items[id].canReadText;}
+	bool canWriteText() const {return items[id].canWriteText;}
+	uint16_t getMaxWriteLength() const {return items[id].maxTextLen;}
 
-		static std::string getDescription(const ItemType& it, int32_t lookDistance, const Item* item = NULL, int32_t subType = -1, bool addArticle = true);
-		static std::string getNameDescription(const ItemType& it, const Item* item = NULL, int32_t subType = -1, bool addArticle = true);
-		static std::string getWeightDescription(double weight, bool stackable, uint32_t count = 1);
+	uint32_t getWorth() const;
+	void getLight(LightInfo& lightInfo);
 
-		virtual std::string getDescription(int32_t lookDistance) const {return getDescription(items[id], lookDistance, this);}
-		std::string getNameDescription() const {return getNameDescription(items[id], this);}
-		std::string getWeightDescription() const {return getWeightDescription(getWeight(), items[id].stackable && items[id].showCount, count);}
+	bool hasProperty(enum ITEMPROPERTY prop) const;
+	bool isBlocking(const Creature* creature) const {return items[id].blockSolid;}
+	bool isStackable() const {return items[id].stackable;}
+	bool isRune() const {return items[id].isRune();}
+	bool isFluidContainer() const {return (items[id].isFluidContainer());}
+	bool isAlwaysOnTop() const {return items[id].alwaysOnTop;}
+	bool isGroundTile() const {return items[id].isGroundTile();}
+	bool isSplash() const {return items[id].isSplash();}
+	bool isMagicField() const {return items[id].isMagicField();}
+	bool isNotMoveable() const {return !items[id].moveable;}
+	bool isMoveable() const {return items[id].moveable;}
+	bool isPickupable() const {return items[id].pickupable;}
+	bool isWeapon() const {return (items[id].weaponType != WEAPON_NONE);}
+	bool isUseable() const {return items[id].useable;}
+	bool isHangable() const {return items[id].isHangable;}
+	bool isRoteable() const {const ItemType& it = items[id]; return it.rotable && it.rotateTo;}
+	bool isDoor() const {return items[id].isDoor();}
+	bool isBed() const {return items[id].isBed();}
+	bool isLevelDoor() const {return items[id].isLevelDoor();}
+	bool hasCharges() const {return getCharges() > 0;}
+	bool isSolidForItems() const { return items[id].isSolidForItems(); }
 
-		Player* getHoldingPlayer();
-		const Player* getHoldingPlayer() const;
+	bool floorChangeDown() const {return items[id].floorChangeDown;}
+	bool floorChangeNorth() const {return items[id].floorChangeNorth;}
+	bool floorChangeSouth() const {return items[id].floorChangeSouth;}
+	bool floorChangeEast() const {return items[id].floorChangeEast;}
+	bool floorChangeWest() const {return items[id].floorChangeWest;}
 
-		//serialization
-		virtual Attr_ReadValue readAttr(AttrTypes_t attr, PropStream& propStream);
-		virtual bool unserializeAttr(PropStream& propStream);
-		virtual bool serializeAttr(PropWriteStream& propWriteStream) const;
-		virtual bool unserializeItemNode(FileLoader&, NODE, PropStream& propStream) {return unserializeAttr(propStream);}
+	const std::string& getName() const {return items[id].name;}
+	const std::string& getPluralName() const {return items[id].pluralName;}
+	std::string getLongName() const;
 
-		// Item attributes
-		void setDuration(int32_t time) {setAttribute("duration", time);}
-		void decreaseDuration(int32_t time);
-		int32_t getDuration() const;
+	// get the number of items
+	uint16_t getItemCount() const {return count;}
+	void setItemCount(uint8_t n) {if(n < 1) n = 1; count = n;}
 
-		void setSpecialDescription(const std::string& description) {setAttribute("description", description);}
-		void resetSpecialDescription() {eraseAttribute("description");}
-		std::string getSpecialDescription() const;
+	static uint32_t countByType(const Item* i, int32_t subType);
 
-		void setText(const std::string& text) {setAttribute("text", text);}
-		void resetText() {eraseAttribute("text");}
-		std::string getText() const;
+	void setDefaultSubtype();
+	bool hasSubType() const;
+	uint16_t getSubType() const;
+	void setSubType(uint16_t n);
 
-		void setDate(time_t date) {setAttribute("date", (int32_t)date);}
-		void resetDate() {eraseAttribute("date");}
-		time_t getDate() const;
+	void setUniqueId(uint16_t n);
 
-		void setWriter(std::string writer) {setAttribute("writer", writer);}
-		void resetWriter() {eraseAttribute("writer");}
-		std::string getWriter() const;
-
-		void setActionId(int32_t aid, bool callEvent = true);
-		void resetActionId(bool callEvent = true);
-		int32_t getActionId() const;
-
-		void setUniqueId(int32_t uid);
-		int32_t getUniqueId() const;
-
-		void setCharges(uint16_t charges) {setAttribute("charges", charges);}
-		void resetCharges() {eraseAttribute("charges");}
-		uint16_t getCharges() const;
-
-		void setFluidType(uint16_t fluidType) {setAttribute("fluidtype", fluidType);}
-		void resetFluidType() {eraseAttribute("fluidtype");}
-		uint16_t getFluidType() const;
-
-		void setOwner(uint32_t owner) {setAttribute("owner", (int32_t)owner);}
-		uint32_t getOwner() const;
-
-		void setCorpseOwner(uint32_t corpseOwner) {setAttribute("corpseowner", (int32_t)corpseOwner);}
-		uint32_t getCorpseOwner();
-
-		void setDecaying(ItemDecayState_t state) {setAttribute("decaying", (int32_t)state);}
-		ItemDecayState_t getDecaying() const;
-
-		std::string getName() const;
-		std::string getPluralName() const;
-		std::string getArticle() const;
-
-		bool isScriptProtected() const;
-		bool isDualWield() const;
-
-		int32_t getAttack() const;
-		int32_t getExtraAttack() const;
-		int32_t getDefense() const;
-		int32_t getExtraDefense() const;
-
-		int32_t getArmor() const;
-		int32_t getAttackSpeed() const;
-		int32_t getHitChance() const;
-		int32_t getShootRange() const;
-
-		Ammo_t getAmmoType() const {return items[id].ammoType;}
-		WeaponType_t getWeaponType() const {return items[id].weaponType;}
-		int32_t getSlotPosition() const {return items[id].slotPosition;}
-		int32_t getWieldPosition() const {return items[id].wieldPosition;}
-
-		virtual double getWeight() const;
-		void getLight(LightInfo& lightInfo);
-
-		int32_t getMaxWriteLength() const {return items[id].maxTextLength;}
-		int32_t getWorth() const {return count * items[id].worth;}
-		virtual int32_t getThrowRange() const {return (isPickupable() ? 15 : 2);}
-
-		bool floorChange(FloorChange_t change = CHANGE_NONE) const;
-		bool forceSerialize() const {return items[id].forceSerialize || canWriteText() || isContainer() || isBed() || isDoor();}
-
-		bool hasProperty(enum ITEMPROPERTY prop) const;
-		bool hasSubType() const {return items[id].hasSubType();}
-		bool hasCharges() const {return hasIntegerAttribute("charges");}
-
-		bool canDecay();
-		virtual bool canRemove() const {return true;}
-		virtual bool canTransform() const {return true;}
-		bool canWriteText() const {return items[id].canWriteText;}
-
-		virtual bool isPushable() const {return isMovable();}
-		virtual bool isBlocking(const Creature*) const {return items[id].blockSolid;}
-		bool isGroundTile() const {return items[id].isGroundTile();}
-		bool isContainer() const {return items[id].isContainer();}
-		bool isSplash() const {return items[id].isSplash();}
-		bool isFluidContainer() const {return (items[id].isFluidContainer());}
-		bool isDoor() const {return items[id].isDoor();}
-		bool isMagicField() const {return items[id].isMagicField();}
-		bool isTeleport() const {return items[id].isTeleport();}
-		bool isKey() const {return items[id].isKey();}
-		bool isDepot() const {return items[id].isDepot();}
-		bool isMailbox() const {return items[id].isMailbox();}
-		bool isTrashHolder() const {return items[id].isTrashHolder();}
-		bool isBed() const {return items[id].isBed();}
-		bool isRune() const {return items[id].isRune();}
-		bool isStackable() const {return items[id].stackable;}
-		bool isAlwaysOnTop() const {return items[id].alwaysOnTop;}
-		bool isMovable() const {return items[id].movable;}
-		bool isPickupable() const {return items[id].pickupable;}
-		bool isUsable() const {return items[id].usable;}
-		bool isHangable() const {return items[id].isHangable;}
-		bool isRoteable() const {const ItemType& it = items[id]; return it.rotable && it.rotateTo != 0;}
-		bool isWeapon() const {return (items[id].weaponType != WEAPON_NONE);}
-		bool isReadable() const {return items[id].canReadText;}
-		bool isWare() const {return items[id].wareId != 0;}
-		bool isPremiumScroll() const {return items[id].premiumDays > 0;}
-
-		bool isLoadedFromMap() const {return loadedFromMap;}
-		void setLoadedFromMap(bool value) {loadedFromMap = value;}
-
-		CombatType_t getElementType() const {return items[id].hasAbilities() ? items[id].abilities->elementType : COMBAT_NONE;}
-		int32_t getElementDamage() const {return items[id].hasAbilities() ? items[id].abilities->elementDamage : 0;}
-
-		uint16_t getItemCount() const {return count;}
-		void setItemCount(uint16_t n) {count = std::max((uint16_t)1, n);}
-
-		uint16_t getSubType() const;
-		void setSubType(uint16_t n);
-
-		uint32_t getDefaultDuration() const {return items[id].decayTime * 1000;}
-		void setDefaultDuration()
-		{
-			uint32_t duration = getDefaultDuration();
-			if(duration)
-				setDuration(duration);
+	void setDefaultDuration(){
+		uint32_t duration = getDefaultDuration();
+		if(duration != 0){
+			setDuration(duration);
 		}
+	}
+	uint32_t getDefaultDuration() const {return items[id].decayTime * 1000;}
+	bool canDecay();
 
-		void setDefaultSubtype();
+	virtual bool canRemove() const {return true;}
+	virtual bool canTransform() const {return true;}
+	virtual void onRemoved();
+	virtual bool onTradeEvent(TradeEvents_t event, Player* owner){return true;};
 
-		Raid* getRaid() {return raid;}
-		void setRaid(Raid* _raid) {raid = _raid;}
+	virtual void __startDecaying();
 
-		virtual void __startDecaying();
-		virtual void onRemoved();
-		virtual bool onTradeEvent(TradeEvents_t, Player*, Player*) {return true;}
+protected:
+	// If weight description is needed from outside of item class
+	// use the other getWeightDescription
+	std::string getWeightDescription(double weight) const;
 
-		static uint32_t countByType(const Item* item, int32_t checkType, bool multiCount);
+	uint16_t id;  // the same id as in ItemType
+	uint8_t count; // number of stacked items
 
-	protected:
-		uint16_t id;
-		uint8_t count;
-
-		Raid* raid;
-		bool loadedFromMap;
+	//Don't add variables here, use the ItemAttribute class.
 };
 
-inline std::string Item::getName() const
-{
-	bool ok;
-	std::string v = getStringAttribute("name", ok);
-	if(ok)
-		return v;
+typedef std::list<Item *> ItemList;
 
-	return items[id].name;
-}
-
-inline std::string Item::getPluralName() const
-{
-	bool ok;
-	std::string v = getStringAttribute("pluralname", ok);
-	if(ok)
-		return v;
-
-	return items[id].pluralName;
-}
-
-inline std::string Item::getArticle() const
-{
-	bool ok;
-	std::string v = getStringAttribute("article", ok);
-	if(ok)
-		return v;
-
-	return items[id].article;
-}
-
-inline bool Item::isScriptProtected() const
-{
-	bool ok;
-	bool v = getBooleanAttribute("scriptprotected", ok);
-	if(ok)
-		return v;
-
-	return false;
-}
-
-inline int32_t Item::getAttack() const
-{
-	bool ok;
-	int32_t v = getIntegerAttribute("attack", ok);
-	if(ok)
-		return v;
-
-	return items[id].attack;
-}
-
-inline int32_t Item::getExtraAttack() const
-{
-	bool ok;
-	int32_t v = getIntegerAttribute("extraattack", ok);
-	if(ok)
-		return v;
-
-	return items[id].extraAttack;
-}
-
-inline int32_t Item::getDefense() const
-{
-	bool ok;
-	int32_t v = getIntegerAttribute("defense", ok);
-	if(ok)
-		return v;
-
-	return items[id].defense;
-}
-
-inline int32_t Item::getExtraDefense() const
-{
-	bool ok;
-	int32_t v = getIntegerAttribute("extradefense", ok);
-	if(ok)
-		return v;
-
-	return items[id].extraDefense;
-}
-
-inline int32_t Item::getArmor() const
-{
-	bool ok;
-	int32_t v = getIntegerAttribute("armor", ok);
-	if(ok)
-		return v;
-
-	return items[id].armor;
-}
-
-inline int32_t Item::getAttackSpeed() const
-{
-	bool ok;
-	int32_t v = getIntegerAttribute("attackspeed", ok);
-	if(ok)
-		return v;
-
-	return items[id].attackSpeed;
-}
-
-inline int32_t Item::getHitChance() const
-{
-	bool ok;
-	int32_t v = getIntegerAttribute("hitchance", ok);
-	if(ok)
-		return v;
-
-	return items[id].hitChance;
-}
-
-inline int32_t Item::getShootRange() const
-{
-	bool ok;
-	int32_t v = getIntegerAttribute("shootrange", ok);
-	if(ok)
-		return v;
-
-	return items[id].shootRange;
-}
-
-inline bool Item::isDualWield() const
-{
-	bool ok;
-	bool v = getBooleanAttribute("dualwield", ok);
-	if(ok)
-		return v;
-
-	return items[id].dualWield;
-}
-
-inline void Item::decreaseDuration(int32_t time)
-{
-	bool ok;
-	int32_t v = getIntegerAttribute("duration", ok);
-	if(ok)
-		setAttribute("duration", v - time);
-}
-
-inline int32_t Item::getDuration() const
-{
-	bool ok;
-	int32_t v = getIntegerAttribute("duration", ok);
-	if(ok)
-		return v;
+inline uint32_t Item::countByType(const Item* i, int32_t subType){
+	if(subType == -1 || subType == i->getSubType()){
+		return i->getItemCount();
+	}
 
 	return 0;
 }
 
-inline std::string Item::getSpecialDescription() const
-{
-	bool ok;
-	std::string v = getStringAttribute("description", ok);
-	if(ok)
-		return v;
-
-	return "";
-}
-
-inline std::string Item::getText() const
-{
-	bool ok;
-	std::string v = getStringAttribute("text", ok);
-	if(ok)
-		return v;
-
-	return items[id].text;
-}
-
-inline time_t Item::getDate() const
-{
-	bool ok;
-	int32_t v = getIntegerAttribute("date", ok);
-	if(ok)
-		return (time_t)v;
-
-	return items[id].date;
-}
-
-inline std::string Item::getWriter() const
-{
-	bool ok;
-	std::string v = getStringAttribute("writer", ok);
-	if(ok)
-		return v;
-
-	return items[id].writer;
-}
-
-inline int32_t Item::getActionId() const
-{
-	bool ok;
-	int32_t v = getIntegerAttribute("aid", ok);
-	if(ok)
-		return v;
-
-	return 0;
-}
-
-inline int32_t Item::getUniqueId() const
-{
-	bool ok;
-	int32_t v = getIntegerAttribute("uid", ok);
-	if(ok)
-		return v;
-
-	return 0;
-}
-
-inline uint16_t Item::getCharges() const
-{
-	bool ok;
-	int32_t v = getIntegerAttribute("charges", ok);
-	if(ok && v >= 0)
-		return (uint16_t)v;
-
-	return 0;
-}
-
-inline uint16_t Item::getFluidType() const
-{
-	bool ok;
-	int32_t v = getIntegerAttribute("fluidtype", ok);
-	if(ok && v >= 0)
-		return (uint16_t)v;
-
-	return 0;
-}
-
-inline uint32_t Item::getOwner() const
-{
-	bool ok;
-	int32_t v = getIntegerAttribute("owner", ok);
-	if(ok)
-		return (uint32_t)v;
-
-	return 0;
-}
-
-inline uint32_t Item::getCorpseOwner()
-{
-	bool ok;
-	int32_t v = getIntegerAttribute("corpseowner", ok);
-	if(ok)
-		return (uint32_t)v;
-
-	return 0;
-}
-
-inline ItemDecayState_t Item::getDecaying() const
-{
-	bool ok;
-	int32_t v = getIntegerAttribute("decaying", ok);
-	if(ok)
-		return (ItemDecayState_t)v;
-
-	return DECAYING_FALSE;
-}
-
-inline uint32_t Item::countByType(const Item* item, int32_t checkType, bool multiCount)
-{
-	if(checkType != -1 && checkType != (int32_t)item->getSubType())
-		return 0;
-
-	if(multiCount)
-		return item->getItemCount();
-
-	if(item->isRune())
-		return item->getCharges();
-
-	return item->getItemCount();
-}
 #endif

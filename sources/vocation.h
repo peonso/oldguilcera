@@ -1,144 +1,129 @@
-////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
 // OpenTibia - an opensource roleplaying game
-////////////////////////////////////////////////////////////////////////
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
+//////////////////////////////////////////////////////////////////////
+//
+//////////////////////////////////////////////////////////////////////
+// This program is free software; you can redistribute it and/or
+// modify it under the terms of the GNU General Public License
+// as published by the Free Software Foundation; either version 2
+// of the License, or (at your option) any later version.
 //
 // This program is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
 //
 // You should have received a copy of the GNU General Public License
-// along with this program.  If not, see <http://www.gnu.org/licenses/>.
-////////////////////////////////////////////////////////////////////////
+// along with this program; if not, write to the Free Software Foundation,
+// Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+//////////////////////////////////////////////////////////////////////
 
-#ifndef __VOCATION__
-#define __VOCATION__
+#ifndef __OTSERV_VOCATION_H__
+#define __OTSERV_VOCATION_H__
 
-#include "otsystem.h"
+#include "definitions.h"
 #include "enums.h"
 #include "const.h"
+#include <string>
+#include <map>
 
 class Vocation
 {
-	public:
-		virtual ~Vocation();
+public:
+	~Vocation();
 
-		Vocation() {reset();}
-		Vocation(uint32_t _id): id(_id) {reset();}
+	const std::string& getName() const {return name;}
+	const std::string& getDescription() const {return description;}
 
-		void reset();
+	uint64_t getReqSkillTries(int32_t skill, int32_t level);
+	uint64_t getReqMana(int32_t magLevel);
+	uint32_t getHPGain() const {return gainHP;};
+	uint32_t getManaGain() const {return gainMana;};
+	uint32_t getCapGain() const {return gainCap;};
+	uint32_t getManaGainTicks() const {return gainManaTicks;};
+	uint32_t getManaGainAmount() const {return gainManaAmount;};
+	uint32_t getHealthGainTicks() const {return gainHealthTicks;};
+	uint32_t getHealthGainAmount() const {return gainHealthAmount;};
+	uint16_t getSoulMax() const {return maxSoul;};
+	uint16_t getSoulGainTicks() const {return gainSoulTicks;};
+	uint32_t getAttackSpeed() const {return attackSpeed;};
 
-		uint32_t getId() const {return id;}
-		void setId(int32_t v) {id = v;}
+	float getMeleeBaseDamage(WeaponType_t weaponType) const
+	{
+		if(weaponType == WEAPON_SWORD)
+			return swordBaseDamage;
+		else if(weaponType == WEAPON_AXE)
+			return axeBaseDamage;
+		else if(weaponType == WEAPON_CLUB)
+			return clubBaseDamage;
+		else if(weaponType == WEAPON_DIST)
+			return distBaseDamage;
+		else
+			return fistBaseDamage;
+	};
 
-		uint16_t getClientId() const {return clientId;}
-		void setClientId(uint16_t v) {clientId = v;}
+	float getMagicBaseDamage() const {return magicBaseDamage;};
+	float getWandBaseDamage() const {return wandBaseDamage;};
+	float getHealingBaseDamage() const {return healingBaseDamage;};
+	float getBaseDefense() const {return baseDefense;};
+	float getArmorDefense() const {return armorDefense;};
 
-		uint32_t getFromVocation() const {return fromVocation;}
-		void setFromVocation(int32_t v) {fromVocation = v;}
+	void debugVocation();
 
-		std::string getName() const {return name;}
-		void setName(const std::string& v) {name = v;}
+protected:
+	friend class Vocations;
+	Vocation();
 
-		std::string getDescription() const {return description;}
-		void setDescription(const std::string& v) {description = v;}
+	std::string name;
+	std::string description;
 
-		bool isAttackable() const {return attackable;}
-		void setAttackable(bool v) {attackable = v;}
+	uint32_t gainHealthTicks;
+	uint32_t gainHealthAmount;
+	uint32_t gainManaTicks;
+	uint32_t gainManaAmount;
+	uint32_t gainCap;
+	uint32_t gainMana;
+	uint32_t gainHP;
+	uint16_t maxSoul;
+	uint16_t gainSoulTicks;
 
-		bool isPremiumNeeded() const {return needPremium;}
-		void setNeedPremium(bool v) {needPremium = v;}
+	uint32_t skillBases[SKILL_LAST + 1];
+	float skillMultipliers[SKILL_LAST + 1];
+	float manaMultiplier;
+	uint32_t attackSpeed;
 
-		bool getDropLoot() const {return dropLoot;}
-		void setDropLoot(bool v) {dropLoot = v;}
+	float swordBaseDamage;
+	float axeBaseDamage;
+	float clubBaseDamage;
+	float distBaseDamage;
+	float fistBaseDamage;
+	float magicBaseDamage;
+	float wandBaseDamage;
+	float healingBaseDamage;
+	float baseDefense;
+	float armorDefense;
 
-		bool getLossSkill() const {return skillLoss;}
-		void setLossSkill(bool v) {skillLoss = v;}
+	typedef std::map<uint32_t, uint64_t> manaCacheMap;
+	manaCacheMap cacheMana;
 
-		uint32_t getAttackSpeed() const {return attackSpeed;}
-		void setAttackSpeed(uint32_t v) {attackSpeed = v;}
-
-		uint32_t getBaseSpeed() const {return baseSpeed;}
-		void setBaseSpeed(uint32_t v) {baseSpeed = v;}
-
-		int32_t getLessLoss() const {return lessLoss;}
-		void setLessLoss(int32_t v) {lessLoss = v;}
-
-		int32_t getGainCap() const {return capGain;}
-		void setGainCap(int32_t v) {capGain = v;}
-
-		uint32_t getGain(gain_t type) const {return gain[type];}
-		void setGain(gain_t type, uint32_t v) {gain[type] = v;}
-
-		uint32_t getGainTicks(gain_t type) const {return gainTicks[type];}
-		void setGainTicks(gain_t type, uint32_t v) {gainTicks[type] = v;}
-
-		uint32_t getGainAmount(gain_t type) const {return gainAmount[type];}
-		void setGainAmount(gain_t type, uint32_t v) {gainAmount[type] = v;}
-
-		float getMultiplier(multiplier_t type) const {return formulaMultipliers[type];}
-		void setMultiplier(multiplier_t type, float v) {formulaMultipliers[type] = v;}
-
-		int16_t getAbsorb(CombatType_t combat) const {return absorb[combat];}
-		void increaseAbsorb(CombatType_t combat, int16_t v) {absorb[combat] += v;}
-
-		int16_t getReflect(CombatType_t combat) const;
-		void increaseReflect(Reflect_t type, CombatType_t combat, int16_t v) {reflect[type][combat] += v;}
-
-		double getExperienceMultiplier() const {return skillMultipliers[SKILL__LEVEL];}
-		void setSkillMultiplier(skills_t s, float v) {skillMultipliers[s] = v;}
-		void setSkillBase(skills_t s, uint32_t v) {skillBase[s] = v;}
-
-		uint64_t getReqSkillTries(int32_t skill, int32_t level);
-		uint64_t getReqMana(uint32_t magLevel);
-
-	private:
-		typedef std::map<uint32_t, uint64_t> cacheMap;
-		cacheMap cacheSkill[SKILL_LAST + 1];
-		cacheMap cacheMana;
-
-		bool attackable, needPremium, dropLoot, skillLoss;
-		uint16_t clientId;
-		int32_t lessLoss, capGain;
-		uint32_t id, fromVocation, baseSpeed, attackSpeed;
-		std::string name, description;
-
-		int16_t absorb[COMBAT_LAST + 1], reflect[REFLECT_LAST + 1][COMBAT_LAST + 1];
-		uint32_t gain[GAIN_LAST + 1], gainTicks[GAIN_LAST + 1], gainAmount[GAIN_LAST + 1], skillBase[SKILL_LAST + 1];
-		float skillMultipliers[SKILL__LAST + 1], formulaMultipliers[MULTIPLIER_LAST + 1];
+	typedef std::map<uint32_t, uint32_t> skillCacheMap;
+	skillCacheMap cacheSkill[SKILL_LAST + 1];
 };
 
-typedef std::map<uint32_t, Vocation*> VocationsMap;
+
 class Vocations
 {
-	public:
-		virtual ~Vocations() {clear();}
-		static Vocations* getInstance()
-		{
-			static Vocations instance;
-			return &instance;
-		}
+public:
+	Vocations();
+	~Vocations();
 
-		bool reload();
-		bool loadFromXml();
-		bool parseVocationNode(xmlNodePtr p);
+	bool loadFromXml(const std::string& datadir);
+	bool getVocation(const uint32_t& vocationId, Vocation*& vocation);
+	bool getVocationId(const std::string& name, int32_t& vocationId) const;
 
-		Vocation* getVocation(uint32_t vocId);
-		int32_t getVocationId(const std::string& name);
-		int32_t getPromotedVocation(uint32_t vocationId);
-
-		VocationsMap::iterator getFirstVocation() {return vocationsMap.begin();}
-		VocationsMap::iterator getLastVocation() {return vocationsMap.end();}
-
-	private:
-		static Vocation defVoc;
-		VocationsMap vocationsMap;
-
-		Vocations() {}
-		void clear();
+private:
+	typedef std::map<uint32_t, Vocation*> VocationsMap;
+	VocationsMap vocationsMap;
 };
+
 #endif

@@ -3,6 +3,14 @@ Guilcera Change Log
 datapack for opentibia
 more info and lastest version at https://github.com/peonso/guilcera
 
+  4.04
+
+    - august 2014, [7.72] OTHire 0.0.2 by TwistedScorpio - MySQL database
+	- AAC is now Znote 1.5
+	- missing actions/quests
+	- missing npcs
+	- map main city is a mess
+
   4.03
 
     - august 2014, [7.72] OTX 2.10 by Kaiser - MySQL database

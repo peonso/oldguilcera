@@ -1,52 +1,90 @@
-noinst_PROGRAMS = theotxserver
 
-CXXFLAGS = -pipe -g
+sbin_PROGRAMS = otserv
+
 AM_CXXFLAGS = $(XML_CPPFLAGS) $(OTSERV_FLAGS) $(LUA_CFLAGS) $(DEBUG_FLAGS)\
-$(MYSQL_FLAGS) $(MYSQLPP_FLAGS) $(SQLITE_FLAGS) $(PGSQL_FLAGS) $(PROFILER_FLAGS)\
-$(OPTIONAL_FLAGS) -D_THREAD_SAFE -D_REENTRANT -Wall -Wextra -Wno-strict-aliasing
+	$(MYSQL_FLAGS) $(SQLITE_FLAGS) $(ODBC_FLAGS) $(PGSQL_FLAGS)\
+	$(PROFILER_FLAGS) $(OPTIONAL_FLAGS) \
+	-DSYSCONFDIR=\"$(sysconfdir)\" -DPKGDATADIR=\"$(pkgdatadir)\" \
+	-D_THREAD_SAFE -D__OLD_GUILD_SYSTEM__ -D_REENTRANT -Wall
 
-theotxserver_LDADD = $(LUA_LIBS)
+otserv_LDADD = $(LUA_LIBS)
 
 if USE_MYSQL
 MAYBE_MYSQL = databasemysql.cpp databasemysql.h
 endif
-if USE_MYSQLPP
-MAYBE_MYSQLPP = databasemysqlpp.cpp databasemysqlpp.h
-endif
 if USE_SQLITE
 MAYBE_SQLITE = databasesqlite.cpp databasesqlite.h
+endif
+if USE_ODBC
+MAYBE_ODBC = databaseodbc.cpp databaseodbc.h
 endif
 if USE_PGSQL
 MAYBE_PGSQL = databasepgsql.cpp databasepgsql.h
 endif
-if LOGIN_SERVER
-MAYBE_LOGIN = gameservers.cpp gameservers.h
-endif
 
-theotxserver_SOURCES = account.h actions.cpp actions.h  baseevents.cpp baseevents.h beds.cpp \
-	beds.h chat.cpp chat.h combat.cpp combat.h condition.cpp condition.h \
-	config.h configmanager.cpp configmanager.h connection.cpp connection.h \
-	const.h container.cpp container.h creature.cpp creature.h \
-	creatureevent.cpp creatureevent.h cylinder.cpp cylinder.h database.cpp \
-	database.h databasemanager.cpp databasemanager.h $(MAYBE_MYSQL) \
-	$(MAYBE_MYSQLPP) $(MAYBE_SQLITE) $(MAYBE_PGSQL) depot.cpp depot.h dispatcher.cpp \
-	dispatcher.h exception.cpp exception.h fileloader.cpp fileloader.h \
-	game.cpp game.h $(MAYBE_LOGIN) globalevent.cpp globalevent.h group.cpp \
-	group.h gui.cpp gui.h house.cpp house.h housetile.cpp housetile.h inputbox.cpp inputbox.h ioban.cpp ioban.h \
-	ioguild.cpp ioguild.h iologindata.cpp iologindata.h iomap.cpp iomap.h \
-	iomapserialize.cpp iomapserialize.h item.cpp item.h itemattributes.cpp \
-	itemattributes.h items.cpp items.h luascript.cpp luascript.h \
-	mailbox.cpp mailbox.h map.cpp map.h monster.cpp \
-	monster.h monsters.cpp monsters.h movement.cpp movement.h \
-	networkmessage.cpp networkmessage.h npc.cpp npc.h otpch.cpp otpch.h otserv.cpp \
-	otsystem.h outfit.cpp outfit.h outputmessage.cpp outputmessage.h \
-	party.cpp party.h playerbox.cpp playerbox.h player.cpp player.h position.cpp position.h \
-	protocol.cpp protocol.h protocolgame.cpp protocolgame.h \
-	protocollogin.cpp protocollogin.h raids.cpp raids.h \
-	resources.h scheduler.cpp scheduler.h scriptmanager.cpp \
-	scriptmanager.h server.cpp server.h spawn.cpp spawn.h \
-	spells.cpp spells.h status.cpp status.h talkaction.cpp talkaction.h teleport.cpp \
-	teleport.h templates.h textlogger.cpp textlogger.h thing.cpp thing.h \
-	tile.cpp tile.h tools.cpp tools.h town.h trashholder.cpp trashholder.h \
-	waitlist.cpp waitlist.h waypoints.h weapons.cpp weapons.h vocation.cpp \
-	vocation.h
+EXTRA_DIST=autogen.sh \
+	\
+	schema.mysql  schema.pgsql  schema.sqlite config.lua.dist \
+	AUTHORS Doxyfile LICENSE Makefile.am README README.DATABASE \
+	\
+	\
+	account.h	 map.h	     scriptmanager.h \
+	actions.h	 md5.h	     server.h \
+	admin.h		 definitions.h	   monster.h	     sha1.h \
+	allocator.h	 depot.h	   monsters.h	     spawn.h \
+	ban.h		 enums.h	   movement.h	     spells.h \
+	baseevents.h	 exception.h	   networkmessage.h  status.h \
+	beds.h		 fileloader.h	   npc.h	     talkaction.h \
+	chat.h		 game.h		   otpch.h	     tasks.h \
+	combat.h	 house.h	   otsystem.h	     teleport.h \
+	housetile.h	        templates.h \
+	condition.h	 ioaccount.h	   outputmessage.h   thing.h \
+	config.h	 iomap.h	   party.h	     tile.h \
+	configmanager.h  iomapotbm.h	   player.h	     tools.h \
+	connection.h	 iomapserialize.h  position.h	     town.h \
+	const.h		 		   protocolgame.h    trashholder.h \
+	container.h	 ioplayer.h	   protocol.h	     vocation.h \
+	creatureevent.h  item.h		   protocollogin.h   waitlist.h \
+	creature.h	 itemloader.h	        waypoints.h \
+	cylinder.h	 items.h	       weapons.h \
+	database.h	 logger.h	   raids.h \
+	luascript.h	   rsa.h \
+	mailbox.h	   scheduler.h \
+	guild.h		globalevent.h
+
+
+
+
+otserv_SOURCES = $(MAYBE_MYSQL) $(MAYBE_SQLITE) $(MAYBE_ODBC) $(MAYBE_PGSQL) \
+	map.cpp		   rsa.cpp \
+	actions.cpp	   md5.cpp		   scheduler.cpp \
+	admin.cpp	   monster.cpp	           scriptmanager.cpp \
+	allocator.cpp	   depot.cpp	       monsters.cpp	   server.cpp \
+	ban.cpp		   exception.cpp       movement.cpp	   sha1.cpp \
+	baseevents.cpp	   fileloader.cpp      networkmessage.cpp  spawn.cpp \
+	beds.cpp	   game.cpp	       npc.cpp		   spells.cpp \
+	chat.cpp	   house.cpp	       otserv.cpp	   status.cpp \
+	combat.cpp	   housetile.cpp       	   talkaction.cpp \
+	ioaccount.cpp       outputmessage.cpp   tasks.cpp \
+	condition.cpp	   iomapotbm.cpp       party.cpp	   teleport.cpp \
+	configmanager.cpp  iomapserialize.cpp  player.cpp	   thing.cpp \
+	connection.cpp	   position.cpp	   tile.cpp	\
+	container.cpp	   ioplayer.cpp        protocol.cpp	   tools.cpp \
+	creature.cpp	   item.cpp	       protocolgame.cpp    trashholder.cpp \
+	creatureevent.cpp  items.cpp	       protocollogin.cpp   vocation.cpp \
+	cylinder.cpp	   logger.cpp	       	   waitlist.cpp \
+	database.cpp	   luascript.cpp      	   weapons.cpp \
+	mailbox.cpp	   raids.cpp \
+	guild.cpp	globalevent.cpp
+
+pkgsysconfdir=$(sysconfdir)/$(PACKAGE)
+
+pkgsysconf_DATA = config.lua
+
+config.lua:
+	cp $(srcdir)/config.lua.dist config.lua
+
+
+distclean-local:
+	-rm -f config.lua.dist config.lua
+

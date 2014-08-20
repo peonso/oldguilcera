@@ -1,8 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <houses>
-  <house name="House 1" houseid="3" entryx="206" entryy="218" entryz="7" rent="100" townid="1" size="17"/>
-  <house name="House 2" houseid="7" entryx="206" entryy="224" entryz="7" rent="100" townid="1" size="23"/>
-  <house name="House 3" houseid="8" entryx="206" entryy="230" entryz="7" rent="100" townid="1" size="23"/>
-  <house name="House 4" houseid="9" entryx="197" entryy="224" entryz="7" rent="100" townid="1" size="19"/>
-  <house name="House 5" houseid="10" entryx="190" entryy="234" entryz="7" rent="100" townid="1" size="36"/>
+  <house name="Temple I" houseid="3" entryx="206" entryy="218" entryz="7" rent="4000" townid="1" size="17"/>
+  <house name="Temple II" houseid="7" entryx="206" entryy="224" entryz="7" rent="3800" townid="1" size="23"/>
+  <house name="Temple III" houseid="8" entryx="206" entryy="230" entryz="7" rent="3800" townid="1" size="23"/>
+  <house name="West Flats I" houseid="9" entryx="197" entryy="224" entryz="7" rent="3200" townid="1" size="19"/>
+  <house name="Garden I" houseid="10" entryx="190" entryy="234" entryz="7" rent="5500" townid="1" size="36"/>
+  <house name="South Wall I" houseid="11" entryx="194" entryy="236" entryz="7" rent="3400" townid="1" size="30"/>
+  <house name="South Wall II" houseid="12" entryx="199" entryy="236" entryz="7" rent="3800" townid="1" size="54"/>
+  <house name="West Flats II" houseid="13" entryx="197" entryy="223" entryz="7" rent="3350" townid="1" size="16"/>
+  <house name="West Flats III" houseid="14" entryx="195" entryy="224" entryz="7" rent="3800" townid="1" size="25"/>
+  <house name="West Flats IV" houseid="15" entryx="195" entryy="214" entryz="7" rent="2050" townid="1" size="13"/>
+  <house name="West Flats V" houseid="16" entryx="189" entryy="214" entryz="7" rent="6200" townid="1" size="34"/>
+  <house name="West Flats VI" houseid="17" entryx="194" entryy="219" entryz="6" rent="4000" townid="1" size="28"/>
+  <house name="West Flats VII" houseid="18" entryx="199" entryy="229" entryz="6" rent="3150" townid="1" size="19"/>
+  <house name="West Flats VIII" houseid="19" entryx="199" entryy="226" entryz="5" rent="3150" townid="1" size="19"/>
+  <house name="Main Street I" houseid="20" entryx="204" entryy="211" entryz="7" rent="4200" townid="1" size="19"/>
+  <house name="Main Street II" houseid="21" entryx="211" entryy="211" entryz="7" rent="3550" townid="1" size="15"/>
+  <house name="Lower Slums I" houseid="22" entryx="241" entryy="192" entryz="7" rent="1100" townid="1" size="13"/>
+  <house name="Lower Slums II" houseid="23" entryx="240" entryy="192" entryz="7" rent="1100" townid="1" size="7"/>
+  <house name="Lower Slums III" houseid="24" entryx="232" entryy="192" entryz="7" rent="1100" townid="1" size="12"/>
+  <house name="Lower Slums IV" houseid="25" entryx="229" entryy="192" entryz="7" rent="1100" townid="1" size="15"/>
+  <house name="Lower Slums V" houseid="26" entryx="229" entryy="187" entryz="7" rent="1100" townid="1" size="12"/>
+  <house name="Lower Slums VI" houseid="27" entryx="229" entryy="183" entryz="7" rent="1100" townid="1" size="16"/>
+  <house name="Lower Slums VII" houseid="28" entryx="232" entryy="182" entryz="7" rent="1100" townid="1" size="17"/>
+  <house name="Lower Slums VIII" houseid="29" entryx="237" entryy="182" entryz="7" rent="1100" townid="1" size="13"/>
+  <house name="Lower Slums IX" houseid="30" entryx="241" entryy="182" entryz="7" rent="1100" townid="1" size="19"/>
+  <house name="Lower Slums X" houseid="31" entryx="241" entryy="184" entryz="7" rent="1100" townid="1" size="10"/>
+  <house name="Temple VI" houseid="32" entryx="239" entryy="220" entryz="7" rent="3100" townid="1" size="16"/>
+  <house name="Temple V" houseid="33" entryx="240" entryy="226" entryz="7" rent="3100" townid="1" size="25"/>
 </houses>

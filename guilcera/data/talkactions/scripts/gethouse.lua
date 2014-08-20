@@ -1,30 +1,21 @@
-local config = {
-	teleportAccess = 3
-}
-
-function onSay(cid, words, param, channel)
-	if(param == '') then
-		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Command param required.")
-		return true
+function onSay(cid, words, param)
+	if(param == "") then
+		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "You need to type the parameter.")
+		return false
 	end
 
-	local teleport = false
-	local t = string.explode(param, ",")
-	if(t[2]) then
-		teleport = getBooleanFromString(t[2])
+	local guid = getPlayerGUIDByName(param)
+	local str= "Player not found."
+	if guid ~= LUA_NULL then
+		str = getPlayerNameByGUID(guid)
+		local house = House.getHouseByOwnerGUID(guid)
+		if house ~= nil then
+			str = str .. " owns house: " .. house:getName()
+		else
+			str = str .. " does not own any house."
+		end
 	end
 
-	local house = getHouseByPlayerGUID(getPlayerGUIDByName(t[1]))
-	if(not house) then
-		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Player " .. t[1] .. " does not own house or doesn't exists.")
-		return true
-	end
-
-	local houseInfo = getHouseInfo(house)
-	if(teleport and getPlayerAccess(cid) >= config.teleportAccess) then
-		doTeleportThing(cid, houseInfo.entry)
-	end
-
-	doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, t[1] .. " owns house: " .. houseInfo.name .. ".")
-	return true
+	doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, str)
+	return false
 end
