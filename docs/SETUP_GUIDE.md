@@ -71,7 +71,7 @@ We don't create a gamemaster from scratch, we will turn an existing one into a g
 
 3.1 - Remere's Map Editor
 
-You can edit guilcera map with [Remere's Map Editor version 2.2] (http://remeresmapeditor.com/) .
+You can edit guilcera map with [Remere's Map Editor version 2.2] (http://remeresmapeditor.com/).
 
 Run the instaler, and open the it and it will ask for tibia 9.6 files, just ignore and close all windows that appear. Hit *file* at upper left, then  *preferences*, *Client Version* tab, set *default client version* to 7.6, on *Version 7.6 search path* select your Tibia Client 7.6 folder. You can also take a look on the other options and see if you want to change anything. Both default items.otb and items.xml for version 7.6 from RME are not optimized and also items.otb and clients.xml do not work with current distribution OTHire, and can broke our map, download revised versions [HERE](https://github.com/peonso/guilcera/raw/master/docs/rme_data). Go to RME folder (...\Remere's Map Editor\data) and replace those files.
 

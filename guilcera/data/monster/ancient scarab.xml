@@ -42,7 +42,8 @@
 		<summon name="larva" interval="1000" chance="15" max="3"/>
 	</summons>
 	<defenses armor="36" defense="33">
-	    <defense name="speed" interval="1000" chance="8" speedchange="170" duration="9000">
+		<defense name="speed" interval="1000" chance="8" speedchange="780" duration="9000">
+	    <!--<defense name="speed" interval="1000" chance="8" speedchange="170" duration="9000">-->
 			<attribute key="areaEffect" value="redshimmer"/>
 		</defense>
 	</defenses>
