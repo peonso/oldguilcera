@@ -130,10 +130,10 @@
 	<monster name="Yeti" file="yeti.xml"/>
 	
 <!-- bosses -->
-
 	<monster name="Ashmunrah" file="bosses\ashmunrah.xml"/>
 	<monster name="Deathslicer" file="bosses\deathslicer.xml"/>
 	<monster name="Demodras" file="bosses\demodras.xml"/>
+	<monster name="demongoblin" file="bosses\demongoblin.xml"/>
 	<monster name="Dharalion" file="bosses\dharalion.xml"/>
 	<monster name="Dipthrah" file="bosses\dipthrah.xml"/>
 	<monster name="Fernfang" file="bosses\fernfang.xml"/>

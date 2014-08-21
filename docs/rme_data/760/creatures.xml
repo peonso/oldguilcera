@@ -168,6 +168,7 @@
   <creature name="magicthrower" type="monster" lookitem="1560"/>
   <creature name="plaguethrower" type="monster"/>
   <creature name="shredderthrower" type="monster"/>
+  <creature name="demongoblin" type="monster" looktype="201"/>
     
   <creature name="Tiquandas Revenge" type="monster" looktype="120"/>
   <creature name="Demodras" type="monster" looktype="204"/>

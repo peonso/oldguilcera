@@ -5,6 +5,8 @@
 	<event name="ServerRecord" type="login" script="record.lua"/>
 	<event name="RemoveBlesses" type="die" script="removeblesses.lua"/>
 	<event name="ExpStage" type="advance" script="exp_stage.lua"/>
+	
+	<!-- Guilcera -->
 	<event type="login" name="addPremium" script="freepremmium.lua" />
-	<!--event name="PlayerLook" type="look" script="look.lua"/-->
+	<event type="login" name="giveFirstItems" script="firstitems.lua" />
 </creaturescripts>

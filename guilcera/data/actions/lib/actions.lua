@@ -248,3 +248,23 @@ if (item2.itemid == ITEM_PRE_WHEAT) then
 	return true
 end
 
+-- quest function
+function questAddReward(PLAYER_ENTITY, EFFECT_POS, QUEST_ITEM, ITEM_count, QUEST_STORAGE)
+queststatus = getPlayerStorageValue(PLAYER_ENTITY,QUEST_STORAGE)
+	if queststatus == -1 or queststatus == 0 then
+		local DESCRIPTION = getItemDescriptions(QUEST_ITEM)
+		REWARD_ITEM = doPlayerAddItem(PLAYER_ENTITY,QUEST_ITEM,ITEM_count)
+		if (getPlayerFreeCap(PLAYER_ENTITY) > 0 == false) then
+			doPlayerSendTextMessage(PLAYER_ENTITY, 22, "You do not have enough capacity.")
+ 			doRemoveItem(REWARD_ITEM,ITEM_count)
+		else
+			doPlayerSendTextMessage(PLAYER_ENTITY,22,'You have found ' .. DESCRIPTION.article .. ' ' ..  DESCRIPTION.name .. '.')
+			doSendMagicEffect(EFFECT_POS,12)
+			setPlayerStorageValue(PLAYER_ENTITY,QUEST_STORAGE,1)
+		end
+	else
+		doPlayerSendTextMessage(PLAYER_ENTITY, 22, "This chest is empty.")
+	end
+end
+-- END quest function
+

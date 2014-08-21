@@ -1,5 +1,134 @@
 <?xml version="1.0"?>
 <actions>
+
+<!-- Guilcera -->
+	<!-- uniqueids -->
+
+	<action uniqueid="6000" script="guilcera/annihilator.lua"/>
+	<action uniqueid="6001" script="guilcera/annihilator.lua"/>
+	<action uniqueid="6002" script="guilcera/annihilator.lua"/>
+	<action uniqueid="6003" script="guilcera/annihilator.lua"/>
+
+	<action uniqueid="6004" script="guilcera/parchment.lua"/>
+
+	<action uniqueid="6005" script="guilcera/chests.lua"/>
+	<action uniqueid="6006" script="guilcera/chests.lua"/>
+	<action uniqueid="6007" script="guilcera/chests.lua"/>
+	<action uniqueid="6008" script="guilcera/chests.lua"/>
+	<action uniqueid="6009" script="guilcera/chests.lua"/>
+	<action uniqueid="6010" script="guilcera/chests.lua"/>
+	<action uniqueid="6011" script="guilcera/chests.lua"/>
+	<action uniqueid="6012" script="guilcera/chests.lua"/>
+	<action uniqueid="6013" script="guilcera/chests.lua"/>
+	<action uniqueid="6014" script="guilcera/chests.lua"/>
+	<action uniqueid="6015" script="guilcera/chests.lua"/>
+	<action uniqueid="6016" script="guilcera/chests.lua"/>
+	<action uniqueid="6017" script="guilcera/chests.lua"/>
+	<action uniqueid="6018" script="guilcera/chests.lua"/>
+	<action uniqueid="6019" script="guilcera/chests.lua"/>
+	<action uniqueid="6020" script="guilcera/chests.lua"/>
+	<action uniqueid="6021" script="guilcera/chests.lua"/>
+	<action uniqueid="6022" script="guilcera/chests.lua"/>
+	<action uniqueid="6023" script="guilcera/chests.lua"/>
+	<action uniqueid="6024" script="guilcera/chests.lua"/>
+	<action uniqueid="6025" script="guilcera/chests.lua"/>
+	<action uniqueid="6026" script="guilcera/chests.lua"/>
+	<action uniqueid="6027" script="guilcera/chests.lua"/>
+	<action uniqueid="6028" script="guilcera/chests.lua"/>
+	<action uniqueid="6029" script="guilcera/chests.lua"/>
+	<action uniqueid="6030" script="guilcera/chests.lua"/>
+	<action uniqueid="6031" script="guilcera/chests.lua"/>
+	<action uniqueid="6032" script="guilcera/chests.lua"/>
+	<action uniqueid="6033" script="guilcera/chests.lua"/>
+	<action uniqueid="6034" script="guilcera/chests.lua"/>
+	<action uniqueid="6035" script="guilcera/chests.lua"/>
+	<action uniqueid="6036" script="guilcera/chests.lua"/>
+	<action uniqueid="6037" script="guilcera/chests.lua"/>
+	<action uniqueid="6038" script="guilcera/chests.lua"/>
+	<action uniqueid="6039" script="guilcera/chests.lua"/>
+	<action uniqueid="6040" script="guilcera/chests.lua"/>
+	<action uniqueid="6041" script="guilcera/chests.lua"/>
+	<action uniqueid="6042" script="guilcera/chests.lua"/>
+	<action uniqueid="6043" script="guilcera/chests.lua"/>
+	<action uniqueid="6044" script="guilcera/chests.lua"/>
+	<action uniqueid="6045" script="guilcera/chests.lua"/>
+	<action uniqueid="6046" script="guilcera/chests.lua"/>
+	<action uniqueid="6047" script="guilcera/chests.lua"/>
+	<action uniqueid="6048" script="guilcera/chests.lua"/>
+	<action uniqueid="6049" script="guilcera/chests.lua"/>
+	<action uniqueid="6050" script="guilcera/chests.lua"/>
+	<action uniqueid="6051" script="guilcera/chests.lua"/>
+	<action uniqueid="6052" script="guilcera/chests.lua"/>
+	<action uniqueid="6053" script="guilcera/chests.lua"/>
+	<action uniqueid="6054" script="guilcera/chests.lua"/>
+	<action uniqueid="6055" script="guilcera/chests.lua"/>
+	<action uniqueid="6056" script="guilcera/chests.lua"/>
+	<action uniqueid="6057" script="guilcera/chests.lua"/>
+	<action uniqueid="6058" script="guilcera/chests.lua"/>
+	<action uniqueid="6059" script="guilcera/chests.lua"/>
+	<action uniqueid="6060" script="guilcera/chests.lua"/>
+	<action uniqueid="6061" script="guilcera/chests.lua"/>
+	<action uniqueid="6062" script="guilcera/chests.lua"/>
+	<action uniqueid="6063" script="guilcera/chests.lua"/>
+	<action uniqueid="6064" script="guilcera/chests.lua"/>
+	<action uniqueid="6065" script="guilcera/chests.lua"/>
+	<action uniqueid="6066" script="guilcera/chests.lua"/>
+	<action uniqueid="6067" script="guilcera/chests.lua"/>
+	<action uniqueid="6068" script="guilcera/chests.lua"/>
+	<action uniqueid="6069" script="guilcera/chests.lua"/>
+	<action uniqueid="6070" script="guilcera/chests.lua"/>
+	<action uniqueid="6071" script="guilcera/chests.lua"/>
+	<action uniqueid="6072" script="guilcera/chests.lua"/>
+	<action uniqueid="6073" script="guilcera/chests.lua"/>
+	<action uniqueid="6074" script="guilcera/chests.lua"/>
+	<action uniqueid="6075" script="guilcera/chests.lua"/>
+
+	<action uniqueid="8000" script="guilcera/annihilator.lua"/>
+
+	<action uniqueid="8001" script="guilcera/demonquest.lua"/>
+	<action uniqueid="8002" script="guilcera/demonquest2.lua"/>
+
+	<action uniqueid="8003" script="guilcera/insane1.lua"/>
+	<action uniqueid="8004" script="guilcera/insane2.lua"/>
+	<action uniqueid="8005" script="guilcera/insane3.lua"/>
+	<action uniqueid="8006" script="guilcera/insane4.lua"/>
+	<action uniqueid="8007" script="guilcera/insane5.lua"/>
+	<action uniqueid="8008" script="guilcera/insane6.lua"/>
+	<action uniqueid="8009" script="guilcera/insane7.lua"/>
+	<action uniqueid="8010" script="guilcera/insane8.lua"/>
+	<action uniqueid="8011" script="guilcera/insane9.lua"/>
+	<action uniqueid="8012" script="guilcera/insane10.lua"/>
+
+	<action uniqueid="8013" script="guilcera/insanekey.lua"/>
+
+	<action uniqueid="8014" script="guilcera/demonswitch.lua"/>
+
+	<action uniqueid="8015" script="guilcera/necroskey.lua"/>
+
+	<action uniqueid="8016" script="guilcera/gate1.lua"/>
+	<action uniqueid="8017" script="guilcera/gate2.lua"/>
+	<action uniqueid="8018" script="guilcera/gate3.lua"/>
+	<action uniqueid="8019" script="guilcera/gate4.lua"/>
+	<action uniqueid="8020" script="guilcera/gate5.lua"/>
+	<action uniqueid="8021" script="guilcera/gate6.lua"/>
+	<action uniqueid="8022" script="guilcera/gate7.lua"/>
+	<action uniqueid="8023" script="guilcera/gate8.lua"/>
+	<action uniqueid="8024" script="guilcera/gate9.lua"/>
+	<action uniqueid="8025" script="guilcera/gate10.lua"/>
+
+	<action uniqueid="8026" script="guilcera/emptychests.lua"/>
+	<action uniqueid="8027" script="guilcera/emptychests.lua"/>
+	<action uniqueid="8028" script="guilcera/emptychests.lua"/>
+	<action uniqueid="8029" script="guilcera/emptychests.lua"/>
+
+	<action uniqueid="8030" script="guilcera/vocation.lua"/>
+
+	<!-- Change gold -->
+	<action itemid="2148;2152;2160" event="script" value="guilcera/changegold.lua"/>
+
+	<!-- helmet of the ancients -->
+	<action itemid="2342" script="hota.lua"/>
+
 	<!-- Quest System (based on map editor) -->
 	<action actionid="2000" script="system.lua"/>
 	

@@ -101,7 +101,7 @@
         <instant name="Great Energy Beam" words="exevo gran vis lux" lvl="29" mana="200" direction="1" script="attack/great_energy_beam.lua">
             <vocation name="Sorcerer"/> <vocation name="Master Sorcerer"/>
         </instant>
-        <instant name="Berserk" words="exori" lvl="35" lvpercent="400" selftarget="1" script="attack/berserk.lua">
+        <instant name="Berserk" words="exori" lvl="35" levelpercent="400" selftarget="1" script="attack/berserk.lua">
             <vocation name="Knight"/>   <vocation name="Elite Knight"/>
         </instant>
         <instant name="Invisibility" words="utana vid" lvl="35" mana="440" selftarget="1" aggressive="0" script="support/invisible.lua">

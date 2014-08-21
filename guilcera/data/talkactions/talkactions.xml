@@ -48,4 +48,5 @@
 	<talkaction words="!online" access="0" script="onlinelist.lua"/>
 	<talkaction words="!frags" access="0" script="frags.lua"/>
 	<talkaction words="/played" access="0" script="played.lua"/>
+	<talkaction words="!commands;/commands;/command;!command;!help;/help;!serverinfo" access="0" script="commands.lua"/>
 </talkactions>

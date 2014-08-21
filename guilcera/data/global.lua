@@ -1,7 +1,3 @@
--- gesior powergamers/online time
--- http://otland.net/threads/gesior-acc-maker-tfs-0-3-powergamers-and-online-time-stats.8640/
-
-
 -- Load Lua-made functions
 dofile(getDataDir() .. 'functions.lua')
 
@@ -17,6 +13,8 @@ dofile(getDataDir() .. 'exp_stages.lua')
 -- Load db file
 dofile(getDataDir() .. 'db.lua')
 
+-- gesior powergamers/online time
+-- http://otland.net/threads/gesior-acc-maker-tfs-0-3-powergamers-and-online-time-stats.8640/
 -- PowerGamers
 InitHistory = 0
 
