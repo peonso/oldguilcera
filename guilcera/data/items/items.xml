@@ -4374,14 +4374,14 @@
 		<attribute key="attack" value="36"/>
 		<attribute key="weaponType" value="club"/>
 	</item>
-	<item id="2437" article="a" name="golden mace">
+	<item id="2437" article="a" name="light mace">
 		<attribute key="weight" value="5000"/>
-		<attribute key="defense" value="24"/>
-		<attribute key="attack" value="47"/>
+		<attribute key="defense" value="9"/>
+		<attribute key="attack" value="14"/>
 		<attribute key="weaponType" value="club"/>
 	</item>
 	<item id="2438" article="an" name="epee">
-		<attribute key="weight" value="1500"/>
+		<attribute key="weight" value="1450"/>
 		<attribute key="defense" value="23"/>
 		<attribute key="attack" value="37"/>
 		<attribute key="weaponType" value="sword"/>
@@ -4911,6 +4911,11 @@
 		<attribute key="weaponType" value="shield"/>
 	</item>
 	<item id="2537" article="an" name="amazon shield">
+		<attribute key="weight" value="6200"/>
+		<attribute key="defense" value="32"/>
+		<attribute key="weaponType" value="shield"/>
+	</item>
+	<item id="2538" article="an" name="eagle shield">
 		<attribute key="weight" value="6200"/>
 		<attribute key="defense" value="32"/>
 		<attribute key="weaponType" value="shield"/>

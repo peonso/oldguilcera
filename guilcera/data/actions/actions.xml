@@ -127,7 +127,7 @@
 	<action itemid="2148;2152;2160" event="script" value="guilcera/changegold.lua"/>
 
 	<!-- helmet of the ancients -->
-	<action itemid="2342" script="hota.lua"/>
+	<action itemid="2342" script="enchanting.lua"/>
 
 	<!-- Quest System (based on map editor) -->
 	<action actionid="2000" script="system.lua"/>
