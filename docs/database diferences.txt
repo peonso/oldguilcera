@@ -1,0 +1,98 @@
+SET GLOBAL max_allowed_packet = 16777216
+
+CREATE TABLE `server_record` (
+  `record` int(11) NOT NULL,
+  `timestamp` bigint(20) NOT NULL,
+  UNIQUE KEY `record` (`record`,`timestamp`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER TABLE `players` ADD `exphist_lastexp` BIGINT( 255 ) NOT NULL DEFAULT '0',
+ADD `exphist1` BIGINT( 255 ) NOT NULL DEFAULT '0',
+ADD `exphist2` BIGINT( 255 ) NOT NULL DEFAULT '0',
+ADD `exphist3` BIGINT( 255 ) NOT NULL DEFAULT '0',
+ADD `exphist4` BIGINT( 255 ) NOT NULL DEFAULT '0',
+ADD `exphist5` BIGINT( 255 ) NOT NULL DEFAULT '0',
+ADD `exphist6` BIGINT( 255 ) NOT NULL DEFAULT '0',
+ADD `exphist7` BIGINT( 255 ) NOT NULL DEFAULT '0',
+ADD `onlinetimetoday` BIGINT( 255 ) NOT NULL DEFAULT '0',
+ADD `onlinetime1` BIGINT( 255 ) NOT NULL DEFAULT '0',
+ADD `onlinetime2` BIGINT( 255 ) NOT NULL DEFAULT '0',
+ADD `onlinetime3` BIGINT( 255 ) NOT NULL DEFAULT '0',
+ADD `onlinetime4` BIGINT( 255 ) NOT NULL DEFAULT '0',
+ADD `onlinetime5` BIGINT( 255 ) NOT NULL DEFAULT '0',
+ADD `onlinetime6` BIGINT( 255 ) NOT NULL DEFAULT '0',
+ADD `onlinetime7` BIGINT( 255 ) NOT NULL DEFAULT '0',
+ADD `onlinetimeall` BIGINT( 255 ) NOT NULL DEFAULT '0';
+
+UPDATE `players` SET `exphist_lastexp`=`players`.`experience`
+
+CREATE TABLE IF NOT EXISTS `players_online` (
+  `player_id` int(11) NOT NULL,
+  PRIMARY KEY (`player_id`)
+) ENGINE=MEMORY;
+
+ALTER TABLE houses ADD `bid` int(11) NOT NULL DEFAULT '0';
+ALTER TABLE houses ADD `bid_end` int(11) NOT NULL DEFAULT '0';
+ALTER TABLE houses ADD `last_bid` int(11) NOT NULL DEFAULT '0';
+ALTER TABLE houses ADD `highest_bidder` int(11) NOT NULL DEFAULT '0';
+
+
+////////////////TEST QUESTS /////////////
+
+INSERT INTO `player_storage` (`player_id`, `key`, `value`) VALUES
+		(9, 1501,100),
+		(9, 1502,150),
+		(9, 65001,100),
+		(9, 65002,100),
+		(9, 65003,200),
+		(9, 65004,3),
+		(9, 65005,300),
+		(9, 65006,150),
+		(9, 65007,200),
+		(9, 65008,300),
+		(9, 65009,300),
+		(9, 65010,300),
+		(9, 65011,300),
+		(9, 65012,300),
+		(9, 65013,300),
+		(9, 65014,300),
+		(9, 12110,2),
+		(9, 12111,7),
+		(9, 12112,3),
+		(9, 12113,6),
+		(9, 12114,3),
+		(9, 12115,3),
+		(9, 12116,3),
+		(9, 12117,5),
+		(9, 330,3),
+		(9, 12121,3),
+		(9, 12122,5),
+		(9, 12123,3),
+		(9, 12124,3),
+		(9, 12125,3),
+		(9, 12126,3),
+		(9, 12127,4),
+		(9, 12128,3),
+		(9, 12129,3),
+		(9, 12101,1),
+		(9, 12102,1),
+		(9, 12103,1),
+		(9, 12104,1),
+		(9, 12105,1),
+		(9, 12106,1),
+		(9, 12107,1),
+		(9, 12022,3),
+		(9, 12022,3),
+		(9, 12022,3),
+		(9, 12025,3),
+		(9, 12026,5),
+		(9, 12027,3),
+		(9, 12028,2),
+		(9, 12029,6),
+		(9, 12030,8),
+		(9, 12031,2),
+		(9, 12032,4),
+		(9, 12033,2),
+		(9, 12034,2),
+		(9, 12035,2),
+		(9, 12036,5);
