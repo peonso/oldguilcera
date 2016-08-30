@@ -1,23 +1,23 @@
 Guilcera otserv for Tibia client version 7.72
 =============================================
-https://github.com/peonso/guilcera
+https://github.com/peonso/oldguilcera
 
-http://guilcera.t15.org/
+http://peonso.co.nf/oldschool/
 
 Information
 -----------
-- 4.04 is the current version
+- 4.05 is the current version
 - In-depth credit list [HERE](https://github.com/peonso/guilcera/blob/master/docs/AUTHORS.md)
 - A guide on how to setup the server [HERE](https://github.com/peonso/guilcera/blob/master/docs/SETUP_GUIDE.md)
 - Updated changelog [HERE](https://github.com/peonso/guilcera/blob/master/docs/CHANGELOG.md)
-- Lastest minimap [HERE](https://raw.githubusercontent.com/peonso/guilcera/master/docs/images/guilcera_401.png)
+- Lastest minimap [HERE](https://raw.githubusercontent.com/peonso/guilcera/master/docs/images/guilcera_405.png)
 
 Downloads
 ---------
 - Uniform Server can be downloaded [HERE](http://www.uniformserver.com/)
 - Notedpad ++ can be downloaded [HERE](http://filehippo.com/download_notepad)
-- Remere's Map Editor can be downloaded [HERE](http://remeresmapeditor.com/), to make it functional with Guilcera please follow the steps from [SETUP_GUIDE](https://github.com/peonso/guilcera/blob/master/docs/SETUP_GUIDE.md)
-- otitemeditor-0.2.2 can be downloaded [HERE](http://www.4shared.com/zip/jFtWifSjce/otitemeditor-022.html), to make it functional with Guilcera please follow the steps from [SETUP_GUIDE](https://github.com/peonso/guilcera/blob/master/docs/SETUP_GUIDE.md)
+- Remere's Map Editor can be downloaded [HERE](https://github.com/hjnilsson/rme/releases/latest), to make it functional with Guilcera please follow the steps from [HERE](https://github.com/TwistedScorpio/OTHire/wiki/How-to-use-RME-for-this-OTServer)
+- otitemeditor-0.3.0 can be downloaded [HERE](https://github.com/TwistedScorpio/OTHire/wiki/Using-itemeditor).
 - OtLand ip changer [HERE](http://otland.net/threads/otland-ip-changer.134369/), you can found it [HERE](http://static.otland.net/ipchanger.exe)
 - XAMMP can be downloaded [HERE](https://www.apachefriends.org/index.html)
 
