@@ -6,7 +6,7 @@
 datadir = "data/"
 
 -- map location
-map = "data/world/guilcera.otbm"
+map = "data/world/oldguilcera.otbm"
 
 -- Type of map storage,
 -- 'relational' - Slower, but possible to run database queries to change all items to another id for example.

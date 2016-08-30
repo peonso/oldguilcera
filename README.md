@@ -1,5 +1,6 @@
-Guilcera otserv for Tibia client version 7.72
-=============================================
+# Guilcera
+>an OpenTibia 7.72 custom server
+
 https://github.com/peonso/oldguilcera
 
 http://peonso.co.nf/oldschool/
