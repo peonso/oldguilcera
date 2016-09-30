@@ -14,13 +14,13 @@
 - Dwalin (buy rare items)
 - Cornehlia (blacksmith)
 
-###Imladris
+###Xanadu
 - Captain Gesior(boat captain)
 - Elandriel (magic shop/buy gems)
 - Rofelos (tools/food)
 - Ixidor (depot)
 
-###Kabah
+###Turim
 - Captain Nicaw (boat captain)
 - Mishra (tools/depot/paladin shop)
 - Jiddo (magic shop)
