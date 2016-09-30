@@ -3,6 +3,7 @@
 	<health now="1800" max="1800"/>
 	<look type="131" head="95" body="95" legs="95" feet="95" corpse="3128"/>
 	<targetchange interval="1000" chance="3"/>
+	<targetstrategies nearest="80" health="10" damage="10" random="0"/>
 	<flags>
 		<flag attackable="1"/>
 		<flag hostile="1"/>
@@ -18,7 +19,7 @@
 	</flags>
 	<attacks>
 		<attack name="melee" interval="2000" skill="88" attack="60"/>
-		<attack name="physical" interval="1000" chance="15" range="7" min="-145" max="-185">
+		<attack name="physical" interval="2000" checkshield="1" chance="15" range="7" min="-145" max="-185">
 			<attribute key="shootEffect" value="spear"/>
 		</attack>
 	</attacks>

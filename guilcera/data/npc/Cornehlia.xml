@@ -1,5 +1,4 @@
-<?xml version="1.0"?>
-<npc name="Cornehlia" script="default.lua" walkinterval="2000" floorchange="0" idleinterval="30">
+<npc name="Insane" script="default.lua" floorchange="0" walkinterval="1500" speed="100">
 	<health now="100" max="100"/>
-	<look type="142" head="41" body="21" legs="95" feet="5"/>
+	<look type="139" head="114" body="114" legs="114" feet="114"/>
 </npc>

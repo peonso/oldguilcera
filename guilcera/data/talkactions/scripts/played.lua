@@ -19,23 +19,5 @@ function onSay(cid, words, param, channel)
     -- end of conversion --
     str = "Total time played: ".. days .." days, ".. hours .." hours, ".. minutes .." minutes, since " .. os.date("%d %b %Y", getCreateDate(cid)) .. "."
     doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, str)
-    return true
-end
-
-function getPlayerOnlineTime(cid)
-    local query = db.getResult("SELECT `onlinetimeall` FROM `players` WHERE `id` = " .. getPlayerGUID(cid) .. ";")
-    if query:getID() ~= -1 then
-    return query:getDataInt("onlinetimeall")
-    end
-    query:free()
-    return LUA_ERROR
-end
-
-function getCreateDate(cid)
-    local query = db.getResult("SELECT `created` FROM `znote_players` WHERE `player_id` = " .. getPlayerGUID(cid) .. ";")
-    if query:getID() ~= -1 then
-    return query:getDataInt("created")
-    end
-    query:free()
-    return LUA_ERROR
+    return false
 end

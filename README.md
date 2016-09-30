@@ -27,7 +27,7 @@ Structure
 - main folder contains current version of guilcera map + OTHire server
 - docs contains important documentation about the server, as: mysql_schema.sql, manual, bug list, changelog, server setup guide and such
 - www contains current AAC, ZnoteAAC 1.5
-- sources contains sources for OTHire 0.0.2
+- sources contains sources for OTHire 0.0.3
 
 Credits
 -------

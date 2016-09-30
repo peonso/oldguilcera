@@ -1,0 +1,4 @@
+<npc name="Captain Znote" script="default.lua" floorchange="0" walkinterval="1500" speed="100">
+	<health now="100" max="100"/>
+	<look type="134" head="94" body="117" legs="40" feet="114"/>
+</npc>

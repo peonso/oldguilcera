@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<npc name="Sunny" script="default.lua" walkinterval="2000" floorchange="0" idleinterval="30">
-	<health now="100" max="100"/>
-	<look type="133" head="80" body="6" legs="13" feet="1"/>
-</npc>

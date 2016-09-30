@@ -1,0 +1,4 @@
+<npc name="King Peonsius IV" script="default.lua" floorchange="0" walkinterval="1500" speed="100">
+	<health now="100" max="100"/>
+	<look type="132" head="114" body="4" legs="57" feet="14"/>
+</npc>

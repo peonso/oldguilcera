@@ -1,5 +1,4 @@
-<?xml version="1.0"?>
-<npc name="Jiddo" script="default.lua" walkinterval="2000" floorchange="0" idleinterval="30">
+<npc name="Jiddo" script="default.lua" floorchange="0" walkinterval="1500" speed="100">
 	<health now="100" max="100"/>
-	<look type="133" head="77" body="3" legs="114" feet="57"/>
+	<look type="130" head="132" body="57" legs="77" feet="79"/>
 </npc>

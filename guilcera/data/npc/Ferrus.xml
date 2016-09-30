@@ -1,5 +1,4 @@
-<?xml version="1.0"?>
-<npc name="Ferrus" script="default.lua" walkinterval="2000" floorchange="0" idleinterval="30">
+<npc name="Ferrus" script="default.lua" floorchange="0" walkinterval="1500" speed="100">
 	<health now="100" max="100"/>
 	<look type="57"/>
 </npc>

@@ -1,15 +1,15 @@
-parchpos = { x = 343, y = 87, z = 14 }
+function onRemoveItem(item, tile, position)
+	local demonPositions = {
+		{x=33060, y=31623, z=15},
+		{x=33066, y=31623, z=15},
+		{x=33060, y=31627, z=15},
+		{x=33066, y=31627, z=15}
+	}
 
-function onRemoveItem(item, tileItem, pos)
-	if pos.x == parchpos.x and pos.y == parchpos.y and pos.z == parchpos.z then
-		demonpos1 = { x = parchpos.x - 2, y = parchpos.y - 1, z = parchpos.z }
-		demonpos2 = { x = parchpos.x - 2, y = parchpos.y + 1, z = parchpos.z }
-		demonpos3 = { x = parchpos.x + 2, y = parchpos.y - 1, z = parchpos.z }
-		demonpos4 = { x = parchpos.x + 2, y = parchpos.y + 1, z = parchpos.z }
-		doSummonCreature("Demon", demonpos1)  
-		doSummonCreature("Demon", demonpos2)  
-		doSummonCreature("Demon", demonpos3)  
-		doSummonCreature("Demon", demonpos4)
+	doSetItemActionId(item.uid, 0)
+	for i = 1, #demonPositions do
+		doSummonCreature("Demon", demonPositions[i])
 	end
-return 1
+
+	return true
 end

@@ -1,9 +1,7 @@
 @echo off
-title othire:guilcera_403
-color 07
-echo :: ======================
 :begin
-othire.exe
-echo :: === The Server Shutdown, Restarting... ===
+othire_win32.exe
+echo :: Restarting...
+echo :: 
 goto begin
 :goto begin

@@ -1,10 +1,12 @@
-local ITEM_BLUEBERRY_EMPTY 	=	2786
-local ITEM_BLUEBERRY	   	=	2677
-local ITEM_BLUEBERRY_COUNT   	=	3
+-- by Nottinghster
 
-function onUse(cid, item, frompos, item2, topos)
+local ITEM_BLUEBERRY_EMPTY = 2786
+local ITEM_BLUEBERRY = 2677
+local ITEM_BLUEBERRY_COUNT = 3
+
+function onUse(cid, item, fromPosition, itemEx, toPosition)
 	doTransformItem(item.uid, ITEM_BLUEBERRY_EMPTY)
-	doCreateItem(ITEM_BLUEBERRY, ITEM_BLUEBERRY_COUNT, frompos)
+	doCreateItem(ITEM_BLUEBERRY, ITEM_BLUEBERRY_COUNT, fromPosition)
 	doDecayItem(item.uid)
 	return true
-end
+end 

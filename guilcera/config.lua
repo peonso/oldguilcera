@@ -20,10 +20,10 @@ map_store_type = "binary"
 mapkind = "OTBM"
 
 -- server name
-servername = "Guilcera"
+servername = "OTServ"
 
 -- server location
-location = "Earth"
+location = "Rondônia"
 
 -- server ip (the ip that server listens on)
 ip = "127.0.0.1"
@@ -77,7 +77,7 @@ fightexhausted = 2000
 healexhausted = 1000
 
 -- exhausted time in ms (1000 = 1 second) for floor changing
-stairhop_exhausted = 2000
+stairhop_exhausted = 0
 
 -- how many ms to add if the player is already exhausted and tries to cast a spell/yells (1000 = 1 second)
 exhaustedadd = 5000
@@ -102,7 +102,7 @@ minactionexinterval = 1000
 
 -- house rent period
 -- options: daily, weekly, monthly
-houserentperiod = "monthly"
+houserentperiod = "weekly"
 
 -- whether or not to check for premium accounts when using beds
 premonlybeds = false
@@ -135,19 +135,16 @@ max_violation_comment_size = 255
 notations_to_banishment = 3
 warnings_to_final_banishment = 4
 warnings_to_deletion = 5
-banishment_length = 7*86400
- --seconds
-final_banishment_length = 30*86400
- --seconds
-ip_banishment_length = 86400
- --seconds
+banishment_length = 7*86400 --seconds
+final_banishment_length = 30*86400 --seconds
+ip_banishment_length = 86400 --seconds
 
 -- Extra experience % per player when sharing experience
 party_exp_mul = 5
 
 -- Anti-MageBomb system
 -- This system works as in Tibia, time in milliseconds
-login_attack_delay = 5*1000
+login_attack_delay = 10*1000
 
 -- AFK Configuration (in milliseconds, but use values for minutes)
 -- Maximum time a player can stay away from keyboard before being kicked
@@ -156,15 +153,22 @@ max_idle_time = 16*60*1000
 max_idle_time_warning = 15*60*1000
 
 -- Exp Stages configuration is in /data/exp_stages.lua
-experience_stages = false
+experience_stages = true
 
 -- rates (experience, skill, magic level, loot and spawn)
 rate_exp = 1
 rate_exp_pvp = 0
-rate_skill = 1
-rate_mag = 1
-rate_loot = 1
+rate_skill = 8
+rate_mag = 2
+rate_loot = 5
 rate_spawn = 1
+
+-- Rookgaard system
+-- level_to_rook if player reach this level he is sento to newbie island at level 1
+level_to_rook = 0
+-- rook_temple_id newbie island temple id
+rook_temple_id = 1
+storage_sendrook = 31009
 
 -- What message should be sent for the player, after its own death? Use "" to disable.
 death_msg = "You are dead."
@@ -211,7 +215,7 @@ max_amount_items_inside_containers = 2000
 max_containers_inside_player_inventory = 100
 
 --maximal length for chains of containers (i.e, a container inside of a container which is inside of a container...)
-max_deepness_of_chain_of_containers = 100
+max_deepness_of_chain_of_containers = 500
 
 --should OTServ bind only global IP address ?
 bind_only_global_address = true
@@ -241,8 +245,8 @@ despawnrange = 2
 -- how many square metters can a monster be far from his spawn before despawning
 despawnradius = 50
 
---should players be able to hit invisible creatures using not AOE runes? (default: false)
-can_attack_invisible = false
+--should players be able to hit invisible creatures using not AOE runes? (default: true)
+can_attack_invisible = true
 
 --players with a level smaller than this number can't be attacked by other players. Set it to to 0 to disable
 min_pvp_level = 0
@@ -259,14 +263,14 @@ min_pvp_level_applies_to_summons = true
 push_interval = 2000
 
 -- How many milliseconds a player should wait until he can move another item after moving one (0 disables it)
-move_item_interval = 500
+move_item_interval = 100
 
 -- max number of messages a player can say before getting muted (default 4), set to 0 to disable muting
 maxmessagebuffer = 4
 
 -- if you doesn't wish to see errors like this: "Error: Expected an integer/boolean parameter"
 --(it means that you are missing an return somewhere but this is not so important and is just spamming your console on a production server) then set this to false
-lua_excepted_type_errors_enabled = true
+lua_excepted_type_errors_enabled = false
 
 -- motd (the message box that you sometimes get before you choose characters)
 motd = "Welcome to Guilcera."
@@ -277,7 +281,7 @@ loginmsg = "Welcome to Guilcera."
 
 -- how many logins attempts until ip is temporary disabled
 -- set to 0 to disable
-logintries = 25
+logintries = 0
 
 -- how long the retry timeout until a new login can be made (without disabling the ip)
 retrytimeout = 5000
@@ -295,7 +299,7 @@ allowclones = false
 checkaccounts = false
 
 -- max number of players allowed
-maxplayers = "100"
+maxplayers = "900"
 
 -- save client debug assertion reports
 -- to use this option you have to create file called client_assertions.txt and make sure after client crash to change IP to otserv one then click "send".
@@ -316,11 +320,11 @@ passwordsalt = ""
 
 -- House configuration (game_class)
 -- House tile price
-house_tile_price = 50
+house_tile_price = 20
 -- Only premium players can buy houses?
 house_only_premium = false
 -- Level to buy houses
-house_level = 10
+house_level = 30
 -- Show house price and its rent price when looking at its door?
 -- PS: This info is going to be shown just if house has no owner
 show_house_prices = true
@@ -330,8 +334,8 @@ show_house_prices = true
 sql_type = "mysql"
 
 -- SQL connection part (mysql, pgsql, odbc)
-sql_db   = "dbsample"
+sql_db   = "g410"
 sql_host = "127.0.0.1"
 sql_port = 3306
-sql_user = "usersample"
-sql_pass = "passsample"
+sql_user = "guilcera"
+sql_pass = "peonso"

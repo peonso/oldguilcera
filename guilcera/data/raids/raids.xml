@@ -1,2 +1,10 @@
-<?xml version="1.0"?>
-<raids/>
+<raids>
+
+	<!--
+		Every minute all raids are checked, raids in the top of the list are rolled first.
+		Margin is a cooldown, in minutes, before the raid can happen after last raid, 30 = 30 minutes, 600 = 10 hours, 1440 = 1 day.
+		Interval is the avarage amount of minutes needed for it to happen once, 1440 = 1/day, 10080 = 1/week, 20160 = 1/two weeks,
+		40320 = 1/month, 80640 = 1/two months, 241920 = 1/six months, 483840 = 1/year.
+	-->
+
+</raids>

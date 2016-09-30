@@ -3,6 +3,7 @@
 	<health now="225" max="225"/>
 	<look type="219" corpse="4320"/>
 	<targetchange interval="1000" chance="5"/>
+	<targetstrategies nearest="70" health="0" damage="30" random="0"/>
 	<flags>
 		<flag attackable="1"/>
 		<flag hostile="1"/>
@@ -18,16 +19,13 @@
 	</flags>
 	<attacks>
 		<attack name="melee" interval="2000" skill="40" attack="38" poison="30"/>
-		<attack name="poisonfield" interval="1000" chance="20" range="1">
+		<attack name="poisonfield" interval="2000" chance="20" range="1">
 			<attribute key="shootEffect" value="poison"/>
 			<attribute key="areaEffect" value="poff"/>
 		</attack>
 	</attacks>
 	<defenses armor="20" defense="20">
-		<defense name="speed" interval="1000" chance="13" speedchange="890" duration="2000">
-	    <!--<defense name="speed" interval="1000" chance="13" speedchange="190" duration="2000">-->
-			<attribute key="areaEffect" value="redshimmer"/>
-		</defense>
+		<defense name="haste_tarantula" interval="2000" chance="13"/>
 	</defenses>
 	<elements>
 		<element earthPercent="100"/>

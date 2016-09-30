@@ -1,2 +1,35 @@
 <?xml version="1.0"?>
-<houses />
+<houses>
+	<house name="Unnamed House #1" houseid="1" entryx="210" entryy="217" entryz="7" rent="0" townid="1" size="32" />
+	<house name="Unnamed House #2" houseid="2" entryx="202" entryy="223" entryz="7" rent="0" townid="1" size="17" />
+	<house name="Unnamed House #3" houseid="3" entryx="202" entryy="229" entryz="7" rent="0" townid="1" size="24" />
+	<house name="Unnamed House #4" houseid="4" entryx="202" entryy="235" entryz="7" rent="0" townid="1" size="23" />
+	<house name="Unnamed House #5" houseid="5" entryx="208" entryy="223" entryz="7" rent="0" townid="1" size="20" />
+	<house name="Unnamed House #6" houseid="6" entryx="208" entryy="229" entryz="7" rent="0" townid="1" size="23" />
+	<house name="Unnamed House #7" houseid="7" entryx="208" entryy="235" entryz="7" rent="0" townid="1" size="23" />
+	<house name="Unnamed House #8" houseid="8" entryx="206" entryy="240" entryz="7" rent="0" townid="1" size="46" />
+	<house name="Unnamed House #9" houseid="9" entryx="227" entryy="217" entryz="7" rent="0" townid="1" size="18" />
+	<house name="Unnamed House #10" houseid="10" entryx="235" entryy="225" entryz="7" rent="0" townid="1" size="15" />
+	<house name="Unnamed House #11" houseid="11" entryx="236" entryy="231" entryz="7" rent="0" townid="1" size="24" />
+	<house name="Unnamed House #12" houseid="12" entryx="412" entryy="413" entryz="7" rent="0" townid="5" size="12" />
+	<house name="Unnamed House #13" houseid="13" entryx="431" entryy="396" entryz="7" rent="0" townid="5" size="31" />
+	<house name="Unnamed House #14" houseid="14" entryx="440" entryy="381" entryz="7" rent="0" townid="5" size="8" />
+	<house name="Unnamed House #15" houseid="15" entryx="440" entryy="385" entryz="7" rent="0" townid="5" size="8" />
+	<house name="Unnamed House #16" houseid="16" entryx="440" entryy="390" entryz="7" rent="0" townid="5" size="9" />
+	<house name="Unnamed House #17" houseid="17" entryx="444" entryy="381" entryz="7" rent="0" townid="5" size="8" />
+	<house name="Unnamed House #18" houseid="18" entryx="444" entryy="385" entryz="7" rent="0" townid="5" size="8" />
+	<house name="Unnamed House #19" houseid="19" entryx="444" entryy="390" entryz="7" rent="0" townid="5" size="11" />
+	<house name="Unnamed House #20" houseid="20" entryx="455" entryy="392" entryz="7" rent="0" townid="5" size="14" />
+	<house name="Unnamed House #21" houseid="21" entryx="455" entryy="393" entryz="7" rent="0" townid="5" size="23" />
+	<house name="Unnamed House #22" houseid="22" entryx="455" entryy="392" entryz="6" rent="0" townid="5" size="41" />
+	<house name="Unnamed House #23" houseid="23" entryx="454" entryy="399" entryz="7" rent="0" townid="5" size="9" />
+	<house name="Unnamed House #24" houseid="24" entryx="454" entryy="406" entryz="7" rent="0" townid="5" size="10" />
+	<house name="Unnamed House #25" houseid="25" entryx="424" entryy="422" entryz="6" rent="0" townid="5" size="32" />
+	<house name="Unnamed House #26" houseid="26" entryx="421" entryy="432" entryz="6" rent="0" townid="5" size="13" />
+	<house name="Unnamed House #27" houseid="27" entryx="433" entryy="432" entryz="6" rent="0" townid="5" size="16" />
+	<house name="Unnamed House #28" houseid="28" entryx="433" entryy="441" entryz="6" rent="0" townid="5" size="15" />
+	<house name="Unnamed House #29" houseid="29" entryx="433" entryy="445" entryz="6" rent="0" townid="5" size="16" />
+	<house name="Unnamed House #30" houseid="30" entryx="431" entryy="450" entryz="6" rent="0" townid="5" size="17" />
+	<house name="Unnamed House #31" houseid="31" entryx="437" entryy="450" entryz="6" rent="0" townid="5" size="12" />
+	<house name="Unnamed House #32" houseid="32" entryx="460" entryy="447" entryz="7" rent="0" townid="5" size="75" />
+</houses>

@@ -1,0 +1,4 @@
+<npc name="Captain Gesior" script="default.lua" floorchange="0" walkinterval="1500" speed="100">
+	<health now="100" max="100"/>
+	<look type="129" head="58" body="41" legs="117" feet="76"/>
+</npc>

@@ -1,5 +1,4 @@
-<?xml version="1.0"?>
-<npc name="Insane" script="default.lua" walkinterval="2000" floorchange="0" idleinterval="30">
+<npc name="Insane" script="default.lua" floorchange="0" walkinterval="1500" speed="100">
 	<health now="100" max="100"/>
-	<look type="134" head="91" body="114" legs="41" feet="0"/>
+	<look type="134" head="94" body="79" legs="107" feet="0"/>
 </npc>

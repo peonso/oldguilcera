@@ -1,5 +1,4 @@
-<?xml version="1.0"?>
-<npc name="Jeska" script="default.lua" walkinterval="2000" floorchange="0" idleinterval="30">
+<npc name="Jeska" script="default.lua" floorchange="0" walkinterval="1500" speed="100">
 	<health now="100" max="100"/>
-	<look type="137" head="56" body="40" legs="76" feet="60"/>
+	<look type="142" head="59" body="57" legs="114" feet="97"/>
 </npc>

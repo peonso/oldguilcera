@@ -3,6 +3,7 @@
 	<health now="400" max="400"/>
 	<look type="37" head="0" body="0" legs="0" feet="0" corpse="2809"/>
 	<targetchange interval="1000" chance="5"/>
+	<targetstrategies nearest="70" health="0" damage="30" random="0"/>
 	<flags>
 		<flag attackable="1"/>
 		<flag hostile="1"/>
@@ -18,7 +19,7 @@
 	</flags>
 	<attacks>
 		<attack name="melee" interval="2000" skill="70" attack="45"/>
-		<attack name="lifedrain" interval="1000" chance="10" range="1" min="-30" max="-50"/>
+		<attack name="lifedrain" interval="2000" chance="10" range="1" min="-30" max="-50"/>
 	</attacks>
 	<defenses armor="25" defense="35">
 	</defenses>

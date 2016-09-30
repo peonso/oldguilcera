@@ -1,7 +1,7 @@
 local ITEM_CANDELABRUM_ON = 2057
 local ITEM_CANDELABRUM_OFF = 2041
 
-function onUse(cid, item, frompos, item2, topos)
+function onUse(cid, item, fromPosition, itemEx, toPosition)
 	
 	if (isInArray(DECAYTO_ITEM_INCREMENT, item.itemid) ) then
 		doTransformItem(item.uid, item.itemid + 1)

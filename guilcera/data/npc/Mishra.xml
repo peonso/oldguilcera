@@ -1,5 +1,4 @@
-<?xml version="1.0"?>
-<npc name="Mishra" script="default.lua" walkinterval="2000" floorchange="0" idleinterval="30">
+<npc name="Mishra" script="default.lua" floorchange="0" walkinterval="1500" speed="100">
 	<health now="100" max="100"/>
-	<look type="131" head="114" body="43" legs="6" feet="115"/>
+	<look type="65"/>
 </npc>

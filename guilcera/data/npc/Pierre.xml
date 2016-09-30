@@ -1,0 +1,4 @@
+<npc name="Pierre" script="default.lua" floorchange="0" walkinterval="1500" speed="100">
+	<health now="100" max="100"/>
+	<look type="131" head="126" body="57" legs="126" feet="0"/>
+</npc>

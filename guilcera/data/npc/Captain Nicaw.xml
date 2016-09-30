@@ -1,0 +1,4 @@
+<npc name="Captain Nicaw" script="default.lua" floorchange="0" walkinterval="1500" speed="100">
+	<health now="100" max="100"/>
+	<look type="129" head="115" body="122" legs="24" feet="76"/>
+</npc>

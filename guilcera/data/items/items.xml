@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <items>
 	<item id="100" name="void"/>
 	<item id="101" name="earth"/>
@@ -230,7 +230,7 @@
 	<item id="488" article="a" name="ramp"/>
 	<item id="489" article="a" name="hole">
 		<attribute key="floorchange" value="down"/>
-		<attribute key="decayTo" value="9059"/>
+		<attribute key="decayTo" value="231"/>
 		<attribute key="duration" value="30"/>
 	</item>
 	<item id="493" name="water">
@@ -683,30 +683,38 @@
 	<item id="1223" article="a" name="closed door">
 		<attribute key="type" value="door"/>
 		<attribute key="blockprojectile" value="1"/>
+		<attribute key="description" value="The door seems to be sealed against unwanted intruders."/>
 	</item>
 	<item id="1224" article="an" name="open door">
 		<attribute key="type" value="door"/>
+		<attribute key="description" value="The door seems to be sealed against unwanted intruders."/>
 	</item>
 	<item id="1225" article="a" name="closed door">
 		<attribute key="type" value="door"/>
 		<attribute key="blockprojectile" value="1"/>
+		<attribute key="description" value="The door seems to be sealed against unwanted intruders."/>
 	</item>
 	<item id="1226" article="an" name="open door">
 		<attribute key="type" value="door"/>
+		<attribute key="description" value="The door seems to be sealed against unwanted intruders."/>
 	</item>
 	<item id="1227" article="a" name="gate of expertise">
 		<attribute key="type" value="door"/>
 		<attribute key="blockprojectile" value="1"/>
+		<attribute key="description" value="Only the worthy may pass."/>
 	</item>
 	<item id="1228" article="a" name="gate of expertise">
 		<attribute key="type" value="door"/>
+		<attribute key="description" value="Only the worthy may pass."/>
 	</item>
 	<item id="1229" article="a" name="gate of expertise">
 		<attribute key="type" value="door"/>
 		<attribute key="blockprojectile" value="1"/>
+		<attribute key="description" value="Only the worthy may pass."/>
 	</item>
 	<item id="1230" article="a" name="gate of expertise">
 		<attribute key="type" value="door"/>
+		<attribute key="description" value="Only the worthy may pass."/>
 	</item>
 	<item id="1231" article="a" name="closed door" editorsuffix=" (Locked)">
 		<attribute key="type" value="door"/>
@@ -749,30 +757,38 @@
 	<item id="1241" article="a" name="closed door">
 		<attribute key="type" value="door"/>
 		<attribute key="blockprojectile" value="1"/>
+		<attribute key="description" value="The door seems to be sealed against unwanted intruders."/>
 	</item>
 	<item id="1242" article="an" name="open door">
 		<attribute key="type" value="door"/>
+		<attribute key="description" value="The door seems to be sealed against unwanted intruders."/>
 	</item>
 	<item id="1243" article="a" name="closed door">
 		<attribute key="type" value="door"/>
 		<attribute key="blockprojectile" value="1"/>
+		<attribute key="description" value="The door seems to be sealed against unwanted intruders."/>
 	</item>
 	<item id="1244" article="an" name="open door">
 		<attribute key="type" value="door"/>
+		<attribute key="description" value="The door seems to be sealed against unwanted intruders."/>
 	</item>
 	<item id="1245" article="a" name="gate of expertise">
 		<attribute key="type" value="door"/>
 		<attribute key="blockprojectile" value="1"/>
+		<attribute key="description" value="Only the worthy may pass."/>
 	</item>
 	<item id="1246" article="a" name="gate of expertise">
 		<attribute key="type" value="door"/>
+		<attribute key="description" value="Only the worthy may pass."/>
 	</item>
 	<item id="1247" article="a" name="gate of expertise">
 		<attribute key="type" value="door"/>
 		<attribute key="blockprojectile" value="1"/>
+		<attribute key="description" value="Only the worthy may pass."/>
 	</item>
 	<item id="1248" article="a" name="gate of expertise">
 		<attribute key="type" value="door"/>
+		<attribute key="description" value="Only the worthy may pass."/>
 	</item>
 	<item id="1249" article="a" name="closed door" editorsuffix=" (Locked)">
 		<attribute key="type" value="door"/>
@@ -801,30 +817,38 @@
 	<item id="1255" article="a" name="closed door">
 		<attribute key="type" value="door"/>
 		<attribute key="blockprojectile" value="1"/>
+		<attribute key="description" value="The door seems to be sealed against unwanted intruders."/>
 	</item>
 	<item id="1256" article="an" name="open door">
 		<attribute key="type" value="door"/>
+		<attribute key="description" value="The door seems to be sealed against unwanted intruders."/>
 	</item>
 	<item id="1257" article="a" name="closed door">
 		<attribute key="type" value="door"/>
 		<attribute key="blockprojectile" value="1"/>
+		<attribute key="description" value="The door seems to be sealed against unwanted intruders."/>
 	</item>
 	<item id="1258" article="an" name="open door">
 		<attribute key="type" value="door"/>
+		<attribute key="description" value="The door seems to be sealed against unwanted intruders."/>
 	</item>
 	<item id="1259" article="a" name="gate of expertise">
 		<attribute key="type" value="door"/>
 		<attribute key="blockprojectile" value="1"/>
+		<attribute key="description" value="Only the worthy may pass."/>
 	</item>
 	<item id="1260" article="a" name="gate of expertise">
 		<attribute key="type" value="door"/>
+		<attribute key="description" value="Only the worthy may pass."/>
 	</item>
 	<item id="1261" article="a" name="gate of expertise">
 		<attribute key="type" value="door"/>
 		<attribute key="blockprojectile" value="1"/>
+		<attribute key="description" value="Only the worthy may pass."/>
 	</item>
 	<item id="1262" article="a" name="gate of expertise">
 		<attribute key="type" value="door"/>
+		<attribute key="description" value="Only the worthy may pass."/>
 	</item>
 	<item id="1263" article="a" name="framework window"/>
 	<item id="1264" article="a" name="framework window"/>
@@ -1057,6 +1081,7 @@
 	<item id="1421" article="a" name="campfire"/>
 	<item id="1422" article="a" name="campfire"/>
 	<item id="1423" article="a" name="campfire">
+		<attribute key="replaceable" value="0"/>
 		<attribute key="field" value="fire">
 			<attribute key="damage" value="20"/>
 			<attribute key="ticks" value="4000"/>
@@ -1065,6 +1090,7 @@
 		</attribute>
 	</item>
 	<item id="1424" article="a" name="campfire">
+		<attribute key="replaceable" value="0"/>
 		<attribute key="field" value="fire">
 			<attribute key="damage" value="20"/>
 			<attribute key="ticks" value="4000"/>
@@ -1073,6 +1099,7 @@
 		</attribute>
 	</item>
 	<item id="1425" article="a" name="campfire">
+		<attribute key="replaceable" value="0"/>
 		<attribute key="field" value="fire">
 			<attribute key="damage" value="20"/>
 			<attribute key="ticks" value="4000"/>
@@ -1613,7 +1640,7 @@
 	<item id="1682" article="a" name="small orange pillow">
 		<attribute key="weight" value="1500"/>
 	</item>
-	<item id="1683" article="a" name="small turqoise pillow">
+	<item id="1683" article="a" name="small turquoise pillow">
 		<attribute key="weight" value="1500"/>
 	</item>
 	<item id="1684" article="a" name="small white pillow">
@@ -1643,7 +1670,7 @@
 	<item id="1692" article="a" name="round purple pillow">
 		<attribute key="weight" value="1550"/>
 	</item>
-	<item id="1693" article="a" name="round turqoise pillow">
+	<item id="1693" article="a" name="round turquoise pillow">
 		<attribute key="weight" value="1550"/>
 	</item>
 	<item id="1694" article="a" name="couch"/>
@@ -1823,49 +1850,42 @@
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerDirection" value="south" />
 		<attribute key="maleSleeper" value="1762" />
-		<attribute key="femaleSleeper" value="7778" />
 	</item>
 	<item id="1755" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerDirection" value="north" />
 		<attribute key="maleSleeper" value="1763" />
-		<attribute key="femaleSleeper" value="8075" />
+
 	</item>
 	<item id="1756" article="a" name="cot">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerDirection" value="east" />
 		<attribute key="maleSleeper" value="1768" />
-		<attribute key="femaleSleeper" value="7783" />
 	</item>
 	<item id="1757" article="a" name="cot">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerDirection" value="west" />
 		<attribute key="maleSleeper" value="1769" />
-		<attribute key="femaleSleeper" value="7784" />
 	</item>
 	<item id="1758" article="a" name="cot">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerDirection" value="south"/>
 		<attribute key="maleSleeper" value="1766" />
-		<attribute key="femaleSleeper" value="7781" />
 	</item>
 	<item id="1759" article="a" name="cot">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerDirection" value="north" />
 		<attribute key="maleSleeper" value="1767" />
-		<attribute key="femaleSleeper" value="7782" />
 	</item>
 	<item id="1760" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerDirection" value="east" />
 		<attribute key="maleSleeper" value="1764" />
-		<attribute key="femaleSleeper" value="7779" />
 	</item>
 	<item id="1761" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerDirection" value="west" />
 		<attribute key="maleSleeper" value="1765" />
-		<attribute key="femaleSleeper" value="7780" />
 	</item>
 	<item id="1762" article="a" name="bed">
 		<attribute key="type" value="bed"/>
@@ -2197,10 +2217,7 @@
 		<attribute key="maxTextLen" value="512"/>
 	</item>
 	<item id="1950" article="a" name="book">
-		<attribute key="writeable" value="1"/>
-		<attribute key="maxTextLen" value="512"/>
 		<attribute key="weight" value="1300"/>
-		<attribute key="writeOnceItemId" value="1971"/>
 	</item>
 	<item id="1951" article="a" name="parchment">
 		<attribute key="weight" value="200"/>
@@ -2221,10 +2238,7 @@
 		<attribute key="weight" value="50"/>
 	</item>
 	<item id="1955" article="a" name="book">
-		<attribute key="writeable" value="1"/>
-		<attribute key="maxTextLen" value="512"/>
 		<attribute key="weight" value="1300"/>
-		<attribute key="writeOnceItemId" value="1972"/>
 	</item>
 	<item id="1956" article="a" name="map">
 		<attribute key="weight" value="830"/>
@@ -2233,63 +2247,43 @@
 		<attribute key="weight" value="790"/>
 	</item>
 	<item id="1958" article="a" name="book">
-		<attribute key="writeable" value="1"/>
-		<attribute key="maxTextLen" value="512"/>
 		<attribute key="weight" value="1300"/>
-		<attribute key="writeOnceItemId" value="1973"/>
 	</item>
 	<item id="1959" article="a" name="book">
-		<attribute key="writeable" value="1"/>
-		<attribute key="maxTextLen" value="512"/>
 		<attribute key="weight" value="1300"/>
-		<attribute key="writeOnceItemId" value="1974"/>
 	</item>
 	<item id="1960" article="a" name="book">
-		<attribute key="writeable" value="1"/>
-		<attribute key="maxTextLen" value="512"/>
 		<attribute key="weight" value="1300"/>
-		<attribute key="writeOnceItemId" value="1975"/>
 	</item>
 	<item id="1961" article="a" name="book">
-		<attribute key="writeable" value="1"/>
-		<attribute key="maxTextLen" value="512"/>
 		<attribute key="weight" value="1300"/>
 	</item>
 	<item id="1962" article="a" name="book">
-		<attribute key="writeable" value="1"/>
-		<attribute key="maxTextLen" value="512"/>
 		<attribute key="weight" value="1300"/>
-		<attribute key="writeOnceItemId" value="1977"/>
 	</item>
 	<item id="1963" article="a" name="book">
-		<attribute key="writeable" value="1"/>
-		<attribute key="maxTextLen" value="512"/>
 		<attribute key="weight" value="1300"/>
-		<attribute key="writeOnceItemId" value="1978"/>
 	</item>
 	<item id="1964" article="a" name="book">
-		<attribute key="writeable" value="1"/>
-		<attribute key="maxTextLen" value="512"/>
 		<attribute key="weight" value="1300"/>
-		<attribute key="writeOnceItemId" value="1979"/>
 	</item>
 	<item id="1965" article="a" name="book">
-		<attribute key="writeable" value="1"/>
-		<attribute key="maxTextLen" value="512"/>
 		<attribute key="weight" value="1300"/>
-		<attribute key="writeOnceItemId" value="1980"/>
 	</item>
 	<item id="1966" article="a" name="book">
-		<attribute key="writeable" value="1"/>
-		<attribute key="maxTextLen" value="512"/>
 		<attribute key="weight" value="1300"/>
-		<attribute key="writeOnceItemId" value="1981"/>
 	</item>
 	<item id="1967" article="a" name="parchment">
 		<attribute key="weight" value="200"/>
+		<attribute key="writeable" value="1"/>
+		<attribute key="maxTextLen" value="512"/>
+		<attribute key="writeOnceItemId" value="1967"/>
 	</item>
 	<item id="1968" article="a" name="document">
 		<attribute key="weight" value="150"/>
+		<attribute key="writeable" value="1"/>
+		<attribute key="maxTextLen" value="512"/>
+		<attribute key="writeOnceItemId" value="1968"/>
 	</item>
 	<item id="1969" article="a" name="parchment">
 		<attribute key="writeable" value="1"/>
@@ -2300,39 +2294,69 @@
 		<attribute key="weight" value="1300"/>
 	</item>
 	<item id="1971" article="a" name="book">
+		<attribute key="writeable" value="1"/>
+		<attribute key="maxTextLen" value="512"/>
 		<attribute key="weight" value="1300"/>
+		<attribute key="writeOnceItemId" value="1950"/>
 	</item>
 	<item id="1972" article="a" name="book">
+		<attribute key="writeable" value="1"/>
+		<attribute key="maxTextLen" value="512"/>
 		<attribute key="weight" value="1300"/>
+		<attribute key="writeOnceItemId" value="1955"/>
 	</item>
 	<item id="1973" article="a" name="book">
+		<attribute key="writeable" value="1"/>
+		<attribute key="maxTextLen" value="512"/>
 		<attribute key="weight" value="1300"/>
+		<attribute key="writeOnceItemId" value="1958"/>
 	</item>
 	<item id="1974" article="a" name="book">
+		<attribute key="writeable" value="1"/>
+		<attribute key="maxTextLen" value="512"/>
 		<attribute key="weight" value="1300"/>
+		<attribute key="writeOnceItemId" value="1959"/>
 	</item>
 	<item id="1975" article="a" name="book">
+		<attribute key="writeable" value="1"/>
+		<attribute key="maxTextLen" value="512"/>
 		<attribute key="weight" value="1300"/>
+		<attribute key="writeOnceItemId" value="1960"/>
 	</item>
-	<item id="1976" article="a" name="gemmed book">
+	<item id="1976" article="a" name="T book">
 		<attribute key="writeable" value="1"/>
 		<attribute key="maxTextLen" value="1100"/>
 		<attribute key="weight" value="1300"/>
 	</item>
 	<item id="1977" article="a" name="book">
+		<attribute key="writeable" value="1"/>
+		<attribute key="maxTextLen" value="512"/>
 		<attribute key="weight" value="1300"/>
+		<attribute key="writeOnceItemId" value="1962"/>
 	</item>
 	<item id="1978" article="a" name="book">
+		<attribute key="writeable" value="1"/>
+		<attribute key="maxTextLen" value="512"/>
 		<attribute key="weight" value="1300"/>
+		<attribute key="writeOnceItemId" value="1963"/>
 	</item>
 	<item id="1979" article="a" name="book">
+		<attribute key="writeable" value="1"/>
+		<attribute key="maxTextLen" value="512"/>
 		<attribute key="weight" value="1300"/>
+		<attribute key="writeOnceItemId" value="1964"/>
 	</item>
 	<item id="1980" article="a" name="book">
+		<attribute key="writeable" value="1"/>
+		<attribute key="maxTextLen" value="512"/>
 		<attribute key="weight" value="1300"/>
+		<attribute key="writeOnceItemId" value="1965"/>
 	</item>
 	<item id="1981" article="a" name="book">
+		<attribute key="writeable" value="1"/>
+		<attribute key="maxTextLen" value="512"/>
 		<attribute key="weight" value="1300"/>
+		<attribute key="writeOnceItemId" value="1966"/>
 	</item>
 	<item id="1982" article="a" name="purple tome">
 		<attribute key="weight" value="1900"/>
@@ -2756,7 +2780,7 @@
 	</item>
 	<item id="2111" article="a" name="snowball" plural="snowballs">
 		<attribute key="weight" value="80"/>
-		<attribute key="attack" value="1"/>
+		<attribute key="attack" value="0"/>
 		<attribute key="weaponType" value="distance"/>
 		<attribute key="shootType" value="snowball"/>
 		<attribute key="range" value="5"/>
@@ -2855,7 +2879,6 @@
 	</item>
 	<item id="2138" article="a" name="sapphire amulet">
 		<attribute key="weight" value="5200"/>
-		<attribute key="armor" value="3"/>
 		<attribute key="slotType" value="necklace"/>
 	</item>
 	<item id="2139" article="an" name="ancient tiara">
@@ -3044,7 +3067,7 @@
 		<attribute key="weight" value="2500"/>
 		<attribute key="weaponType" value="wand"/>
 		<attribute key="shootType" value="poison"/>
-		<attribute key="range" value="3"/>
+		<attribute key="range" value="2"/>
 	</item>
 	<item id="2182" article="a" name="snakebite rod">
 		<attribute key="weight" value="1900"/>
@@ -3056,7 +3079,7 @@
 		<attribute key="weight" value="2700"/>
 		<attribute key="weaponType" value="wand"/>
 		<attribute key="shootType" value="energy"/>
-		<attribute key="range" value="3"/>
+		<attribute key="range" value="1"/>
 	</item>
 	<item id="2184" article="a" name="crystal wand">
 		<attribute key="weight" value="2800"/>
@@ -3077,13 +3100,13 @@
 		<attribute key="weight" value="2700"/>
 		<attribute key="weaponType" value="wand"/>
 		<attribute key="shootType" value="fire"/>
-		<attribute key="range" value="3"/>
+		<attribute key="range" value="2"/>
 	</item>
 	<item id="2188" article="a" name="wand of plague">
 		<attribute key="weight" value="2300"/>
 		<attribute key="weaponType" value="wand"/>
 		<attribute key="shootType" value="poison"/>
-		<attribute key="range" value="3"/>
+		<attribute key="range" value="2"/>
 	</item>
 	<item id="2189" article="a" name="wand of cosmic energy">
 		<attribute key="weight" value="2500"/>
@@ -3421,14 +3444,14 @@
 	<item id="2261" article="a" name="destroy field rune">
 		<attribute key="type" value="rune"/>
 		<attribute key="runeSpellName" value="adito grav"/>
-		<attribute key="weight" value="70"/>
+		<attribute key="weight" value="120"/>
 		<attribute key="charges" value="3"/>
 		<attribute key="showcharges" value="1"/>
 	</item>
 	<item id="2262" article="an" name="energy bomb rune">
 		<attribute key="type" value="rune"/>
 		<attribute key="runeSpellName" value="adevo mas vis"/>
-		<attribute key="weight" value="105"/>
+		<attribute key="weight" value="120"/>
 		<attribute key="charges" value="2"/>
 		<attribute key="showcharges" value="1"/>
 	</item>
@@ -3443,14 +3466,16 @@
 	<item id="2265" article="an" name="intense healing rune">
 		<attribute key="type" value="rune"/>
 		<attribute key="runeSpellName" value="adura gran"/>
-		<attribute key="weight" value="210"/>
+		<attribute key="weight" value="120"/>
 		<attribute key="charges" value="1"/>
+		<attribute key="showcharges" value="1"/>
 	</item>
 	<item id="2266" article="an" name="antidote rune">
 		<attribute key="type" value="rune"/>
 		<attribute key="runeSpellName" value="adana pox"/>
-		<attribute key="weight" value="210"/>
+		<attribute key="weight" value="120"/>
 		<attribute key="charges" value="1"/>
+		<attribute key="showcharges" value="1"/>
 	</item>
 	<item id="2267" article="a" name="spell rune">
 		<attribute key="type" value="rune"/>
@@ -3458,15 +3483,15 @@
 	</item>
 	<item id="2268" article="a" name="sudden death rune">
 		<attribute key="type" value="rune"/>
-		<attribute key="runeSpellName" value="adori gran mort"/>
-		<attribute key="weight" value="70"/>
-		<attribute key="charges" value="3"/>
+		<attribute key="runeSpellName" value="adori vita vis"/>
+		<attribute key="weight" value="120"/>
+		<attribute key="charges" value="1"/>
 		<attribute key="showcharges" value="1"/>
 	</item>
 	<item id="2269" article="a" name="wild growth rune">
 		<attribute key="type" value="rune"/>
 		<attribute key="runeSpellName" value="adevo grav vita"/>
-		<attribute key="weight" value="105"/>
+		<attribute key="weight" value="120"/>
 		<attribute key="charges" value="2"/>
 		<attribute key="showcharges" value="1"/>
 	</item>
@@ -3477,8 +3502,9 @@
 	<item id="2271" article="an" name="icicle rune">
 		<attribute key="type" value="rune"/>
 		<attribute key="runeSpellName" value="adori frigo"/>
-		<attribute key="weight" value="42"/>
+		<attribute key="weight" value="120"/>
 		<attribute key="charges" value="5"/>
+		<attribute key="showcharges" value="1"/>
 	</item>
 	<item id="2272" article="a" name="spell rune">
 		<attribute key="type" value="rune"/>
@@ -3487,13 +3513,14 @@
 	<item id="2273" article="an" name="ultimate healing rune">
 		<attribute key="type" value="rune"/>
 		<attribute key="runeSpellName" value="adura vita"/>
-		<attribute key="weight" value="210"/>
+		<attribute key="weight" value="120"/>
 		<attribute key="charges" value="1"/>
+		<attribute key="showcharges" value="1"/>
 	</item>
 	<item id="2274" article="an" name="avalanche rune">
 		<attribute key="type" value="rune"/>
 		<attribute key="runeSpellName" value="adori mas frigo"/>
-		<attribute key="weight" value="52"/>
+		<attribute key="weight" value="120"/>
 		<attribute key="charges" value="4"/>
 		<attribute key="showcharges" value="1"/>
 	</item>
@@ -3508,20 +3535,21 @@
 	<item id="2277" article="an" name="energy field rune">
 		<attribute key="type" value="rune"/>
 		<attribute key="runeSpellName" value="adevo grav vis"/>
-		<attribute key="weight" value="70"/>
+		<attribute key="weight" value="120"/>
 		<attribute key="charges" value="3"/>
 		<attribute key="showcharges" value="1"/>
 	</item>
 	<item id="2278" article="a" name="paralyze rune">
 		<attribute key="type" value="rune"/>
 		<attribute key="runeSpellName" value="adana ani"/>
-		<attribute key="weight" value="210"/>
+		<attribute key="weight" value="120"/>
 		<attribute key="charges" value="1"/>
+		<attribute key="showcharges" value="1"/>
 	</item>
 	<item id="2279" article="an" name="energy wall rune">
 		<attribute key="type" value="rune"/>
 		<attribute key="runeSpellName" value="adevo mas grav vis"/>
-		<attribute key="weight" value="52"/>
+		<attribute key="weight" value="120"/>
 		<attribute key="charges" value="4"/>
 		<attribute key="showcharges" value="1"/>
 	</item>
@@ -3548,61 +3576,63 @@
 	<item id="2285" article="a" name="poison field rune">
 		<attribute key="type" value="rune"/>
 		<attribute key="runeSpellName" value="adevo grav pox"/>
-		<attribute key="weight" value="70"/>
+		<attribute key="weight" value="120"/>
 		<attribute key="charges" value="3"/>
 		<attribute key="showcharges" value="1"/>
 	</item>
 	<item id="2286" article="a" name="poison bomb rune">
 		<attribute key="type" value="rune"/>
 		<attribute key="runeSpellName" value="adevo mas pox"/>
-		<attribute key="weight" value="105"/>
+		<attribute key="weight" value="120"/>
 		<attribute key="charges" value="2"/>
 		<attribute key="showcharges" value="1"/>
 	</item>
 	<item id="2287" article="a" name="light magic missile rune">
 		<attribute key="type" value="rune"/>
-		<attribute key="runeSpellName" value="adori min vis"/>
-		<attribute key="weight" value="21"/>
-		<attribute key="charges" value="10"/>
+		<attribute key="runeSpellName" value="adori"/>
+		<attribute key="weight" value="120"/>
+		<attribute key="charges" value="5"/>
 		<attribute key="showcharges" value="1"/>
 	</item>
 	<item id="2288" article="a" name="stone shower rune">
 		<attribute key="type" value="rune"/>
 		<attribute key="runeSpellName" value="adori mas tera"/>
-		<attribute key="weight" value="52"/>
+		<attribute key="weight" value="120"/>
 		<attribute key="charges" value="4"/>
 		<attribute key="showcharges" value="1"/>
 	</item>
 	<item id="2289" article="a" name="poison wall rune">
 		<attribute key="type" value="rune"/>
 		<attribute key="runeSpellName" value="adevo mas grav pox"/>
-		<attribute key="weight" value="52"/>
+		<attribute key="weight" value="120"/>
 		<attribute key="charges" value="4"/>
 		<attribute key="showcharges" value="1"/>
 	</item>
 	<item id="2290" article="a" name="convince creature rune">
 		<attribute key="type" value="rune"/>
 		<attribute key="runeSpellName" value="adeta sio"/>
-		<attribute key="weight" value="210"/>
+		<attribute key="weight" value="120"/>
 		<attribute key="charges" value="1"/>
+		<attribute key="showcharges" value="1"/>
 	</item>
 	<item id="2291" article="a" name="chameleon rune">
 		<attribute key="type" value="rune"/>
 		<attribute key="runeSpellName" value="adevo ina"/>
-		<attribute key="weight" value="210"/>
+		<attribute key="weight" value="120"/>
 		<attribute key="charges" value="1"/>
+		<attribute key="showcharges" value="1"/>
 	</item>
-	<item id="2292" article="a" name="stalagmite rune">
-		<attribute key="type" value="rune"/>
-		<attribute key="runeSpellName" value="adori tera"/>
-		<attribute key="weight" value="21"/>
-		<attribute key="charges" value="10"/>
+	<item id="2292" article="a" name="envenom rune">
+		<attribute key="type" value="rune" />
+		<attribute key="runeSpellName" value="adevo res pox" />
+		<attribute key="weight" value="120" />
+		<attribute key="charges" value="3" />
 		<attribute key="showcharges" value="1"/>
 	</item>
 	<item id="2293" article="a" name="magic wall rune">
 		<attribute key="type" value="rune"/>
 		<attribute key="runeSpellName" value="adevo grav tera"/>
-		<attribute key="weight" value="70"/>
+		<attribute key="weight" value="120"/>
 		<attribute key="charges" value="3"/>
 		<attribute key="showcharges" value="1"/>
 	</item>
@@ -3613,7 +3643,7 @@
 	<item id="2295" article="a" name="holy missile rune">
 		<attribute key="type" value="rune"/>
 		<attribute key="runeSpellName" value="adori san"/>
-		<attribute key="weight" value="42"/>
+		<attribute key="weight" value="120"/>
 		<attribute key="charges" value="5"/>
 		<attribute key="showcharges" value="1"/>
 	</item>
@@ -3640,35 +3670,35 @@
 	<item id="2301" article="a" name="fire field rune">
 		<attribute key="type" value="rune"/>
 		<attribute key="runeSpellName" value="adevo grav flam"/>
-		<attribute key="weight" value="70"/>
+		<attribute key="weight" value="120"/>
 		<attribute key="charges" value="3"/>
 		<attribute key="showcharges" value="1"/>
 	</item>
 	<item id="2302" article="a" name="fireball rune">
 		<attribute key="type" value="rune"/>
 		<attribute key="runeSpellName" value="adori flam"/>
-		<attribute key="weight" value="42"/>
-		<attribute key="charges" value="5"/>
+		<attribute key="weight" value="120"/>
+		<attribute key="charges" value="3"/>
 		<attribute key="showcharges" value="1"/>
 	</item>
 	<item id="2303" article="a" name="fire wall rune">
 		<attribute key="type" value="rune"/>
 		<attribute key="runeSpellName" value="adevo mas grav flam"/>
-		<attribute key="weight" value="52"/>
+		<attribute key="weight" value="120"/>
 		<attribute key="charges" value="4"/>
 		<attribute key="showcharges" value="1"/>
 	</item>
 	<item id="2304" article="a" name="great fireball rune">
 		<attribute key="type" value="rune"/>
-		<attribute key="runeSpellName" value="adori mas flam"/>
-		<attribute key="weight" value="52"/>
-		<attribute key="charges" value="4"/>
+		<attribute key="runeSpellName" value="adori gran flam"/>
+		<attribute key="weight" value="120"/>
+		<attribute key="charges" value="2"/>
 		<attribute key="showcharges" value="1"/>
 	</item>
 	<item id="2305" article="a" name="fire bomb rune">
 		<attribute key="type" value="rune"/>
 		<attribute key="runeSpellName" value="adevo mas flam"/>
-		<attribute key="weight" value="105"/>
+		<attribute key="weight" value="120"/>
 		<attribute key="charges" value="2"/>
 		<attribute key="showcharges" value="1"/>
 	</item>
@@ -3683,8 +3713,8 @@
 	<item id="2308" article="a" name="soulfire rune">
 		<attribute key="type" value="rune"/>
 		<attribute key="runeSpellName" value="adevo res flam"/>
-		<attribute key="weight" value="70"/>
-		<attribute key="charges" value="3"/>
+		<attribute key="weight" value="120"/>
+		<attribute key="charges" value="2"/>
 		<attribute key="showcharges" value="1"/>
 	</item>
 	<item id="2309" article="a" name="spell rune">
@@ -3694,15 +3724,15 @@
 	<item id="2310" article="a" name="desintegrate rune">
 		<attribute key="type" value="rune"/>
 		<attribute key="runeSpellName" value="adito tera"/>
-		<attribute key="weight" value="70"/>
+		<attribute key="weight" value="120"/>
 		<attribute key="charges" value="3"/>
 		<attribute key="showcharges" value="1"/>
 	</item>
 	<item id="2311" article="a" name="heavy magic missile rune">
 		<attribute key="type" value="rune"/>
-		<attribute key="runeSpellName" value="adori vis"/>
-		<attribute key="weight" value="21"/>
-		<attribute key="charges" value="10"/>
+		<attribute key="runeSpellName" value="adori gran"/>
+		<attribute key="weight" value="120"/>
+		<attribute key="charges" value="5"/>
 		<attribute key="showcharges" value="1"/>
 	</item>
 	<item id="2312" article="a" name="spell rune">
@@ -3712,8 +3742,8 @@
 	<item id="2313" article="an" name="explosion rune">
 		<attribute key="type" value="rune"/>
 		<attribute key="runeSpellName" value="adevo mas hur"/>
-		<attribute key="weight" value="35"/>
-		<attribute key="charges" value="6"/>
+		<attribute key="weight" value="120"/>
+		<attribute key="charges" value="3"/>
 		<attribute key="showcharges" value="1"/>
 	</item>
 	<item id="2314" article="a" name="spell rune">
@@ -3723,15 +3753,16 @@
 	<item id="2315" article="a" name="thunderstorm rune">
 		<attribute key="type" value="rune"/>
 		<attribute key="runeSpellName" value="adori mas vis"/>
-		<attribute key="weight" value="52"/>
+		<attribute key="weight" value="120"/>
 		<attribute key="charges" value="4"/>
 		<attribute key="showcharges" value="1"/>
 	</item>
 	<item id="2316" article="an" name="animate dead rune">
 		<attribute key="type" value="rune"/>
 		<attribute key="runeSpellName" value="adana mort"/>
-		<attribute key="weight" value="210"/>
-		<attribute key="charges" value="1"/>
+		<attribute key="weight" value="120"/>
+		<attribute key="charges" value="2"/>
+		<attribute key="showcharges" value="1"/>
 	</item>
 	<item id="2317" article="a" name="dead human"/>
 	<item id="2318" article="a" name="family brooch">
@@ -3741,8 +3772,8 @@
 	<item id="2319" article="a" name="dragonfetish">
 		<attribute key="weight" value="490"/>
 	</item>
-	<item id="2320" article="a" name="skull" plural="skulls">
-		<attribute key="weight" value="2180"/>
+	<item id="2320" article="a" name="skull of Ratha" plural="skulls of Ratha">
+		<attribute key="weight" value="2180" />
 	</item>
 	<item id="2321" article="a" name="giant smithhammer">
 		<attribute key="description" value="This cyclopean hammer seems to be an awesome smithing tool."/>
@@ -3759,7 +3790,6 @@
 		<attribute key="description" value="You have a vague feeling that it looks somewhat silly."/>
 		<attribute key="weight" value="700"/>
 		<attribute key="armor" value="3"/>
-		<attribute key="magicpoints" value="1"/>
 		<attribute key="slotType" value="head"/>
 	</item>
 	<item id="2324" article="a" name="broom">
@@ -4375,7 +4405,7 @@
 		<attribute key="weaponType" value="club"/>
 	</item>
 	<item id="2437" article="a" name="light mace">
-		<attribute key="weight" value="5000"/>
+		<attribute key="weight" value="4100"/>
 		<attribute key="defense" value="9"/>
 		<attribute key="attack" value="14"/>
 		<attribute key="weaponType" value="club"/>
@@ -4398,6 +4428,12 @@
 		<attribute key="attack" value="39"/>
 		<attribute key="weaponType" value="axe"/>
 		<attribute key="slotType" value="two-handed"/>
+	</item>
+	<item id="2441" article="a" name="daramian axe">
+		<attribute key="weight" value="4100" />
+		<attribute key="defense" value="8" />
+		<attribute key="attack" value="17" />
+		<attribute key="weaponType" value="axe" />
 	</item>
 	<item id="2442" article="a" name="heavy machete">
 		<attribute key="weight" value="1840"/>
@@ -4747,20 +4783,26 @@
 		<attribute key="armor" value="7"/>
 		<attribute key="slotType" value="legs"/>
 	</item>
+	<item id="2505" article="an" name="elven mail">
+		<attribute key="weight" value="9000" />
+		<attribute key="armor" value="9" />
+		<attribute key="slotType" value="body" />
+	</item>
 	<item id="2506" article="a" name="dragon scale helmet">
 		<attribute key="description" value="It is made of dragon scales."/>
 		<attribute key="weight" value="6000"/>
-		<attribute key="armor" value="10"/>
+		<attribute key="armor" value="9"/>
 		<attribute key="slotType" value="head"/>
 	</item>
-	<item id="2507" name="ranger legs">
+	<item id="2507" name="elven legs">
 		<attribute key="weight" value="3500"/>
 		<attribute key="armor" value="4"/>
 		<attribute key="slotType" value="legs"/>
 	</item>
-	<item id="2508" article="a" name="native armor" editorsuffix=" (Unknown weight)">
-		<attribute key="slotType" value="body"/>
-		<attribute key="armor" value="7"/>
+	<item id="2508" article="a" name="native armor">
+		<attribute key="weight" value="8000" />
+		<attribute key="slotType" value="body" />
+		<attribute key="armor" value="7" />
 	</item>
 	<item id="2509" article="a" name="steel shield">
 		<attribute key="weight" value="6900"/>
@@ -5243,8 +5285,7 @@
 	<item id="2640" article="a" name="pair of soft boots">
 		<attribute key="weight" value="800"/>
 		<attribute key="slotType" value="feet"/>
-		<attribute key="decayTo" value="10021"/>
-		<attribute key="transformDeEquipTo" value="6132"/>
+		<attribute key="decayTo" value="2238"/>
 		<attribute key="duration" value="14400"/>
 		<attribute key="healthGain" value="1"/>
 		<attribute key="healthTicks" value="2000"/>
@@ -5322,6 +5363,7 @@
 	</item>
 	<item id="2655" article="a" name="red robe">
 		<attribute key="weight" value="2600"/>
+		<attribute key="description" value="The robe is artfully embroideredy." />
 		<attribute key="armor" value="1"/>
 		<attribute key="slotType" value="body"/>
 	</item>
@@ -5364,6 +5406,11 @@
 		<attribute key="weight" value="850"/>
 		<attribute key="armor" value="1"/>
 		<attribute key="slotType" value="head"/>
+	</item>
+	<item id="2664" article="a" name="wood cape">
+		<attribute key="weight" value="1100" />
+		<attribute key="armor" value="2" />
+		<attribute key="slotType" value="head" />
 	</item>
 	<item id="2665" article="a" name="post officers hat">
 		<attribute key="description" value="This hat is the insignia of all tibian post officers."/>
@@ -7980,16 +8027,20 @@
 	<item id="3540" article="a" name="gate of expertise">
 		<attribute key="type" value="door"/>
 		<attribute key="blockprojectile" value="1"/>
+		<attribute key="description" value="Only the worthy may pass."/>
 	</item>
 	<item id="3541" article="a" name="gate of expertise">
 		<attribute key="type" value="door"/>
+		<attribute key="description" value="Only the worthy may pass."/>
 	</item>
 	<item id="3542" article="a" name="closed door">
 		<attribute key="type" value="door"/>
 		<attribute key="blockprojectile" value="1"/>
+		<attribute key="description" value="The door seems to be sealed against unwanted intruders."/>
 	</item>
 	<item id="3543" article="an" name="open door">
 		<attribute key="type" value="door"/>
+		<attribute key="description" value="The door seems to be sealed against unwanted intruders."/>
 	</item>
 	<item id="3544" article="a" name="closed door" editorsuffix=" (Locked)">
 		<attribute key="type" value="door"/>
@@ -8013,16 +8064,20 @@
 	<item id="3549" article="a" name="gate of expertise">
 		<attribute key="type" value="door"/>
 		<attribute key="blockprojectile" value="1"/>
+		<attribute key="description" value="Only the worthy may pass."/>
 	</item>
 	<item id="3550" article="a" name="gate of expertise">
 		<attribute key="type" value="door"/>
+		<attribute key="description" value="Only the worthy may pass."/>
 	</item>
 	<item id="3551" article="a" name="closed door">
 		<attribute key="type" value="door"/>
 		<attribute key="blockprojectile" value="1"/>
+		<attribute key="description" value="The door seems to be sealed against unwanted intruders."/>
 	</item>
 	<item id="3552" article="an" name="open door">
 		<attribute key="type" value="door"/>
+		<attribute key="description" value="The door seems to be sealed against unwanted intruders."/>
 	</item>
 	<item id="3569" article="a" name="waterfall"/>
 	<item id="3570" article="a" name="waterfall"/>
@@ -9841,36 +9896,48 @@
 		<attribute key="fluidSource" value="water"/>
 	</item>
 	<item id="4620" name="shallow water">
+		<attribute key="decayTo" value="4611"/>
+		<attribute key="duration" value="1200"/>
 		<attribute key="type" value="trashholder"/>
 		<attribute key="effect" value="bluebubble"/>
 		<attribute key="allowpickupable" value="1"/>
 		<attribute key="fluidSource" value="water"/>
 	</item>
 	<item id="4621" name="shallow water">
+		<attribute key="decayTo" value="4612"/>
+		<attribute key="duration" value="1200"/>
 		<attribute key="type" value="trashholder"/>
 		<attribute key="effect" value="bluebubble"/>
 		<attribute key="allowpickupable" value="1"/>
 		<attribute key="fluidSource" value="water"/>
 	</item>
 	<item id="4622" name="shallow water">
+		<attribute key="decayTo" value="4613"/>
+		<attribute key="duration" value="1200"/>
 		<attribute key="type" value="trashholder"/>
 		<attribute key="effect" value="bluebubble"/>
 		<attribute key="allowpickupable" value="1"/>
 		<attribute key="fluidSource" value="water"/>
 	</item>
 	<item id="4623" name="shallow water">
+		<attribute key="decayTo" value="4614"/>
+		<attribute key="duration" value="1200"/>
 		<attribute key="type" value="trashholder"/>
 		<attribute key="effect" value="bluebubble"/>
 		<attribute key="allowpickupable" value="1"/>
 		<attribute key="fluidSource" value="water"/>
 	</item>
 	<item id="4624" name="shallow water">
+		<attribute key="decayTo" value="4615"/>
+		<attribute key="duration" value="1200"/>
 		<attribute key="type" value="trashholder"/>
 		<attribute key="effect" value="bluebubble"/>
 		<attribute key="allowpickupable" value="1"/>
 		<attribute key="fluidSource" value="water"/>
 	</item>
 	<item id="4625" name="shallow water">
+		<attribute key="decayTo" value="4616"/>
+		<attribute key="duration" value="1200"/>
 		<attribute key="type" value="trashholder"/>
 		<attribute key="effect" value="bluebubble"/>
 		<attribute key="allowpickupable" value="1"/>
@@ -10796,14 +10863,14 @@
 	<item id="20005" name="lemonade" fluidClient="5"/>
 	<item id="20006" name="milk" fluidClient="6"/>
 	<item id="20007" name="manafluid" fluidClient="7"/>
-	<item id="20010" name="lifefluid" fluidClient="8"/>
-	<item id="20011" name="oil" fluidClient="9"/>
-	<item id="20013" name="urine" fluidClient="10"/>
-	<item id="20014" name="coconut milk" fluidClient="11"/>
-	<item id="20015" name="wine" fluidClient="12"/>
-	<item id="20019" name="mud" fluidClient="13"/>
-	<item id="20021" name="fruit juice" fluidClient="14"/>
-	<item id="20027" name="rum" fluidClient="15"/>
-	<item id="20035" name="tea" fluidClient="16"/>
-	<item id="20036" name="mead" fluidClient="17"/>
+	<item id="20010" name="lifefluid" fluidClient="10"/>
+	<item id="20011" name="oil" fluidClient="11"/>
+	<item id="20013" name="urine" fluidClient="13"/>
+	<item id="20014" name="coconut milk" fluidClient="14"/>
+	<item id="20015" name="wine" fluidClient="15"/>
+	<item id="20019" name="mud" fluidClient="19"/>
+	<item id="20021" name="fruit juice" fluidClient="21"/>
+	<item id="20027" name="rum" fluidClient="27"/>
+	<item id="20035" name="tea" fluidClient="35"/>
+	<item id="20036" name="mead" fluidClient="36"/>
 </items>

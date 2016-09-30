@@ -3,6 +3,7 @@
 	<health now="950" max="950"/>
 	<look type="110" corpse="3055"/>
 	<targetchange interval="1000" chance="5"/>
+	<targetstrategies nearest="70" health="0" damage="30" random="0"/>
 	<flags>
 		<flag attackable="1"/>
 		<flag hostile="1"/>
@@ -18,11 +19,11 @@
 	</flags>
 	<attacks>
 		<attack name="melee" interval="2000" skill="79" attack="53"/>
-		<attack name="physical" interval="1000" chance="15" range="7" min="-170" max="-200">
+		<attack name="physical" interval="2000" checkshield="1" chance="15" range="7" min="-170" max="-200">
 			<attribute key="shootEffect" value="snowball"/>
 			<attribute key="areaEffect" value="poff"/>
 		</attack>
-		<attack name="energy" interval="1000" chance="12" length="3" spread="3" min="-120" max="-210">
+		<attack name="energy" interval="2000" chance="12" length="3" spread="3" min="-120" max="-210">
 			<attribute key="areaEffect" value="poff"/>
 		</attack>
 	</attacks>

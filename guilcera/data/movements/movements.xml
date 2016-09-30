@@ -1,91 +1,89 @@
 <?xml version="1.0"?>
-<movements>
 
-    <!-- Guilcera -->
-	<moveevent event="AddItem" actionid="101" tileitem="1" script="guilcera\hota.lua"/>
-	<moveevent event="RemoveItem" itemid="1953" script="guilcera\parchment.lua"/>
+<movements>
 
 	<!-- Citizen teleport -->
 	<moveevent event="StepIn" itemid="1387" script="citizen.lua"/>
-
+	
 	<!-- Pitfalls -->
-	<moveevent event="StepIn" itemid="293" script="increment.lua" />
-	<moveevent event="StepIn" itemid="3310" script="increment.lua" />
-
+	<moveevent event="StepIn" itemid="293" script="increment.lua"/>
+	<moveevent event="StepIn" itemid="461" script="increment.lua"/>
+	<moveevent event="StepIn" itemid="3310" script="increment.lua"/>
+	
 	<!-- Campfires -->
-	<moveevent event="StepIn" itemid="1423" function="onStepInField" />
-	<moveevent event="AddItem" itemid="1423" function="onAddField" />
+	<moveevent event="StepIn" itemid="1423" function="onStepInField"/>
+	<moveevent event="AddItem" itemid="1423" function="onAddField"/>
 
-	<moveevent event="StepIn" itemid="1424" function="onStepInField" />
-	<moveevent event="AddItem" itemid="1424" function="onAddField" />
+	<moveevent event="StepIn" itemid="1424" function="onStepInField"/>
+	<moveevent event="AddItem" itemid="1424" function="onAddField"/>
 
-	<moveevent event="StepIn" itemid="1425" function="onStepInField" />
-	<moveevent event="AddItem" itemid="1425" function="onAddField" />
+	<moveevent event="StepIn" itemid="1425" function="onStepInField"/>
+	<moveevent event="AddItem" itemid="1425" function="onAddField"/>
 
-	<!-- Fields -->
-	<moveevent event="StepIn" itemid="1487" function="onStepInField" />
-	<moveevent event="AddItem" itemid="1487" function="onAddField" />
+    <!-- Fields -->
+	<moveevent event="StepIn" itemid="1487" function="onStepInField"/>
+	<moveevent event="AddItem" itemid="1487" function="onAddField"/>
 
-	<moveevent event="StepIn" itemid="1488" function="onStepInField" />
-	<moveevent event="AddItem" itemid="1488" function="onAddField" />
+	<moveevent event="StepIn" itemid="1488" function="onStepInField"/>
+	<moveevent event="AddItem" itemid="1488" function="onAddField"/>
 
-	<moveevent event="StepIn" itemid="1489" function="onStepInField" />
-	<moveevent event="AddItem" itemid="1489" function="onAddField" />
+	<moveevent event="StepIn" itemid="1489" function="onStepInField"/>
+	<moveevent event="AddItem" itemid="1489" function="onAddField"/>
 
-	<moveevent event="StepIn" itemid="1490" function="onStepInField" />
-	<moveevent event="AddItem" itemid="1490" function="onAddField" />
+	<moveevent event="StepIn" itemid="1490" function="onStepInField"/>
+	<moveevent event="AddItem" itemid="1490" function="onAddField"/>
 
-	<moveevent event="StepIn" itemid="1491" function="onStepInField" />
-	<moveevent event="AddItem" itemid="1491" function="onAddField" />
+	<moveevent event="StepIn" itemid="1491" function="onStepInField"/>
+	<moveevent event="AddItem" itemid="1491" function="onAddField"/>
 
-	<moveevent event="StepIn" itemid="1492" function="onStepInField" />
-	<moveevent event="AddItem" itemid="1492" function="onAddField" />
+	<moveevent event="StepIn" itemid="1492" function="onStepInField"/>
+	<moveevent event="AddItem" itemid="1492" function="onAddField"/>
 
-	<moveevent event="StepIn" itemid="1493" function="onStepInField" />
-	<moveevent event="AddItem" itemid="1493" function="onAddField" />
+	<moveevent event="StepIn" itemid="1493" function="onStepInField"/>
+	<moveevent event="AddItem" itemid="1493" function="onAddField"/>
 
-	<moveevent event="StepIn" itemid="1494" function="onStepInField" />
-	<moveevent event="AddItem" itemid="1494" function="onAddField" />
+	<moveevent event="StepIn" itemid="1494" function="onStepInField"/>
+	<moveevent event="AddItem" itemid="1494" function="onAddField"/>
 
-	<moveevent event="StepIn" itemid="1495" function="onStepInField" />
-	<moveevent event="AddItem" itemid="1495" function="onAddField" />
+	<moveevent event="StepIn" itemid="1495" function="onStepInField"/>
+	<moveevent event="AddItem" itemid="1495" function="onAddField"/>
 
-	<moveevent event="StepIn" itemid="1496" function="onStepInField" />
-	<moveevent event="AddItem" itemid="1496" function="onAddField" />
+	<moveevent event="StepIn" itemid="1496" function="onStepInField"/>
+	<moveevent event="AddItem" itemid="1496" function="onAddField"/>
 
-	<moveevent event="StepIn" itemid="1497" function="onStepInField" />
-	<moveevent event="AddItem" itemid="1497" function="onAddField" />
-  
-	<moveevent event="StepIn" itemid="1498" function="onStepInField" />
-	<moveevent event="AddItem" itemid="1498" function="onAddField" />
+	<moveevent event="StepIn" itemid="1497" function="onStepInField"/>
+	<moveevent event="AddItem" itemid="1497" function="onAddField"/>
 
-	<moveevent event="StepIn" itemid="1499" function="onStepInField" />
-	<moveevent event="AddItem" itemid="1499" function="onAddField" />
+	<moveevent event="StepIn" itemid="1498" function="onStepInField"/>
+	<moveevent event="AddItem" itemid="1498" function="onAddField"/>
 
-	<moveevent event="StepIn" itemid="1500" function="onStepInField" />
-	<moveevent event="AddItem" itemid="1500" function="onAddField" />
+	<moveevent event="StepIn" itemid="1499" function="onStepInField"/>
+	<moveevent event="AddItem" itemid="1499" function="onAddField"/>
 
-	<moveevent event="StepIn" itemid="1501" function="onStepInField" />
-	<moveevent event="AddItem" itemid="1501" function="onAddField" />
+	<moveevent event="StepIn" itemid="1500" function="onStepInField"/>
+	<moveevent event="AddItem" itemid="1500" function="onAddField"/>
 
-	<moveevent event="StepIn" itemid="1502" function="onStepInField" />
-	<moveevent event="AddItem" itemid="1502" function="onAddField" />
+	<moveevent event="StepIn" itemid="1501" function="onStepInField"/>
+	<moveevent event="AddItem" itemid="1501" function="onAddField"/>
 
-	<moveevent event="StepIn" itemid="1503" function="onStepInField" />
-	<moveevent event="AddItem" itemid="1503" function="onAddField" />
+	<moveevent event="StepIn" itemid="1502" function="onStepInField"/>
+	<moveevent event="AddItem" itemid="1502" function="onAddField"/>
 
-	<moveevent event="StepIn" itemid="1504" function="onStepInField" />
-	<moveevent event="AddItem" itemid="1504" function="onAddField" />
+	<moveevent event="StepIn" itemid="1503" function="onStepInField"/>
+	<moveevent event="AddItem" itemid="1503" function="onAddField"/>
 
-	<moveevent event="StepIn" itemid="1505" function="onStepInField" />
-	<moveevent event="AddItem" itemid="1505" function="onAddField" />
+	<moveevent event="StepIn" itemid="1504" function="onStepInField"/>
+	<moveevent event="AddItem" itemid="1504" function="onAddField"/>
 
-	<moveevent event="StepIn" itemid="1506" function="onStepInField" />
-	<moveevent event="AddItem" itemid="1506" function="onAddField" />
+	<moveevent event="StepIn" itemid="1505" function="onStepInField"/>
+	<moveevent event="AddItem" itemid="1505" function="onAddField"/>
 
-	<moveevent event="StepIn" itemid="1507" function="onStepInField" />
-	<moveevent event="AddItem" itemid="1507" function="onAddField" />
+	<moveevent event="StepIn" itemid="1506" function="onStepInField"/>
+	<moveevent event="AddItem" itemid="1506" function="onAddField"/>
 
+	<moveevent event="StepIn" itemid="1507" function="onStepInField"/>
+	<moveevent event="AddItem" itemid="1507" function="onAddField"/>
+	
 	<!-- Doors -->
 	<moveevent event="StepOut" itemid="1224" script="doors/door_close_vertical.lua"/>
 	<moveevent event="StepOut" itemid="1226" script="doors/door_close_horizontal.lua"/>
@@ -104,26 +102,6 @@
 	<moveevent event="StepOut" itemid="3550" script="doors/door_close_vertical.lua"/>
 	<moveevent event="StepOut" itemid="3552" script="doors/door_close_vertical.lua"/>
 	
-	<!-- Adding level doors to the map -->
-	<moveevent event="AddItem" itemid="1227" script="doors/onadd_gateofexp.lua"/>
-	<moveevent event="AddItem" itemid="1229" script="doors/onadd_gateofexp.lua"/>
-	<moveevent event="AddItem" itemid="1245" script="doors/onadd_gateofexp.lua"/>
-	<moveevent event="AddItem" itemid="1247" script="doors/onadd_gateofexp.lua"/>
-	<moveevent event="AddItem" itemid="1259" script="doors/onadd_gateofexp.lua"/>
-	<moveevent event="AddItem" itemid="1261" script="doors/onadd_gateofexp.lua"/>
-	<moveevent event="AddItem" itemid="3540" script="doors/onadd_gateofexp.lua"/>
-	<moveevent event="AddItem" itemid="3549" script="doors/onadd_gateofexp.lua"/>
-	
-	<!-- Adding quest doors to the map -->
-	<moveevent event="AddItem" itemid="1223" script="doors/onadd_questdoor.lua"/>
-	<moveevent event="AddItem" itemid="1225" script="doors/onadd_questdoor.lua"/>
-	<moveevent event="AddItem" itemid="1241" script="doors/onadd_questdoor.lua"/>
-	<moveevent event="AddItem" itemid="1243" script="doors/onadd_questdoor.lua"/>
-	<moveevent event="AddItem" itemid="1255" script="doors/onadd_questdoor.lua"/>
-	<moveevent event="AddItem" itemid="1257" script="doors/onadd_questdoor.lua"/>
-	<moveevent event="AddItem" itemid="3542" script="doors/onadd_questdoor.lua"/>
-	<moveevent event="AddItem" itemid="3551" script="doors/onadd_questdoor.lua"/>
-	
 	<!-- Adding locked doors to the map -->
 	<moveevent event="AddItem" itemid="1209" script="doors/onadd_lockeddoor.lua"/>
 	<moveevent event="AddItem" itemid="1212" script="doors/onadd_lockeddoor.lua"/>
@@ -137,31 +115,32 @@
 	<moveevent event="AddItem" itemid="4916" script="doors/onadd_lockeddoor.lua"/>
 	
 	<!-- Switch Tiles -->
-	<moveevent event="StepIn" itemid="416" script="switch_tile.lua" />
-	<moveevent event="StepOut" itemid="417" script="switch_tile.lua" />
-	<moveevent event="StepOut" itemid="425" script="switch_tile.lua" />
-	<moveevent event="StepIn" itemid="426" script="switch_tile.lua" />
-	<moveevent event="StepIn" itemid="446" script="switch_tile.lua" />
-	<moveevent event="StepOut" itemid="447" script="switch_tile.lua" />
-	<moveevent event="StepIn" itemid="3216" script="switch_tile.lua" />
-	<moveevent event="StepOut" itemid="3217" script="switch_tile.lua" />
-
+	<moveevent event="StepIn" itemid="416" script="switch_tile.lua"/>
+	<moveevent event="StepOut" itemid="417" script="switch_tile.lua"/>
+	<moveevent event="StepOut" itemid="425" script="switch_tile.lua"/>
+	<moveevent event="StepIn" itemid="426" script="switch_tile.lua"/>
+	<moveevent event="StepIn" itemid="446" script="switch_tile.lua"/>
+	<moveevent event="StepOut" itemid="447" script="switch_tile.lua"/>
+	<moveevent event="StepIn" itemid="3216" script="switch_tile.lua"/>
+	<moveevent event="StepOut" itemid="3217" script="switch_tile.lua"/>
+	
 	<!-- Traps -->
-	<moveevent event="StepIn" itemid="1510" script="trap.lua" />
-	<moveevent event="StepOut" itemid="1511" script="trap.lua" />
-	<moveevent event="StepIn" itemid="1512" script="trap.lua" />
-	<moveevent event="StepOut" itemid="1513" script="trap.lua" />
-	<moveevent event="StepIn" itemid="2579" script="trap.lua" />
-	<moveevent event="RemoveItem" itemid="2579" script="trap.lua" />
-	<moveevent event="AddItem" tileitem="1" itemid="2579" script="trap.lua" />
-
+	<moveevent event="StepIn" itemid="1510" script="trap.lua"/>
+	<moveevent event="StepOut" itemid="1511" script="trap.lua"/>
+	<moveevent event="StepIn" itemid="1513" script="trap.lua"/>
+	<moveevent event="StepIn" itemid="2579" script="trap.lua"/>
+	<moveevent event="RemoveItem" itemid="2579" script="trap.lua"/>
+	<moveevent event="AddItem" tileitem="1" itemid="2579" script="trap.lua"/>
+	<moveevent event="StepIn" itemid="4208" script="trap.lua"/>
+	<moveevent event="StepOut" itemid="4209" script="trap.lua"/>
+	
 	<!-- Items -->
 	<!-- Boots -->
 	<moveevent event="Equip" itemid="2195" slot="feet" function="onEquipItem"/>
 	<moveevent event="DeEquip" itemid="2195" slot="feet" function="onDeEquipItem"/>
 	<moveevent event="Equip" itemid="2640" slot="feet" function="onEquipItem"/>
 	<moveevent event="DeEquip" itemid="2640" slot="feet" function="onDeEquipItem"/>
-	
+
 	<!-- Amulets -->
 	<moveevent event="Equip" itemid="2161" slot="necklace" function="onEquipItem"/>
 	<moveevent event="DeEquip" itemid="2161" slot="necklace" function="onDeEquipItem"/>
@@ -181,7 +160,7 @@
 	<moveevent event="DeEquip" itemid="2201" slot="necklace" function="onDeEquipItem"/>
 	<moveevent event="Equip" itemid="2173" slot="necklace" function="onEquipItem"/>
 	<moveevent event="DeEquip" itemid="2173" slot="necklace" function="onDeEquipItem"/>
-	
+
 	<!-- Rings -->
 	<moveevent event="Equip" itemid="2164" slot="ring" function="onEquipItem"/>
 	<moveevent event="DeEquip" itemid="2164" slot="ring" function="onDeEquipItem"/>
@@ -215,9 +194,13 @@
 	<moveevent event="DeEquip" itemid="2215" slot="ring" function="onDeEquipItem"/>
 	<moveevent event="Equip" itemid="2216" slot="ring" function="onEquipItem"/>
 	<moveevent event="DeEquip" itemid="2216" slot="ring" function="onDeEquipItem"/>
-
+	
 	<!-- Helmets -->
 	<moveevent event="Equip" itemid="2343" slot="head" function="onEquipItem"/>
 	<moveevent event="DeEquip" itemid="2343" slot="head" function="onDeEquipItem"/>
- 
+
+	<!-- .:: Guilcera ::. -->
+	<moveevent event="AddItem" actionid="101" tileitem="1" script="guilcera/hota.lua"/>
+	<moveevent event="RemoveItem" actionid="25012" script="guilcera/parchment.lua"/>
+
 </movements>
