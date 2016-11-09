@@ -1,9 +1,9 @@
 function onRemoveItem(item, tile, position)
 	local demonPositions = {
-		{x=33060, y=31623, z=15},
-		{x=33066, y=31623, z=15},
-		{x=33060, y=31627, z=15},
-		{x=33066, y=31627, z=15}
+		{x=340, y=86, z=14},
+		{x=346, y=86, z=14},
+		{x=340, y=90, z=14},
+		{x=346, y=90, z=14}
 	}
 
 	doSetItemActionId(item.uid, 0)

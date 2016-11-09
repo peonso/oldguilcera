@@ -85,7 +85,7 @@
 		<vocation name="Paladin"/>	<vocation name="Royal Paladin"/>
 		<vocation name="Knight"/>	<vocation name="Elite Knight"/>
 	</instant>
-	<instant name="Energy Strike" words="exori vis" maglv="2" mana="20" direction="1" script="attack/energy_strike.lua">
+	<instant name="Energy Strike" words="exori vis" maglv="2" mana="20" direction="1" exhaustion="1000" script="attack/energy_strike.lua">
 		<vocation name="Sorcerer"/>	<vocation name="Master Sorcerer"/>
 		<vocation name="Druid"/>	<vocation name="Elder Druid"/>
 	</instant>
@@ -105,11 +105,11 @@
 		<vocation name="Paladin"/>	<vocation name="Royal Paladin"/>
 	</instant>
 	<instant name="Haste" words="utani hur" needlearn="0" maglv="4" prem="1" mana="60" selftarget="1" aggressive="0" script="support/haste.lua" />
-	<instant name="Flame Strike" words="exori flam" maglv="3" prem="1" mana="20" direction="1" script="attack/flame_strike.lua">
+	<instant name="Flame Strike" words="exori flam" maglv="3" prem="1" mana="20" direction="1" exhaustion="1000" script="attack/flame_strike.lua">
 		<vocation name="Sorcerer"/>	<vocation name="Master Sorcerer"/>
 		<vocation name="Druid"/>	<vocation name="Elder Druid"/>
 	</instant>
-	<instant name="Force Strike" words="exori mort" needlearn="0" maglv="2" prem="1" mana="20" direction="1" script="attack/force_strike.lua">
+	<instant name="Force Strike" words="exori mort" needlearn="0" maglv="2" prem="1" mana="20" direction="1" exhaustion="1000" script="attack/force_strike.lua">
 		<vocation name="Sorcerer"/>	<vocation name="Master Sorcerer"/>
 		<vocation name="Druid"/>	<vocation name="Elder Druid"/>
 	</instant>
@@ -347,5 +347,7 @@
 	<instant name="paralyze_vampire"  words="###48"  aggressive="1" blockwalls="1" needtarget="1" needlearn="1" script="monster/paralyze_vampire.lua"/>
 	<instant name="paralyze_vashresamun"  words="###49"  aggressive="1" blockwalls="1" needtarget="1" needlearn="1" script="monster/paralyze_vashresamun.lua"/>
 	<instant name="paralyze_warlock"  words="###50"  aggressive="1" blockwalls="1" needtarget="1" needlearn="1" script="monster/paralyze_warlock.lua"/>
+	<instant name="skills_dipthrah"  words="###51"  aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/skills_dipthrah.lua"/>
+	<instant name="skills_morguthis"  words="###52"  aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/skills_morguthis.lua"/>
 
 </spells>

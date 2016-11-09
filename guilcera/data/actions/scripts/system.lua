@@ -1,8 +1,7 @@
 local specialQuests = {
-	[20002] = 20001, -- Annihilator
-	[20003] = 20001, -- Annihilator
-	[20004] = 20001, -- Annihilator
-	[20069] = 243 -- postman
+	[10002] = 10001, -- Annihilator
+	[10003] = 10001, -- Annihilator
+	[10004] = 10001, -- Annihilator
 }
 
 local questsExperience = {

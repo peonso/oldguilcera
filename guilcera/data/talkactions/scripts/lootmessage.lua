@@ -1,4 +1,4 @@
-function onSay(player, words, param)
+function onSay(cid, words, param)
     if getPlayerStorageValue(cid,STORAGE_LOOTMESSAGE) == 1 then
         setPlayerStorageValue(cid, STORAGE_LOOTMESSAGE, -1)
         doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Loot message has been disabled.")

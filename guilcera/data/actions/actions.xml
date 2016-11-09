@@ -158,14 +158,10 @@
 	<action itemid="1222" script="doors/door_open_horizontal.lua"/>
 
 	<action itemid="1223" script="doors/questdoor_closed.lua"/>
-	<action itemid="1224" script="doors/door_open_vertical.lua"/>
 	<action itemid="1225" script="doors/questdoor_closed.lua"/>
-	<action itemid="1226" script="doors/door_open_horizontal.lua"/>
 
 	<action itemid="1227" script="doors/gateofexp_closed.lua"/>
-	<action itemid="1228" script="doors/door_open_vertical.lua"/>
 	<action itemid="1229" script="doors/gateofexp_closed.lua"/>
-	<action itemid="1230" script="doors/door_open_horizontal.lua"/>
 
 	<action itemid="1231" script="doors/door_locked.lua"/>
 	<action itemid="1232" script="increment.lua"/>
@@ -180,14 +176,10 @@
 	<action itemid="1240" script="doors/door_open_horizontal.lua"/>
 
 	<action itemid="1241" script="doors/questdoor_closed.lua"/>
-	<action itemid="1242" script="doors/door_open_vertical.lua"/>
 	<action itemid="1243" script="doors/questdoor_closed.lua"/>
-	<action itemid="1244" script="doors/door_open_horizontal.lua"/>
 
 	<action itemid="1245" script="doors/gateofexp_closed.lua"/>
-	<action itemid="1246" script="doors/door_open_vertical.lua"/>
 	<action itemid="1247" script="doors/gateofexp_closed.lua"/>
-	<action itemid="1248" script="doors/door_open_horizontal.lua"/>	
 
 	<action itemid="1249" script="doors/door_locked.lua"/>
 	<action itemid="1250" script="increment.lua"/>
@@ -197,14 +189,10 @@
 	<action itemid="1254" script="doors/door_open_horizontal.lua"/>
 
 	<action itemid="1255" script="doors/questdoor_closed.lua"/>
-	<action itemid="1256" script="doors/door_open_vertical.lua"/>
 	<action itemid="1257" script="doors/questdoor_closed.lua"/>
-	<action itemid="1258" script="doors/door_open_horizontal.lua"/>
 
 	<action itemid="1259" script="doors/gateofexp_closed.lua"/>
-	<action itemid="1260" script="doors/door_open_vertical.lua"/>
 	<action itemid="1261" script="doors/gateofexp_closed.lua"/>
-	<action itemid="1262" script="doors/door_open_horizontal.lua"/>
 
 	<action itemid="1539" script="increment.lua"/>
 	<action itemid="1540" script="doors/door_open_vertical.lua"/> 
@@ -226,9 +214,7 @@
 	<action itemid="3538" script="increment.lua"/>
 	<action itemid="3539" script="doors/door_open_horizontal.lua"/>
 	<action itemid="3540" script="doors/gateofexp_closed.lua"/>
-	<action itemid="3541" script="doors/door_open_horizontal.lua"/>
 	<action itemid="3542" script="doors/questdoor_closed.lua"/>
-	<action itemid="3543" script="doors/door_open_horizontal.lua"/>
 
 	<action itemid="3544" script="doors/door_locked.lua"/>
 	<action itemid="3545" script="increment.lua"/>
@@ -236,9 +222,7 @@
 	<action itemid="3547" script="increment.lua"/>
 	<action itemid="3548" script="doors/door_open_vertical.lua"/>
 	<action itemid="3549" script="doors/gateofexp_closed.lua"/>
-	<action itemid="3550" script="doors/door_open_vertical.lua"/>
 	<action itemid="3551" script="doors/questdoor_closed.lua"/>
-	<action itemid="3552" script="doors/door_open_vertical.lua"/>
 
 	<action itemid="4913" script="doors/door_locked.lua"/>
 	<action itemid="4914" script="increment.lua"/>
@@ -385,43 +369,35 @@
 	<!-- .:: Guilcera ::. --> 
 
 	<action actionid="102" script="guilcera/teleport_drawwell.lua"/>
-	<action itemid="2148" script="guilcera/changegold.lua" />
-	<action itemid="2152" script="guilcera/changegold.lua" />
-	<action itemid="2160" script="guilcera/changegold.lua" />
+	<action itemid="2148" script="guilcera/changegold.lua"/>
+	<action itemid="2152" script="guilcera/changegold.lua"/>
+	<action itemid="2160" script="guilcera/changegold.lua"/>
 
 	<!-- Switchs -->
-	<action uniqueid="8013" script="guilcera/insanekey.lua"/>
-	<action uniqueid="8014" script="guilcera/demonswitch.lua"/>
-	<action uniqueid="8030" script="guilcera/vocation.lua"/>
-	<action uniqueid="8000" script="guilcera/annihilator.lua"/>
-	<action uniqueid="8001" script="guilcera/demonquest.lua"/>
-	<action uniqueid="8002" script="guilcera/demonquest2.lua"/>
-	<action uniqueid="8016" script="guilcera/gate1.lua"/>
-	<action uniqueid="8017" script="guilcera/gate2.lua"/>
-	<action uniqueid="8018" script="guilcera/gate3.lua"/>
-	<action uniqueid="8019" script="guilcera/gate4.lua"/>
-	<action uniqueid="8020" script="guilcera/gate5.lua"/>
-	<action uniqueid="8021" script="guilcera/gate6.lua"/>
-	<action uniqueid="8022" script="guilcera/gate7.lua"/>
-	<action uniqueid="8023" script="guilcera/gate8.lua"/>
-	<action uniqueid="8024" script="guilcera/gate9.lua"/>
-	<action uniqueid="8025" script="guilcera/gate10.lua"/>
-	<action uniqueid="8003" script="guilcera/insane1.lua"/>
-	<action uniqueid="8004" script="guilcera/insane2.lua"/>
-	<action uniqueid="8005" script="guilcera/insane3.lua"/>
-	<action uniqueid="8006" script="guilcera/insane4.lua"/>
-	<action uniqueid="8007" script="guilcera/insane5.lua"/>
-	<action uniqueid="8008" script="guilcera/insane6.lua"/>
-	<action uniqueid="8009" script="guilcera/insane7.lua"/>
-	<action uniqueid="8010" script="guilcera/insane8.lua"/>
-	<action uniqueid="8011" script="guilcera/insane9.lua"/>
-	<action uniqueid="8012" script="guilcera/insane10.lua"/>
-
-	<action uniqueid="8015" script="guilcera/necroskey.lua"/>
-	<action uniqueid="6004" script="guilcera/parchment.lua"/>
-	<action uniqueid="8026" script="guilcera/emptychests.lua"/>
-	<action uniqueid="8027" script="guilcera/emptychests.lua"/>
-	<action uniqueid="8028" script="guilcera/emptychests.lua"/>
-	<action uniqueid="8029" script="guilcera/emptychests.lua"/>
+	<action actionid="9003" script="guilcera/lever_annihilator.lua"/>
+	<action actionid="8014" script="guilcera/lever_turimdemons.lua"/>
+	<action actionid="8030" script="guilcera/lever_vocation.lua"/>
+	<action actionid="8001" script="guilcera/lever_demonquest.lua"/>
+	<action actionid="8002" script="guilcera/lever_demonquest2.lua"/>
+	<action actionid="8016" script="guilcera/lever_gate1.lua"/>
+	<action actionid="8017" script="guilcera/lever_gate2.lua"/>
+	<action actionid="8018" script="guilcera/lever_gate3.lua"/>
+	<action actionid="8019" script="guilcera/lever_gate4.lua"/>
+	<action actionid="8020" script="guilcera/lever_gate5.lua"/>
+	<action actionid="8021" script="guilcera/lever_gate6.lua"/>
+	<action actionid="8022" script="guilcera/lever_gate7.lua"/>
+	<action actionid="8023" script="guilcera/lever_gate8.lua"/>
+	<action actionid="8024" script="guilcera/lever_gate9.lua"/>
+	<action actionid="8025" script="guilcera/lever_gate10.lua"/>
+	<action actionid="8003" script="guilcera/lever_insane1.lua"/>
+	<action actionid="8004" script="guilcera/lever_insane2.lua"/>
+	<action actionid="8005" script="guilcera/lever_insane3.lua"/>
+	<action actionid="8006" script="guilcera/lever_insane4.lua"/>
+	<action actionid="8007" script="guilcera/lever_insane5.lua"/>
+	<action actionid="8008" script="guilcera/lever_insane6.lua"/>
+	<action actionid="8009" script="guilcera/lever_insane7.lua"/>
+	<action actionid="8010" script="guilcera/lever_insane8.lua"/>
+	<action actionid="8011" script="guilcera/lever_insane9.lua"/>
+	<action actionid="8012" script="guilcera/lever_insane10.lua"/>
 
 </actions>

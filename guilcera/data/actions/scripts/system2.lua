@@ -1,19 +1,24 @@
 local config = {
-	[10018] = {
+	[10005] = {
 		items = {
-			{itemid = 1955, text = "Hardek *\nBozo *\nSam ****\nOswald\nPartos ***\nQuentin *\nTark ***\nHarsky ***\nStutch *\nFerumbras *\nFrodo **\nNoodles ****"} -- amber notebook
+			{itemid = 2424} -- silver mace
 		},
 	},
-	[20086] = {
+	[10006] = {
 		items = {
-			{itemid = 2091, actionid = 6010}, 	-- golden key, demon quest
+			{itemid = 2091, actionid = 5000}, 	-- golden key, demon quest
 			{itemid = 1948},					-- parchment
 			{itemid = 2229},					-- skull
 			{itemid = 2230},					-- bone
 			{itemid = 2151, type = 2},			-- talon
 			{itemid = 2165}						-- ring
 		},
-	}
+	},
+--	[10018] = {
+--		items = {
+--			{itemid = 1955, text = "Hardek *\nBozo *\nSam ****\nOswald\nPartos ***\nQuentin *\nTark ***\nHarsky ***\nStutch *\nFerumbras *\nFrodo **\nNoodles ****"} -- amber notebook
+--		},
+--	}
 }
 
 function onUse(cid, item, fromPosition, itemEx, toPosition)

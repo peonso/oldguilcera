@@ -200,7 +200,7 @@
 	<moveevent event="DeEquip" itemid="2343" slot="head" function="onDeEquipItem"/>
 
 	<!-- .:: Guilcera ::. -->
-	<moveevent event="AddItem" actionid="101" tileitem="1" script="guilcera/hota.lua"/>
-	<moveevent event="RemoveItem" actionid="25012" script="guilcera/parchment.lua"/>
+	<moveevent event="RemoveItem" actionid="9001" script="guilcera/parchment.lua"/>
+	<moveevent event="AddItem" actionid="9002" tileitem="1" script="guilcera/hota.lua"/>
 
 </movements>
