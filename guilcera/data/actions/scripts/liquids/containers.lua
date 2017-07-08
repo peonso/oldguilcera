@@ -55,7 +55,7 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 		end
 
 		if(item.type == FLUID_MANA) then
-			if not doPlayerAddMana(cid, math.random(50, 150)) then
+			if not doPlayerAddMana(cid, math.random(25, 75)) then
 				return false
 			end
 			doCreatureSay(cid, "Aaaah...", TALKTYPE_SAY)
